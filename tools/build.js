@@ -305,6 +305,8 @@ for (const art of CATALOGUE) for (const lang of ORDER) sm += smEntry(art.slug, l
 for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'play/word-match.html',
                  'worksheets/', 'worksheets/addition.html', 'worksheets/subtraction.html',
                  'worksheets/multiplication.html', 'worksheets/missing-number.html', 'worksheets/arabic-letters.html',
+                 'worksheets/latin-letters.html', 'worksheets/numbers.html',
+                 'worksheets/coloring.html', 'worksheets/coloring-letters.html',
                  'about.html']) {
   sm += `  <url>
     <loc>${BASE}/${p}</loc>

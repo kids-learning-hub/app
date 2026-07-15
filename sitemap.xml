@@ -554,6 +554,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/latin-letters.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/numbers.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/coloring.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/coloring-letters.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://kids-learning-hub.github.io/app/about.html</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
