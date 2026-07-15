@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Times Tables Race — Free Online Multiplication Game for Kids | Kids Learning Hub</title>
+<meta name="description" content="Practise the times tables free in your browser! Pick a table, answer 10 questions, earn stars. A fun multiplication game for kids aged 6–12." />
+<link rel="canonical" href="https://kids-learning-hub.github.io/app/play/times-tables.html" />
+<meta name="theme-color" content="#1E5BFF" />
+<link rel="icon" href="../logos/hub-logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Kids Learning Hub" />
+<meta property="og:url" content="https://kids-learning-hub.github.io/app/play/times-tables.html" />
+<meta property="og:title" content="Times Tables Race — Free Online Multiplication Game for Kids" />
+<meta property="og:description" content="Pick a table, answer 10 questions, earn stars. Play free in your browser!" />
+<meta property="og:image" content="https://kids-learning-hub.github.io/app/logos/og-share.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9202119066805107" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="play.css" />
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="../index.html"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <div class="top-actions">
+      <div class="langsw" role="group" aria-label="Language">
+        <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
+      </div>
+      <button class="icon-btn" aria-label="Dark mode" onclick="PLAY.toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="crumbs"><a href="../index.html" data-t="home">Home</a> › <a href="index.html" data-t="games">Games</a> › <span data-t="title">Times Tables Race</span></p>
+
+  <div class="gamecard">
+    <div class="gamehead">
+      <span class="gicon" style="background:linear-gradient(135deg,#5B8CFF,#1E5BFF)">✖️</span>
+      <div><h1 data-t="title">Times Tables Race</h1><p class="sub" data-t="sub">Answer 10 questions and earn your stars!</p></div>
+    </div>
+
+    <!-- setup -->
+    <div id="setup">
+      <p class="pick" data-t="pick">Which table do you want to practise?</p>
+      <div class="choices tables" id="tablePick"></div>
+    </div>
+
+    <!-- game -->
+    <div id="game" hidden>
+      <div class="hud"><span id="progress"></span><span id="score">⭐ 0</span></div>
+      <div class="question" id="question">3 × 4 = ?</div>
+      <div class="choices answers" id="answers"></div>
+      <div class="feedback" id="feedback">&nbsp;</div>
+    </div>
+
+    <!-- end -->
+    <div id="end" hidden>
+      <div class="bigstars" id="bigstars"></div>
+      <div class="endscore" id="endscore"></div>
+      <p class="endmsg" id="endmsg"></p>
+      <div class="endbtns">
+        <button class="btn primary" onclick="startGame(currentTable)" data-t="again">Play again</button>
+        <button class="btn ghost" onclick="showSetup()" data-t="other">Choose another table</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="appcta">
+    <img src="../logos/mathokids.png" alt="MathoKids">
+    <div><b>MathoKids</b><p data-t="cta">Want more? Adaptive maths practice for kids — offline, safe and free on Google Play.</p></div>
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
+  </div>
+
+  <div class="ad-slot"><div class="ad-label" data-t="ad">Advertisement</div><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-format="auto" data-ad-client="ca-pub-9202119066805107" data-ad-slot="4620284747" data-full-width-responsive="true"></ins></div>
+</div>
+
+<footer class="foot">
+  <div class="fb">Kids Learning Hub</div>
+  <div style="opacity:.8">by VS MEDIA · <a href="../index.html" data-t="home">Home</a> · <a href="index.html" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
+</footer>
+
+<script src="play.js"></script>
+<script>
+const STR = {
+  en:{home:'Home',games:'Games',title:'Times Tables Race',sub:'Answer 10 questions and earn your stars!',pick:'Which table do you want to practise?',mix:'Mix!',again:'Play again',other:'Choose another table',good:['Great job! 🎉','Awesome! 🚀','You rock! ⭐'],ok:'Well done — keep practising!',try:'Good try — play once more!',correct:'Correct! 🎉',wrong:'Almost! It was',q:'Question',ad:'Advertisement',cta:'Want more? Adaptive maths practice for kids — offline, safe and free on Google Play.'},
+  fr:{home:'Accueil',games:'Jeux',title:'La course des tables',sub:'Réponds à 10 questions et gagne tes étoiles !',pick:'Quelle table veux-tu réviser ?',mix:'Mélange !',again:'Rejouer',other:'Choisir une autre table',good:['Bravo ! 🎉','Génial ! 🚀','Champion ! ⭐'],ok:'Bien joué — continue !',try:'Bel essai — encore une fois !',correct:'Correct ! 🎉',wrong:'Presque ! C’était',q:'Question',ad:'Publicité',cta:'Tu en veux plus ? Un entraînement de maths adaptatif — hors ligne, sûr et gratuit sur Google Play.'},
+  es:{home:'Inicio',games:'Juegos',title:'La carrera de las tablas',sub:'¡Responde 10 preguntas y gana tus estrellas!',pick:'¿Qué tabla quieres practicar?',mix:'¡Mezcla!',again:'Jugar otra vez',other:'Elegir otra tabla',good:['¡Muy bien! 🎉','¡Genial! 🚀','¡Campeón! ⭐'],ok:'¡Bien hecho! Sigue practicando.',try:'Buen intento, ¡una vez más!',correct:'¡Correcto! 🎉',wrong:'¡Casi! Era',q:'Pregunta',ad:'Publicidad',cta:'¿Quieres más? Práctica de mates adaptativa — sin conexión, segura y gratis en Google Play.'},
+  ar:{home:'الرئيسية',games:'الألعاب',title:'سباق جداول الضرب',sub:'أجب عن 10 أسئلة واكسب نجومك!',pick:'أي جدول تريد التدرّب عليه؟',mix:'خليط!',again:'العب مجددًا',other:'اختر جدولًا آخر',good:['أحسنت! 🎉','رائع! 🚀','بطل! ⭐'],ok:'عمل جيد — واصل التدريب!',try:'محاولة طيبة — جرّب مرة أخرى!',correct:'صحيح! 🎉',wrong:'قريب! كانت',q:'سؤال',ad:'إعلان',cta:'تريد المزيد؟ تدريب رياضيات متكيّف — دون إنترنت، آمن ومجاني على Google Play.'}
+};
+let T = STR.en, currentTable = 0, qi = 0, score = 0, questions = [];
+
+PLAY.init(l => { T = STR[l] || STR.en; PLAY.applyStrings(T); renderTablePick(); });
+
+function renderTablePick(){
+  const box = document.getElementById('tablePick'); box.innerHTML = '';
+  for(let t=2;t<=10;t++){
+    const b=document.createElement('button'); b.className='btn table'; b.textContent='×'+t;
+    b.onclick=()=>startGame(t); box.appendChild(b);
+  }
+  const mix=document.createElement('button'); mix.className='btn table mix'; mix.textContent='🎲 '+T.mix;
+  mix.onclick=()=>startGame(0); box.appendChild(mix);
+}
+function makeQuestions(table){
+  const qs=[];
+  for(let i=0;i<10;i++){
+    const a = table||2+Math.floor(Math.random()*9);
+    const b = 1+Math.floor(Math.random()*10);
+    qs.push([a,b]);
+  }
+  return qs;
+}
+function startGame(table){
+  currentTable=table; questions=makeQuestions(table); qi=0; score=0;
+  document.getElementById('setup').hidden=true;
+  document.getElementById('end').hidden=true;
+  document.getElementById('game').hidden=false;
+  nextQ();
+}
+function showSetup(){
+  document.getElementById('end').hidden=true;
+  document.getElementById('game').hidden=true;
+  document.getElementById('setup').hidden=false;
+}
+function nextQ(){
+  if(qi>=questions.length) return endGame();
+  const [a,b]=questions[qi];
+  document.getElementById('progress').textContent=T.q+' '+(qi+1)+' / 10';
+  document.getElementById('score').textContent='⭐ '+score;
+  document.getElementById('question').textContent=a+' × '+b+' = ?';
+  document.getElementById('feedback').innerHTML='&nbsp;';
+  const good=a*b, opts=new Set([good]);
+  while(opts.size<4){
+    const d=good+[-10,-2,-1,1,2,10,a,b][Math.floor(Math.random()*8)];
+    if(d>0&&d!==good) opts.add(d);
+  }
+  const box=document.getElementById('answers'); box.innerHTML='';
+  [...opts].sort(()=>Math.random()-.5).forEach(v=>{
+    const btn=document.createElement('button'); btn.className='btn answer'; btn.textContent=v;
+    btn.onclick=()=>answer(btn,v,good); box.appendChild(btn);
+  });
+}
+function answer(btn,v,good){
+  document.querySelectorAll('.answer').forEach(b=>b.disabled=true);
+  const fb=document.getElementById('feedback');
+  if(v===good){ score++; btn.classList.add('right'); fb.textContent=T.correct; }
+  else{ btn.classList.add('bad');
+    document.querySelectorAll('.answer').forEach(b=>{ if(+b.textContent===good) b.classList.add('right'); });
+    fb.textContent=T.wrong+' '+good; }
+  qi++; setTimeout(nextQ,900);
+}
+function endGame(){
+  document.getElementById('game').hidden=true;
+  document.getElementById('end').hidden=false;
+  const stars=score>=9?3:score>=6?2:1;
+  document.getElementById('bigstars').textContent='⭐'.repeat(stars)+'☆'.repeat(3-stars);
+  document.getElementById('endscore').textContent=score+' / 10';
+  document.getElementById('endmsg').textContent=score>=9?T.good[Math.floor(Math.random()*T.good.length)]:score>=6?T.ok:T.try;
+  if(score>=9) PLAY.confetti();
+}
+</script>
+</body>
+</html>

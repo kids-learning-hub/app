@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kids Learning Hub — Printable leaflet (4 languages)</title>
+<meta name="description" content="Printable A4 leaflet for the Kids Learning Hub educational apps, in English, French, Spanish and Arabic, with a QR code to the website." />
+<meta name="robots" content="noindex,follow" />
+<link rel="icon" href="logos/hub-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1E5BFF;--navy:#163A8C;--yellow:#FFC72C;--orange:#FF8A00;--pink:#FF4FA3;
+  --sky:#49B6FF;--green:#42C85A;--purple:#7A4DFF;--ink:#12224E;--muted:#5B6B9C;--line:#E4ECFA;
+  --grad:linear-gradient(135deg,var(--blue),var(--purple));
+}
+html,body{background:#eef4ff}
+body{font-family:"Nunito",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;padding:20px 12px 60px}
+[dir="rtl"] body{font-family:"Nunito","Segoe UI","Tahoma",sans-serif}
+h1,h2,h3,h4,.brand{font-family:"Baloo 2","Nunito",sans-serif}
+img{display:block;max-width:100%}
+
+/* ── toolbar (screen only) ── */
+.toolbar{max-width:210mm;margin:0 auto 18px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 30px rgba(20,45,110,.12);padding:14px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.toolbar .ttl{font-family:"Baloo 2";font-weight:800;font-size:16px;margin-inline-end:auto;display:flex;align-items:center;gap:10px}
+.toolbar .ttl img{width:34px;height:34px;object-fit:contain;border-radius:9px}
+.langsw{display:flex;gap:5px;background:#f2f6ff;border:1px solid var(--line);border-radius:12px;padding:4px}
+.langsw button{padding:7px 13px;border:none;background:none;border-radius:9px;font:inherit;font-weight:800;font-size:13px;color:var(--muted);cursor:pointer}
+.langsw button.active{background:var(--grad);color:#fff}
+.btn{border:none;cursor:pointer;font:inherit;font-weight:800;font-size:14px;padding:11px 18px;border-radius:12px;display:inline-flex;align-items:center;gap:8px;transition:.15s}
+.btn svg{width:18px;height:18px}
+.btn-print{background:var(--grad);color:#fff;box-shadow:0 8px 20px rgba(30,91,255,.3)}
+.btn-print:hover{transform:translateY(-2px)}
+.btn-all{background:#fff;color:var(--blue);border:1.5px solid var(--blue)}
+.btn-all:hover{background:#f2f6ff}
+.hint{max-width:210mm;margin:0 auto 16px;text-align:center;color:var(--muted);font-weight:700;font-size:13.5px}
+
+/* ── A4 flyer ── */
+.flyer{
+  width:210mm;min-height:297mm;background:#fff;margin:0 auto 26px;border-radius:6px;
+  box-shadow:0 18px 50px rgba(20,45,110,.18);overflow:hidden;
+  display:flex;flex-direction:column;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+}
+.flyer[hidden]{display:none}
+.f-head{
+  background:radial-gradient(120% 140% at 100% 0,rgba(255,255,255,.18),transparent 55%),var(--grad);
+  color:#fff;padding:8mm 14mm 7mm;display:flex;align-items:center;gap:14px;position:relative;
+}
+.f-head .logo{width:32mm;height:32mm;object-fit:contain;filter:drop-shadow(0 6px 14px rgba(0,0,0,.28));flex:none}
+.f-head .brand{font-size:30px;font-weight:800;line-height:1.05}
+.f-head .tag{font-family:"Nunito";font-weight:800;font-size:14px;opacity:.95;letter-spacing:.5px;margin-top:4px}
+.f-body{padding:10mm 14mm 8mm;flex:1;display:flex;flex-direction:column}
+.headline{font-size:26px;font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:7px}
+.sub{color:#33436b;font-size:14.5px;font-weight:600;line-height:1.5;margin-bottom:4mm;max-width:62ch}
+.sec-t{font-family:"Baloo 2";font-weight:800;font-size:15px;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;margin-bottom:9px}
+
+.apps{display:grid;grid-template-columns:repeat(2,1fr);gap:9px 12px;margin-bottom:5mm;flex:1;align-content:space-between}
+.app{display:flex;align-items:center;gap:8px;text-align:start}
+.app .ic{width:19mm;height:19mm;border-radius:13px;overflow:hidden;position:relative;display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:0 6px 14px rgba(20,45,110,.2);flex:none}
+.app .ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.app .atx{flex:1;min-width:0}
+.app .anm{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.app b{font-size:13.5px;color:var(--ink);line-height:1.1}
+.app .subj{color:#fff;font-weight:800;font-size:9.5px;padding:2px 7px;border-radius:20px;line-height:1.4}
+.app .desc{font-size:11px;color:var(--muted);font-weight:600;line-height:1.32;margin-top:2px}
+.app .gp{display:inline-flex;align-items:center;gap:4px;margin-top:3px;background:#111827;color:#fff;font-weight:800;font-size:9px;letter-spacing:.2px;padding:2px 7px;border-radius:6px}
+.app .gp svg{display:block}
+.app .miniqr{width:20mm;height:20mm;flex:none;align-self:center;background:#fff;border:1px solid var(--line);border-radius:7px;padding:1.5px}
+
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4mm}
+.badge{display:inline-flex;align-items:center;gap:6px;background:#f2f7ff;border:1px solid var(--line);border-radius:20px;padding:6px 12px;font-size:12.5px;font-weight:800;color:var(--navy)}
+.badge .ck{width:16px;height:16px;border-radius:50%;background:var(--green);display:grid;place-items:center;flex:none}
+.badge .ck svg{width:10px;height:10px}
+
+.qrblock{margin-top:auto;display:flex;align-items:center;gap:16px;background:linear-gradient(135deg,#EAF3FF,#F3ECFF);border:1.5px solid var(--line);border-radius:20px;padding:14px 16px}
+.qrblock .qr{width:40mm;height:40mm;flex:none;background:#fff;border-radius:12px;padding:6px;box-shadow:0 6px 16px rgba(20,45,110,.14)}
+.qrblock .qrtxt{flex:1;min-width:0}
+.qrblock h3{font-size:18px;font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:4px}
+.qrblock .note{display:inline-block;background:var(--green);color:#fff;font-weight:800;font-size:11.5px;padding:3px 10px;border-radius:20px;margin-bottom:6px}
+.qrblock .url{font-family:"Baloo 2";font-weight:700;font-size:15px;color:var(--blue);word-break:break-all}
+.qrblock .qrsub{font-size:12px;color:var(--muted);font-weight:700;margin-top:3px}
+
+.f-foot{background:var(--navy);color:#cdd9ff;text-align:center;font-size:12px;font-weight:700;padding:8px 14mm;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.f-foot b{color:#fff}
+
+/* ── print ── */
+@page{size:A4;margin:0}
+@media print{
+  html,body{background:#fff;padding:0}
+  .toolbar,.hint{display:none!important}
+  .flyer{box-shadow:none;margin:0;border-radius:0;display:none}
+  .flyer.active{display:flex}
+  body.print-all .flyer{display:flex;page-break-after:always}
+}
+@media(max-width:230mm){ .toolbar,.hint{max-width:100%} }
+</style>
+<!-- Règle @page dynamique : vide = A4 (défaut ci-dessus), remplie = A3. -->
+<style id="pageStyle"></style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span class="ttl"><img src="logos/hub-logo.png" alt=""> <span>Kids Learning Hub — <span id="tw">leaflet</span></span></span>
+  <div class="langsw" id="langsw"></div>
+  <div class="langsw" id="sizesw" title="A4 / A3"></div>
+  <button class="btn btn-print" id="printBtn" onclick="printOne()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 9V3h12v6M6 18H4v-6h16v6h-2M8 14h8v7H8z"/></svg>
+    <span id="printLbl">Print</span>
+  </button>
+  <button class="btn btn-all" id="printAllBtn" onclick="printAll()"><span id="printAllLbl">Print all 4</span></button>
+</div>
+<p class="hint" id="hint"></p>
+
+<div id="flyers"></div>
+
+<script>
+const SITE = 'kids-learning-hub.github.io/app';
+
+const APPS = [
+  {file:'mathokids.png',  color:'#3B82F6', name:'MathoKids', subj:{en:'Maths',fr:'Maths',es:'Matemáticas',ar:'رياضيات'},
+    desc:{en:'Learn maths by playing.',fr:'Les maths en jouant.',es:'Matemáticas jugando.',ar:'الرياضيات باللعب.'}},
+  {file:'scienkids.png',  color:'#15A34A', emoji:'🔬', name:'ScienKids', subj:{en:'Science',fr:'Sciences',es:'Ciencias',ar:'علوم'},
+    desc:{en:'Fun, safe science experiments.',fr:'Expériences sûres et amusantes.',es:'Experimentos seguros y divertidos.',ar:'تجارب علمية آمنة وممتعة.'}},
+  {file:'codokids.png',   color:'#5D4037', emoji:'🤖', name:'CodoKids', subj:{en:'Coding',fr:'Codage',es:'Programación',ar:'برمجة'},
+    desc:{en:'First steps in coding & logic.',fr:'Premiers pas en programmation.',es:'Primeros pasos en programación.',ar:'أولى خطوات البرمجة والمنطق.'}},
+  {file:'geokids.png',    color:'#7CB342', emoji:'🌍', name:'GeoKids', subj:{en:'Geography',fr:'Géographie',es:'Geografía',ar:'جغرافيا'},
+    desc:{en:'Countries, maps & world wonders.',fr:'Pays, cartes et merveilles du monde.',es:'Países, mapas y maravillas.',ar:'دول وخرائط وعجائب العالم.'}},
+  {file:'englokids.png',  color:'#DC2626', name:'EngloKids', subj:{en:'English',fr:'Anglais',es:'Inglés',ar:'إنجليزية'},
+    desc:{en:'Read, listen & speak English.',fr:'Lire, écouter, parler l’anglais.',es:'Leer, escuchar y hablar inglés.',ar:'قراءة واستماع ونطق الإنجليزية.'}},
+  {file:'francokids.png', color:'#2563EB', name:'FrancoKids', subj:{en:'French',fr:'Français',es:'Francés',ar:'فرنسية'},
+    desc:{en:'First French words & reading.',fr:'Premiers mots en français.',es:'Primeras palabras en francés.',ar:'أوّل الكلمات بالفرنسية.'}},
+  {file:'spanokids.png',  color:'#F59E0B', name:'SpanoKids', subj:{en:'Spanish',fr:'Espagnol',es:'Español',ar:'إسبانية'},
+    desc:{en:'Spanish words through play.',fr:'L’espagnol en jouant.',es:'Español jugando.',ar:'الإسبانية عبر اللعب.'}},
+  {file:'arabikids.png',  color:'#6816AD', name:'ArabiKids', subj:{en:'Arabic',fr:'Arabe',es:'Árabe',ar:'عربية'},
+    desc:{en:'Arabic letters & first reading.',fr:'Lettres arabes et lecture.',es:'Letras árabes y lectura.',ar:'حروف عربية وقراءة أولى.'}},
+  {file:'germokids.png',  color:'#1A1A1A', name:'GermoKids', subj:{en:'German',fr:'Allemand',es:'Alemán',ar:'ألمانية'},
+    desc:{en:'Start German the fun way.',fr:'L’allemand en s’amusant.',es:'Empieza el alemán jugando.',ar:'ابدأ الألمانية بالمرح.'}},
+  {file:'chinokids.png',  color:'#DC2626', name:'ChinoKids', subj:{en:'Chinese',fr:'Chinois',es:'Chino',ar:'صينية'},
+    desc:{en:'Chinese characters & Pinyin.',fr:'Caractères chinois et pinyin.',es:'Caracteres chinos y pinyin.',ar:'رموز صينية وبينيين.'}},
+];
+
+const L = {
+  en:{flag:'🇬🇧',label:'EN',dir:'ltr',tagline:'Learn • Play • Discover',
+    headline:'Fun learning apps for your kids',
+    sub:'Maths, science, coding, geography and 6 languages — Read · Listen · Speak · Write. Offline, and made for ages 4 and up.',
+    appsT:'Our educational apps',
+    badges:['4 interface languages','Works offline','Made by teachers','Ages 4+','Weekly parent report'],
+    qrTitle:'Scan to explore & download all the apps',
+    qrNote:'Free on Google Play', qrSub:'Point your phone camera at the code',
+    foot:'All apps are free to download', print:'Print', printAll:'Print all 4', tw:'printable leaflet',
+    hint:'Pick a language, then print. “Print all 4” makes a 4-page multilingual set.'},
+  fr:{flag:'🇫🇷',label:'FR',dir:'ltr',tagline:'Apprendre • Jouer • Découvrir',
+    headline:'Des applis éducatives amusantes pour vos enfants',
+    sub:'Maths, sciences, codage, géographie et 6 langues — Lire · Écouter · Parler · Écrire. Hors ligne, dès 4 ans.',
+    appsT:'Nos applications éducatives',
+    badges:['4 langues d’interface','Fonctionne hors ligne','Conçu par des enseignants','Dès 4 ans','Rapport parent hebdo'],
+    qrTitle:'Scannez pour explorer et télécharger les applis',
+    qrNote:'Gratuit sur Google Play', qrSub:'Dirigez l’appareil photo vers le code',
+    foot:'Toutes les applis sont gratuites', print:'Imprimer', printAll:'Imprimer les 4', tw:'dépliant à imprimer',
+    hint:'Choisissez une langue, puis imprimez. « Imprimer les 4 » crée un dépliant de 4 pages.'},
+  es:{flag:'🇪🇸',label:'ES',dir:'ltr',tagline:'Aprende • Juega • Descubre',
+    headline:'Apps educativas divertidas para tus hijos',
+    sub:'Matemáticas, ciencias, programación, geografía y 6 idiomas — Leer · Escuchar · Hablar · Escribir. Sin conexión, desde los 4 años.',
+    appsT:'Nuestras apps educativas',
+    badges:['4 idiomas de interfaz','Funciona sin conexión','Hecho por profesores','Desde 4 años','Informe semanal para padres'],
+    qrTitle:'Escanea para explorar y descargar las apps',
+    qrNote:'Gratis en Google Play', qrSub:'Apunta la cámara del móvil al código',
+    foot:'Todas las apps son gratis', print:'Imprimir', printAll:'Imprimir las 4', tw:'folleto para imprimir',
+    hint:'Elige un idioma y luego imprime. «Imprimir las 4» crea un folleto de 4 páginas.'},
+  ar:{flag:'🇲🇦',label:'AR',dir:'rtl',tagline:'تعلّم • العب • اكتشف',
+    headline:'تطبيقات تعليمية ممتعة لأطفالك',
+    sub:'رياضيات وعلوم وبرمجة وجغرافيا و6 لغات — قراءة · استماع · نطق · كتابة. دون إنترنت، من عمر 4 سنوات.',
+    appsT:'تطبيقاتنا التعليمية',
+    badges:['4 لغات واجهة','يعمل دون إنترنت','من إعداد معلّمين','من عمر 4 سنوات','تقرير أسبوعي للأهل'],
+    qrTitle:'امسح لاستكشاف وتحميل كل التطبيقات',
+    qrNote:'مجانًا على Google Play', qrSub:'وجّه كاميرا هاتفك نحو الرمز',
+    foot:'كل التطبيقات مجانية', print:'طباعة', printAll:'طباعة الأربع', tw:'مطوية للطباعة',
+    hint:'اختر لغة ثم اطبع. «طباعة الأربع» تُنشئ مطوية من 4 صفحات بأربع لغات.'},
+};
+
+const ORDER = ['en','fr','es','ar'];
+let lang = 'en';
+const ckSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>';
+const gpSvg = '<svg viewBox="0 0 512 512" width="11" height="12" aria-hidden="true"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg>';
+
+function flyerHTML(lg){
+  const t = L[lg];
+  const apps = APPS.map(a=>`
+    <div class="app">
+      <div class="ic" style="background:${a.color}">${a.emoji||''}<img src="logos/${a.file}" alt="${a.name}" onerror="this.remove()"></div>
+      <div class="atx">
+        <div class="anm"><b>${a.name}</b><span class="subj" style="background:${a.color}">${a.subj[lg]}</span></div>
+        <p class="desc">${a.desc[lg]}</p>
+        <span class="gp">${gpSvg} Google Play</span>
+      </div>
+      <img class="miniqr" src="qr/${a.file.replace('.png','')}.svg" alt="QR ${a.name}" title="${a.name} · Google Play">
+    </div>`).join('');
+  const badges = t.badges.map(b=>`<span class="badge"><span class="ck">${ckSvg}</span>${b}</span>`).join('');
+  return `
+  <section class="flyer" data-lang="${lg}" dir="${t.dir}">
+    <div class="f-head">
+      <img class="logo" src="logos/hub-logo.png" alt="Kids Learning Hub">
+      <div><div class="brand">Kids Learning Hub</div><div class="tag">${t.tagline}</div></div>
+    </div>
+    <div class="f-body">
+      <h1 class="headline">${t.headline}</h1>
+      <p class="sub">${t.sub}</p>
+      <div class="sec-t">${t.appsT}</div>
+      <div class="apps">${apps}</div>
+      <div class="qrblock">
+        <img class="qr" src="qr.svg" alt="QR code: ${SITE}">
+        <div class="qrtxt">
+          <span class="note">${t.qrNote}</span>
+          <h3>${t.qrTitle}</h3>
+          <div class="url">${SITE}</div>
+          <div class="qrsub">${t.qrSub}</div>
+        </div>
+      </div>
+    </div>
+    <div class="f-foot">${t.foot} · <b>VS MEDIA</b> · vs.media.ste@gmail.com · © 2026 </div>
+  </section>`;
+}
+
+function render(){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = L[lang].dir;
+  document.getElementById('flyers').innerHTML = ORDER.map(flyerHTML).join('');
+  ORDER.forEach(lg=>{ const f=document.querySelector('.flyer[data-lang="'+lg+'"]'); f.hidden=(lg!==lang); f.classList.toggle('active', lg===lang); });
+  document.getElementById('langsw').innerHTML = ORDER.map(lg=>
+    `<button class="${lg===lang?'active':''}" onclick="setLang('${lg}')">${L[lg].flag} ${L[lg].label}</button>`).join('');
+  document.getElementById('printLbl').textContent = L[lang].print;
+  document.getElementById('printAllLbl').textContent = L[lang].printAll;
+  document.getElementById('tw').textContent = L[lang].tw;
+  document.getElementById('hint').textContent = L[lang].hint;
+}
+function setLang(l){ lang=l; render(); }
+
+/* ── Format papier : A4 (défaut) ou A3 ──
+   Le dépliant est conçu en 210×297 mm ; pour l'A3 on l'agrandit de
+   √2 (= 297×420 mm exactement) au moment de l'impression. */
+let paper = 'a4';
+const PAPER_ZOOM = { a4:'1', a3:'1.41421' };
+function setPaper(p){
+  paper = p;
+  document.getElementById('pageStyle').textContent =
+      p === 'a3' ? '@page{size:A3;margin:0}' : '';
+  renderSize();
+}
+function renderSize(){
+  document.getElementById('sizesw').innerHTML = ['a4','a3'].map(p=>
+    `<button class="${p===paper?'active':''}" onclick="setPaper('${p}')">${p.toUpperCase()}</button>`).join('');
+}
+
+/* Scale the A4 flyer to fit the screen (prints full size). */
+function fitFlyer(){
+  const el = document.getElementById('flyers');
+  el.style.zoom = '1';
+  const avail = document.documentElement.clientWidth - 24;
+  el.style.zoom = Math.min(1, avail / 794);
+}
+function printOne(){ document.body.classList.remove('print-all'); document.getElementById('flyers').style.zoom=PAPER_ZOOM[paper]; window.print(); }
+function printAll(){ document.body.classList.add('print-all'); document.getElementById('flyers').style.zoom=PAPER_ZOOM[paper]; window.print(); }
+window.addEventListener('beforeprint',()=>{ document.getElementById('flyers').style.zoom=PAPER_ZOOM[paper]; });
+window.addEventListener('afterprint',()=>{ document.body.classList.remove('print-all'); fitFlyer(); });
+window.addEventListener('resize', fitFlyer);
+
+render();
+renderSize();
+fitFlyer();
+</script>
+</body>
+</html>

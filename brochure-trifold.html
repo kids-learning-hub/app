@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kids Learning Hub — Tri-fold leaflet (4 languages)</title>
+<meta name="description" content="Printable tri-fold (3-panel) leaflet for the Kids Learning Hub educational apps in 4 languages, with QR codes to the website." />
+<meta name="robots" content="noindex,follow" />
+<link rel="icon" href="logos/hub-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1E5BFF;--navy:#163A8C;--yellow:#FFC72C;--orange:#FF8A00;--pink:#FF4FA3;
+  --sky:#49B6FF;--green:#42C85A;--purple:#7A4DFF;--ink:#12224E;--muted:#5B6B9C;--line:#E4ECFA;
+  --grad:linear-gradient(135deg,var(--blue),var(--purple));
+}
+html,body{background:#eef4ff}
+body{font-family:"Nunito",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;padding:20px 12px 60px}
+[dir="rtl"] body{font-family:"Nunito","Segoe UI","Tahoma",sans-serif}
+h1,h2,h3,h4,.brand{font-family:"Baloo 2","Nunito",sans-serif}
+img{display:block;max-width:100%}
+
+/* toolbar */
+.toolbar{max-width:1000px;margin:0 auto 14px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 30px rgba(20,45,110,.12);padding:14px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.toolbar .ttl{font-family:"Baloo 2";font-weight:800;font-size:16px;margin-inline-end:auto;display:flex;align-items:center;gap:10px}
+.toolbar .ttl img{width:34px;height:34px;object-fit:contain;border-radius:9px}
+.langsw{display:flex;gap:5px;background:#f2f6ff;border:1px solid var(--line);border-radius:12px;padding:4px}
+.langsw button{padding:7px 13px;border:none;background:none;border-radius:9px;font:inherit;font-weight:800;font-size:13px;color:var(--muted);cursor:pointer}
+.langsw button.active{background:var(--grad);color:#fff}
+.btn{border:none;cursor:pointer;font:inherit;font-weight:800;font-size:14px;padding:11px 18px;border-radius:12px;display:inline-flex;align-items:center;gap:8px;transition:.15s}
+.btn svg{width:18px;height:18px}
+.btn-print{background:var(--grad);color:#fff;box-shadow:0 8px 20px rgba(30,91,255,.3)}
+.btn-print:hover{transform:translateY(-2px)}
+.btn-all{background:#fff;color:var(--blue);border:1.5px solid var(--blue)}
+.hint{max-width:1000px;margin:0 auto 16px;text-align:center;color:var(--muted);font-weight:700;font-size:13.5px}
+.stage{overflow-x:auto;padding-bottom:8px}
+
+/* sheet = A4 landscape, 3 panels */
+.lgset{display:none}
+.lgset.active{display:block}
+.sheet{width:297mm;height:210mm;background:#fff;display:flex;margin:0 auto 20px;box-shadow:0 18px 50px rgba(20,45,110,.18);border-radius:4px;overflow:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.panel{width:99mm;flex:none;padding:11mm 9mm;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.panel + .panel{border-inline-start:1px dashed #ccd8f2}
+.plabel{position:absolute;top:3mm;inset-inline-start:50%;transform:translateX(-50%);font-size:8px;font-weight:800;color:#adbcdf;letter-spacing:1px;text-transform:uppercase}
+
+/* front cover */
+.panel.front{background:radial-gradient(120% 90% at 50% 0,rgba(255,255,255,.18),transparent 55%),var(--grad);color:#fff;align-items:center;text-align:center;justify-content:center;gap:5mm}
+.panel.front .logo{width:44mm;height:44mm;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,.3))}
+.panel.front .brand{font-size:27px;font-weight:800;line-height:1.05}
+.panel.front .ftag{font-weight:800;font-size:12.5px;letter-spacing:.5px;opacity:.95}
+.panel.front .cline{font-size:13px;font-weight:700;opacity:.95;max-width:70mm;margin-top:2mm}
+.qrcard{background:#fff;border-radius:14px;padding:8px;box-shadow:0 8px 20px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;gap:5px;margin-top:3mm}
+.qrcard img{width:40mm;height:40mm}
+.qrcard .scan{color:var(--navy);font-weight:800;font-size:11px}
+.qrcard .u{color:var(--blue);font-weight:700;font-size:9.5px}
+
+/* generic headings */
+.p-t{font-family:"Baloo 2";font-weight:800;font-size:16px;color:var(--blue);margin-bottom:5mm;padding-bottom:2mm;border-bottom:2px solid var(--line)}
+
+/* back cover */
+.panel.back{justify-content:space-between}
+.panel.back .bhead{display:flex;align-items:center;gap:9px;margin-bottom:5mm}
+.panel.back .bhead img{width:21mm;height:21mm;object-fit:contain}
+.panel.back .bhead b{font-family:"Baloo 2";font-size:16px}
+.panel.back p{font-size:11.5px;color:#33436b;font-weight:600;line-height:1.55;margin-bottom:4mm}
+.freechip{display:inline-flex;align-items:center;gap:6px;background:var(--green);color:#fff;font-weight:800;font-size:11px;padding:5px 11px;border-radius:20px;margin-bottom:5mm}
+.contact{font-size:11px;font-weight:700;color:var(--navy);line-height:1.8}
+.contact .u{color:var(--blue)}
+.copy{margin-top:auto;font-size:9.5px;color:var(--muted);font-weight:700}
+
+/* fold-in flap (CTA + features) */
+.panel.flap{background:linear-gradient(160deg,#EAF3FF,#F3ECFF)}
+.flist{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:6mm}
+.flist li{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:var(--navy)}
+.flist .ck{width:18px;height:18px;border-radius:50%;background:var(--green);display:grid;place-items:center;flex:none}
+.flist .ck svg{width:11px;height:11px}
+.skillbox{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;text-align:center;margin-bottom:6mm}
+.skillbox b{display:block;font-family:"Baloo 2";color:var(--purple);font-size:13px;margin-bottom:3px}
+.skillbox span{font-weight:800;font-size:12.5px;color:var(--navy)}
+.ctabox{margin-top:auto;background:var(--grad);color:#fff;border-radius:14px;padding:12px;text-align:center;font-weight:800;font-size:13px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+/* inside app rows */
+.tapps{display:flex;flex-direction:column;gap:4mm}
+.tapps.fill{flex:1;justify-content:space-around;gap:2.5mm}
+.tapp{display:flex;gap:8px;align-items:center;background:#F7FAFF;border:1px solid var(--line);border-radius:14px;padding:5px 8px}
+.tapp .ic{width:16mm;height:16mm;border-radius:11px;overflow:hidden;position:relative;display:grid;place-items:center;color:#fff;font-size:20px;box-shadow:0 5px 12px rgba(20,45,110,.2);flex:none}
+.tapp .ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tapp .tx{flex:1;min-width:0}
+.tapp .nm{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.tapp .nm b{font-size:13.5px;color:var(--ink)}
+.tapp .subj{color:#fff;font-weight:800;font-size:9px;padding:2px 7px;border-radius:20px}
+.tapp .desc{font-size:10px;color:#33436b;font-weight:600;line-height:1.3;margin-top:2px}
+.tapp .gp{display:inline-flex;align-items:center;gap:4px;margin-top:4px;background:#111827;color:#fff;font-weight:800;font-size:8.5px;padding:2px 7px;border-radius:6px}
+.tapp .gp svg{display:block}
+.tapp .miniqr{width:19mm;height:19mm;flex:none;align-self:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:2px}
+.p-foot{margin-top:auto;font-size:9.5px;color:var(--muted);font-weight:700;text-align:center}
+
+/* print */
+@page{size:A4 landscape;margin:0}
+@media print{
+  html,body{background:#fff;padding:0}
+  .toolbar,.hint{display:none!important}
+  .plabel{display:none}
+  .stage{overflow:visible}
+  .sheet{box-shadow:none;border-radius:0;margin:0;display:none;page-break-after:always}
+  .lgset.active .sheet{display:flex}
+  body.print-all .lgset .sheet{display:flex}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span class="ttl"><img src="logos/hub-logo.png" alt=""> <span>Kids Learning Hub — <span id="tw">tri-fold</span></span></span>
+  <div class="langsw" id="langsw"></div>
+  <button class="btn btn-print" onclick="printOne()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 9V3h12v6M6 18H4v-6h16v6h-2M8 14h8v7H8z"/></svg>
+    <span id="printLbl">Print</span>
+  </button>
+  <button class="btn btn-all" onclick="printAll()"><span id="printAllLbl">Print all 4</span></button>
+</div>
+<p class="hint" id="hint"></p>
+
+<div class="stage"><div id="sets"></div></div>
+
+<script>
+const SITE = 'kids-learning-hub.github.io/app';
+
+const APPS = [
+  {file:'mathokids.png',  color:'#3B82F6', name:'MathoKids', subj:{en:'Maths',fr:'Maths',es:'Matemáticas',ar:'رياضيات'},
+    desc:{en:'Counting, addition, subtraction and times tables — playful maths that builds real confidence with numbers.',fr:'Compter, additions, soustractions et tables — des maths ludiques pour une vraie confiance avec les nombres.',es:'Contar, sumas, restas y tablas — matemáticas divertidas que dan confianza real con los números.',ar:'العدّ والجمع والطرح وجداول الضرب — رياضيات ممتعة تبني ثقة حقيقية بالأعداد.'}},
+  {file:'scienkids.png',  color:'#15A34A', emoji:'🔬', name:'ScienKids', subj:{en:'Science',fr:'Sciences',es:'Ciencias',ar:'علوم'},
+    desc:{en:'Fun, safe experiments and quizzes that show curious kids how the world really works.',fr:'Des expériences et quiz sûrs et amusants qui montrent aux curieux comment le monde fonctionne.',es:'Experimentos y cuestionarios seguros y divertidos que muestran cómo funciona el mundo.',ar:'تجارب واختبارات آمنة وممتعة تُري الفضوليّين كيف يعمل العالم حقًّا.'}},
+  {file:'codokids.png',   color:'#5D4037', emoji:'🤖', name:'CodoKids', subj:{en:'Coding',fr:'Codage',es:'Programación',ar:'برمجة'},
+    desc:{en:'Robot mazes, loops and logic puzzles — first real coding skills, hardly any reading needed.',fr:'Labyrinthes de robot, boucles et énigmes logiques — les premières vraies bases du code.',es:'Laberintos de robot, bucles y acertijos de lógica — primeras bases reales de programación.',ar:'متاهات روبوت وحلقات وألغاز منطقية — أولى مهارات البرمجة الحقيقية.'}},
+  {file:'geokids.png',    color:'#7CB342', emoji:'🌍', name:'GeoKids', subj:{en:'Geography',fr:'Géographie',es:'Geografía',ar:'جغرافيا'},
+    desc:{en:'Continents, flags, maps and world wonders — a joyful world atlas for curious kids.',fr:'Continents, drapeaux, cartes et merveilles — un atlas du monde joyeux pour les curieux.',es:'Continentes, banderas, mapas y maravillas — un atlas del mundo alegre para curiosos.',ar:'قارات وأعلام وخرائط وعجائب العالم — أطلس عالم مبهج للأطفال الفضوليين.'}},
+  {file:'englokids.png',  color:'#DC2626', name:'EngloKids', subj:{en:'English',fr:'Anglais',es:'Inglés',ar:'إنجليزية'},
+    desc:{en:'Read, listen, speak and write English step by step, with native audio and playful practice.',fr:'Lire, écouter, parler et écrire l’anglais pas à pas, avec audio natif et exercices ludiques.',es:'Leer, escuchar, hablar y escribir inglés paso a paso, con audio nativo y práctica divertida.',ar:'قراءة واستماع ونطق وكتابة الإنجليزية خطوة بخطوة، بصوت أصلي وتمارين ممتعة.'}},
+  {file:'francokids.png', color:'#2563EB', name:'FrancoKids', subj:{en:'French',fr:'Français',es:'Francés',ar:'فرنسية'},
+    desc:{en:'First French words, sounds and reading — a gentle, joyful start for young learners.',fr:'Premiers mots, sons et lecture en français — un début doux et joyeux pour les petits.',es:'Primeras palabras, sonidos y lectura en francés — un inicio suave y alegre.',ar:'أوّل الكلمات والأصوات والقراءة بالفرنسية — بداية لطيفة ومبهجة للصغار.'}},
+  {file:'spanokids.png',  color:'#F59E0B', name:'SpanoKids', subj:{en:'Spanish',fr:'Espagnol',es:'Español',ar:'إسبانية'},
+    desc:{en:'Build Spanish vocabulary and everyday phrases through colourful, playful games.',fr:'Enrichis ton vocabulaire et tes phrases en espagnol grâce à des jeux colorés et ludiques.',es:'Amplía tu vocabulario y frases en español con juegos coloridos y divertidos.',ar:'ابنِ مفردات الإسبانية وعباراتها اليومية عبر ألعاب ملوّنة وممتعة.'}},
+  {file:'arabikids.png',  color:'#6816AD', name:'ArabiKids', subj:{en:'Arabic',fr:'Arabe',es:'Árabe',ar:'عربية'},
+    desc:{en:'Arabic letters, words and first reading — designed for young learners, right to left.',fr:'Lettres, mots et première lecture arabes — pensé pour les petits, de droite à gauche.',es:'Letras, palabras y primera lectura en árabe — pensado para los más pequeños.',ar:'حروف وكلمات وقراءة أولى بالعربية — مصمّم للصغار، من اليمين إلى اليسار.'}},
+  {file:'germokids.png',  color:'#1A1A1A', name:'GermoKids', subj:{en:'German',fr:'Allemand',es:'Alemán',ar:'ألمانية'},
+    desc:{en:'Start German with clear sounds, useful words and simple sentences — the fun way.',fr:'Débute l’allemand avec des sons clairs, des mots utiles et des phrases simples.',es:'Empieza el alemán con sonidos claros, palabras útiles y frases simples.',ar:'ابدأ الألمانية بأصوات واضحة وكلمات مفيدة وجُمل بسيطة — بطريقة ممتعة.'}},
+  {file:'chinokids.png',  color:'#DC2626', name:'ChinoKids', subj:{en:'Chinese',fr:'Chinois',es:'Chino',ar:'صينية'},
+    desc:{en:'Chinese characters and Pinyin made simple and fun, one friendly step at a time.',fr:'Caractères chinois et pinyin, simples et amusants, une étape à la fois.',es:'Caracteres chinos y pinyin, fáciles y divertidos, paso a paso.',ar:'رموز صينية وبينيين ببساطة ومتعة، خطوة ودودة تلو الأخرى.'}},
+];
+
+const L = {
+  en:{flag:'🇬🇧',label:'EN',dir:'ltr',tagline:'Learn • Play • Discover',
+    coverLine:'10 fun educational apps for children aged 4–12', scanCover:'Scan to download',
+    flapTitle:'Why families love our apps', flapCta:'Start learning today — 100% free',
+    badges:['4 interface languages','Works offline','Made by teachers','Ages 4+','Weekly parent report'],
+    skillsTitle:'The 4 core skills', skills:'Read · Listen · Speak · Write',
+    backTitle:'About Kids Learning Hub', backText:'A friendly, multilingual learning platform by VS MEDIA. Maths, science, coding, geography and 6 languages — offline, and made for young minds.',
+    backFree:'All apps free on Google Play', appsT:'Our educational apps', appsMore:'More apps', scanExplore:'Scan to explore & download all 10 apps',
+    labels:{front:'Front cover',back:'Back',flap:'Fold-in flap',inside:'Inside'},
+    print:'Print', printAll:'Print all 4', tw:'tri-fold leaflet',
+    hint:'Tri-fold, 2 pages. Print double-sided (flip on the short edge), then fold into thirds.'},
+  fr:{flag:'🇫🇷',label:'FR',dir:'ltr',tagline:'Apprendre • Jouer • Découvrir',
+    coverLine:'10 applis éducatives amusantes pour les 4–12 ans', scanCover:'Scannez pour télécharger',
+    flapTitle:'Pourquoi les familles adorent nos applis', flapCta:'Commencez aujourd’hui — 100 % gratuit',
+    badges:['4 langues d’interface','Fonctionne hors ligne','Conçu par des enseignants','Dès 4 ans','Rapport parent hebdo'],
+    skillsTitle:'Les 4 compétences clés', skills:'Lire · Écouter · Parler · Écrire',
+    backTitle:'À propos de Kids Learning Hub', backText:'Une plateforme d’apprentissage multilingue et conviviale, par VS MEDIA. Maths, sciences, codage, géographie et 6 langues — hors ligne, pour les jeunes esprits.',
+    backFree:'Toutes les applis gratuites sur Google Play', appsT:'Nos applications éducatives', appsMore:'Autres applis', scanExplore:'Scannez pour explorer et télécharger les 10 applis',
+    labels:{front:'Couverture',back:'Dos',flap:'Rabat',inside:'Intérieur'},
+    print:'Imprimer', printAll:'Imprimer les 4', tw:'dépliant 3 volets',
+    hint:'Dépliant 3 volets, 2 pages. Imprimez recto-verso (bord court), puis pliez en trois.'},
+  es:{flag:'🇪🇸',label:'ES',dir:'ltr',tagline:'Aprende • Juega • Descubre',
+    coverLine:'10 apps educativas divertidas para 4–12 años', scanCover:'Escanea para descargar',
+    flapTitle:'Por qué las familias aman nuestras apps', flapCta:'Empieza hoy — 100 % gratis',
+    badges:['4 idiomas de interfaz','Funciona sin conexión','Hecho por profesores','Desde 4 años','Informe semanal para padres'],
+    skillsTitle:'Las 4 competencias clave', skills:'Leer · Escuchar · Hablar · Escribir',
+    backTitle:'Sobre Kids Learning Hub', backText:'Una plataforma de aprendizaje multilingüe y amigable, de VS MEDIA. Matemáticas, ciencias, programación, geografía y 6 idiomas — sin conexión, para mentes jóvenes.',
+    backFree:'Todas las apps gratis en Google Play', appsT:'Nuestras apps educativas', appsMore:'Más apps', scanExplore:'Escanea para explorar y descargar las 10 apps',
+    labels:{front:'Portada',back:'Contra',flap:'Solapa',inside:'Interior'},
+    print:'Imprimir', printAll:'Imprimir las 4', tw:'folleto tríptico',
+    hint:'Tríptico, 2 páginas. Imprime a doble cara (borde corto) y dobla en tres.'},
+  ar:{flag:'🇲🇦',label:'AR',dir:'rtl',tagline:'تعلّم • العب • اكتشف',
+    coverLine:'10 تطبيقات تعليمية ممتعة لأعمار 4–12', scanCover:'امسح للتحميل',
+    flapTitle:'لماذا تحبّ العائلات تطبيقاتنا', flapCta:'ابدأ اليوم — مجاني 100%',
+    badges:['4 لغات واجهة','يعمل دون إنترنت','من إعداد معلّمين','من عمر 4 سنوات','تقرير أسبوعي للأهل'],
+    skillsTitle:'المهارات الأربع الأساسية', skills:'قراءة · استماع · نطق · كتابة',
+    backTitle:'عن Kids Learning Hub', backText:'منصّة تعلّم متعدّدة اللغات وودّية من VS MEDIA. رياضيات وعلوم وبرمجة وجغرافيا و6 لغات — دون إنترنت، لعقول صغيرة.',
+    backFree:'كل التطبيقات مجانية على Google Play', appsT:'تطبيقاتنا التعليمية', appsMore:'المزيد من التطبيقات', scanExplore:'امسح لاستكشاف وتحميل التطبيقات العشرة',
+    labels:{front:'الغلاف الأمامي',back:'الغلاف الخلفي',flap:'اللسان الداخلي',inside:'الداخل'},
+    print:'طباعة', printAll:'طباعة الأربع', tw:'مطوية ثلاثية الطيّ',
+    hint:'مطوية ثلاثية الطيّ، صفحتان. اطبع على الوجهين (الحافة القصيرة) ثم اطوِها أثلاثًا.'},
+};
+
+const ORDER = ['en','fr','es','ar'];
+let lang = 'en';
+const ckSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>';
+const gpSvg = '<svg viewBox="0 0 512 512" width="10" height="11" aria-hidden="true"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg>';
+
+function tapp(a,lg){
+  const id = a.file.replace('.png','');
+  return `<div class="tapp">
+    <div class="ic" style="background:${a.color}">${a.emoji||''}<img src="logos/${a.file}" alt="${a.name}" onerror="this.remove()"></div>
+    <div class="tx">
+      <div class="nm"><b>${a.name}</b><span class="subj" style="background:${a.color}">${a.subj[lg]}</span></div>
+      <p class="desc">${a.desc[lg]}</p>
+      <span class="gp">${gpSvg} Google Play</span>
+    </div>
+    <img class="miniqr" src="qr/${id}.svg" alt="QR ${a.name} on Google Play" title="${a.name} · Google Play">
+  </div>`;
+}
+
+function setHTML(lg){
+  const t = L[lg];
+  const badges = t.badges.map(b=>`<li><span class="ck">${ckSvg}</span>${b}</li>`).join('');
+  const front = `
+    <div class="panel front"><span class="plabel">${t.labels.front}</span>
+      <img class="logo" src="logos/hub-logo.png" alt="Kids Learning Hub">
+      <div class="brand">Kids Learning Hub</div>
+      <div class="ftag">${t.tagline}</div>
+      <div class="cline">${t.coverLine}</div>
+      <div class="qrcard"><img src="qr.svg" alt="QR ${SITE}"><div class="scan">${t.scanCover}</div><div class="u">${SITE}</div></div>
+    </div>`;
+  const back = `
+    <div class="panel back"><span class="plabel">${t.labels.back}</span>
+      <div>
+        <div class="bhead"><img src="logos/hub-logo.png" alt=""><b>Kids Learning Hub</b></div>
+        <p>${t.backText}</p>
+        <span class="freechip">${gpSvg} ${t.backFree}</span>
+        <div class="contact"><div class="u">${SITE}</div><div>vs.media.ste@gmail.com</div></div>
+      </div>
+      <div class="copy">© 2026 VS MEDIA </div>
+    </div>`;
+  const flap = `
+    <div class="panel flap"><span class="plabel">${t.labels.flap}</span>
+      <div class="p-t">${t.flapTitle}</div>
+      <ul class="flist">${badges}</ul>
+      <div class="skillbox"><b>${t.skillsTitle}</b><span>${t.skills}</span></div>
+      <div class="ctabox">${t.flapCta}</div>
+    </div>`;
+  const in1 = `<div class="panel"><span class="plabel">${t.labels.inside} 1</span><div class="p-t">${t.appsT}</div><div class="tapps fill">${APPS.slice(0,4).map(a=>tapp(a,lg)).join('')}</div></div>`;
+  const in2 = `<div class="panel"><span class="plabel">${t.labels.inside} 2</span><div class="p-t">${t.appsMore}</div><div class="tapps fill">${APPS.slice(4,8).map(a=>tapp(a,lg)).join('')}</div></div>`;
+  const in3 = `<div class="panel"><span class="plabel">${t.labels.inside} 3</span><div class="p-t">${t.appsMore}</div><div class="tapps">${APPS.slice(8,10).map(a=>tapp(a,lg)).join('')}</div>
+      <div class="skillbox" style="margin-top:5mm"><b>${t.skillsTitle}</b><span>${t.skills}</span></div>
+      <div class="qrcard" style="box-shadow:none;border:1.5px solid var(--line);margin-top:auto"><img src="qr.svg" alt="QR" style="width:38mm;height:38mm"><div class="scan">${t.scanExplore}</div><div class="u">${SITE}</div></div>
+    </div>`;
+  return `<div class="lgset ${lg===lang?'active':''}" data-lang="${lg}" dir="${t.dir}">
+    <div class="sheet outside">${flap}${back}${front}</div>
+    <div class="sheet inside">${in1}${in2}${in3}</div>
+  </div>`;
+}
+
+function render(){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = L[lang].dir;
+  document.getElementById('sets').innerHTML = ORDER.map(setHTML).join('');
+  document.getElementById('langsw').innerHTML = ORDER.map(lg=>
+    `<button class="${lg===lang?'active':''}" onclick="setLang('${lg}')">${L[lg].flag} ${L[lg].label}</button>`).join('');
+  document.getElementById('printLbl').textContent = L[lang].print;
+  document.getElementById('printAllLbl').textContent = L[lang].printAll;
+  document.getElementById('tw').textContent = L[lang].tw;
+  document.getElementById('hint').textContent = L[lang].hint;
+}
+function setLang(l){ lang=l; render(); }
+
+/* Fit the wide A4-landscape sheets to the screen (they print full size). */
+function fit(){
+  const sets = document.getElementById('sets');
+  sets.style.zoom = '1';
+  const avail = document.documentElement.clientWidth - 28;
+  sets.style.zoom = Math.min(1, avail / 1123);
+}
+function printOne(){ document.body.classList.remove('print-all'); document.getElementById('sets').style.zoom='1'; window.print(); }
+function printAll(){ document.body.classList.add('print-all'); document.getElementById('sets').style.zoom='1'; window.print(); }
+window.addEventListener('beforeprint',()=>{ document.getElementById('sets').style.zoom='1'; });
+window.addEventListener('afterprint',()=>{ document.body.classList.remove('print-all'); fit(); });
+window.addEventListener('resize', fit);
+
+render();
+fit();
+</script>
+</body>
+</html>

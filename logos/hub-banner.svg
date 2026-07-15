@@ -1,0 +1,111 @@
+<svg viewBox="0 0 1600 520" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', 'Baloo 2', Roboto, Arial, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CFE9FF"/>
+      <stop offset="0.55" stop-color="#EAF4FF"/>
+      <stop offset="1" stop-color="#FFF3CC"/>
+    </linearGradient>
+    <linearGradient id="pill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- background card -->
+  <rect x="6" y="6" width="1588" height="508" rx="46" fill="url(#sky)" stroke="#ffffff" stroke-width="10"/>
+
+  <!-- decorations -->
+  <g font-weight="900" opacity="0.95">
+    <text x="120" y="120" font-size="60" fill="#EF4444">1</text>
+    <text x="165" y="120" font-size="60" fill="#22C55E">2</text>
+    <text x="210" y="120" font-size="60" fill="#F59E0B">3</text>
+    <text x="1400" y="120" font-size="58" fill="#EC4899">A</text>
+    <text x="1448" y="120" font-size="58" fill="#22C55E">B</text>
+    <text x="1496" y="120" font-size="58" fill="#7C3AED">C</text>
+  </g>
+  <g fill="#FDE047" font-size="34">
+    <text x="300" y="180">★</text>
+    <text x="1290" y="185">★</text>
+    <text x="250" y="330">★</text>
+    <text x="1330" y="330">★</text>
+  </g>
+  <!-- lightbulb -->
+  <g transform="translate(760,66)">
+    <circle cx="0" cy="0" r="20" fill="#FACC15" stroke="#F59E0B" stroke-width="3"/>
+    <rect x="-9" y="16" width="18" height="10" rx="3" fill="#9CA3AF"/>
+    <g stroke="#FBBF24" stroke-width="4" stroke-linecap="round">
+      <line x1="0" y1="-32" x2="0" y2="-42"/>
+      <line x1="-26" y1="-18" x2="-34" y2="-24"/>
+      <line x1="26" y1="-18" x2="34" y2="-24"/>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <g text-anchor="middle" font-weight="900" paint-order="stroke" stroke="#ffffff" stroke-width="8" stroke-linejoin="round">
+    <text x="800" y="168" font-size="94">
+      <tspan fill="#2563EB">K</tspan><tspan fill="#F59E0B">i</tspan><tspan fill="#EC4899">d</tspan><tspan fill="#22C55E">s</tspan>
+    </text>
+    <text x="800" y="234" font-size="58" fill="#1E3A8A">Learning Hub</text>
+  </g>
+
+  <!-- tagline pill -->
+  <g filter="url(#soft)">
+    <rect x="540" y="256" width="520" height="46" rx="23" fill="url(#pill)"/>
+  </g>
+  <text x="800" y="287" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">Learn · Play · Grow · Succeed</text>
+
+  <!-- 7 subject circles -->
+  <g text-anchor="middle">
+    <!-- Math -->
+    <g transform="translate(440,378)">
+      <circle r="46" fill="#3B82F6" stroke="#fff" stroke-width="5" filter="url(#soft)"/>
+      <text y="10" font-size="28" font-weight="900" fill="#fff">123</text>
+    </g>
+    <text x="440" y="452" font-size="21" font-weight="800" fill="#1E3A8A">Math</text>
+
+    <!-- English -->
+    <g transform="translate(560,378)">
+      <circle r="46" fill="#DC2626" stroke="#fff" stroke-width="5" filter="url(#soft)"/>
+      <text y="10" font-size="27" font-weight="900" fill="#fff">ABC</text>
+    </g>
+    <text x="560" y="452" font-size="21" font-weight="800" fill="#1E3A8A">English</text>
+
+    <!-- Arabic -->
+    <g transform="translate(680,378)">
+      <circle r="46" fill="#16A34A" stroke="#fff" stroke-width="5" filter="url(#soft)"/>
+      <text y="14" font-size="40" font-weight="900" fill="#fff">ع</text>
+    </g>
+    <text x="680" y="452" font-size="21" font-weight="800" fill="#1E3A8A">العربية</text>
+
+    <!-- French -->
+    <g transform="translate(800,378)">
+      <circle r="46" fill="#2563EB" stroke="#fff" stroke-width="5" filter="url(#soft)"/>
+      <text y="12" font-size="34" font-weight="900" fill="#fff">Fr</text>
+    </g>
+    <text x="800" y="452" font-size="21" font-weight="800" fill="#1E3A8A">Français</text>
+
+    <!-- Spanish -->
+    <g transform="translate(920,378)">
+      <circle r="46" fill="#F59E0B" stroke="#fff" stroke-width="5" filter="url(#soft)"/>
+      <text y="12" font-size="34" font-weight="900" fill="#fff">Es</text>
+    </g>
+    <text x="920" y="452" font-size="21" font-weight="800" fill="#1E3A8A">Español</text>
+
+    <!-- Chinese -->
+    <g transform="translate(1040,378)">
+      <circle r="46" fill="#E11D48" stroke="#fff" stroke-width="5" filter="url(#soft)"/>
+      <text y="15" font-size="42" font-weight="900" fill="#fff">中</text>
+    </g>
+    <text x="1040" y="452" font-size="21" font-weight="800" fill="#1E3A8A">中文</text>
+
+    <!-- German (GermoKids brand: black + gold) -->
+    <g transform="translate(1160,378)">
+      <circle r="46" fill="#1A1A1A" stroke="#fff" stroke-width="5" filter="url(#soft)"/>
+      <text y="12" font-size="34" font-weight="900" fill="#FFCE00">De</text>
+    </g>
+    <text x="1160" y="452" font-size="21" font-weight="800" fill="#1E3A8A">Deutsch</text>
+  </g>
+</svg>
