@@ -32,12 +32,28 @@
 .letter-cell .big{font-size:44px;font-weight:800;color:#1E5BFF}
 .letter-cell .trace{font-size:40px;font-weight:800;color:#d7dff2;letter-spacing:8px;line-height:1.25}
 
-/* ── print: only the sheet ── */
+/* ── print: exactly one full A4 page, nothing else ── */
 @media print{
-  @page{size:A4;margin:10mm}
-  body{background:#fff!important}
+  @page{size:A4 portrait;margin:10mm}
+  html,body{margin:0!important;padding:0!important;background:#fff!important}
   body::before{display:none!important}
   .top,.crumbs,.controls,.appcta,.ad-slot,.foot,h1.pagetitle,.pagesub,.nlbox{display:none!important}
   .wrap{max-width:none;padding:0;margin:0}
-  .sheet{border:none;box-shadow:none;border-radius:0;max-width:none;padding:0}
+  /* stretch the sheet to the full printable area (297−2×10 = 277mm high) */
+  .sheet{
+    border:none;box-shadow:none;border-radius:0;max-width:none;padding:0;
+    height:275mm;overflow:hidden;
+    display:flex;flex-direction:column;
+    break-inside:avoid;page-break-inside:avoid;
+  }
+  /* distribute the problems evenly down the whole page */
+  .probs{flex:1;align-content:space-evenly;gap:0 26px}
+  .prob{font-size:15.5pt}
+  .prob .blank{min-width:52px}
+  .letters{flex:1;align-content:space-evenly;grid-template-columns:repeat(5,1fr);gap:10px}
+  .letter-cell .big{font-size:28pt}
+  .letter-cell .trace{font-size:24pt;letter-spacing:6px}
+  .sheet-title{font-size:17pt}
+  .namebar{font-size:11.5pt}
+  .sheet-foot{margin-top:8px}
 }
