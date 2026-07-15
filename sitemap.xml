@@ -518,6 +518,48 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/addition.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/subtraction.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/multiplication.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/missing-number.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.github.io/app/worksheets/arabic-letters.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.github.io/app/about.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://kids-learning-hub.github.io/app/privacy.html</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>yearly</changefreq>

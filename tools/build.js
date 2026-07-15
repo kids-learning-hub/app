@@ -302,7 +302,10 @@ let sm = `<?xml version="1.0" encoding="UTF-8"?>
 `;
 for (const lang of ORDER) sm += smEntry('', lang, 'weekly', lang === 'en' ? '0.8' : '0.7') + '\n';
 for (const art of CATALOGUE) for (const lang of ORDER) sm += smEntry(art.slug, lang, 'monthly', lang === 'en' ? '0.7' : '0.6') + '\n';
-for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'play/word-match.html']) {
+for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'play/word-match.html',
+                 'worksheets/', 'worksheets/addition.html', 'worksheets/subtraction.html',
+                 'worksheets/multiplication.html', 'worksheets/missing-number.html', 'worksheets/arabic-letters.html',
+                 'about.html']) {
   sm += `  <url>
     <loc>${BASE}/${p}</loc>
     <lastmod>${TODAY}</lastmod>

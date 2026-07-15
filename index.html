@@ -719,7 +719,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
             <div class="fc-top"><span class="feat-emoji">📋</span><a class="link" href="#" data-i="viewAll">View All →</a></div>
             <h3 data-i="wsTitle">Printable Worksheets</h3>
             <p data-i="wsDesc">Download and print high-quality worksheets for math, science, languages and more.</p>
-            <a class="btn-sm g-blue" href="#" data-i="wsBtn">Browse Worksheets</a>
+            <a class="btn-sm g-blue" href="worksheets/" data-i="wsBtn">Browse Worksheets</a>
           </article>
           <article class="feat-card">
             <div class="fc-top"><span class="feat-emoji">🎮</span><a class="link" href="#" data-i="viewAll">View All →</a></div>
@@ -934,11 +934,11 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
     </div>
     <div class="foot-col"><h4 data-i="footApps">Apps</h4><div id="footApps"></div></div>
     <div class="foot-col"><h4 data-i="footResources">Resources</h4>
-      <a href="blog/" data-i="fWorksheets">Worksheets</a><a href="play/" data-i="fGames">Games</a>
+      <a href="worksheets/" data-i="fWorksheets">Worksheets</a><a href="play/" data-i="fGames">Games</a>
       <a href="blog/easy-science-experiments-for-kids.html" data-i="fScience">Science</a><a href="blog/" data-i="fBlog">Blog</a>
     </div>
     <div class="foot-col"><h4 data-i="footSupport">Support</h4>
-      <a href="#" data-i="fAbout">About</a><a href="mailto:vs.media.ste@gmail.com" data-i="fContact">Contact</a>
+      <a href="about.html" data-i="fAbout">About</a><a href="mailto:vs.media.ste@gmail.com" data-i="fContact">Contact</a>
       <a href="privacy.html" data-i="fPrivacy">Privacy Policy</a><a href="privacy.html#terms" data-i="fTerms">Terms of Use</a>
     </div>
   </div>
@@ -1252,7 +1252,8 @@ function render(){
     if(k==='home') return '#top';
     if(k==='blog') return 'blog/' + (lang==='en'?'':lang+'/');
     if(k==='games') return 'play/' + (lang==='en'?'':'?lang='+lang);
-    return '#apps'; // subjects & worksheets point to the apps section
+    if(k==='worksheets') return 'worksheets/' + (lang==='en'?'':'?lang='+lang);
+    return '#apps'; // subjects point to the apps section
   };
   const navHtml = NAV_KEYS.map(k=>{
     const home = k==='home';

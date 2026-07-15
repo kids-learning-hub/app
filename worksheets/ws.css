@@ -1,0 +1,43 @@
+/* Kids Learning Hub — printable worksheets (loads after play/play.css) */
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:14px 0 20px}
+.controls .btn.level{background:var(--card2);border:2px solid var(--line);padding:10px 16px;font-size:15px;border-radius:14px}
+.controls .btn.level.active,.controls .btn.level:hover{border-color:var(--blue);color:var(--blue)}
+.controls .btn.action{background:var(--grad);color:#fff;padding:11px 20px;border-radius:14px}
+.controls .btn.print{background:var(--green);color:#fff;padding:11px 20px;border-radius:14px}
+
+/* ── A4 sheet ── */
+.sheet{
+  background:#fff;color:#16213E;max-width:794px;margin:0 auto;
+  border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);
+  padding:34px 38px;direction:ltr;
+}
+:root[data-theme="dark"] .sheet{border-color:#3a4a7a}
+.sheet-head{display:flex;align-items:center;gap:12px;border-bottom:3px solid #1E5BFF;padding-bottom:12px;margin-bottom:8px}
+.sheet-head img{width:46px;height:46px;object-fit:contain}
+.sheet-head .st{flex:1}
+.sheet-head .st b{font-family:"Baloo 2",sans-serif;font-size:19px;color:#1E5BFF;display:block;line-height:1.2}
+.sheet-head .st span{font-size:12px;color:#66799F}
+.sheet-title{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:22px;text-align:center;margin:10px 0 2px}
+.namebar{display:flex;gap:26px;justify-content:space-between;font-size:13.5px;color:#333;margin:10px 0 16px}
+.namebar span{flex:1;border-bottom:1.5px dotted #999;padding-bottom:2px;white-space:nowrap}
+.probs{display:grid;grid-template-columns:repeat(3,1fr);gap:13px 26px}
+.probs.two{grid-template-columns:repeat(2,1fr)}
+.prob{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.prob .pn{display:inline-block;min-width:26px;color:#8a97b8;font-size:13px;font-weight:800}
+.prob .blank{display:inline-block;min-width:44px;border-bottom:2px solid #444}
+.sheet-foot{margin-top:22px;padding-top:10px;border-top:1px solid #ddd;display:flex;justify-content:space-between;font-size:11.5px;color:#8a97b8}
+/* arabic letters sheet */
+.letters{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;direction:rtl}
+.letter-cell{border:1.5px dashed #b9c6e4;border-radius:10px;text-align:center;padding:6px 4px}
+.letter-cell .big{font-size:44px;font-weight:800;color:#1E5BFF}
+.letter-cell .trace{font-size:40px;font-weight:800;color:#d7dff2;letter-spacing:8px;line-height:1.25}
+
+/* ── print: only the sheet ── */
+@media print{
+  @page{size:A4;margin:10mm}
+  body{background:#fff!important}
+  body::before{display:none!important}
+  .top,.crumbs,.controls,.appcta,.ad-slot,.foot,h1.pagetitle,.pagesub,.nlbox{display:none!important}
+  .wrap{max-width:none;padding:0;margin:0}
+  .sheet{border:none;box-shadow:none;border-radius:0;max-width:none;padding:0}
+}
