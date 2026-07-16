@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../play/play.css" />
-<link rel="stylesheet" href="ws.css" />
+<link rel="stylesheet" href="ws.css?v=3" />
 </head>
 <body>
 
@@ -55,7 +55,7 @@
       <img src="../logos/hub-logo.png" alt="">
       <div class="st"><b>Kids Learning Hub</b><span>kids-learning-hub.github.io/app</span></div>
     </div>
-    <div class="sheet-title">الحروف العربية — تتبّع واكتب ✏️</div>
+    <div class="sheet-title" data-t="sheetTitle">الحروف العربية — تتبّع واكتب ✏️</div>
     <div class="namebar">
       <span><span data-t="name">Name</span>: </span>
       <span><span data-t="date">Date</span>: </span>
@@ -82,10 +82,10 @@
 <script src="../play/play.js"></script>
 <script>
 const STR = {
-  en:{home:'Home',worksheets:'Worksheets',title:'Arabic letters',h1:'Arabic alphabet tracing — all 28 letters',sub:'Big model letters with pale copies to trace over. Print or save as PDF.',print:'Print',name:'Name',date:'Date',footL:'Free printable worksheets',ad:'Advertisement',cta:'Interactive letter tracing with instant feedback — learn Arabic by playing, offline and free on Google Play.'},
-  fr:{home:'Accueil',worksheets:'Fiches',title:'Lettres arabes',h1:'Alphabet arabe à tracer — les 28 lettres',sub:'Grandes lettres modèles avec copies pâles à repasser. Imprimez ou enregistrez en PDF.',print:'Imprimer',name:'Nom',date:'Date',footL:'Fiches gratuites à imprimer',ad:'Publicité',cta:'Tracé interactif des lettres avec correction immédiate — apprends l’arabe en jouant, hors ligne et gratuit sur Google Play.'},
-  es:{home:'Inicio',worksheets:'Fichas',title:'Letras árabes',h1:'Alfabeto árabe para trazar — las 28 letras',sub:'Letras modelo grandes con copias pálidas para repasar. Imprime o guarda como PDF.',print:'Imprimir',name:'Nombre',date:'Fecha',footL:'Fichas gratis para imprimir',ad:'Publicidad',cta:'Trazado interactivo de letras con corrección inmediata — aprende árabe jugando, sin conexión y gratis en Google Play.'},
-  ar:{home:'الرئيسية',worksheets:'أوراق العمل',title:'الحروف العربية',h1:'تتبّع الحروف العربية — الحروف الـ28 كاملة',sub:'حروف نموذجية كبيرة مع نسخ باهتة يمرّر الطفل قلمه فوقها. اطبع أو احفظ PDF.',print:'اطبع',name:'الاسم',date:'التاريخ',footL:'أوراق عمل مجانية للطباعة',ad:'إعلان',cta:'تتبّع تفاعلي للحروف مع تصحيح فوري — تعلّم العربية باللعب، دون إنترنت ومجانًا على Google Play.'}
+  en:{home:'Home',worksheets:'Worksheets',title:'Arabic letters',sheetTitle:'Arabic letters — trace and write ✏️',h1:'Arabic alphabet tracing — all 28 letters',sub:'Big model letters with pale copies to trace over. Print or save as PDF.',print:'Print',name:'Name',date:'Date',footL:'Free printable worksheets',ad:'Advertisement',cta:'Interactive letter tracing with instant feedback — learn Arabic by playing, offline and free on Google Play.'},
+  fr:{home:'Accueil',worksheets:'Fiches',title:'Lettres arabes',sheetTitle:'Lettres arabes — trace et écris ✏️',h1:'Alphabet arabe à tracer — les 28 lettres',sub:'Grandes lettres modèles avec copies pâles à repasser. Imprimez ou enregistrez en PDF.',print:'Imprimer',name:'Nom',date:'Date',footL:'Fiches gratuites à imprimer',ad:'Publicité',cta:'Tracé interactif des lettres avec correction immédiate — apprends l’arabe en jouant, hors ligne et gratuit sur Google Play.'},
+  es:{home:'Inicio',worksheets:'Fichas',title:'Letras árabes',sheetTitle:'Letras árabes — traza y escribe ✏️',h1:'Alfabeto árabe para trazar — las 28 letras',sub:'Letras modelo grandes con copias pálidas para repasar. Imprime o guarda como PDF.',print:'Imprimir',name:'Nombre',date:'Fecha',footL:'Fichas gratis para imprimir',ad:'Publicidad',cta:'Trazado interactivo de letras con corrección inmediata — aprende árabe jugando, sin conexión y gratis en Google Play.'},
+  ar:{home:'الرئيسية',worksheets:'أوراق العمل',title:'الحروف العربية',sheetTitle:'الحروف العربية — تتبّع واكتب ✏️',h1:'تتبّع الحروف العربية — الحروف الـ28 كاملة',sub:'حروف نموذجية كبيرة مع نسخ باهتة يمرّر الطفل قلمه فوقها. اطبع أو احفظ PDF.',print:'اطبع',name:'الاسم',date:'التاريخ',footL:'أوراق عمل مجانية للطباعة',ad:'إعلان',cta:'تتبّع تفاعلي للحروف مع تصحيح فوري — تعلّم العربية باللعب، دون إنترنت ومجانًا على Google Play.'}
 };
 PLAY.init(l=>{ PLAY.applyStrings(STR[l]||STR.en); });
 document.getElementById('printSheet').addEventListener('click',()=>window.print());

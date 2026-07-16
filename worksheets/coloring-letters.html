@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../play/play.css" />
-<link rel="stylesheet" href="ws.css" />
+<link rel="stylesheet" href="ws.css?v=3" />
 </head>
 <body>
 
@@ -47,9 +47,9 @@
   <p class="pagesub" style="color:var(--muted);font-weight:700" data-t="sub">Pick a letter or number — it fills the whole A4 page as an outline to color in.</p>
 
   <div class="controls" style="flex-direction:column">
-    <div class="picker" id="pickerAZ"></div>
-    <div class="picker" id="picker09"></div>
-    <div class="picker" id="pickerAR"></div>
+    <div class="picker" id="pickerAZ" style="direction:ltr"></div>
+    <div class="picker" id="picker09" style="direction:ltr"></div>
+    <div class="picker" id="pickerAR" style="direction:rtl"></div>
     <button class="btn print" id="printSheet">🖨️ <span data-t="print">Print</span></button>
   </div>
 

@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../play/play.css" />
-<link rel="stylesheet" href="ws.css" />
+<link rel="stylesheet" href="ws.css?v=3" />
 </head>
 <body>
 
@@ -55,7 +55,7 @@
       <img src="../logos/hub-logo.png" alt="">
       <div class="st"><b>Kids Learning Hub</b><span>kids-learning-hub.github.io/app</span></div>
     </div>
-    <div class="sheet-title">ABC — Trace the letters ✏️</div>
+    <div class="sheet-title" data-t="sheetTitle">ABC — Trace the letters ✏️</div>
     <div class="namebar">
       <span><span data-t="name">Name</span>: </span>
       <span><span data-t="date">Date</span>: </span>
@@ -82,10 +82,10 @@
 <script src="../play/play.js"></script>
 <script>
 const STR = {
-  en:{home:'Home',worksheets:'Worksheets',title:'ABC letters',h1:'ABC tracing — all 26 letters, big and small',sub:'Model letters with pale copies to trace over — for English, French, Spanish and German. Print or save as PDF.',print:'Print',name:'Name',date:'Date',footL:'Free printable worksheets',ad:'Advertisement',cta:'Interactive letters, words and stories — learn English by playing, offline and free on Google Play.'},
-  fr:{home:'Accueil',worksheets:'Fiches',title:'Lettres ABC',h1:'Alphabet à tracer — les 26 lettres, majuscules et minuscules',sub:'Lettres modèles avec copies pâles à repasser — pour l’anglais, le français, l’espagnol et l’allemand.',print:'Imprimer',name:'Nom',date:'Date',footL:'Fiches gratuites à imprimer',ad:'Publicité',cta:'Lettres, mots et histoires interactifs — apprends l’anglais en jouant, hors ligne et gratuit sur Google Play.'},
-  es:{home:'Inicio',worksheets:'Fichas',title:'Letras ABC',h1:'Alfabeto para trazar — las 26 letras, mayúsculas y minúsculas',sub:'Letras modelo con copias pálidas para repasar — para inglés, francés, español y alemán.',print:'Imprimir',name:'Nombre',date:'Fecha',footL:'Fichas gratis para imprimir',ad:'Publicidad',cta:'Letras, palabras e historias interactivas — aprende inglés jugando, sin conexión y gratis en Google Play.'},
-  ar:{home:'الرئيسية',worksheets:'أوراق العمل',title:'الحروف اللاتينية',h1:'تتبّع الحروف اللاتينية — 26 حرفًا كبيرًا وصغيرًا',sub:'حروف نموذجية مع نسخ باهتة للتتبّع — للإنجليزية والفرنسية والإسبانية والألمانية.',print:'اطبع',name:'الاسم',date:'التاريخ',footL:'أوراق عمل مجانية للطباعة',ad:'إعلان',cta:'حروف وكلمات وقصص تفاعلية — تعلّم الإنجليزية باللعب، دون إنترنت ومجانًا على Google Play.'}
+  en:{home:'Home',worksheets:'Worksheets',title:'ABC letters',sheetTitle:'ABC — Trace the letters ✏️',h1:'ABC tracing — all 26 letters, big and small',sub:'Model letters with pale copies to trace over — for English, French, Spanish and German. Print or save as PDF.',print:'Print',name:'Name',date:'Date',footL:'Free printable worksheets',ad:'Advertisement',cta:'Interactive letters, words and stories — learn English by playing, offline and free on Google Play.'},
+  fr:{home:'Accueil',worksheets:'Fiches',title:'Lettres ABC',sheetTitle:'ABC — Trace les lettres ✏️',h1:'Alphabet à tracer — les 26 lettres, majuscules et minuscules',sub:'Lettres modèles avec copies pâles à repasser — pour l’anglais, le français, l’espagnol et l’allemand.',print:'Imprimer',name:'Nom',date:'Date',footL:'Fiches gratuites à imprimer',ad:'Publicité',cta:'Lettres, mots et histoires interactifs — apprends l’anglais en jouant, hors ligne et gratuit sur Google Play.'},
+  es:{home:'Inicio',worksheets:'Fichas',title:'Letras ABC',sheetTitle:'ABC — Traza las letras ✏️',h1:'Alfabeto para trazar — las 26 letras, mayúsculas y minúsculas',sub:'Letras modelo con copias pálidas para repasar — para inglés, francés, español y alemán.',print:'Imprimir',name:'Nombre',date:'Fecha',footL:'Fichas gratis para imprimir',ad:'Publicidad',cta:'Letras, palabras e historias interactivas — aprende inglés jugando, sin conexión y gratis en Google Play.'},
+  ar:{home:'الرئيسية',worksheets:'أوراق العمل',title:'الحروف اللاتينية',sheetTitle:'ABC — تتبّع الحروف ✏️',h1:'تتبّع الحروف اللاتينية — 26 حرفًا كبيرًا وصغيرًا',sub:'حروف نموذجية مع نسخ باهتة للتتبّع — للإنجليزية والفرنسية والإسبانية والألمانية.',print:'اطبع',name:'الاسم',date:'التاريخ',footL:'أوراق عمل مجانية للطباعة',ad:'إعلان',cta:'حروف وكلمات وقصص تفاعلية — تعلّم الإنجليزية باللعب، دون إنترنت ومجانًا على Google Play.'}
 };
 PLAY.init(l=>{ PLAY.applyStrings(STR[l]||STR.en); });
 document.getElementById('printSheet').addEventListener('click',()=>window.print());

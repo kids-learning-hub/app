@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../play/play.css" />
-<link rel="stylesheet" href="ws.css" />
+<link rel="stylesheet" href="ws.css?v=3" />
 </head>
 <body>
 
@@ -55,7 +55,7 @@
       <img src="../logos/hub-logo.png" alt="">
       <div class="st"><b>Kids Learning Hub</b><span>kids-learning-hub.github.io/app</span></div>
     </div>
-    <div class="sheet-title">0 1 2 3… — Trace the numbers ✏️</div>
+    <div class="sheet-title" data-t="sheetTitle">0 1 2 3… — Trace the numbers ✏️</div>
     <div class="namebar">
       <span><span data-t="name">Name</span>: </span>
       <span><span data-t="date">Date</span>: </span>
@@ -82,10 +82,10 @@
 <script src="../play/play.js"></script>
 <script>
 const STR = {
-  en:{home:'Home',worksheets:'Worksheets',title:'Numbers',h1:'Number tracing 0–9 — with counting dots',sub:'Each digit with dots to count and pale models to trace over. Print or save as PDF.',print:'Print',name:'Name',date:'Date',footL:'Free printable worksheets',ad:'Advertisement',cta:'First numbers, counting and more — learn by playing, offline and free on Google Play.'},
-  fr:{home:'Accueil',worksheets:'Fiches',title:'Chiffres',h1:'Chiffres à tracer 0–9 — avec points à compter',sub:'Chaque chiffre avec des points à compter et des modèles pâles à repasser. Imprimez ou enregistrez en PDF.',print:'Imprimer',name:'Nom',date:'Date',footL:'Fiches gratuites à imprimer',ad:'Publicité',cta:'Premiers nombres, comptage et plus — apprends en jouant, hors ligne et gratuit sur Google Play.'},
-  es:{home:'Inicio',worksheets:'Fichas',title:'Números',h1:'Números para trazar 0–9 — con puntos para contar',sub:'Cada número con puntos para contar y modelos pálidos para repasar. Imprime o guarda como PDF.',print:'Imprimir',name:'Nombre',date:'Fecha',footL:'Fichas gratis para imprimir',ad:'Publicidad',cta:'Primeros números, contar y más — aprende jugando, sin conexión y gratis en Google Play.'},
-  ar:{home:'الرئيسية',worksheets:'أوراق العمل',title:'الأرقام',h1:'تتبّع الأرقام 0–9 — مع نقاط للعدّ',sub:'كل رقم مع نقاط يعدّها الطفل ونماذج باهتة يتتبّعها. اطبع أو احفظ PDF.',print:'اطبع',name:'الاسم',date:'التاريخ',footL:'أوراق عمل مجانية للطباعة',ad:'إعلان',cta:'الأرقام الأولى والعدّ وأكثر — تعلّم باللعب، دون إنترنت ومجانًا على Google Play.'}
+  en:{home:'Home',worksheets:'Worksheets',title:'Numbers',sheetTitle:'0 1 2 3… — Trace the numbers ✏️',h1:'Number tracing 0–9 — with counting dots',sub:'Each digit with dots to count and pale models to trace over. Print or save as PDF.',print:'Print',name:'Name',date:'Date',footL:'Free printable worksheets',ad:'Advertisement',cta:'First numbers, counting and more — learn by playing, offline and free on Google Play.'},
+  fr:{home:'Accueil',worksheets:'Fiches',title:'Chiffres',sheetTitle:'0 1 2 3… — Trace les chiffres ✏️',h1:'Chiffres à tracer 0–9 — avec points à compter',sub:'Chaque chiffre avec des points à compter et des modèles pâles à repasser. Imprimez ou enregistrez en PDF.',print:'Imprimer',name:'Nom',date:'Date',footL:'Fiches gratuites à imprimer',ad:'Publicité',cta:'Premiers nombres, comptage et plus — apprends en jouant, hors ligne et gratuit sur Google Play.'},
+  es:{home:'Inicio',worksheets:'Fichas',title:'Números',sheetTitle:'0 1 2 3… — Traza los números ✏️',h1:'Números para trazar 0–9 — con puntos para contar',sub:'Cada número con puntos para contar y modelos pálidos para repasar. Imprime o guarda como PDF.',print:'Imprimir',name:'Nombre',date:'Fecha',footL:'Fichas gratis para imprimir',ad:'Publicidad',cta:'Primeros números, contar y más — aprende jugando, sin conexión y gratis en Google Play.'},
+  ar:{home:'الرئيسية',worksheets:'أوراق العمل',title:'الأرقام',sheetTitle:'0 1 2 3… — تتبّع الأرقام ✏️',h1:'تتبّع الأرقام 0–9 — مع نقاط للعدّ',sub:'كل رقم مع نقاط يعدّها الطفل ونماذج باهتة يتتبّعها. اطبع أو احفظ PDF.',print:'اطبع',name:'الاسم',date:'التاريخ',footL:'أوراق عمل مجانية للطباعة',ad:'إعلان',cta:'الأرقام الأولى والعدّ وأكثر — تعلّم باللعب، دون إنترنت ومجانًا على Google Play.'}
 };
 PLAY.init(l=>{ PLAY.applyStrings(STR[l]||STR.en); });
 document.getElementById('printSheet').addEventListener('click',()=>window.print());
