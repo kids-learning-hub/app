@@ -26,6 +26,23 @@
     document.querySelectorAll('.langsw a[data-l]').forEach(a=>{
       a.addEventListener('click', ()=>{ try{ localStorage.setItem('vsm_lang', a.dataset.l); }catch(e){} });
     });
+    // collapse the language row into a dropdown so all languages fit on phones
+    const sw = document.querySelector('.langsw');
+    if(sw && !sw.classList.contains('dd')){
+      sw.classList.add('dd');
+      const panel = document.createElement('div');
+      panel.className = 'langsw-panel';
+      [...sw.children].forEach(el=>panel.appendChild(el));
+      const active = panel.querySelector('.active');
+      const cur = document.createElement('button');
+      cur.type = 'button';
+      cur.className = 'langsw-cur';
+      cur.textContent = active ? active.textContent : (document.documentElement.lang||'en').toUpperCase();
+      cur.addEventListener('click', e=>{ e.stopPropagation(); sw.classList.toggle('open'); });
+      sw.appendChild(cur);
+      sw.appendChild(panel);
+      document.addEventListener('click', e=>{ if(!sw.contains(e.target)) sw.classList.remove('open'); });
+    }
   });
   window.addEventListener('load', initAds);
 })();

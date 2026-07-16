@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'learn-chinese-kids', date: '2026-07-16',
+    emoji: '🐼', grad: 'linear-gradient(135deg,#FFB84D,#E53935)', tagColor: '#E53935', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'The Ultimate Guide to Teaching Chinese to Kids at Home',
+      fr: 'Le guide complet pour enseigner le chinois aux enfants à la maison',
+      es: 'La guía definitiva para enseñar chino a los niños en casa',
+      ar: 'الدليل الشامل لتعليم اللغة الصينية للأطفال في المنزل بسهولة' },
+    excerpt: {
+      en: 'Discover how interactive games, simple songs, and playful apps can make learning Chinese (Mandarin) an exciting and easy adventure.',
+      fr: 'Découvrez comment les jeux interactifs, les chansons et les applications font de l\'apprentissage du chinois une aventure passionnante.',
+      es: 'Descubre cómo los juegos interactivos, canciones y aplicaciones lúdicas hacen que aprender chino mandarín sea fácil y divertido.',
+      ar: 'اكتشف كيف يمكن للألعاب التفاعلية والأناشيد البسيطة أن تجعل تعلم اللغة الصينية تجربة ممتعة وسهلة لطفلك.' },
+  },
+  {
     slug: 'kids-english-games', date: '2026-07-15',
     emoji: '🇬🇧', grad: 'linear-gradient(135deg,#FF7E7E,#FF4B4B)', tagColor: '#FF4B4B', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },

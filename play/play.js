@@ -18,18 +18,40 @@
     let saved = null; try{ saved = localStorage.getItem('vsm_lang'); }catch(e){}
     setLang(['en','fr','es','ar'].includes(p) ? p : (['en','fr','es','ar'].includes(saved) ? saved : 'en'));
 
-    document.querySelectorAll('.langsw button').forEach(b=>{
-      b.addEventListener('click', ()=>{ try{ localStorage.setItem('vsm_lang', b.dataset.l); }catch(e){} setLang(b.dataset.l); });
+    document.querySelectorAll('.langsw button[data-l]').forEach(b=>{
+      b.addEventListener('click', ()=>{ try{ localStorage.setItem('vsm_lang', b.dataset.l); }catch(e){} setLang(b.dataset.l); closeDd(); });
     });
+    buildDd();
   };
 
   function setLang(l){
     lang = l;
     document.documentElement.lang = l;
     document.documentElement.dir = (l === 'ar') ? 'rtl' : 'ltr';
-    document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active', b.dataset.l===l));
+    document.querySelectorAll('.langsw button[data-l]').forEach(b=>b.classList.toggle('active', b.dataset.l===l));
+    const cur = document.querySelector('.langsw-cur');
+    if(cur) cur.textContent = l.toUpperCase();
     if(onLang) onLang(l);
   }
+
+  /* collapse the language row into a dropdown so all languages fit on phones */
+  function buildDd(){
+    const sw = document.querySelector('.langsw');
+    if(!sw || sw.classList.contains('dd')) return;
+    sw.classList.add('dd');
+    const panel = document.createElement('div');
+    panel.className = 'langsw-panel';
+    [...sw.children].forEach(el=>panel.appendChild(el));
+    const cur = document.createElement('button');
+    cur.type = 'button';
+    cur.className = 'langsw-cur';
+    cur.textContent = lang.toUpperCase();
+    cur.addEventListener('click', e=>{ e.stopPropagation(); sw.classList.toggle('open'); });
+    sw.appendChild(cur);
+    sw.appendChild(panel);
+    document.addEventListener('click', e=>{ if(!sw.contains(e.target)) sw.classList.remove('open'); });
+  }
+  function closeDd(){ const sw=document.querySelector('.langsw'); if(sw) sw.classList.remove('open'); }
 
   PLAY.lang = ()=>lang;
 
