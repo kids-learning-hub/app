@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'positive-parenting-digital-age', date: '2026-07-18',
+    emoji: '🌱', grad: 'linear-gradient(135deg,#FFD84D,#FF8A00)', tagColor: '#FF8A00', tagClass: 'tips',
+    tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
+    cardTitle: {
+      en: 'Positive Parenting in the Digital Age: Raising Confident Learners',
+      fr: "L'éducation positive à l'ère du numérique : élever des enfants épanouis",
+      es: 'Crianza positiva en la era digital: cómo criar niños seguros y curiosos',
+      ar: 'التربية الإيجابية في العصر الرقمي: دليل شامل لبناء شخصية طفلك وتنمية فضوله' },
+    excerpt: {
+      en: 'Discover how to foster emotional intelligence, manage screen time constructively, and turn digital play into active learning.',
+      fr: 'Apprenez à nourrir l\'intelligence émotionnelle de votre enfant, à gérer les écrans et à transformer la technologie en moteur d\'apprentissage.',
+      es: 'Descubre cómo fomentar la inteligencia emocional, gestionar el tiempo de pantalla y convertir el juego digital en aprendizaje activo.',
+      ar: 'اكتشف الركائز الأساسية للتربية الإيجابية، وكيفية إدارة وقت الشاشات بذكاء وتحويل اللعب الرقمي إلى فرص لتعزيز ذكاء طفلك.' },
+  },
+  {
     slug: 'geography-importance-kids', date: '2026-07-17',
     emoji: '🌍', grad: 'linear-gradient(135deg,#4FC3F7,#0288D1)', tagColor: '#0288D1', tagClass: 'science',
     tagL: { en: 'Geography', fr: 'Géographie', es: 'Geografía', ar: 'جغرافيا' },
