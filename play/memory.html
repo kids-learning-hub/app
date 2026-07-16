@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Memory Match — Free Online Memory Game for Kids | Kids Learning Hub</title>
+<meta name="description" content="Flip the cards and find the matching pairs! A free memory game for kids aged 4–10 that trains focus and short-term memory — no install, no sign-up." />
+<link rel="canonical" href="https://kids-learning-hub.cc/play/memory.html" />
+<meta name="theme-color" content="#1E5BFF" />
+<link rel="icon" href="../logos/hub-logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Kids Learning Hub" />
+<meta property="og:url" content="https://kids-learning-hub.cc/play/memory.html" />
+<meta property="og:title" content="Memory Match — Free Online Memory Game for Kids" />
+<meta property="og:description" content="Flip the cards, find the pairs, earn stars. Play free in your browser!" />
+<meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9202119066805107" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="play.css?v=2" />
+<style>
+.memgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:440px;margin:10px auto}
+.mcard{aspect-ratio:1;border-radius:16px;cursor:pointer;perspective:600px;background:none;padding:0}
+.mcard-in{position:relative;width:100%;height:100%;transition:transform .35s;transform-style:preserve-3d}
+.mcard.flip .mcard-in{transform:rotateY(180deg)}
+.mface{position:absolute;inset:0;border-radius:16px;display:grid;place-items:center;backface-visibility:hidden;font-size:clamp(26px,7vw,40px)}
+.mback{background:var(--grad);color:#fff;font-size:clamp(18px,5vw,26px)}
+.mfront{background:var(--card2);border:2px solid var(--line);transform:rotateY(180deg)}
+.mcard.done .mfront{border-color:var(--green);background:color-mix(in srgb,var(--green) 14%,var(--card2))}
+.mcard.done{cursor:default}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="../index.html"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <div class="top-actions">
+      <div class="langsw" role="group" aria-label="Language">
+        <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
+      </div>
+      <button class="icon-btn" aria-label="Dark mode" onclick="PLAY.toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="crumbs"><a href="../index.html" data-t="home">Home</a> › <a href="index.html" data-t="games">Games</a> › <span data-t="title">Memory Match</span></p>
+
+  <div class="gamecard">
+    <div class="gamehead">
+      <span class="gicon" style="background:linear-gradient(135deg,#FFD84D,#FF8A00)">🃏</span>
+      <div><h1 data-t="title">Memory Match</h1><p class="sub" data-t="sub">Flip the cards and find all the pairs!</p></div>
+    </div>
+
+    <div id="game">
+      <div class="hud"><span id="moves"></span><span id="found"></span></div>
+      <div class="memgrid" id="grid"></div>
+    </div>
+
+    <div id="end" hidden>
+      <div class="bigstars" id="bigstars"></div>
+      <div class="endscore" id="endscore"></div>
+      <p class="endmsg" id="endmsg"></p>
+      <div class="endbtns">
+        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=star" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="appcta">
+    <img src="../logos/hub-logo.png" alt="Kids Learning Hub">
+    <div><b data-t="ctaT">Train more skills!</b><p data-t="cta">Memory, logic, numbers and languages — 10 free apps, offline and safe on Google Play.</p></div>
+    <a class="btn primary" href="../index.html#apps" data-t="ctaBtn">See the apps</a>
+  </div>
+
+  <div class="ad-slot"><div class="ad-label" data-t="ad">Advertisement</div><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-format="auto" data-ad-client="ca-pub-9202119066805107" data-ad-slot="4620284747" data-full-width-responsive="true"></ins></div>
+</div>
+
+<footer class="foot">
+  <div class="fb">Kids Learning Hub</div>
+  <div style="opacity:.8">by VS MEDIA · <a href="../index.html" data-t="home">Home</a> · <a href="index.html" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
+</footer>
+
+<script src="play.js?v=2"></script>
+<script>
+const STR = {
+  en:{home:'Home',games:'Games',title:'Memory Match',sub:'Flip the cards and find all the pairs!',again:'Play again',moves:'Moves',found:'Pairs',good:'Amazing memory! 🧠🎉',ok:'Well done!',try:'Good job — try to use fewer moves!',cert:'Print your certificate!',ad:'Advertisement',ctaT:'Train more skills!',cta:'Memory, logic, numbers and languages — 10 free apps, offline and safe on Google Play.',ctaBtn:'See the apps'},
+  fr:{home:'Accueil',games:'Jeux',title:'Jeu de mémoire',sub:'Retourne les cartes et trouve toutes les paires !',again:'Rejouer',moves:'Coups',found:'Paires',good:'Mémoire incroyable ! 🧠🎉',ok:'Bien joué !',try:'Bravo — essaie avec moins de coups !',cert:'Imprime ton diplôme !',ad:'Publicité',ctaT:'Entraîne plus de talents !',cta:'Mémoire, logique, nombres et langues — 10 applis gratuites, hors ligne et sûres sur Google Play.',ctaBtn:'Voir les applis'},
+  es:{home:'Inicio',games:'Juegos',title:'Juego de memoria',sub:'¡Voltea las cartas y encuentra todas las parejas!',again:'Jugar otra vez',moves:'Turnos',found:'Parejas',good:'¡Memoria increíble! 🧠🎉',ok:'¡Bien hecho!',try:'¡Muy bien! Intenta usar menos turnos.',cert:'¡Imprime tu diploma!',ad:'Publicidad',ctaT:'¡Entrena más habilidades!',cta:'Memoria, lógica, números e idiomas — 10 apps gratis, sin conexión y seguras en Google Play.',ctaBtn:'Ver las apps'},
+  ar:{home:'الرئيسية',games:'الألعاب',title:'لعبة الذاكرة',sub:'اقلب البطاقات واعثر على كل الأزواج!',again:'العب مجددًا',moves:'محاولات',found:'أزواج',good:'ذاكرة مذهلة! 🧠🎉',ok:'أحسنت!',try:'رائع — حاول بعدد محاولات أقل!',cert:'اطبع شهادتك!',ad:'إعلان',ctaT:'درّب مهارات أكثر!',cta:'ذاكرة ومنطق وأرقام ولغات — 10 تطبيقات مجانية، دون إنترنت وآمنة على Google Play.',ctaBtn:'شاهد التطبيقات'}
+};
+const EMOJIS=['🍎','🐱','🚀','⭐','🐟','🌸','🎈','🦋','⚽','🍓','🐤','🌈'];
+let T=STR.en, moves=0, foundPairs=0, first=null, lock=false;
+
+PLAY.init(l=>{ T=STR[l]||STR.en; PLAY.applyStrings(T); updateHud(); });
+startGame();
+
+function startGame(){
+  moves=0; foundPairs=0; first=null; lock=false;
+  document.getElementById('end').hidden=true;
+  document.getElementById('game').hidden=false;
+  const six=PLAY.shuffle([...EMOJIS]).slice(0,6);
+  const deck=PLAY.shuffle([...six,...six]);
+  const grid=document.getElementById('grid'); grid.innerHTML='';
+  deck.forEach(e=>{
+    const b=document.createElement('button'); b.className='mcard'; b.dataset.e=e;
+    b.innerHTML=`<div class="mcard-in"><div class="mface mback">❓</div><div class="mface mfront">${e}</div></div>`;
+    b.onclick=()=>flip(b); grid.appendChild(b);
+  });
+  updateHud();
+}
+function updateHud(){
+  document.getElementById('moves').textContent=T.moves+': '+moves;
+  document.getElementById('found').textContent=T.found+': '+foundPairs+' / 6';
+}
+function flip(card){
+  if(lock||card.classList.contains('flip')||card.classList.contains('done')) return;
+  card.classList.add('flip');
+  if(!first){ first=card; return; }
+  moves++; updateHud();
+  const a=first, b=card; first=null;
+  if(a.dataset.e===b.dataset.e){
+    a.classList.add('done'); b.classList.add('done');
+    foundPairs++; updateHud();
+    if(foundPairs===6) setTimeout(endGame,500);
+  }else{
+    lock=true;
+    setTimeout(()=>{ a.classList.remove('flip'); b.classList.remove('flip'); lock=false; },800);
+  }
+}
+function endGame(){
+  document.getElementById('game').hidden=true;
+  document.getElementById('end').hidden=false;
+  const stars=moves<=9?3:moves<=13?2:1;
+  document.getElementById('bigstars').textContent='⭐'.repeat(stars)+'☆'.repeat(3-stars);
+  document.getElementById('endscore').textContent=moves+' 🔄';
+  document.getElementById('endmsg').textContent=stars===3?T.good:stars===2?T.ok:T.try;
+  document.getElementById('certLink').hidden = stars<3;
+  if(stars===3) PLAY.confetti();
+}
+</script>
+</body>
+</html>

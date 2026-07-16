@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What Time Is It? — Free Online Clock Reading Game for Kids | Kids Learning Hub</title>
+<meta name="description" content="Learn to tell time by playing! Read the analog clock and pick the right time — from whole hours to 5-minute steps. Free browser game for kids aged 6–10." />
+<link rel="canonical" href="https://kids-learning-hub.cc/play/clock-game.html" />
+<meta name="theme-color" content="#1E5BFF" />
+<link rel="icon" href="../logos/hub-logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Kids Learning Hub" />
+<meta property="og:url" content="https://kids-learning-hub.cc/play/clock-game.html" />
+<meta property="og:title" content="What Time Is It? — Free Online Clock Reading Game" />
+<meta property="og:description" content="Read the analog clock, pick the right time, earn stars. Play free!" />
+<meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9202119066805107" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="play.css?v=2" />
+<style>#clockBox svg{width:min(58vw,230px);height:auto;margin:6px auto}</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="../index.html"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <div class="top-actions">
+      <div class="langsw" role="group" aria-label="Language">
+        <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
+      </div>
+      <button class="icon-btn" aria-label="Dark mode" onclick="PLAY.toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="crumbs"><a href="../index.html" data-t="home">Home</a> › <a href="index.html" data-t="games">Games</a> › <span data-t="title">What time is it?</span></p>
+
+  <div class="gamecard">
+    <div class="gamehead">
+      <span class="gicon" style="background:linear-gradient(135deg,#49B6FF,#1E5BFF)">⏰</span>
+      <div><h1 data-t="title">What time is it?</h1><p class="sub" data-t="sub">Read the clock and pick the right time!</p></div>
+    </div>
+
+    <div id="setup">
+      <p class="pick" data-t="pick">Choose your level:</p>
+      <div class="choices tables" id="levelPick"></div>
+    </div>
+
+    <div id="game" hidden>
+      <div class="hud"><span id="progress"></span><span id="score">⭐ 0</span></div>
+      <div id="clockBox"></div>
+      <div class="choices answers" id="answers" dir="ltr"></div>
+      <div class="feedback" id="feedback">&nbsp;</div>
+    </div>
+
+    <div id="end" hidden>
+      <div class="bigstars" id="bigstars"></div>
+      <div class="endscore" id="endscore"></div>
+      <p class="endmsg" id="endmsg"></p>
+      <div class="endbtns">
+        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <button class="btn primary" onclick="startGame(currentStep)" data-t="again">Play again</button>
+        <button class="btn ghost" onclick="showSetup()" data-t="other">Another level</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="appcta">
+    <img src="../logos/mathokids.png" alt="MathoKids">
+    <div><b>MathoKids</b><p data-t="cta">More time, numbers and maths practice — offline, safe and free on Google Play.</p></div>
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
+  </div>
+
+  <div class="ad-slot"><div class="ad-label" data-t="ad">Advertisement</div><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-format="auto" data-ad-client="ca-pub-9202119066805107" data-ad-slot="4620284747" data-full-width-responsive="true"></ins></div>
+</div>
+
+<footer class="foot">
+  <div class="fb">Kids Learning Hub</div>
+  <div style="opacity:.8">by VS MEDIA · <a href="../index.html" data-t="home">Home</a> · <a href="index.html" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
+</footer>
+
+<script src="play.js?v=2"></script>
+<script>
+const STR = {
+  en:{home:'Home',games:'Games',title:'What time is it?',sub:'Read the clock and pick the right time!',pick:'Choose your level:',again:'Play again',other:'Another level',good:'Time master! ⏰🎉',ok:'Well done — keep practising!',try:'Good try — play once more!',correct:'Correct! 🎉',wrong:'Almost! It was',q:'Clock',cert:'Print your certificate!',ad:'Advertisement',cta:'More time, numbers and maths practice — offline, safe and free on Google Play.'},
+  fr:{home:'Accueil',games:'Jeux',title:'Quelle heure est-il ?',sub:'Lis l’horloge et choisis la bonne heure !',pick:'Choisis ton niveau :',again:'Rejouer',other:'Autre niveau',good:'Maître du temps ! ⏰🎉',ok:'Bien joué — continue !',try:'Bel essai — encore une fois !',correct:'Correct ! 🎉',wrong:'Presque ! C’était',q:'Horloge',cert:'Imprime ton diplôme !',ad:'Publicité',cta:'Encore plus d’heures, de nombres et de maths — hors ligne, sûr et gratuit sur Google Play.'},
+  es:{home:'Inicio',games:'Juegos',title:'¿Qué hora es?',sub:'¡Lee el reloj y elige la hora correcta!',pick:'Elige tu nivel:',again:'Jugar otra vez',other:'Otro nivel',good:'¡Maestro del tiempo! ⏰🎉',ok:'¡Bien hecho! Sigue practicando.',try:'Buen intento, ¡una vez más!',correct:'¡Correcto! 🎉',wrong:'¡Casi! Era',q:'Reloj',cert:'¡Imprime tu diploma!',ad:'Publicidad',cta:'Más horas, números y mates — sin conexión, seguro y gratis en Google Play.'},
+  ar:{home:'الرئيسية',games:'الألعاب',title:'كم الساعة؟',sub:'اقرأ الساعة واختر الوقت الصحيح!',pick:'اختر مستواك:',again:'العب مجددًا',other:'مستوى آخر',good:'سيّد الوقت! ⏰🎉',ok:'أحسنت — واصل التدريب!',try:'محاولة طيبة — جرّب مرة أخرى!',correct:'صحيح! 🎉',wrong:'قريب! كانت',q:'ساعة',cert:'اطبع شهادتك!',ad:'إعلان',cta:'مزيد من الوقت والأرقام والرياضيات — دون إنترنت، آمن ومجاني على Google Play.'}
+};
+let T=STR.en, currentStep=60, qi=0, score=0;
+
+PLAY.init(l=>{ T=STR[l]||STR.en; PLAY.applyStrings(T); renderLevels(); });
+
+function clockSvg(h,m){
+  const cx=50,cy=50,r=46; let t='';
+  for(let i=0;i<12;i++){
+    const a=i*Math.PI/6, x1=cx+Math.sin(a)*(r-4), y1=cy-Math.cos(a)*(r-4), x2=cx+Math.sin(a)*(r-8), y2=cy-Math.cos(a)*(r-8);
+    t+=`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="#8a97b8" stroke-width="2"/>`;
+    const nx=cx+Math.sin(a)*(r-14), ny=cy-Math.cos(a)*(r-14);
+    t+=`<text x="${nx.toFixed(1)}" y="${(ny+3.5).toFixed(1)}" text-anchor="middle" font-size="10" font-weight="800" fill="currentColor" font-family="Nunito,sans-serif">${i===0?12:i}</text>`;
+  }
+  const ha=((h%12)+m/60)*Math.PI/6, ma=m*Math.PI/30;
+  t+=`<line x1="${cx}" y1="${cy}" x2="${(cx+Math.sin(ha)*22).toFixed(1)}" y2="${(cy-Math.cos(ha)*22).toFixed(1)}" stroke="#1E5BFF" stroke-width="5.5" stroke-linecap="round"/>`;
+  t+=`<line x1="${cx}" y1="${cy}" x2="${(cx+Math.sin(ma)*33).toFixed(1)}" y2="${(cy-Math.cos(ma)*33).toFixed(1)}" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round"/>`;
+  return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="${cx}" cy="${cy}" r="${r}" fill="var(--card)" stroke="currentColor" stroke-width="3.5"/>${t}<circle cx="${cx}" cy="${cy}" r="3" fill="currentColor"/></svg>`;
+}
+const fmt=(h,m)=>h+':'+String(m).padStart(2,'0');
+
+function renderLevels(){
+  const box=document.getElementById('levelPick'); box.innerHTML='';
+  [[60,'⏰ :00'],[30,':30'],[15,':15'],[5,':05']].forEach(([s,lb])=>{
+    const b=document.createElement('button'); b.className='btn table'; b.textContent=lb;
+    b.onclick=()=>startGame(s); box.appendChild(b);
+  });
+}
+function startGame(step){
+  currentStep=step; qi=0; score=0;
+  document.getElementById('setup').hidden=true;
+  document.getElementById('end').hidden=true;
+  document.getElementById('game').hidden=false;
+  nextQ();
+}
+function showSetup(){
+  document.getElementById('end').hidden=true;
+  document.getElementById('game').hidden=true;
+  document.getElementById('setup').hidden=false;
+}
+function nextQ(){
+  if(qi>=10) return endGame();
+  const h=1+Math.floor(Math.random()*12);
+  const m=(currentStep===60)?0:Math.floor(Math.random()*(60/currentStep))*currentStep;
+  document.getElementById('progress').textContent=T.q+' '+(qi+1)+' / 10';
+  document.getElementById('score').textContent='⭐ '+score;
+  document.getElementById('clockBox').innerHTML=clockSvg(h,m);
+  document.getElementById('feedback').innerHTML='&nbsp;';
+  const good=fmt(h,m), opts=new Set([good]);
+  while(opts.size<4){
+    const dh=1+Math.floor(Math.random()*12);
+    const dm=(currentStep===60)?0:Math.floor(Math.random()*(60/currentStep))*currentStep;
+    opts.add(fmt(dh,dm));
+  }
+  const box=document.getElementById('answers'); box.innerHTML='';
+  PLAY.shuffle([...opts]).forEach(v=>{
+    const b=document.createElement('button'); b.className='btn answer'; b.textContent=v;
+    b.onclick=()=>answer(b,v,good); box.appendChild(b);
+  });
+}
+function answer(btn,v,good){
+  document.querySelectorAll('.answer').forEach(b=>b.disabled=true);
+  const fb=document.getElementById('feedback');
+  if(v===good){ score++; btn.classList.add('right'); fb.textContent=T.correct; }
+  else{ btn.classList.add('bad');
+    document.querySelectorAll('.answer').forEach(b=>{ if(b.textContent===good) b.classList.add('right'); });
+    fb.textContent=T.wrong+' '+good; }
+  qi++; setTimeout(nextQ,950);
+}
+function endGame(){
+  document.getElementById('game').hidden=true;
+  document.getElementById('end').hidden=false;
+  const stars=score>=9?3:score>=6?2:1;
+  document.getElementById('bigstars').textContent='⭐'.repeat(stars)+'☆'.repeat(3-stars);
+  document.getElementById('endscore').textContent=score+' / 10';
+  document.getElementById('endmsg').textContent=score>=9?T.good:score>=6?T.ok:T.try;
+  document.getElementById('certLink').hidden = score<9;
+  if(score>=9) PLAY.confetti();
+}
+</script>
+</body>
+</html>
