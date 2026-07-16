@@ -68,6 +68,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
+        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=tables" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame(currentTable)" data-t="again">Play again</button>
         <button class="btn ghost" onclick="showSetup()" data-t="other">Choose another table</button>
       </div>
@@ -92,10 +93,10 @@
 <script src="play.js"></script>
 <script>
 const STR = {
-  en:{home:'Home',games:'Games',title:'Times Tables Race',sub:'Answer 10 questions and earn your stars!',pick:'Which table do you want to practise?',mix:'Mix!',again:'Play again',other:'Choose another table',good:['Great job! 🎉','Awesome! 🚀','You rock! ⭐'],ok:'Well done — keep practising!',try:'Good try — play once more!',correct:'Correct! 🎉',wrong:'Almost! It was',q:'Question',ad:'Advertisement',cta:'Want more? Adaptive maths practice for kids — offline, safe and free on Google Play.'},
-  fr:{home:'Accueil',games:'Jeux',title:'La course des tables',sub:'Réponds à 10 questions et gagne tes étoiles !',pick:'Quelle table veux-tu réviser ?',mix:'Mélange !',again:'Rejouer',other:'Choisir une autre table',good:['Bravo ! 🎉','Génial ! 🚀','Champion ! ⭐'],ok:'Bien joué — continue !',try:'Bel essai — encore une fois !',correct:'Correct ! 🎉',wrong:'Presque ! C’était',q:'Question',ad:'Publicité',cta:'Tu en veux plus ? Un entraînement de maths adaptatif — hors ligne, sûr et gratuit sur Google Play.'},
-  es:{home:'Inicio',games:'Juegos',title:'La carrera de las tablas',sub:'¡Responde 10 preguntas y gana tus estrellas!',pick:'¿Qué tabla quieres practicar?',mix:'¡Mezcla!',again:'Jugar otra vez',other:'Elegir otra tabla',good:['¡Muy bien! 🎉','¡Genial! 🚀','¡Campeón! ⭐'],ok:'¡Bien hecho! Sigue practicando.',try:'Buen intento, ¡una vez más!',correct:'¡Correcto! 🎉',wrong:'¡Casi! Era',q:'Pregunta',ad:'Publicidad',cta:'¿Quieres más? Práctica de mates adaptativa — sin conexión, segura y gratis en Google Play.'},
-  ar:{home:'الرئيسية',games:'الألعاب',title:'سباق جداول الضرب',sub:'أجب عن 10 أسئلة واكسب نجومك!',pick:'أي جدول تريد التدرّب عليه؟',mix:'خليط!',again:'العب مجددًا',other:'اختر جدولًا آخر',good:['أحسنت! 🎉','رائع! 🚀','بطل! ⭐'],ok:'عمل جيد — واصل التدريب!',try:'محاولة طيبة — جرّب مرة أخرى!',correct:'صحيح! 🎉',wrong:'قريب! كانت',q:'سؤال',ad:'إعلان',cta:'تريد المزيد؟ تدريب رياضيات متكيّف — دون إنترنت، آمن ومجاني على Google Play.'}
+  en:{home:'Home',games:'Games',title:'Times Tables Race',sub:'Answer 10 questions and earn your stars!',pick:'Which table do you want to practise?',mix:'Mix!',again:'Play again',other:'Choose another table',good:['Great job! 🎉','Awesome! 🚀','You rock! ⭐'],ok:'Well done — keep practising!',try:'Good try — play once more!',correct:'Correct! 🎉',wrong:'Almost! It was',q:'Question',cert:'Print your certificate!',ad:'Advertisement',cta:'Want more? Adaptive maths practice for kids — offline, safe and free on Google Play.'},
+  fr:{home:'Accueil',games:'Jeux',title:'La course des tables',sub:'Réponds à 10 questions et gagne tes étoiles !',pick:'Quelle table veux-tu réviser ?',mix:'Mélange !',again:'Rejouer',other:'Choisir une autre table',good:['Bravo ! 🎉','Génial ! 🚀','Champion ! ⭐'],ok:'Bien joué — continue !',try:'Bel essai — encore une fois !',correct:'Correct ! 🎉',wrong:'Presque ! C’était',q:'Question',cert:'Imprime ton diplôme !',ad:'Publicité',cta:'Tu en veux plus ? Un entraînement de maths adaptatif — hors ligne, sûr et gratuit sur Google Play.'},
+  es:{home:'Inicio',games:'Juegos',title:'La carrera de las tablas',sub:'¡Responde 10 preguntas y gana tus estrellas!',pick:'¿Qué tabla quieres practicar?',mix:'¡Mezcla!',again:'Jugar otra vez',other:'Elegir otra tabla',good:['¡Muy bien! 🎉','¡Genial! 🚀','¡Campeón! ⭐'],ok:'¡Bien hecho! Sigue practicando.',try:'Buen intento, ¡una vez más!',correct:'¡Correcto! 🎉',wrong:'¡Casi! Era',q:'Pregunta',cert:'¡Imprime tu diploma!',ad:'Publicidad',cta:'¿Quieres más? Práctica de mates adaptativa — sin conexión, segura y gratis en Google Play.'},
+  ar:{home:'الرئيسية',games:'الألعاب',title:'سباق جداول الضرب',sub:'أجب عن 10 أسئلة واكسب نجومك!',pick:'أي جدول تريد التدرّب عليه؟',mix:'خليط!',again:'العب مجددًا',other:'اختر جدولًا آخر',good:['أحسنت! 🎉','رائع! 🚀','بطل! ⭐'],ok:'عمل جيد — واصل التدريب!',try:'محاولة طيبة — جرّب مرة أخرى!',correct:'صحيح! 🎉',wrong:'قريب! كانت',q:'سؤال',cert:'اطبع شهادتك!',ad:'إعلان',cta:'تريد المزيد؟ تدريب رياضيات متكيّف — دون إنترنت، آمن ومجاني على Google Play.'}
 };
 let T = STR.en, currentTable = 0, qi = 0, score = 0, questions = [];
 
@@ -165,6 +166,7 @@ function endGame(){
   document.getElementById('bigstars').textContent='⭐'.repeat(stars)+'☆'.repeat(3-stars);
   document.getElementById('endscore').textContent=score+' / 10';
   document.getElementById('endmsg').textContent=score>=9?T.good[Math.floor(Math.random()*T.good.length)]:score>=6?T.ok:T.try;
+  document.getElementById("certLink").hidden = score<9;
   if(score>=9) PLAY.confetti();
 }
 </script>

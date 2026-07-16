@@ -65,6 +65,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
+        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=words" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame(target)" data-t="again">Play again</button>
         <button class="btn ghost" onclick="showSetup()" data-t="other">Another language</button>
       </div>
@@ -89,10 +90,10 @@
 <script src="play.js"></script>
 <script>
 const STR = {
-  en:{home:'Home',games:'Games',title:'Word Match',sub:'Match the picture to the right word!',pick:'Which language do you want to learn?',again:'Play again',other:'Another language',good:'Word wizard! 🎉',ok:'Well done — keep going!',try:'Good try — play once more!',correct:'Correct! 🎉',wrong:'Almost! It was',q:'Word',ad:'Advertisement',cta:'Vocabulary, stories, dictation and games — learn a language by playing, offline and free on Google Play.'},
-  fr:{home:'Accueil',games:'Jeux',title:'Trouve le mot',sub:'Associe l’image au bon mot !',pick:'Quelle langue veux-tu apprendre ?',again:'Rejouer',other:'Autre langue',good:'Magicien des mots ! 🎉',ok:'Bien joué — continue !',try:'Bel essai — encore une fois !',correct:'Correct ! 🎉',wrong:'Presque ! C’était',q:'Mot',ad:'Publicité',cta:'Vocabulaire, histoires, dictées et jeux — apprends une langue en jouant, hors ligne et gratuit sur Google Play.'},
-  es:{home:'Inicio',games:'Juegos',title:'Une la palabra',sub:'¡Une la imagen con la palabra correcta!',pick:'¿Qué idioma quieres aprender?',again:'Jugar otra vez',other:'Otro idioma',good:'¡Mago de las palabras! 🎉',ok:'¡Bien hecho! Sigue así.',try:'Buen intento, ¡una vez más!',correct:'¡Correcto! 🎉',wrong:'¡Casi! Era',q:'Palabra',ad:'Publicidad',cta:'Vocabulario, cuentos, dictados y juegos — aprende un idioma jugando, sin conexión y gratis en Google Play.'},
-  ar:{home:'الرئيسية',games:'الألعاب',title:'طابِق الكلمة',sub:'طابِق الصورة مع الكلمة الصحيحة!',pick:'أي لغة تريد أن تتعلّم؟',again:'العب مجددًا',other:'لغة أخرى',good:'ساحر الكلمات! 🎉',ok:'أحسنت — واصل!',try:'محاولة طيبة — جرّب مرة أخرى!',correct:'صحيح! 🎉',wrong:'قريب! الكلمة هي',q:'كلمة',ad:'إعلان',cta:'مفردات وقصص وإملاء وألعاب — تعلّم لغة باللعب، دون إنترنت ومجانًا على Google Play.'}
+  en:{home:'Home',games:'Games',title:'Word Match',sub:'Match the picture to the right word!',pick:'Which language do you want to learn?',again:'Play again',other:'Another language',good:'Word wizard! 🎉',ok:'Well done — keep going!',try:'Good try — play once more!',correct:'Correct! 🎉',wrong:'Almost! It was',q:'Word',cert:'Print your certificate!',ad:'Advertisement',cta:'Vocabulary, stories, dictation and games — learn a language by playing, offline and free on Google Play.'},
+  fr:{home:'Accueil',games:'Jeux',title:'Trouve le mot',sub:'Associe l’image au bon mot !',pick:'Quelle langue veux-tu apprendre ?',again:'Rejouer',other:'Autre langue',good:'Magicien des mots ! 🎉',ok:'Bien joué — continue !',try:'Bel essai — encore une fois !',correct:'Correct ! 🎉',wrong:'Presque ! C’était',q:'Mot',cert:'Imprime ton diplôme !',ad:'Publicité',cta:'Vocabulaire, histoires, dictées et jeux — apprends une langue en jouant, hors ligne et gratuit sur Google Play.'},
+  es:{home:'Inicio',games:'Juegos',title:'Une la palabra',sub:'¡Une la imagen con la palabra correcta!',pick:'¿Qué idioma quieres aprender?',again:'Jugar otra vez',other:'Otro idioma',good:'¡Mago de las palabras! 🎉',ok:'¡Bien hecho! Sigue así.',try:'Buen intento, ¡una vez más!',correct:'¡Correcto! 🎉',wrong:'¡Casi! Era',q:'Palabra',cert:'¡Imprime tu diploma!',ad:'Publicidad',cta:'Vocabulario, cuentos, dictados y juegos — aprende un idioma jugando, sin conexión y gratis en Google Play.'},
+  ar:{home:'الرئيسية',games:'الألعاب',title:'طابِق الكلمة',sub:'طابِق الصورة مع الكلمة الصحيحة!',pick:'أي لغة تريد أن تتعلّم؟',again:'العب مجددًا',other:'لغة أخرى',good:'ساحر الكلمات! 🎉',ok:'أحسنت — واصل!',try:'محاولة طيبة — جرّب مرة أخرى!',correct:'صحيح! 🎉',wrong:'قريب! الكلمة هي',q:'كلمة',cert:'اطبع شهادتك!',ad:'إعلان',cta:'مفردات وقصص وإملاء وألعاب — تعلّم لغة باللعب، دون إنترنت ومجانًا على Google Play.'}
 };
 /* [emoji, en, fr, es, de, ar] */
 const WORDS=[
@@ -186,6 +187,7 @@ function endGame(){
   document.getElementById('bigstars').textContent='⭐'.repeat(stars)+'☆'.repeat(3-stars);
   document.getElementById('endscore').textContent=score+' / 10';
   document.getElementById('endmsg').textContent=score>=9?T.good:score>=6?T.ok:T.try;
+  document.getElementById("certLink").hidden = score<9;
   if(score>=9) PLAY.confetti();
 }
 </script>

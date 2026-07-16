@@ -60,6 +60,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
+        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=counting" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
       </div>
     </div>
@@ -83,10 +84,10 @@
 <script src="play.js"></script>
 <script>
 const STR = {
-  en:{home:'Home',games:'Games',title:'Quick Count',sub:'How many do you see? Tap the right number!',again:'Play again',good:'Amazing counting! 🎉',ok:'Well done — keep counting!',try:'Good try — play once more!',correct:'Yes! 🎉',wrong:'Almost! There were',q:'Round',ad:'Advertisement',cta:'First numbers, counting, addition and more — learn by playing, offline and free on Google Play.'},
-  fr:{home:'Accueil',games:'Jeux',title:'Compte vite',sub:'Combien en vois-tu ? Touche le bon nombre !',again:'Rejouer',good:'Super comptage ! 🎉',ok:'Bien joué — continue !',try:'Bel essai — encore une fois !',correct:'Oui ! 🎉',wrong:'Presque ! Il y en avait',q:'Manche',ad:'Publicité',cta:'Premiers nombres, comptage, additions et plus — apprends en jouant, hors ligne et gratuit sur Google Play.'},
-  es:{home:'Inicio',games:'Juegos',title:'Cuenta rápido',sub:'¿Cuántos ves? ¡Toca el número correcto!',again:'Jugar otra vez',good:'¡Cuentas genial! 🎉',ok:'¡Bien hecho! Sigue contando.',try:'Buen intento, ¡una vez más!',correct:'¡Sí! 🎉',wrong:'¡Casi! Había',q:'Ronda',ad:'Publicidad',cta:'Primeros números, contar, sumas y más — aprende jugando, sin conexión y gratis en Google Play.'},
-  ar:{home:'الرئيسية',games:'الألعاب',title:'العدّ السريع',sub:'كم ترى في الصورة؟ المس الرقم الصحيح!',again:'العب مجددًا',good:'عدّ رائع! 🎉',ok:'أحسنت — واصل العدّ!',try:'محاولة طيبة — جرّب مرة أخرى!',correct:'نعم! 🎉',wrong:'قريب! كان العدد',q:'جولة',ad:'إعلان',cta:'الأرقام الأولى والعدّ والجمع وأكثر — تعلّم باللعب، دون إنترنت ومجانًا على Google Play.'}
+  en:{home:'Home',games:'Games',title:'Quick Count',sub:'How many do you see? Tap the right number!',again:'Play again',good:'Amazing counting! 🎉',ok:'Well done — keep counting!',try:'Good try — play once more!',correct:'Yes! 🎉',wrong:'Almost! There were',q:'Round',cert:'Print your certificate!',ad:'Advertisement',cta:'First numbers, counting, addition and more — learn by playing, offline and free on Google Play.'},
+  fr:{home:'Accueil',games:'Jeux',title:'Compte vite',sub:'Combien en vois-tu ? Touche le bon nombre !',again:'Rejouer',good:'Super comptage ! 🎉',ok:'Bien joué — continue !',try:'Bel essai — encore une fois !',correct:'Oui ! 🎉',wrong:'Presque ! Il y en avait',q:'Manche',cert:'Imprime ton diplôme !',ad:'Publicité',cta:'Premiers nombres, comptage, additions et plus — apprends en jouant, hors ligne et gratuit sur Google Play.'},
+  es:{home:'Inicio',games:'Juegos',title:'Cuenta rápido',sub:'¿Cuántos ves? ¡Toca el número correcto!',again:'Jugar otra vez',good:'¡Cuentas genial! 🎉',ok:'¡Bien hecho! Sigue contando.',try:'Buen intento, ¡una vez más!',correct:'¡Sí! 🎉',wrong:'¡Casi! Había',q:'Ronda',cert:'¡Imprime tu diploma!',ad:'Publicidad',cta:'Primeros números, contar, sumas y más — aprende jugando, sin conexión y gratis en Google Play.'},
+  ar:{home:'الرئيسية',games:'الألعاب',title:'العدّ السريع',sub:'كم ترى في الصورة؟ المس الرقم الصحيح!',again:'العب مجددًا',good:'عدّ رائع! 🎉',ok:'أحسنت — واصل العدّ!',try:'محاولة طيبة — جرّب مرة أخرى!',correct:'نعم! 🎉',wrong:'قريب! كان العدد',q:'جولة',cert:'اطبع شهادتك!',ad:'إعلان',cta:'الأرقام الأولى والعدّ والجمع وأكثر — تعلّم باللعب، دون إنترنت ومجانًا على Google Play.'}
 };
 const THINGS=['🍎','🐤','⭐','🎈','🐟','🌸','🚗','🦋','🍓','⚽'];
 let T=STR.en, qi=0, score=0;
@@ -132,6 +133,7 @@ function endGame(){
   document.getElementById('bigstars').textContent='⭐'.repeat(stars)+'☆'.repeat(3-stars);
   document.getElementById('endscore').textContent=score+' / 10';
   document.getElementById('endmsg').textContent=score>=9?T.good:score>=6?T.ok:T.try;
+  document.getElementById("certLink").hidden = score<9;
   if(score>=9) PLAY.confetti();
 }
 </script>
