@@ -22,7 +22,7 @@ const path = require('path');
 const TOOLS = __dirname;
 const ROOT = path.resolve(TOOLS, '..');           // apps-site/
 const BLOG = path.join(ROOT, 'blog');
-const BASE = 'https://kids-learning-hub.github.io/app';
+const BASE = 'https://kids-learning-hub.cc';
 const OG_IMG = BASE + '/logos/og-share.png';
 const TODAY = new Date().toISOString().slice(0, 10);
 
@@ -277,6 +277,10 @@ ${CATALOGUE.map(a => pcard(a, lang)).join('\n\n')}
 console.log('✔ rebuilt 4 blog index pages');
 
 /* ── 3 · regenerate sitemap.xml ──────────────────────────────────────── */
+/* stories/ section slugs (pages generated separately; listed here for the sitemap) */
+const STORY_SLUGS = ['the-little-star', 'ziko-the-turtle', 'ant-and-the-rain'];
+function urlOfIn(section, slug, lang) { return BASE + '/' + section + '/' + LANGS[lang].folder + (slug ? slug + '.html' : ''); }
+
 function smEntry(slug, lang, changefreq, priority) {
   const alts = ORDER.map(l => `    <xhtml:link rel="alternate" hreflang="${l}" href="${urlOf(slug, l)}"/>`).join('\n')
     + `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${urlOf(slug, 'en')}"/>`;
@@ -285,6 +289,17 @@ function smEntry(slug, lang, changefreq, priority) {
     <lastmod>${TODAY}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
+${alts}
+  </url>`;
+}
+function smEntryIn(section, slug, lang) {
+  const alts = ORDER.map(l => `    <xhtml:link rel="alternate" hreflang="${l}" href="${urlOfIn(section, slug, l)}"/>`).join('\n')
+    + `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${urlOfIn(section, slug, 'en')}"/>`;
+  return `  <url>
+    <loc>${urlOfIn(section, slug, lang)}</loc>
+    <lastmod>${TODAY}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>${lang === 'en' ? '0.7' : '0.6'}</priority>
 ${alts}
   </url>`;
 }
@@ -302,12 +317,15 @@ let sm = `<?xml version="1.0" encoding="UTF-8"?>
 `;
 for (const lang of ORDER) sm += smEntry('', lang, 'weekly', lang === 'en' ? '0.8' : '0.7') + '\n';
 for (const art of CATALOGUE) for (const lang of ORDER) sm += smEntry(art.slug, lang, 'monthly', lang === 'en' ? '0.7' : '0.6') + '\n';
+for (const lang of ORDER) sm += smEntryIn('stories', '', lang) + '\n';
+for (const s of STORY_SLUGS) for (const lang of ORDER) sm += smEntryIn('stories', s, lang) + '\n';
 for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'play/word-match.html',
                  'worksheets/', 'worksheets/addition.html', 'worksheets/subtraction.html',
                  'worksheets/multiplication.html', 'worksheets/missing-number.html', 'worksheets/arabic-letters.html',
                  'worksheets/latin-letters.html', 'worksheets/numbers.html',
                  'worksheets/coloring.html', 'worksheets/coloring-letters.html',
                  'worksheets/certificates.html', 'worksheets/clock.html', 'worksheets/money.html',
+                 'worksheets/tables-poster.html',
                  'about.html']) {
   sm += `  <url>
     <loc>${BASE}/${p}</loc>
