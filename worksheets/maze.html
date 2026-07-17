@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Printable Maze Worksheets — Unlimited Maze Generator for Kids | Kids Learning Hub</title>
+<meta name="description" content="Print unlimited mazes for kids! Easy, medium or hard — every click generates a brand-new solvable maze on a full A4 page. Help the mouse reach the cheese. Free." />
+<link rel="canonical" href="https://kids-learning-hub.cc/worksheets/maze.html" />
+<meta name="theme-color" content="#1E5BFF" />
+<link rel="icon" href="../logos/hub-logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Kids Learning Hub" />
+<meta property="og:url" content="https://kids-learning-hub.cc/worksheets/maze.html" />
+<meta property="og:title" content="Free Printable Maze Generator for Kids" />
+<meta property="og:description" content="A brand-new solvable maze with every click — easy, medium or hard. Print free!" />
+<meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9202119066805107" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../play/play.css?v=2" />
+<link rel="stylesheet" href="ws.css?v=3" />
+<style>
+.maze-stage{display:flex;justify-content:center;padding:6px 0}
+.maze-stage svg{width:100%;max-width:640px;height:auto}
+.maze-cap{display:flex;justify-content:space-between;font-weight:800;font-size:17px;color:#444;max-width:640px;margin:4px auto 0;direction:ltr}
+@media print{
+  .maze-stage{flex:1;align-items:center}
+  .maze-stage svg{max-width:100%;height:100%;max-height:215mm}
+  .maze-cap{font-size:13pt}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="../index.html"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <div class="top-actions">
+      <div class="langsw" role="group" aria-label="Language">
+        <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
+      </div>
+      <button class="icon-btn" aria-label="Dark mode" onclick="PLAY.toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap" style="max-width:880px">
+  <p class="crumbs"><a href="../index.html" data-t="home">Home</a> › <a href="index.html" data-t="worksheets">Worksheets</a> › <span data-t="title">Mazes</span></p>
+
+  <h1 class="pagetitle" style="font-size:clamp(24px,4.5vw,34px)" data-t="h1">Maze generator — a brand-new maze every click</h1>
+  <p class="pagesub" style="color:var(--muted);font-weight:700" data-t="sub">Help the mouse find the cheese! Pick a difficulty, print, or save as PDF. Every maze is solvable.</p>
+
+  <div class="controls">
+    <div id="levels" style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn level" data-n="8">🐣 <span data-t="easy">Easy</span></button>
+      <button class="btn level" data-n="12">⭐ <span data-t="medium">Medium</span></button>
+      <button class="btn level" data-n="16">🔥 <span data-t="hard">Hard</span></button>
+    </div>
+    <button class="btn action" id="newSheet">🎲 <span data-t="newSheet">New maze</span></button>
+    <button class="btn print" id="printSheet">🖨️ <span data-t="print">Print</span></button>
+  </div>
+
+  <div class="sheet">
+    <div class="sheet-head">
+      <img src="../logos/hub-logo.png" alt="">
+      <div class="st"><b>Kids Learning Hub</b><span>kids-learning-hub.cc</span></div>
+    </div>
+    <div class="sheet-title" data-t="sheetTitle">🐭 Find the cheese! 🧀</div>
+    <div class="namebar">
+      <span><span data-t="name">Name</span>: </span>
+      <span><span data-t="date">Date</span>: </span>
+    </div>
+    <div class="maze-cap"><span>🐭 <span data-t="start">START</span></span><span><span data-t="finish">FINISH</span> 🧀</span></div>
+    <div class="maze-stage" id="stage"></div>
+    <div class="sheet-foot"><span data-t="footL">Free printable worksheets</span><span>© Kids Learning Hub · VS MEDIA</span></div>
+  </div>
+
+  <div class="appcta">
+    <img src="../logos/codokids.png" alt="CodoKids">
+    <div><b>CodoKids</b><p data-t="cta">Love mazes? Guide a robot through 40 coding mazes — learn logic by playing, offline and free on Google Play.</p></div>
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.vsmedia.codokids" target="_blank" rel="noopener">Google Play</a>
+  </div>
+
+  <div class="ad-slot"><div class="ad-label" data-t="ad">Advertisement</div><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-format="auto" data-ad-client="ca-pub-9202119066805107" data-ad-slot="4620284747" data-full-width-responsive="true"></ins></div>
+</div>
+
+<footer class="foot">
+  <div class="fb">Kids Learning Hub</div>
+  <div style="opacity:.8">by VS MEDIA · <a href="../index.html" data-t="home">Home</a> · <a href="index.html" data-t="worksheets">Worksheets</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
+</footer>
+
+<script src="../play/play.js?v=2"></script>
+<script>
+const STR = {
+  en:{home:'Home',worksheets:'Worksheets',title:'Mazes',h1:'Maze generator — a brand-new maze every click',sub:'Help the mouse find the cheese! Pick a difficulty, print, or save as PDF. Every maze is solvable.',easy:'Easy',medium:'Medium',hard:'Hard',newSheet:'New maze',print:'Print',sheetTitle:'🐭 Find the cheese! 🧀',start:'START',finish:'FINISH',name:'Name',date:'Date',footL:'Free printable worksheets',ad:'Advertisement',cta:'Love mazes? Guide a robot through 40 coding mazes — learn logic by playing, offline and free on Google Play.'},
+  fr:{home:'Accueil',worksheets:'Fiches',title:'Labyrinthes',h1:'Générateur de labyrinthes — un nouveau à chaque clic',sub:'Aide la souris à trouver le fromage ! Choisis la difficulté, imprime ou PDF. Chaque labyrinthe a une solution.',easy:'Facile',medium:'Moyen',hard:'Difficile',newSheet:'Nouveau labyrinthe',print:'Imprimer',sheetTitle:'🐭 Trouve le fromage ! 🧀',start:'DÉPART',finish:'ARRIVÉE',name:'Nom',date:'Date',footL:'Fiches gratuites à imprimer',ad:'Publicité',cta:'Fan de labyrinthes ? Guide un robot dans 40 labyrinthes de code — hors ligne et gratuit sur Google Play.'},
+  es:{home:'Inicio',worksheets:'Fichas',title:'Laberintos',h1:'Generador de laberintos — uno nuevo con cada clic',sub:'¡Ayuda al ratón a encontrar el queso! Elige la dificultad, imprime o guarda como PDF. Todos tienen solución.',easy:'Fácil',medium:'Medio',hard:'Difícil',newSheet:'Nuevo laberinto',print:'Imprimir',sheetTitle:'🐭 ¡Encuentra el queso! 🧀',start:'SALIDA',finish:'META',name:'Nombre',date:'Fecha',footL:'Fichas gratis para imprimir',ad:'Publicidad',cta:'¿Te gustan los laberintos? Guía un robot por 40 laberintos de código — sin conexión y gratis en Google Play.'},
+  ar:{home:'الرئيسية',worksheets:'أوراق العمل',title:'المتاهات',h1:'مولّد المتاهات — متاهة جديدة بكل ضغطة',sub:'ساعد الفأر ليصل إلى الجبن! اختر الصعوبة ثم اطبع أو احفظ PDF. كل متاهة لها حلّ مضمون.',easy:'سهل',medium:'متوسط',hard:'صعب',newSheet:'متاهة جديدة',print:'اطبع',sheetTitle:'🐭 أوصِل الفأر إلى الجبن! 🧀',start:'البداية',finish:'النهاية',name:'الاسم',date:'التاريخ',footL:'أوراق عمل مجانية للطباعة',ad:'إعلان',cta:'تحب المتاهات؟ قُد الروبوت عبر 40 متاهة برمجية — دون إنترنت ومجانًا على Google Play.'}
+};
+let N=12;
+PLAY.init(l=>{ PLAY.applyStrings(STR[l]||STR.en); markLevel(); });
+document.getElementById('printSheet').addEventListener('click',()=>window.print());
+document.getElementById('newSheet').addEventListener('click',drawMaze);
+document.querySelectorAll('#levels .level').forEach(b=>b.addEventListener('click',()=>{N=+b.dataset.n;markLevel();drawMaze();}));
+function markLevel(){document.querySelectorAll('#levels .level').forEach(b=>b.classList.toggle('active',+b.dataset.n===N));}
+
+/* recursive-backtracker maze: every cell reachable → always solvable */
+function genMaze(n){
+  const cell=()=>({right:true,bottom:true,seen:false});
+  const G=Array.from({length:n},()=>Array.from({length:n},cell));
+  const stack=[[0,0]]; G[0][0].seen=true;
+  while(stack.length){
+    const [x,y]=stack[stack.length-1];
+    const nbs=[];
+    if(x+1<n && !G[y][x+1].seen) nbs.push(['R',x+1,y]);
+    if(x-1>=0 && !G[y][x-1].seen) nbs.push(['L',x-1,y]);
+    if(y+1<n && !G[y+1][x].seen) nbs.push(['D',x,y+1]);
+    if(y-1>=0 && !G[y-1][x].seen) nbs.push(['U',x,y-1]);
+    if(!nbs.length){ stack.pop(); continue; }
+    const [d,nx,ny]=nbs[Math.floor(Math.random()*nbs.length)];
+    if(d==='R') G[y][x].right=false;
+    if(d==='L') G[ny][nx].right=false;
+    if(d==='D') G[y][x].bottom=false;
+    if(d==='U') G[ny][nx].bottom=false;
+    G[ny][nx].seen=true; stack.push([nx,ny]);
+  }
+  return G;
+}
+function drawMaze(){
+  const G=genMaze(N), C=600/N, W=3.2;
+  let s='';
+  const L=(x1,y1,x2,y2)=>s+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#16213E" stroke-width="${W}" stroke-linecap="round"/>`;
+  // outer border with entrance (top of cell 0,0) and exit (bottom of last cell)
+  L(C,0,600,0);                 // top edge, gap at first cell = entrance
+  L(0,600,600-C,600);           // bottom edge, gap at last cell = exit
+  L(0,0,0,600); L(600,0,600,600);
+  for(let y=0;y<N;y++)for(let x=0;x<N;x++){
+    if(G[y][x].right && x<N-1)  L((x+1)*C,y*C,(x+1)*C,(y+1)*C);
+    if(G[y][x].bottom && y<N-1) L(x*C,(y+1)*C,(x+1)*C,(y+1)*C);
+  }
+  const emo=(ch,x,y,sz)=>`<text x="${x}" y="${y}" font-size="${sz}" text-anchor="middle">${ch}</text>`;
+  s+=emo('🐭',C/2,-8,Math.min(34,C*0.8));
+  s+=emo('🧀',600-C/2,600+26,Math.min(34,C*0.8));
+  document.getElementById('stage').innerHTML=
+    `<svg viewBox="-4 -40 608 680" xmlns="http://www.w3.org/2000/svg">${s}</svg>`;
+}
+drawMaze();
+</script>
+</body>
+</html>

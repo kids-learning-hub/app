@@ -23,6 +23,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../play/play.css?v=2" />
 <link rel="stylesheet" href="ws.css?v=3" />
+<style>
+.ws-sec{font-family:"Baloo 2",sans-serif;font-size:clamp(20px,3.6vw,27px);margin:34px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.ws-sec:first-of-type{margin-top:22px}
+</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Worksheets","item":"https://kids-learning-hub.cc/worksheets/"}]}
 </script>
@@ -49,6 +53,7 @@
   <h1 style="font-size:clamp(26px,5vw,40px)" data-t="h1">Free printable worksheets — a fresh sheet every click</h1>
   <p style="color:var(--muted);font-weight:700;max-width:62ch" data-t="lede">Pick a worksheet, choose a level, and print (or save as PDF). Unlimited, free, no sign-up — made by a maths teacher.</p>
 
+  <h2 class="ws-sec" data-t="secMath">📐 Math</h2>
   <div class="hubgrid">
     <a class="gcard" href="addition.html">
       <div class="cover" style="background:linear-gradient(135deg,#49B6FF,#1E5BFF)">➕</div>
@@ -62,33 +67,17 @@
       <div class="cover" style="background:linear-gradient(135deg,#5B8CFF,#1E5BFF)">✖️</div>
       <div class="body"><h3 data-t="w3">Times tables</h3><p data-t="w3d">Pick one table (2–10) or mix them all.</p><span class="go" data-t="open">Open →</span></div>
     </a>
+    <a class="gcard" href="division.html">
+      <div class="cover" style="background:linear-gradient(135deg,#49B6FF,#1E5BFF)">➗</div>
+      <div class="body"><h3 data-t="w14">Division</h3><p data-t="w14d">Simple division with whole answers, ÷2 to ÷10.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+    <a class="gcard" href="compare-numbers.html">
+      <div class="cover" style="background:linear-gradient(135deg,#22C55E,#15A34A)">🟰</div>
+      <div class="body"><h3 data-t="w15">Compare numbers</h3><p data-t="w15d">Write &lt;, &gt; or = — greater than, less than.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
     <a class="gcard" href="missing-number.html">
       <div class="cover" style="background:linear-gradient(135deg,#FFD84D,#FF8A00)">🔍</div>
       <div class="body"><h3 data-t="w4">Missing number</h3><p data-t="w4d">Counting by 1, 2, 5 or 10 — fill in the gaps.</p><span class="go" data-t="open">Open →</span></div>
-    </a>
-    <a class="gcard" href="arabic-letters.html">
-      <div class="cover" style="background:linear-gradient(135deg,#3ED6C9,#0E9E8F)">✍️</div>
-      <div class="body"><h3 data-t="w5">Arabic letters</h3><p data-t="w5d">All 28 letters with pale tracing models.</p><span class="go" data-t="open">Open →</span></div>
-    </a>
-    <a class="gcard" href="latin-letters.html">
-      <div class="cover" style="background:linear-gradient(135deg,#FF7AB8,#FF4FA3)">🔤</div>
-      <div class="body"><h3 data-t="w6">ABC letters</h3><p data-t="w6d">Aa–Zz tracing — for English, French, Spanish and German.</p><span class="go" data-t="open">Open →</span></div>
-    </a>
-    <a class="gcard" href="numbers.html">
-      <div class="cover" style="background:linear-gradient(135deg,#9B7BFF,#7A4DFF)">🔢</div>
-      <div class="body"><h3 data-t="w7">Numbers 0–9</h3><p data-t="w7d">Digit tracing with counting dots — ages 3–6.</p><span class="go" data-t="open">Open →</span></div>
-    </a>
-    <a class="gcard" href="coloring.html">
-      <div class="cover" style="background:linear-gradient(135deg,#FFD84D,#FF8A00)">🎨</div>
-      <div class="body"><h3 data-t="w8">Coloring pages</h3><p data-t="w8d">Sun, cat, rocket… big bold outlines, full A4.</p><span class="go" data-t="open">Open →</span></div>
-    </a>
-    <a class="gcard" href="coloring-letters.html">
-      <div class="cover" style="background:linear-gradient(135deg,#5FE08A,#15A34A)">🅰️</div>
-      <div class="body"><h3 data-t="w9">Big letters to color</h3><p data-t="w9d">Giant outlined A–Z, 0–9 and Arabic letters.</p><span class="go" data-t="open">Open →</span></div>
-    </a>
-    <a class="gcard" href="certificates.html">
-      <div class="cover" style="background:linear-gradient(135deg,#FFC72C,#FF8A00)">🏆</div>
-      <div class="body"><h3 data-t="w10">Award certificates</h3><p data-t="w10d">Type the child's name, pick a design, print — 6 models.</p><span class="go" data-t="open">Open →</span></div>
     </a>
     <a class="gcard" href="clock.html">
       <div class="cover" style="background:linear-gradient(135deg,#49B6FF,#1E5BFF)">🕐</div>
@@ -101,6 +90,58 @@
     <a class="gcard" href="tables-poster.html">
       <div class="cover" style="background:linear-gradient(135deg,#9B7BFF,#7A4DFF)">📌</div>
       <div class="body"><h3 data-t="w13">Tables wall poster</h3><p data-t="w13d">The full 1–10 grid on one colorful page — print and hang it.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+  </div>
+
+  <h2 class="ws-sec" data-t="secWriting">✍️ Writing &amp; pre-school</h2>
+  <div class="hubgrid">
+    <a class="gcard" href="line-tracing.html">
+      <div class="cover" style="background:linear-gradient(135deg,#5FE08A,#15A34A)">✏️</div>
+      <div class="body"><h3 data-t="w16">Line tracing</h3><p data-t="w16d">Prewriting strokes — straight, zigzag, loops.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+    <a class="gcard" href="shapes.html">
+      <div class="cover" style="background:linear-gradient(135deg,#8B5CF6,#6816AD)">📐</div>
+      <div class="body"><h3 data-t="w17">2D shapes</h3><p data-t="w17d">Trace and color the 6 basic shapes.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+    <a class="gcard" href="numbers.html">
+      <div class="cover" style="background:linear-gradient(135deg,#9B7BFF,#7A4DFF)">🔢</div>
+      <div class="body"><h3 data-t="w7">Numbers 0–9</h3><p data-t="w7d">Digit tracing with counting dots — ages 3–6.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+    <a class="gcard" href="latin-letters.html">
+      <div class="cover" style="background:linear-gradient(135deg,#FF7AB8,#FF4FA3)">🔤</div>
+      <div class="body"><h3 data-t="w6">ABC letters</h3><p data-t="w6d">Aa–Zz tracing — for English, French, Spanish and German.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+    <a class="gcard" href="arabic-letters.html">
+      <div class="cover" style="background:linear-gradient(135deg,#3ED6C9,#0E9E8F)">✍️</div>
+      <div class="body"><h3 data-t="w5">Arabic letters</h3><p data-t="w5d">All 28 letters with pale tracing models.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+  </div>
+
+  <h2 class="ws-sec" data-t="secActivities">🎨 Coloring &amp; activities</h2>
+  <div class="hubgrid">
+    <a class="gcard" href="coloring.html">
+      <div class="cover" style="background:linear-gradient(135deg,#FFD84D,#FF8A00)">🎨</div>
+      <div class="body"><h3 data-t="w8">Coloring pages</h3><p data-t="w8d">Sun, cat, rocket… big bold outlines, full A4.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+    <a class="gcard" href="coloring-letters.html">
+      <div class="cover" style="background:linear-gradient(135deg,#5FE08A,#15A34A)">🅰️</div>
+      <div class="body"><h3 data-t="w9">Big letters to color</h3><p data-t="w9d">Giant outlined A–Z, 0–9 and Arabic letters.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+    <a class="gcard" href="maze.html">
+      <div class="cover" style="background:linear-gradient(135deg,#5D4037,#8D6E63)">🌀</div>
+      <div class="body"><h3 data-t="w18">Mazes</h3><p data-t="w18d">A brand-new solvable maze every click — 3 levels.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+    <a class="gcard" href="sudoku.html">
+      <div class="cover" style="background:linear-gradient(135deg,#7A4DFF,#5B2CC9)">🧠</div>
+      <div class="body"><h3 data-t="w19">Sudoku for kids</h3><p data-t="w19d">Easy 4×4 and 6×6 — a new puzzle every click.</p><span class="go" data-t="open">Open →</span></div>
+    </a>
+  </div>
+
+  <h2 class="ws-sec" data-t="secAwards">🏆 Certificates</h2>
+  <div class="hubgrid">
+    <a class="gcard" href="certificates.html">
+      <div class="cover" style="background:linear-gradient(135deg,#FFC72C,#FF8A00)">🏆</div>
+      <div class="body"><h3 data-t="w10">Award certificates</h3><p data-t="w10d">Type the child's name, pick a design, print — 7 models.</p><span class="go" data-t="open">Open →</span></div>
     </a>
   </div>
 
@@ -126,10 +167,10 @@
 <script src="../play/play.js?v=2"></script>
 <script>
 const STR = {
-  en:{home:'Home',worksheets:'Worksheets',blog:'Blog',games:'Games',h1:'Free printable worksheets — a fresh sheet every click',lede:'Pick a worksheet, choose a level, and print (or save as PDF). Unlimited, free, no sign-up — made by a maths teacher.',w1:'Addition',w1d:'Numbers to 10, 20 or 100 — 24 problems per sheet.',w2:'Subtraction',w2d:'Numbers to 10, 20 or 100 — no negative answers.',w3:'Times tables',w3d:'Pick one table (2–10) or mix them all.',w4:'Missing number',w4d:'Counting by 1, 2, 5 or 10 — fill in the gaps.',w5:'Arabic letters',w5d:'All 28 letters with pale tracing models.',w6:'ABC letters',w6d:'Aa–Zz tracing — for English, French, Spanish and German.',w7:'Numbers 0–9',w7d:'Digit tracing with counting dots — ages 3–6.',w8:'Coloring pages',w8d:'Sun, cat, rocket… big bold outlines, full A4.',w9:'Big letters to color',w9d:'Giant outlined A–Z, 0–9 and Arabic letters.',w10:'Award certificates',w10d:"Type the child's name, pick a design, print — 6 models.",w11:'Telling time',w11d:'9 clocks per sheet — whole hours to 5-minute steps.',w12:'Counting money',w12d:'Dirhams, euros or dollars — add coins, write the total.',w13:'Tables wall poster',w13d:'The full 1–10 grid on one colorful page — print and hang it.',open:'Open →',nlT:'Get new worksheets by email',nlD:'One email a month with fresh worksheets, activities and app news. No spam.',nlPh:'Your email address',nlBtn:'Subscribe',nlThanks:'🎉 Thank you!',ad:'Advertisement'},
-  fr:{home:'Accueil',worksheets:'Fiches',blog:'Blog',games:'Jeux',h1:'Fiches gratuites à imprimer — une nouvelle fiche à chaque clic',lede:'Choisissez une fiche et un niveau, puis imprimez (ou enregistrez en PDF). Illimité, gratuit, sans inscription — conçu par un professeur de maths.',w1:'Additions',w1d:'Nombres jusqu’à 10, 20 ou 100 — 24 opérations par fiche.',w2:'Soustractions',w2d:'Jusqu’à 10, 20 ou 100 — sans résultats négatifs.',w3:'Tables de multiplication',w3d:'Une table (2–10) ou tout mélanger.',w4:'Nombre manquant',w4d:'Compter de 1, 2, 5 ou 10 — complète les trous.',w5:'Lettres arabes',w5d:'Les 28 lettres avec modèles pâles à repasser.',w6:'Lettres ABC',w6d:'Aa–Zz à tracer — anglais, français, espagnol, allemand.',w7:'Chiffres 0–9',w7d:'Chiffres à tracer avec points à compter — 3–6 ans.',w8:'Coloriages',w8d:'Soleil, chat, fusée… grands contours, page A4 entière.',w9:'Grandes lettres à colorier',w9d:'A–Z, 0–9 et lettres arabes géantes en contour.',w10:'Diplômes de réussite',w10d:'Écrivez le prénom, choisissez un modèle, imprimez — 6 modèles.',w11:'Lire l’heure',w11d:'9 horloges par fiche — des heures pleines aux pas de 5 min.',w12:'Compter la monnaie',w12d:'Dirhams, euros ou dollars — additionne et écris le total.',w13:'Poster des tables',w13d:'La grille complète 1–10 sur une page colorée — à imprimer et afficher.',open:'Ouvrir →',nlT:'Recevez les nouvelles fiches par e-mail',nlD:'Un e-mail par mois : fiches, activités et nouveautés. Zéro spam.',nlPh:'Votre adresse e-mail',nlBtn:'S’inscrire',nlThanks:'🎉 Merci !',ad:'Publicité'},
-  es:{home:'Inicio',worksheets:'Fichas',blog:'Blog',games:'Juegos',h1:'Fichas gratis para imprimir — una hoja nueva con cada clic',lede:'Elige una ficha y un nivel, e imprime (o guarda como PDF). Ilimitado, gratis, sin registro — hecho por un profesor de mates.',w1:'Sumas',w1d:'Números hasta 10, 20 o 100 — 24 operaciones por hoja.',w2:'Restas',w2d:'Hasta 10, 20 o 100 — sin resultados negativos.',w3:'Tablas de multiplicar',w3d:'Una tabla (2–10) o todas mezcladas.',w4:'Número que falta',w4d:'Contar de 1, 2, 5 o 10 — completa los huecos.',w5:'Letras árabes',w5d:'Las 28 letras con modelos pálidos para repasar.',w6:'Letras ABC',w6d:'Aa–Zz para trazar — inglés, francés, español y alemán.',w7:'Números 0–9',w7d:'Números para trazar con puntos — 3–6 años.',w8:'Dibujos para colorear',w8d:'Sol, gato, cohete… contornos grandes, A4 completa.',w9:'Letras grandes para colorear',w9d:'A–Z, 0–9 y letras árabes gigantes en contorno.',w10:'Diplomas de logro',w10d:'Escribe el nombre, elige un diseño e imprime — 6 modelos.',w11:'Leer la hora',w11d:'9 relojes por hoja — de horas en punto a pasos de 5 min.',w12:'Contar dinero',w12d:'Dírhams, euros o dólares — suma y escribe el total.',w13:'Póster de las tablas',w13d:'La tabla completa 1–10 en una página a color — imprime y cuélgalo.',open:'Abrir →',nlT:'Recibe fichas nuevas por correo',nlD:'Un correo al mes: fichas, actividades y novedades. Sin spam.',nlPh:'Tu correo electrónico',nlBtn:'Suscribirse',nlThanks:'🎉 ¡Gracias!',ad:'Publicidad'},
-  ar:{home:'الرئيسية',worksheets:'أوراق العمل',blog:'المدوّنة',games:'الألعاب',h1:'أوراق عمل مجانية للطباعة — ورقة جديدة بكل ضغطة',lede:'اختر الورقة والمستوى ثم اطبع (أو احفظ PDF). بلا حدود، مجانًا، دون تسجيل — من إعداد أستاذ رياضيات.',w1:'الجمع',w1d:'أعداد حتى 10 أو 20 أو 100 — 24 عملية في الورقة.',w2:'الطرح',w2d:'حتى 10 أو 20 أو 100 — دون نتائج سالبة.',w3:'جداول الضرب',w3d:'جدول واحد (2–10) أو خليط منها.',w4:'العدد الناقص',w4d:'عدّ بالـ1 أو 2 أو 5 أو 10 — أكمل الفراغات.',w5:'الحروف العربية',w5d:'الحروف الـ28 مع نماذج باهتة للتتبّع.',w6:'الحروف اللاتينية',w6d:'تتبّع Aa–Zz — للإنجليزية والفرنسية والإسبانية والألمانية.',w7:'الأرقام 0–9',w7d:'تتبّع الأرقام مع نقاط للعدّ — لأعمار 3–6.',w8:'رسوم للتلوين',w8d:'شمس وقط وصاروخ… خطوط كبيرة تملأ A4.',w9:'حروف كبيرة للتلوين',w9d:'A–Z و0–9 والحروف العربية عملاقة بإطار للتلوين.',w10:'شهادات تقدير',w10d:'اكتب اسم الطفل واختر التصميم واطبع — 6 نماذج.',w11:'قراءة الساعة',w11d:'9 ساعات في الورقة — من الساعات الكاملة إلى خطوات 5 دقائق.',w12:'عدّ النقود',w12d:'درهم أو يورو أو دولار — اجمع القطع واكتب المجموع.',w13:'ملصق جداول الضرب',w13d:'الجدول الكامل 1–10 في صفحة ملوّنة — اطبعه وعلّقه على الحائط.',open:'افتح ←',nlT:'استقبل أوراق العمل الجديدة بريديًا',nlD:'رسالة واحدة شهريًا: أوراق وأنشطة وجديد التطبيقات. بلا إزعاج.',nlPh:'بريدك الإلكتروني',nlBtn:'اشترك',nlThanks:'🎉 شكرًا لك!',ad:'إعلان'}
+  en:{home:'Home',worksheets:'Worksheets',blog:'Blog',games:'Games',h1:'Free printable worksheets — a fresh sheet every click',lede:'Pick a worksheet, choose a level, and print (or save as PDF). Unlimited, free, no sign-up — made by a maths teacher.',w1:'Addition',w1d:'Numbers to 10, 20 or 100 — 24 problems per sheet.',w2:'Subtraction',w2d:'Numbers to 10, 20 or 100 — no negative answers.',w3:'Times tables',w3d:'Pick one table (2–10) or mix them all.',w4:'Missing number',w4d:'Counting by 1, 2, 5 or 10 — fill in the gaps.',w5:'Arabic letters',w5d:'All 28 letters with pale tracing models.',w6:'ABC letters',w6d:'Aa–Zz tracing — for English, French, Spanish and German.',w7:'Numbers 0–9',w7d:'Digit tracing with counting dots — ages 3–6.',w8:'Coloring pages',w8d:'Sun, cat, rocket… big bold outlines, full A4.',w9:'Big letters to color',w9d:'Giant outlined A–Z, 0–9 and Arabic letters.',w10:'Award certificates',w10d:"Type the child's name, pick a design, print — 6 models.",w11:'Telling time',w11d:'9 clocks per sheet — whole hours to 5-minute steps.',w12:'Counting money',w12d:'Dirhams, euros or dollars — add coins, write the total.',w13:'Tables wall poster',w13d:'The full 1–10 grid on one colorful page — print and hang it.',w14:'Division',w14d:'Simple division with whole answers, ÷2 to ÷10.',w15:'Compare numbers',w15d:'Write <, > or = — greater than, less than.',w16:'Line tracing',w16d:'Prewriting strokes — straight, zigzag, loops.',w17:'2D shapes',w17d:'Trace and color the 6 basic shapes.',w18:'Mazes',w18d:'A brand-new solvable maze every click — 3 levels.',w19:'Sudoku for kids',w19d:'Easy 4×4 and 6×6 — a new puzzle every click.',secMath:'📐 Math',secWriting:'✍️ Writing & pre-school',secActivities:'🎨 Coloring & activities',secAwards:'🏆 Certificates',open:'Open →',nlT:'Get new worksheets by email',nlD:'One email a month with fresh worksheets, activities and app news. No spam.',nlPh:'Your email address',nlBtn:'Subscribe',nlThanks:'🎉 Thank you!',ad:'Advertisement'},
+  fr:{home:'Accueil',worksheets:'Fiches',blog:'Blog',games:'Jeux',h1:'Fiches gratuites à imprimer — une nouvelle fiche à chaque clic',lede:'Choisissez une fiche et un niveau, puis imprimez (ou enregistrez en PDF). Illimité, gratuit, sans inscription — conçu par un professeur de maths.',w1:'Additions',w1d:'Nombres jusqu’à 10, 20 ou 100 — 24 opérations par fiche.',w2:'Soustractions',w2d:'Jusqu’à 10, 20 ou 100 — sans résultats négatifs.',w3:'Tables de multiplication',w3d:'Une table (2–10) ou tout mélanger.',w4:'Nombre manquant',w4d:'Compter de 1, 2, 5 ou 10 — complète les trous.',w5:'Lettres arabes',w5d:'Les 28 lettres avec modèles pâles à repasser.',w6:'Lettres ABC',w6d:'Aa–Zz à tracer — anglais, français, espagnol, allemand.',w7:'Chiffres 0–9',w7d:'Chiffres à tracer avec points à compter — 3–6 ans.',w8:'Coloriages',w8d:'Soleil, chat, fusée… grands contours, page A4 entière.',w9:'Grandes lettres à colorier',w9d:'A–Z, 0–9 et lettres arabes géantes en contour.',w10:'Diplômes de réussite',w10d:'Écrivez le prénom, choisissez un modèle, imprimez — 6 modèles.',w11:'Lire l’heure',w11d:'9 horloges par fiche — des heures pleines aux pas de 5 min.',w12:'Compter la monnaie',w12d:'Dirhams, euros ou dollars — additionne et écris le total.',w13:'Poster des tables',w13d:'La grille complète 1–10 sur une page colorée — à imprimer et afficher.',w14:'Divisions',w14d:'Divisions simples à résultat entier, ÷2 à ÷10.',w15:'Comparer les nombres',w15d:'Écris <, > ou = — plus grand, plus petit.',w16:'Tracé de lignes',w16d:'Avant l’écriture — lignes droites, zigzags, boucles.',w17:'Formes',w17d:'Trace et colorie les 6 formes de base.',w18:'Labyrinthes',w18d:'Un nouveau labyrinthe résoluble à chaque clic — 3 niveaux.',w19:'Sudoku enfants',w19d:'4×4 facile et 6×6 — une nouvelle grille à chaque clic.',secMath:'📐 Maths',secWriting:'✍️ Écriture & maternelle',secActivities:'🎨 Coloriage & activités',secAwards:'🏆 Diplômes',open:'Ouvrir →',nlT:'Recevez les nouvelles fiches par e-mail',nlD:'Un e-mail par mois : fiches, activités et nouveautés. Zéro spam.',nlPh:'Votre adresse e-mail',nlBtn:'S’inscrire',nlThanks:'🎉 Merci !',ad:'Publicité'},
+  es:{home:'Inicio',worksheets:'Fichas',blog:'Blog',games:'Juegos',h1:'Fichas gratis para imprimir — una hoja nueva con cada clic',lede:'Elige una ficha y un nivel, e imprime (o guarda como PDF). Ilimitado, gratis, sin registro — hecho por un profesor de mates.',w1:'Sumas',w1d:'Números hasta 10, 20 o 100 — 24 operaciones por hoja.',w2:'Restas',w2d:'Hasta 10, 20 o 100 — sin resultados negativos.',w3:'Tablas de multiplicar',w3d:'Una tabla (2–10) o todas mezcladas.',w4:'Número que falta',w4d:'Contar de 1, 2, 5 o 10 — completa los huecos.',w5:'Letras árabes',w5d:'Las 28 letras con modelos pálidos para repasar.',w6:'Letras ABC',w6d:'Aa–Zz para trazar — inglés, francés, español y alemán.',w7:'Números 0–9',w7d:'Números para trazar con puntos — 3–6 años.',w8:'Dibujos para colorear',w8d:'Sol, gato, cohete… contornos grandes, A4 completa.',w9:'Letras grandes para colorear',w9d:'A–Z, 0–9 y letras árabes gigantes en contorno.',w10:'Diplomas de logro',w10d:'Escribe el nombre, elige un diseño e imprime — 6 modelos.',w11:'Leer la hora',w11d:'9 relojes por hoja — de horas en punto a pasos de 5 min.',w12:'Contar dinero',w12d:'Dírhams, euros o dólares — suma y escribe el total.',w13:'Póster de las tablas',w13d:'La tabla completa 1–10 en una página a color — imprime y cuélgalo.',w14:'Divisiones',w14d:'Divisiones simples con resultado entero, ÷2 a ÷10.',w15:'Comparar números',w15d:'Escribe <, > o = — mayor que, menor que.',w16:'Trazo de líneas',w16d:'Antes de escribir — rectas, zigzag, bucles.',w17:'Formas',w17d:'Traza y colorea las 6 formas básicas.',w18:'Laberintos',w18d:'Un laberinto nuevo con solución en cada clic — 3 niveles.',w19:'Sudoku para niños',w19d:'4×4 fácil y 6×6 — un juego nuevo con cada clic.',secMath:'📐 Matemáticas',secWriting:'✍️ Escritura & preescolar',secActivities:'🎨 Colorear & actividades',secAwards:'🏆 Diplomas',open:'Abrir →',nlT:'Recibe fichas nuevas por correo',nlD:'Un correo al mes: fichas, actividades y novedades. Sin spam.',nlPh:'Tu correo electrónico',nlBtn:'Suscribirse',nlThanks:'🎉 ¡Gracias!',ad:'Publicidad'},
+  ar:{home:'الرئيسية',worksheets:'أوراق العمل',blog:'المدوّنة',games:'الألعاب',h1:'أوراق عمل مجانية للطباعة — ورقة جديدة بكل ضغطة',lede:'اختر الورقة والمستوى ثم اطبع (أو احفظ PDF). بلا حدود، مجانًا، دون تسجيل — من إعداد أستاذ رياضيات.',w1:'الجمع',w1d:'أعداد حتى 10 أو 20 أو 100 — 24 عملية في الورقة.',w2:'الطرح',w2d:'حتى 10 أو 20 أو 100 — دون نتائج سالبة.',w3:'جداول الضرب',w3d:'جدول واحد (2–10) أو خليط منها.',w4:'العدد الناقص',w4d:'عدّ بالـ1 أو 2 أو 5 أو 10 — أكمل الفراغات.',w5:'الحروف العربية',w5d:'الحروف الـ28 مع نماذج باهتة للتتبّع.',w6:'الحروف اللاتينية',w6d:'تتبّع Aa–Zz — للإنجليزية والفرنسية والإسبانية والألمانية.',w7:'الأرقام 0–9',w7d:'تتبّع الأرقام مع نقاط للعدّ — لأعمار 3–6.',w8:'رسوم للتلوين',w8d:'شمس وقط وصاروخ… خطوط كبيرة تملأ A4.',w9:'حروف كبيرة للتلوين',w9d:'A–Z و0–9 والحروف العربية عملاقة بإطار للتلوين.',w10:'شهادات تقدير',w10d:'اكتب اسم الطفل واختر التصميم واطبع — 6 نماذج.',w11:'قراءة الساعة',w11d:'9 ساعات في الورقة — من الساعات الكاملة إلى خطوات 5 دقائق.',w12:'عدّ النقود',w12d:'درهم أو يورو أو دولار — اجمع القطع واكتب المجموع.',w13:'ملصق جداول الضرب',w13d:'الجدول الكامل 1–10 في صفحة ملوّنة — اطبعه وعلّقه على الحائط.',w14:'القسمة',w14d:'قسمة بسيطة بنتائج صحيحة، من ÷2 إلى ÷10.',w15:'مقارنة الأعداد',w15d:'اكتب < أو > أو = — أكبر من، أصغر من.',w16:'تتبّع الخطوط',w16d:'ما قبل الكتابة — خطوط مستقيمة ومتعرّجة وحلقات.',w17:'الأشكال',w17d:'تتبّع ولوّن الأشكال الستة الأساسية.',w18:'المتاهات',w18d:'متاهة جديدة قابلة للحل بكل ضغطة — 3 مستويات.',w19:'سودوكو للأطفال',w19d:'سهل 4×4 و6×6 — لعبة جديدة بكل ضغطة.',secMath:'📐 الرياضيات',secWriting:'✍️ الكتابة وما قبل المدرسة',secActivities:'🎨 التلوين والأنشطة',secAwards:'🏆 الشهادات',open:'افتح ←',nlT:'استقبل أوراق العمل الجديدة بريديًا',nlD:'رسالة واحدة شهريًا: أوراق وأنشطة وجديد التطبيقات. بلا إزعاج.',nlPh:'بريدك الإلكتروني',nlBtn:'اشترك',nlThanks:'🎉 شكرًا لك!',ad:'إعلان'}
 };
 let T = STR.en;
 PLAY.init(l=>{ T = STR[l]||STR.en; PLAY.applyStrings(T);

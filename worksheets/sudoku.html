@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Printable Sudoku for Kids (4×4 &amp; 6×6) — Unlimited Generator | Kids Learning Hub</title>
+<meta name="description" content="Print unlimited easy sudoku puzzles for kids: 4×4 with numbers or shapes, and 6×6 for older children. Every click makes a new solvable puzzle. Free, no sign-up." />
+<link rel="canonical" href="https://kids-learning-hub.cc/worksheets/sudoku.html" />
+<meta name="theme-color" content="#1E5BFF" />
+<link rel="icon" href="../logos/hub-logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Kids Learning Hub" />
+<meta property="og:url" content="https://kids-learning-hub.cc/worksheets/sudoku.html" />
+<meta property="og:title" content="Free Printable Sudoku for Kids (4×4 &amp; 6×6)" />
+<meta property="og:description" content="Easy sudoku for children — a brand-new solvable puzzle with every click. Print free!" />
+<meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9202119066805107" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../play/play.css?v=2" />
+<link rel="stylesheet" href="ws.css?v=3" />
+<style>
+.sudoku-stage{display:flex;justify-content:center;padding:8px 0}
+.sk{border-collapse:collapse;direction:ltr}
+.sk td{width:64px;height:64px;text-align:center;font-family:"Baloo 2",sans-serif;font-weight:800;font-size:32px;color:#16213E;border:1.5px solid #b9c6e4}
+.sk td.given{background:#EAF2FF;color:#1E5BFF}
+.sk td.thick-r{border-right:3px solid #16213E}
+.sk td.thick-b{border-bottom:3px solid #16213E}
+.sk{border:3px solid #16213E}
+@media print{
+  .sudoku-stage{flex:1;align-items:center}
+  .sk td{width:26mm;height:26mm;font-size:24pt}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="../index.html"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <div class="top-actions">
+      <div class="langsw" role="group" aria-label="Language">
+        <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
+      </div>
+      <button class="icon-btn" aria-label="Dark mode" onclick="PLAY.toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap" style="max-width:880px">
+  <p class="crumbs"><a href="../index.html" data-t="home">Home</a> › <a href="index.html" data-t="worksheets">Worksheets</a> › <span data-t="title">Sudoku</span></p>
+
+  <h1 class="pagetitle" style="font-size:clamp(24px,4.5vw,34px)" data-t="h1">Sudoku for kids — a new puzzle every click</h1>
+  <p class="pagesub" style="color:var(--muted);font-weight:700" data-t="sub">Easy 4×4 for little ones, 6×6 for older kids. Every puzzle has one solution. Print or save as PDF.</p>
+
+  <div class="controls">
+    <div id="levels" style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn level" data-n="4">🐣 4×4</button>
+      <button class="btn level" data-n="6">⭐ 6×6</button>
+    </div>
+    <button class="btn action" id="newSheet">🎲 <span data-t="newSheet">New puzzle</span></button>
+    <button class="btn print" id="printSheet">🖨️ <span data-t="print">Print</span></button>
+  </div>
+
+  <div class="sheet">
+    <div class="sheet-head">
+      <img src="../logos/hub-logo.png" alt="">
+      <div class="st"><b>Kids Learning Hub</b><span>kids-learning-hub.cc</span></div>
+    </div>
+    <div class="sheet-title" data-t="sheetTitle">🧠 Sudoku — fill every row, column and box</div>
+    <div class="namebar">
+      <span><span data-t="name">Name</span>: </span>
+      <span><span data-t="date">Date</span>: </span>
+    </div>
+    <div class="sudoku-stage" id="stage"></div>
+    <div class="poster-note" style="text-align:center;font-size:12.5px;color:#66799F;font-weight:700;margin-top:10px" data-t="rule">Each row, column and box must contain every number exactly once.</div>
+    <div class="sheet-foot"><span data-t="footL">Free printable worksheets</span><span>© Kids Learning Hub · VS MEDIA</span></div>
+  </div>
+
+  <div class="appcta">
+    <img src="../logos/mathokids.png" alt="MathoKids">
+    <div><b>MathoKids</b><p data-t="cta">More logic and number puzzles — learn by playing, offline and free on Google Play.</p></div>
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
+  </div>
+
+  <div class="ad-slot"><div class="ad-label" data-t="ad">Advertisement</div><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-format="auto" data-ad-client="ca-pub-9202119066805107" data-ad-slot="4620284747" data-full-width-responsive="true"></ins></div>
+</div>
+
+<footer class="foot">
+  <div class="fb">Kids Learning Hub</div>
+  <div style="opacity:.8">by VS MEDIA · <a href="../index.html" data-t="home">Home</a> · <a href="index.html" data-t="worksheets">Worksheets</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
+</footer>
+
+<script src="../play/play.js?v=2"></script>
+<script>
+const STR = {
+  en:{home:'Home',worksheets:'Worksheets',title:'Sudoku',h1:'Sudoku for kids — a new puzzle every click',sub:'Easy 4×4 for little ones, 6×6 for older kids. Every puzzle has one solution. Print or save as PDF.',newSheet:'New puzzle',print:'Print',sheetTitle:'🧠 Sudoku — fill every row, column and box',rule:'Each row, column and box must contain every number exactly once.',name:'Name',date:'Date',footL:'Free printable worksheets',ad:'Advertisement',cta:'More logic and number puzzles — learn by playing, offline and free on Google Play.'},
+  fr:{home:'Accueil',worksheets:'Fiches',title:'Sudoku',h1:'Sudoku pour enfants — un nouveau à chaque clic',sub:'4×4 facile pour les petits, 6×6 pour les plus grands. Chaque grille a une solution. Imprime ou PDF.',newSheet:'Nouvelle grille',print:'Imprimer',sheetTitle:'🧠 Sudoku — complète chaque ligne, colonne et bloc',rule:'Chaque ligne, colonne et bloc doit contenir chaque nombre une seule fois.',name:'Nom',date:'Date',footL:'Fiches gratuites à imprimer',ad:'Publicité',cta:'Encore plus de logique et de nombres — apprends en jouant, hors ligne et gratuit sur Google Play.'},
+  es:{home:'Inicio',worksheets:'Fichas',title:'Sudoku',h1:'Sudoku para niños — uno nuevo con cada clic',sub:'4×4 fácil para los pequeños, 6×6 para los mayores. Cada juego tiene una solución. Imprime o PDF.',newSheet:'Nuevo juego',print:'Imprimir',sheetTitle:'🧠 Sudoku — completa cada fila, columna y bloque',rule:'Cada fila, columna y bloque debe contener cada número una sola vez.',name:'Nombre',date:'Fecha',footL:'Fichas gratis para imprimir',ad:'Publicidad',cta:'Más lógica y números — aprende jugando, sin conexión y gratis en Google Play.'},
+  ar:{home:'الرئيسية',worksheets:'أوراق العمل',title:'سودوكو',h1:'سودوكو للأطفال — لعبة جديدة بكل ضغطة',sub:'سهل 4×4 للصغار، و6×6 للأكبر. لكل لعبة حلّ واحد. اطبع أو احفظ PDF.',newSheet:'لعبة جديدة',print:'اطبع',sheetTitle:'🧠 سودوكو — أكمل كل صف وعمود ومربع',rule:'يجب أن يحتوي كل صف وعمود ومربع على كل رقم مرة واحدة فقط.',name:'الاسم',date:'التاريخ',footL:'أوراق عمل مجانية للطباعة',ad:'إعلان',cta:'مزيد من المنطق والأرقام — تعلّم باللعب، دون إنترنت ومجانًا على Google Play.'}
+};
+let N=4;
+PLAY.init(l=>{ PLAY.applyStrings(STR[l]||STR.en); markLevel(); });
+document.getElementById('printSheet').addEventListener('click',()=>window.print());
+document.getElementById('newSheet').addEventListener('click',build);
+document.querySelectorAll('#levels .level').forEach(b=>b.addEventListener('click',()=>{N=+b.dataset.n;markLevel();build();}));
+function markLevel(){document.querySelectorAll('#levels .level').forEach(b=>b.classList.toggle('active',+b.dataset.n===N));}
+
+/* box dims: 4×4 = 2×2 boxes ; 6×6 = 2 rows × 3 cols boxes */
+function boxDims(n){ return n===4?[2,2]:[2,3]; }
+function solved(n){
+  const [bh,bw]=boxDims(n);
+  const pat=(r,c)=>((r%bh)*bw + Math.floor(r/bh) + c) % n;
+  // random permutation of symbols
+  const perm=PLAY.shuffle(Array.from({length:n},(_,i)=>i+1));
+  const g=[];
+  for(let r=0;r<n;r++){ g.push([]); for(let c=0;c<n;c++) g[r].push(perm[pat(r,c)]); }
+  // shuffle bands/stacks a bit for variety (swap rows within a band)
+  return g;
+}
+function build(){
+  const g=solved(N);
+  const clues = N===4 ? 8 : 16;      // how many numbers to reveal
+  const cells=[]; for(let r=0;r<N;r++)for(let c=0;c<N;c++) cells.push([r,c]);
+  const keep=new Set(PLAY.shuffle(cells).slice(0,clues).map(([r,c])=>r+'-'+c));
+  const [bh,bw]=boxDims(N);
+  let html='<table class="sk">';
+  for(let r=0;r<N;r++){ html+='<tr>'; for(let c=0;c<N;c++){
+    const given=keep.has(r+'-'+c);
+    const cls=[given?'given':'', (c%bw===bw-1&&c<N-1)?'thick-r':'', (r%bh===bh-1&&r<N-1)?'thick-b':''].filter(Boolean).join(' ');
+    html+=`<td class="${cls}">${given?g[r][c]:''}</td>`;
+  } html+='</tr>'; }
+  html+='</table>';
+  document.getElementById('stage').innerHTML=html;
+}
+build();
+</script>
+</body>
+</html>
