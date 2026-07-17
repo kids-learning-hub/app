@@ -1080,7 +1080,7 @@ const BLOG_POSTS = [
 const T = {
   en:{dir:'ltr',label:'English',flag:'🇬🇧',code:'EN',
     nav:{home:'Home',math:'Math',science:'Science',coding:'Coding',geography:'Geography',english:'English',french:'French',german:'German',arabic:'Arabic',spanish:'Spanish',chinese:'Chinese',games:'Games',worksheets:'Worksheets',stories:'Stories',blog:'Blog',apps:'Apps',pricing:'Pricing',contact:'Contact'},
-    tagline:'Learn • Play • Discover', login:'Login', navLangs:'Languages',
+    tagline:'Learn • Play • Discover', login:'Login', navLangs:'Languages', navSubjects:'Subjects',
     eyebrow:'Multilingual learning for ages 4–12',
     welcome:'Welcome to', wLearning:'Learning', wHub:'Hub',
     lead:'Learn, Play, and Discover Every Day!',
@@ -1126,7 +1126,7 @@ const T = {
 
   fr:{dir:'ltr',label:'Français',flag:'🇫🇷',code:'FR',
     nav:{home:'Accueil',math:'Maths',science:'Sciences',coding:'Codage',geography:'Géographie',english:'Anglais',french:'Français',german:'Allemand',arabic:'Arabe',spanish:'Espagnol',chinese:'Chinois',games:'Jeux',worksheets:'Fiches',stories:'Histoires',blog:'Blog',apps:'Applis',pricing:'Tarifs',contact:'Contact'},
-    tagline:'Apprendre • Jouer • Découvrir', login:'Connexion', navLangs:'Langues',
+    tagline:'Apprendre • Jouer • Découvrir', login:'Connexion', navLangs:'Langues', navSubjects:'Matières',
     eyebrow:'Apprentissage multilingue pour les 4–12 ans',
     welcome:'Bienvenue sur', wLearning:'Learning', wHub:'Hub',
     lead:'Apprendre, jouer et découvrir chaque jour !',
@@ -1172,7 +1172,7 @@ const T = {
 
   es:{dir:'ltr',label:'Español',flag:'🇪🇸',code:'ES',
     nav:{home:'Inicio',math:'Matemáticas',science:'Ciencias',coding:'Programación',geography:'Geografía',english:'Inglés',french:'Francés',german:'Alemán',arabic:'Árabe',spanish:'Español',chinese:'Chino',games:'Juegos',worksheets:'Fichas',stories:'Cuentos',blog:'Blog',apps:'Apps',pricing:'Precios',contact:'Contacto'},
-    tagline:'Aprende • Juega • Descubre', login:'Entrar', navLangs:'Idiomas',
+    tagline:'Aprende • Juega • Descubre', login:'Entrar', navLangs:'Idiomas', navSubjects:'Asignaturas',
     eyebrow:'Aprendizaje multilingüe para 4–12 años',
     welcome:'Bienvenido a', wLearning:'Learning', wHub:'Hub',
     lead:'¡Aprende, juega y descubre cada día!',
@@ -1218,7 +1218,7 @@ const T = {
 
   ar:{dir:'rtl',label:'العربية',flag:'🇲🇦',code:'AR',
     nav:{home:'الرئيسية',math:'الرياضيات',science:'العلوم',coding:'البرمجة',geography:'الجغرافيا',english:'الإنجليزية',french:'الفرنسية',german:'الألمانية',arabic:'العربية',spanish:'الإسبانية',chinese:'الصينية',games:'ألعاب',worksheets:'أوراق عمل',stories:'القصص',blog:'المدونة',apps:'التطبيقات',pricing:'الأسعار',contact:'اتصل بنا'},
-    tagline:'تعلّم • العب • اكتشف', login:'دخول', navLangs:'اللغات',
+    tagline:'تعلّم • العب • اكتشف', login:'دخول', navLangs:'اللغات', navSubjects:'المواد',
     eyebrow:'تعلّم متعدّد اللغات لأعمار 4–12',
     welcome:'مرحبًا بك في', wLearning:'Learning', wHub:'Hub',
     lead:'تعلّم والعب واكتشف كل يوم!',
@@ -1284,15 +1284,20 @@ function render(){
     if(k==='worksheets') return 'worksheets/' + (lang==='en'?'':'?lang='+lang);
     return '#apps'; // subjects point to the apps section
   };
+  const SUBJ_KEYS = ['math','science','coding','geography'];
   const LANG_KEYS = ['english','french','spanish','german','arabic','chinese'];
+  const ddHtml = (label, keys) =>
+    `<div class="nav-dd"><a href="#apps" onclick="this.parentElement.classList.toggle('open');return false;">${label}</a><div class="nav-dd-menu">`
+    + keys.map(k=>`<a href="${navHref(k)}">${t.nav[k]}</a>`).join('')
+    + `</div></div>`;
   let navHtml = '';
   for(const k of NAV_KEYS){
+    if(SUBJ_KEYS.includes(k)){
+      if(k===SUBJ_KEYS[0]) navHtml += ddHtml('📚 '+t.navSubjects, SUBJ_KEYS);
+      continue;
+    }
     if(LANG_KEYS.includes(k)){
-      if(k===LANG_KEYS[0]){ // insert the grouped "Languages" dropdown once
-        navHtml += `<div class="nav-dd"><a href="#apps" onclick="this.parentElement.classList.toggle('open');return false;">🌐 ${t.navLangs}</a><div class="nav-dd-menu">`
-          + LANG_KEYS.map(lk=>`<a href="${navHref(lk)}">${t.nav[lk]}</a>`).join('')
-          + `</div></div>`;
-      }
+      if(k===LANG_KEYS[0]) navHtml += ddHtml('🌐 '+t.navLangs, LANG_KEYS);
       continue;
     }
     const home = k==='home';
