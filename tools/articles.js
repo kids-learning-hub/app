@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'kids-language-learning-secrets', date: '2026-07-20',
+    emoji: '🗣️', grad: 'linear-gradient(135deg,#4F83CC,#01579B)', tagColor: '#01579B', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'How Kids Learn Languages Naturally: Secrets to Fluency',
+      fr: 'Comment les enfants apprennent les langues naturellement : les secrets',
+      es: 'Cómo aprenden idiomas los niños de forma natural: secretos en casa',
+      ar: 'كيف يتعلم الأطفال اللغات الأجنبية تلقائياً؟ أسرار التحدث بطلاقة' },
+    excerpt: {
+      en: 'Discover the neuroscience behind early language acquisition and how to create an effortless bilingual environment.',
+      fr: 'Découvrez les mécanismes neuroscientifiques de l\'acquisition du langage et créez un environnement bilingue à la maison.',
+      es: 'Conoce los secretos de la neurociencia y aprende cómo crear un ambiente interactivo y bilingüe en el hogar de forma sencilla.',
+      ar: 'اكتشف حقائق علم الأعصاب وراء الاكتساب المبكر للغات، وكيفية تأسيس بيئة انغماس تفاعلية ممتعة للطفل داخل المنزل.' },
+  },
+  {
     slug: 'teaching-coding-kids-home', date: '2026-07-19',
     emoji: '💻', grad: 'linear-gradient(135deg,#9575CD,#5E35B1)', tagColor: '#5E35B1', tagClass: 'code',
     tagL: { en: 'Coding', fr: 'Codage', es: 'Código', ar: 'برمجة' },
