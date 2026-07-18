@@ -278,7 +278,8 @@ console.log('✔ rebuilt 4 blog index pages');
 
 /* ── 3 · regenerate sitemap.xml ──────────────────────────────────────── */
 /* stories/ section slugs (pages generated separately; listed here for the sitemap) */
-const STORY_SLUGS = ['the-little-star', 'ziko-the-turtle', 'ant-and-the-rain'];
+const STORY_SLUGS = ['the-little-star', 'ziko-the-turtle', 'ant-and-the-rain',
+                     'the-boy-who-counted-stars', 'amina-and-the-whispering-library', 'pip-the-robot-who-forgot'];
 function urlOfIn(section, slug, lang) { return BASE + '/' + section + '/' + LANGS[lang].folder + (slug ? slug + '.html' : ''); }
 
 function smEntry(slug, lang, changefreq, priority) {

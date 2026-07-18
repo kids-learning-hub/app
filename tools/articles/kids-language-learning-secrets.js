@@ -36,7 +36,7 @@ module.exports = {
     </ul>
 
     <div class="appcta">
-      <div class="ico" style="background:#0288D1"><img src="../logos/englishkids.png" alt="EnglishKids"></div>
+      <div class="ico" style="background:#0288D1"><img src="../logos/englokids.png" alt="EnglishKids"></div>
       <div class="txt"><b>EnglishKids</b><p>The ultimate vocabulary adventure for young learners! Seamlessly blends visual learning, native audio pronunciations, and thrilling interactive games to help primary schoolers think and speak in English naturally.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.english" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">GET IT ON</span><span class="g-main">Google Play</span></span></a>
     </div>
@@ -69,7 +69,7 @@ module.exports = {
     </ul>
 
     <div class="appcta">
-      <div class="ico" style="background:#0288D1"><img src="../logos/englishkids.png" alt="EnglishKids"></div>
+      <div class="ico" style="background:#0288D1"><img src="../logos/englokids.png" alt="EnglishKids"></div>
       <div class="txt"><b>EnglishKids</b><p>L'aventure linguistique ultime ! Associez des visuels éclatants, des prononciations authentiques et des jeux captivants pour aider votre enfant à penser et s'exprimer en anglais tout naturellement.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.english" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE SUR</span><span class="g-main">Google Play</span></span></a>
     </div>
@@ -100,7 +100,7 @@ module.exports = {
     </ul>
 
     <div class="appcta">
-      <div class="ico" style="background:#0288D1"><img src="../logos/englishkids.png" alt="EnglishKids"></div>
+      <div class="ico" style="background:#0288D1"><img src="../logos/englokids.png" alt="EnglishKids"></div>
       <div class="txt"><b>EnglishKids</b><p>¡La aventura interactiva de idiomas ideal! Combina pronunciaciones nativas, retos visuales y divertidos juegos mecánicos para que los niños de primaria aprendan inglés de forma natural.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.english" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE EN</span><span class="g-main">Google Play</span></span></a>
     </div>
@@ -134,7 +134,7 @@ module.exports = {
     </ul>
 
     <div class="appcta">
-      <div class="ico" style="background:#0288D1"><img src="../logos/englishkids.png" alt="EnglishKids"></div>
+      <div class="ico" style="background:#0288D1"><img src="../logos/englokids.png" alt="EnglishKids"></div>
       <div class="txt"><b>EnglishKids</b><p>المغامرة التفاعلية الأقوى لبناء الحصيلة اللغوية للأطفال! يدمج التطبيق بسلاسة فائقة بين الصور الجذابة، النطق الصوتي الأصلي، والألعاب المشوقة لتمكين أطفالك من التفكير والتحدث بالإنجليزية بكل ثقة وعفوية.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.english" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">احصل عليه من</span><span class="g-main">Google Play</span></span></a>
     </div>
