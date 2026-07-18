@@ -35,7 +35,7 @@ module.exports = {
     <p>Once your child understands that computers require logical instructions, transition them to visual block-based learning. Visual coding replaces syntax errors with colorful, snapping jigsaw puzzle blocks. Instead of typing text, children drag blocks to move characters, create loops, and build operational algorithms. This keeps the cognitive focus entirely on logical design rather than typing mastery.</p>
 
     <div class="appcta">
-      <div class="ico" style="background:#7E57C2"><img src="../logos/codekids.png" alt="CodeKids"></div>
+      <div class="ico" style="background:#7E57C2"><img src="../logos/codokids.png" alt="CodeKids"></div>
       <div class="txt"><b>CodeKids</b><p>The ultimate gamified arena for young innovators! Designed to help primary school children master foundational programming concepts, loops, and visual block logic through thousands of exciting game levels.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.code" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">GET IT ON</span><span class="g-main">Google Play</span></span></a>
     </div>
@@ -69,7 +69,7 @@ module.exports = {
     <p>Une fois ces notions assimilées, la programmation visuelle par blocs s'impose comme la transition idéale. Sans aucune contrainte d'écriture textuelle, l'enfant assemble des blocs de couleur comme des pièces de puzzle pour créer des boucles logiques et animer des personnages.</p>
 
     <div class="appcta">
-      <div class="ico" style="background:#7E57C2"><img src="../logos/codekids.png" alt="CodeKids"></div>
+      <div class="ico" style="background:#7E57C2"><img src="../logos/codokids.png" alt="CodeKids"></div>
       <div class="txt"><b>CodeKids</b><p>L'espace interactif idéal pour les jeunes créateurs ! Conçue pour guider les enfants du primaire dans l'apprentissage des concepts de programmation, de boucles et de logique algorithmique par le jeu.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.code" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE SUR</span><span class="g-main">Google Play</span></span></a>
     </div>
@@ -102,7 +102,7 @@ module.exports = {
     <p>La programación basada en bloques visuales es la mejor forma de avanzar. En lugar de escribir texto, los niños arrastran bloques coloridos como piezas de un rompecabezas para crear bucles, condicionales y algoritmos divertidos.</p>
 
     <div class="appcta">
-      <div class="ico" style="background:#7E57C2"><img src="../logos/codekids.png" alt="CodeKids"></div>
+      <div class="ico" style="background:#7E57C2"><img src="../logos/codokids.png" alt="CodeKids"></div>
       <div class="txt"><b>CodeKids</b><p>¡El entorno interactivo perfecto para futuros ingenieros! Diseñado para que los niños de primaria dominen conceptos de lógica, condicionales y bucles mientras superan divertidos desafíos de juego.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.code" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE EN</span><span class="g-main">Google Play</span></span></a>
     </div>
@@ -135,7 +135,7 @@ module.exports = {
     <p>بعد استيعاب المفاهيم اللوجستية، انقل طفلك إلى عالم البرمجة المرئية (Visual Block-Based Coding). هذا الأسلوب يستبدل النصوص والأكواد المعقدة بكتل ملونة تشبه قطع الأحجية (Puzzle)؛ حيث يقوم الطفل بسحب وإفلات الكتل البرمجية لتركيب جمل شرطية (If-Statements)، وتكرار برمجياً (Loops)، لتحريك الشخصيات وحل الألغاز. هذا يضمن بقاء التركيز الذهني للطفل منصباً بالكامل على الهندسة المنطقية بدلاً من الانشغال بالكتابة على لوحة المفاتيح.</p>
 
     <div class="appcta">
-      <div class="ico" style="background:#7E57C2"><img src="../logos/codekids.png" alt="CodeKids"></div>
+      <div class="ico" style="background:#7E57C2"><img src="../logos/codokids.png" alt="CodeKids"></div>
       <div class="txt"><b>CodeKids</b><p>الميدان التفاعلي الأروع للمبتكرين الصغار! تطبيق ذكي يساعد أطفال المرحلة الابتدائية على إتقان التفكير الخوارزمي، بناء الجمل الشرطية، واستيعاب التكرار البرمجي من خلال مئات المستويات والمغامرات اللعبية الساحرة.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.code" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">احصل عليه من</span><span class="g-main">Google Play</span></span></a>
     </div>
