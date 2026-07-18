@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'teaching-coding-kids-home', date: '2026-07-19',
+    emoji: '💻', grad: 'linear-gradient(135deg,#9575CD,#5E35B1)', tagColor: '#5E35B1', tagClass: 'code',
+    tagL: { en: 'Coding', fr: 'Codage', es: 'Código', ar: 'برمجة' },
+    cardTitle: {
+      en: 'The Ultimate Guide to Teaching Coding to Kids at Home',
+      fr: 'Le guide ultime pour enseigner la programmation aux enfants à la maison',
+      es: 'La guía definitiva para enseñar programación a los niños en casa',
+      ar: 'الدليل الشامل لتعليم البرمجة للأطفال في المنزل بدون تعقيد' },
+    excerpt: {
+      en: 'Discover how unplugged games, algorithmic routines, and visual block tools can turn your child into an innovative digital creator.',
+      fr: 'Découvrez comment les jeux physiques, les rituels et les blocs visuels transforment votre enfant en un créateur numérique innovant.',
+      es: 'Descubre cómo los juegos sin pantallas, rutinas y bloques visuales convierten a tu hijo en un creador digital innovador.',
+      ar: 'اكتشف كيف يمكن للألعاب الحركية، تنظيم الأنشطة اليومية والأدوات المرئية التفاعلية أن تحول طفلك إلى مبتكر وصانع رقمي ذكي.' },
+  },
+  {
     slug: 'positive-parenting-digital-age', date: '2026-07-18',
     emoji: '🌱', grad: 'linear-gradient(135deg,#FFD84D,#FF8A00)', tagColor: '#FF8A00', tagClass: 'tips',
     tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
