@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Kids Learning Hub — /apps/ pages
+   Loaded after blog/article.css, which provides the shell
+   (.top, .wrap, .crumbs, .grid, .pcard, .appcta, .foot, details.faq).
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── app hero ─────────────────────────────────────────────────────── */
+.app-hero{
+  display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);padding:26px;margin-bottom:20px;
+}
+.app-hero .app-icon{
+  width:112px;height:112px;border-radius:26px;flex-shrink:0;
+  box-shadow:0 12px 26px rgba(20,45,110,.18);
+}
+.app-hero-t{flex:1;min-width:260px}
+.app-hero-t h1{font-size:clamp(24px,4vw,34px);margin:10px 0 10px}
+.app-hero-t .lede{margin-bottom:18px}
+
+.app-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.free-note{color:var(--muted);font-weight:700;font-size:13.5px}
+
+/* ── Google Play button ───────────────────────────────────────────── */
+.play-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#12224E;color:#fff;border-radius:14px;
+  padding:12px 20px;font-weight:800;font-size:15px;
+  box-shadow:0 8px 20px rgba(18,34,78,.28);transition:.16s;
+}
+.play-btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(18,34,78,.36)}
+.play-btn svg{width:20px;height:20px;flex-shrink:0}
+.play-btn.ghost{
+  background:var(--card2);color:var(--ink);border:1px solid var(--line);
+  box-shadow:none;font-size:14px;padding:11px 16px;
+}
+.play-btn.ghost:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+:root[data-theme="dark"] .play-btn{background:#2A3B6E}
+
+/* ── stat strip ───────────────────────────────────────────────────── */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:8px}
+.stats .stat{
+  background:var(--card2);border:1px solid var(--line);border-radius:16px;
+  padding:14px 10px;text-align:center;
+}
+.stats .stat b{
+  display:block;font-family:"Baloo 2",sans-serif;font-size:26px;
+  color:var(--blue);line-height:1.15;
+}
+.stats .stat span{font-size:12.5px;color:var(--muted);font-weight:700}
+
+/* ── feature list ─────────────────────────────────────────────────── */
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:14px 0 8px}
+.feat{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;
+}
+.feat-i{
+  font-size:26px;line-height:1;flex-shrink:0;
+  width:46px;height:46px;border-radius:14px;background:var(--card2);
+  display:grid;place-items:center;
+}
+.feat h3{font-size:16.5px;margin:2px 0 6px}
+.feat p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.55}
+
+/* ── app cards on the index ───────────────────────────────────────── */
+.pcard.appcard .cover{height:132px}
+.pcard.appcard .cover img{
+  width:72px;height:72px;border-radius:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.22);
+}
+
+.section-h{margin:38px 0 16px;font-size:22px}
+.backlink{margin-top:30px}
+
+/* ── RTL ──────────────────────────────────────────────────────────── */
+[dir="rtl"] .feat,[dir="rtl"] .app-hero{text-align:right}
+
+/* ── narrow screens ───────────────────────────────────────────────── */
+@media(max-width:640px){
+  .app-hero{padding:20px;gap:18px}
+  .app-hero .app-icon{width:84px;height:84px;border-radius:20px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .play-btn{width:100%;justify-content:center}
+  .app-actions{width:100%}
+}

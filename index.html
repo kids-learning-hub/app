@@ -81,6 +81,37 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Kids Learning Hub",
+  "url":"https://kids-learning-hub.cc/",
+  "inLanguage":["en","fr","es","ar"],
+  "publisher":{"@type":"Organization","name":"Kids Learning Hub"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"}]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "inLanguage":"en",
+  "mainEntity":[
+    {"@type":"Question","name":"Are the apps really free?","acceptedAnswer":{"@type":"Answer","text":"Yes! Every app is free to download on Google Play. An optional Premium plan unlocks all content and adds bonus features."}},
+    {"@type":"Question","name":"What ages are they for?","acceptedAnswer":{"@type":"Answer","text":"They are designed for children aged 4 to 12, from first letters and numbers up to primary-school level in each subject."}},
+    {"@type":"Question","name":"Do they work offline?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Once installed, the apps work fully offline — perfect for the car, travelling or anywhere without internet."}},
+    {"@type":"Question","name":"Are they safe for kids?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is a parental gate and no data collection on children. They are built for ages 4+."}}
+  ]
+}
+</script>
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -586,22 +617,21 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
         <div class="hero-grid">
           <div class="hero-text">
             <span class="eyebrow">🎓 <span data-i="eyebrow">Multilingual learning for ages 4–12</span></span>
-            <h1><span data-i="welcome">Welcome to</span><br>
-              <span class="kids">Kids</span> <span class="lr" data-i="wLearning">Learning</span> <span class="hub" data-i="wHub">Hub</span></h1>
-            <div class="lead" data-i="lead">Learn, Play, and Discover Every Day!</div>
-            <p data-i="heroPara">Explore fun lessons, educational games, printable worksheets, and exciting science activities in multiple languages.</p>
+            <h1 data-i="h1">Free learning apps, games and worksheets for kids aged 4–12</h1>
+            <div class="lead"><span class="kids">Kids</span> <span class="lr">Learning</span> <span class="hub">Hub</span> — <span data-i="lead">Learn, Play, and Discover Every Day!</span></div>
+            <p data-i="heroPara">Maths, science, coding, geography and six languages — in 10 free Android apps, printable worksheets and browser games. Offline, safe, no sign-up.</p>
             <div class="hero-cta">
-              <a class="btn btn-primary" href="#apps" id="startBtn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 13c0-5 3-9 9-11 2 5 1 9-4 13l-5-2Z"/><path d="M9 15l-3 3M11 11l-2 2"/></svg>
-                <span data-i="startLearning">Start Learning</span>
-              </a>
-              <a class="btn btn-ghost" href="#apps">
+              <a class="btn btn-primary" href="apps/" id="startBtn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="7" y="2.5" width="10" height="19" rx="3"/><path d="M11 18h2"/></svg>
                 <span data-i="exploreApps">Explore Apps</span>
               </a>
-              <a class="btn btn-text" href="#apps">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>
-                <span data-i="watchDemo">Watch Demo</span>
+              <a class="btn btn-ghost" href="worksheets/">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg>
+                <span data-i="freeSheets">Free Worksheets</span>
+              </a>
+              <a class="btn btn-text" href="play/">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2.5" y="7" width="19" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3M16 12h.01M18.5 14h.01"/></svg>
+                <span data-i="freeGames">Play Free Games</span>
               </a>
             </div>
           </div>
@@ -711,7 +741,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
       <section class="card apps-card reveal" id="apps">
         <div class="sec-head">
           <h2 data-i="ourApps">Our Educational Apps</h2>
-          <a class="link" href="#apps" data-i="viewAllApps">View All Apps →</a>
+          <a class="link" href="apps/" id="allAppsLink" data-i="viewAllApps">View All Apps →</a>
         </div>
         <div class="apps-row" id="appsRow"></div>
       </section>
@@ -1091,10 +1121,10 @@ const T = {
     nav:{home:'Home',math:'Math',science:'Science',coding:'Coding',geography:'Geography',english:'English',french:'French',german:'German',arabic:'Arabic',spanish:'Spanish',chinese:'Chinese',games:'Games',worksheets:'Worksheets',stories:'Stories',blog:'Blog',apps:'Apps',pricing:'Pricing',contact:'Contact'},
     tagline:'Learn • Play • Discover', login:'Login', navLangs:'Languages', navSubjects:'Subjects', wsMath:'Math', wsGeo:'Geography', wsWriting:'Writing & pre-school', wsActivities:'Coloring & activities', wsHolidays:'Holidays & seasons', wsAwards:'Certificates',
     eyebrow:'Multilingual learning for ages 4–12',
-    welcome:'Welcome to', wLearning:'Learning', wHub:'Hub',
+    h1:'Free learning apps, games and worksheets for kids aged 4–12',
     lead:'Learn, Play, and Discover Every Day!',
-    heroPara:'Explore fun lessons, educational games, printable worksheets, and exciting science activities in multiple languages.',
-    startLearning:'Start Learning', exploreApps:'Explore Apps', watchDemo:'Watch Demo',
+    heroPara:'Maths, science, coding, geography and six languages — in 10 free Android apps, printable worksheets and browser games. Offline, safe, no sign-up.',
+    exploreApps:'Explore Apps', freeSheets:'Free Worksheets', freeGames:'Play Free Games',
     cats:{math:'Math',science:'Science',coding:'Coding',geography:'Geography',english:'English',french:'French',german:'German',arabic:'Arabic',games:'Games',work:'Worksheets'},
     ourApps:'Our Educational Apps', viewAllApps:'View All Apps →', viewAll:'View All →', download:'GET IT ON', adLabel:'Advertisement',
     blogEyebrow:'From the blog', blogTitle:'Latest articles & guides', blogAll:'View all →', readMore:'Read more',
@@ -1137,10 +1167,10 @@ const T = {
     nav:{home:'Accueil',math:'Maths',science:'Sciences',coding:'Codage',geography:'Géographie',english:'Anglais',french:'Français',german:'Allemand',arabic:'Arabe',spanish:'Espagnol',chinese:'Chinois',games:'Jeux',worksheets:'Fiches',stories:'Histoires',blog:'Blog',apps:'Applis',pricing:'Tarifs',contact:'Contact'},
     tagline:'Apprendre • Jouer • Découvrir', login:'Connexion', navLangs:'Langues', navSubjects:'Matières', wsMath:'Maths', wsGeo:'Géographie', wsWriting:'Écriture & maternelle', wsActivities:'Coloriage & activités', wsHolidays:'Fêtes & saisons', wsAwards:'Diplômes',
     eyebrow:'Apprentissage multilingue pour les 4–12 ans',
-    welcome:'Bienvenue sur', wLearning:'Learning', wHub:'Hub',
+    h1:'Applis, jeux et fiches éducatives gratuits pour les enfants de 4 à 12 ans',
     lead:'Apprendre, jouer et découvrir chaque jour !',
-    heroPara:'Découvrez des leçons ludiques, des jeux éducatifs, des fiches à imprimer et des activités scientifiques passionnantes en plusieurs langues.',
-    startLearning:'Commencer', exploreApps:'Voir les applis', watchDemo:'Voir la démo',
+    heroPara:'Maths, sciences, codage, géographie et six langues — dans 10 applis Android gratuites, des fiches à imprimer et des jeux en ligne. Hors ligne, sûr, sans inscription.',
+    exploreApps:'Voir les applis', freeSheets:'Fiches gratuites', freeGames:'Jouer gratuitement',
     cats:{math:'Maths',science:'Sciences',coding:'Codage',geography:'Géographie',english:'Anglais',french:'Français',german:'Allemand',arabic:'Arabe',games:'Jeux',work:'Fiches'},
     ourApps:'Nos applications éducatives', viewAllApps:'Toutes les applis →', viewAll:'Tout voir →', download:'DISPONIBLE SUR', adLabel:'Publicité',
     blogEyebrow:'Le blog', blogTitle:'Derniers articles & guides', blogAll:'Voir tout →', readMore:'Lire la suite',
@@ -1183,10 +1213,10 @@ const T = {
     nav:{home:'Inicio',math:'Matemáticas',science:'Ciencias',coding:'Programación',geography:'Geografía',english:'Inglés',french:'Francés',german:'Alemán',arabic:'Árabe',spanish:'Español',chinese:'Chino',games:'Juegos',worksheets:'Fichas',stories:'Cuentos',blog:'Blog',apps:'Apps',pricing:'Precios',contact:'Contacto'},
     tagline:'Aprende • Juega • Descubre', login:'Entrar', navLangs:'Idiomas', navSubjects:'Asignaturas', wsMath:'Matemáticas', wsGeo:'Geografía', wsWriting:'Escritura & preescolar', wsActivities:'Colorear & actividades', wsHolidays:'Fiestas & estaciones', wsAwards:'Diplomas',
     eyebrow:'Aprendizaje multilingüe para 4–12 años',
-    welcome:'Bienvenido a', wLearning:'Learning', wHub:'Hub',
+    h1:'Apps, juegos y fichas educativas gratis para niños de 4 a 12 años',
     lead:'¡Aprende, juega y descubre cada día!',
-    heroPara:'Explora lecciones divertidas, juegos educativos, fichas imprimibles y emocionantes actividades de ciencia en varios idiomas.',
-    startLearning:'Empezar', exploreApps:'Ver apps', watchDemo:'Ver demo',
+    heroPara:'Matemáticas, ciencias, programación, geografía y seis idiomas — en 10 apps Android gratuitas, fichas imprimibles y juegos en el navegador. Sin conexión, seguro, sin registro.',
+    exploreApps:'Ver apps', freeSheets:'Fichas gratis', freeGames:'Juega gratis',
     cats:{math:'Matemáticas',science:'Ciencias',coding:'Programación',geography:'Geografía',english:'Inglés',french:'Francés',german:'Alemán',arabic:'Árabe',games:'Juegos',work:'Fichas'},
     ourApps:'Nuestras apps educativas', viewAllApps:'Ver todas →', viewAll:'Ver todo →', download:'DISPONIBLE EN', adLabel:'Publicidad',
     blogEyebrow:'El blog', blogTitle:'Últimos artículos y guías', blogAll:'Ver todo →', readMore:'Leer más',
@@ -1229,10 +1259,10 @@ const T = {
     nav:{home:'الرئيسية',math:'الرياضيات',science:'العلوم',coding:'البرمجة',geography:'الجغرافيا',english:'الإنجليزية',french:'الفرنسية',german:'الألمانية',arabic:'العربية',spanish:'الإسبانية',chinese:'الصينية',games:'ألعاب',worksheets:'أوراق عمل',stories:'القصص',blog:'المدونة',apps:'التطبيقات',pricing:'الأسعار',contact:'اتصل بنا'},
     tagline:'تعلّم • العب • اكتشف', login:'دخول', navLangs:'اللغات', navSubjects:'المواد', wsMath:'الرياضيات', wsGeo:'الجغرافيا', wsWriting:'الكتابة وما قبل المدرسة', wsActivities:'التلوين والأنشطة', wsHolidays:'المناسبات والفصول', wsAwards:'الشهادات',
     eyebrow:'تعلّم متعدّد اللغات لأعمار 4–12',
-    welcome:'مرحبًا بك في', wLearning:'Learning', wHub:'Hub',
+    h1:'تطبيقات وألعاب وأوراق عمل تعليمية مجانية للأطفال من 4 إلى 12 سنة',
     lead:'تعلّم والعب واكتشف كل يوم!',
-    heroPara:'اكتشف دروسًا ممتعة وألعابًا تعليمية وأوراق عمل قابلة للطباعة وأنشطة علمية شيّقة بعدّة لغات.',
-    startLearning:'ابدأ التعلّم', exploreApps:'استكشف التطبيقات', watchDemo:'شاهد العرض',
+    heroPara:'رياضيات وعلوم وبرمجة وجغرافيا وستّ لغات — في 10 تطبيقات أندرويد مجانية وأوراق عمل للطباعة وألعاب في المتصفّح. دون إنترنت، وبأمان، وبلا تسجيل.',
+    exploreApps:'استكشف التطبيقات', freeSheets:'أوراق عمل مجانية', freeGames:'العب مجانًا',
     cats:{math:'رياضيات',science:'علوم',english:'إنجليزية',french:'فرنسية',german:'ألمانية',arabic:'عربية',games:'ألعاب',work:'أوراق عمل'},
     ourApps:'تطبيقاتنا التعليمية', viewAllApps:'كل التطبيقات ←', viewAll:'عرض الكل ←', download:'حمّله على', adLabel:'إعلان',
     blogEyebrow:'من المدوّنة', blogTitle:'أحدث المقالات والأدلّة', blogAll:'عرض الكل ←', readMore:'اقرأ المزيد',
@@ -1285,13 +1315,21 @@ function render(){
   document.documentElement.dir  = t.dir;
 
   // nav menus
+  /* subject key → app page slug */
+  const APP_SLUG = {
+    math:'mathokids', science:'scienkids', coding:'codokids', geography:'geokids',
+    english:'englokids', french:'francokids', german:'germokids',
+    arabic:'arabikids', spanish:'spanokids', chinese:'chinokids',
+  };
+  const appsBase = () => 'apps/' + (lang==='en'?'':lang+'/');
   const navHref = k => {
     if(k==='home') return '#top';
     if(k==='blog') return 'blog/' + (lang==='en'?'':lang+'/');
     if(k==='stories') return 'stories/' + (lang==='en'?'':lang+'/');
     if(k==='games') return 'play/' + (lang==='en'?'':'?lang='+lang);
     if(k==='worksheets') return 'worksheets/' + (lang==='en'?'':'?lang='+lang);
-    return '#apps'; // subjects point to the apps section
+    if(APP_SLUG[k]) return appsBase() + APP_SLUG[k] + '.html';
+    return appsBase(); // fallback: the apps index
   };
   const SUBJ_KEYS = ['math','science','coding','geography'];
   const LANG_KEYS = ['english','french','spanish','german','arabic','chinese'];
@@ -1352,13 +1390,21 @@ function render(){
   });
   document.querySelectorAll('[data-ip]').forEach(el=>{ const v=t[el.dataset.ip]; if(v) el.placeholder=v; });
 
+  // language-aware hero / section links
+  const _sec = { startBtn:appsBase(), allAppsLink:appsBase() };
+  for(const id in _sec){ const el=document.getElementById(id); if(el) el.href=_sec[id]; }
+  document.querySelectorAll('.hero-cta a[href^="worksheets/"],.hero-cta a[href^="play/"]').forEach(el=>{
+    const base = el.getAttribute('href').split('?')[0].split('#')[0];
+    el.href = base + (lang==='en' ? '' : '?lang='+lang);
+  });
+
   // apps
   document.getElementById('appsRow').innerHTML = APPS.map(a=>`
-    <a class="app-chip" href="${playUrl(a.pkg)}" target="_blank" rel="noopener" aria-label="${a.name} on Google Play">
+    <a class="app-chip" href="${appsBase()}${a.name.toLowerCase()}.html" aria-label="${a.name} — ${a.subject[lang]}">
       <div class="ico" style="background:${a.color}">${a.emoji||''}<img src="logos/${a.file}" alt="${a.name}" loading="lazy" onerror="this.remove()"></div>
       <b>${a.name}</b>
       <small>${a.subject[lang]}</small>
-      <span class="rate">★ 4.8 · ${a.dl}</span>
+      <span class="rate">${a.dl}</span>
       <span class="play">${playSvg}<span><span class="g-sub">${t.download}</span><span class="g-main">Google Play</span></span></span>
     </a>`).join('');
 
@@ -1373,6 +1419,7 @@ function render(){
   ];
   document.getElementById('whyGrid').innerHTML = WHY.map(w=>`
     <div class="why-item"><div class="ic">${w.ic}</div><h4>${w.h[lang]}</h4><p>${w.p[lang]}</p></div>`).join('');
+
 
   // testimonials
   document.getElementById('testiGrid').innerHTML = t.testi.map(x=>`

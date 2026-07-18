@@ -1238,4 +1238,490 @@
     <priority>0.3</priority>
   </url>
 
+  <!--APPS-->
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/mathokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/mathokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/mathokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/mathokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/mathokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/mathokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/mathokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/mathokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/mathokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/scienkids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/scienkids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/scienkids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/scienkids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/scienkids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/scienkids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/scienkids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/scienkids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/scienkids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/codokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/codokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/codokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/codokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/codokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/codokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/codokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/codokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/codokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/geokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/geokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/geokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/geokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/geokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/geokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/geokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/geokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/geokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/englokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/englokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/englokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/englokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/englokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/englokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/englokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/englokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/englokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/francokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/francokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/francokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/francokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/francokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/francokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/francokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/francokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/francokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/spanokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/spanokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/spanokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/spanokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/spanokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/spanokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/spanokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/spanokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/spanokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/arabikids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/arabikids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/arabikids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/arabikids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/arabikids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/arabikids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/arabikids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/arabikids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/arabikids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/germokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/germokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/germokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/germokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/germokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/germokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/germokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/germokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/germokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/chinokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/chinokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/fr/chinokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/chinokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/es/chinokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/chinokids.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/apps/ar/chinokids.html</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/apps/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/apps/fr/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/apps/es/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/apps/ar/chinokids.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/apps/chinokids.html"/>
+  </url>
+  <!--/APPS-->
 </urlset>
