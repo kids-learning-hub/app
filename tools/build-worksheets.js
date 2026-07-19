@@ -73,6 +73,12 @@ ${END}`;
 
 function schemaFor(topic, lang) {
   const t = UI[lang];
+  /* Breadcrumbs surface in search results, so the last crumb must read as a
+     title ("Word tracing"), not as the internal slug ("words"). Take the part
+     of the localised title before the first separator. */
+  const crumbName = (topic.meta && topic.meta[lang] && topic.meta[lang].title)
+    ? topic.meta[lang].title.split(/\s*[|(]/)[0].trim()
+    : topic.slug;
   return [
     { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: lang,
       mainEntity: topic.faq[lang].map(([q, a]) => ({
@@ -82,7 +88,7 @@ function schemaFor(topic, lang) {
       { '@type': 'ListItem', position: 1, name: t.home, item: BASE + '/' },
       { '@type': 'ListItem', position: 2, name: t.ws,
         item: `${BASE}/worksheets/${lang === 'en' ? '' : lang + '/'}` },
-      { '@type': 'ListItem', position: 3, name: topic.slug, item: urlOf(topic.slug, lang) }] },
+      { '@type': 'ListItem', position: 3, name: crumbName, item: urlOf(topic.slug, lang) }] },
   ].map(o => `<script type="application/ld+json">\n${JSON.stringify(o)}\n</script>`).join('\n');
 }
 

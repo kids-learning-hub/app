@@ -2245,5 +2245,49 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/worksheets/ar/clock.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/worksheets/clock.html"/>
   </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/worksheets/words.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/worksheets/words.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/worksheets/fr/words.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/worksheets/es/words.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/worksheets/ar/words.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/worksheets/words.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/worksheets/fr/words.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/worksheets/words.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/worksheets/fr/words.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/worksheets/es/words.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/worksheets/ar/words.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/worksheets/words.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/worksheets/es/words.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/worksheets/words.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/worksheets/fr/words.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/worksheets/es/words.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/worksheets/ar/words.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/worksheets/words.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/worksheets/ar/words.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/worksheets/words.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/worksheets/fr/words.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/worksheets/es/words.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/worksheets/ar/words.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/worksheets/words.html"/>
+  </url>
   <!--/WSPAGES-->
 </urlset>

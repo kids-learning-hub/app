@@ -326,7 +326,7 @@ for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'pl
                  'play/math-race.html', 'play/flags.html', 'play/patterns.html', 'play/science-quiz.html',
                  'worksheets/', 'worksheets/addition.html', 'worksheets/subtraction.html',
                  'worksheets/multiplication.html', 'worksheets/missing-number.html', 'worksheets/arabic-letters.html',
-                 'worksheets/latin-letters.html', 'worksheets/numbers.html',
+                 'worksheets/latin-letters.html', 'worksheets/numbers.html', 'worksheets/words.html',
                  'worksheets/coloring.html', 'worksheets/coloring-letters.html',
                  'worksheets/certificates.html', 'worksheets/clock.html', 'worksheets/money.html',
                  'worksheets/tables-poster.html', 'worksheets/division.html', 'worksheets/compare-numbers.html',
