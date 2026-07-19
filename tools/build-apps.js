@@ -155,6 +155,7 @@ ${hreflangBlock(o.slug, o.self)}<meta name="theme-color" content="#1E5BFF" />
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${root}blog/article.css" />
 <link rel="stylesheet" href="${appsRoot}apps.css" />
+<script src="${root}analytics.js" defer></script>
 <script>(function(){try{var t=localStorage.getItem('vsm_theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
 
 ${o.jsonld.map(j => `<script type="application/ld+json">\n${JSON.stringify(j)}\n</script>`).join('\n')}

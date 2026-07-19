@@ -145,6 +145,7 @@ ${hreflangBlock(opts.slug, opts.self)}${langRedirect(lang, opts.slug)}<meta name
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${blogRoot}article.css" />
+<script src="${root}analytics.js" defer></script>
 
 ${opts.jsonld.map(o => `<script type="application/ld+json">\n${JSON.stringify(o)}\n</script>`).join('\n')}
 </head>
@@ -349,7 +350,28 @@ sm += `  <url>
 
 </urlset>
 `;
-fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sm);
+
+/* ── carry over blocks owned by the other build tools ─────────────────
+   This file rebuilds sitemap.xml from scratch, so without this step a
+   blog rebuild would silently delete every /apps/ and /fr/ /es/ /ar/ url
+   written by build-apps.js and build-langs.js. Their sections are fenced
+   with markers; we lift them out of the previous sitemap and re-insert
+   them, so the three tools can run in any order.                      */
+const smPath = path.join(ROOT, 'sitemap.xml');
+if (fs.existsSync(smPath)) {
+  const prev = fs.readFileSync(smPath, 'utf8');
+  const carried = [];
+  for (const name of ['APPS', 'LANGS', 'WSPAGES']) {
+    const m = prev.match(new RegExp(`<!--${name}-->[\\s\\S]*?<!--/${name}-->`));
+    if (m) carried.push('  ' + m[0]);
+  }
+  if (carried.length) {
+    sm = sm.replace('</urlset>', carried.join('\n') + '\n</urlset>');
+    console.log(`  ↳ preserved ${carried.length} block(s) from other build tools`);
+  }
+}
+
+fs.writeFileSync(smPath, sm);
 console.log(`✔ rebuilt sitemap.xml (${(sm.match(/<loc>/g) || []).length} URLs)`);
 
 /* ── 4 · regenerate the homepage BLOG_POSTS block (between markers) ──── */

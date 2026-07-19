@@ -3,14 +3,39 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kids Learning Hub — Learn • Play • Discover</title>
-<meta name="description" content="Kids Learning Hub by VS MEDIA — multilingual learning for children 4–12: math, science, coding, languages and games. Free apps on Google Play." />
+<title>Free Learning Apps, Games &amp; Worksheets for Kids 4–12 | Kids Learning Hub</title>
+<meta name="description" content="Free educational apps, printable worksheets and browser games for children aged 4–12: maths, science, coding, geography and six languages. Offline, safe, no sign-up." />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/ar/" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/" />
 <link rel="canonical" href="https://kids-learning-hub.cc/" />
 <meta name="google-site-verification" content="d0chbydB13mHmPsUZlGRwn3R9meJ1Eo9vARxKDK3CjE" />
 <meta name="p:domain_verify" content="ceea3f2c65e12ac65b0ee1d443b9e7e1"/>
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="logos/hub-logo.png" />
-<link rel="apple-touch-icon" href="logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
+<link rel="apple-touch-icon" href="/logos/hub-logo.png" />
 
 <!-- Google AdSense (VS MEDIA · pub-9202119066805107) -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9202119066805107"
@@ -20,15 +45,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/" />
-<meta property="og:title" content="Kids Learning Hub — Learn • Play • Discover" />
-<meta property="og:description" content="A multilingual educational platform for children 4–12. Math, science, languages, games and worksheets. Free apps on Google Play." />
+<meta property="og:title" content="Free Learning Apps, Games &amp; Worksheets for Kids 4–12 | Kids Learning Hub" />
+<meta property="og:description" content="Free educational apps, printable worksheets and browser games for children aged 4–12: maths, science, coding, geography and six languages. Offline, safe, no sign-up." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:secure_url" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Kids Learning Hub — Learn, Play, Discover" />
-<meta property="og:locale" content="en_US" />
+<meta property="og:locale" content="en" />
 <meta property="og:locale:alternate" content="fr_FR" />
 <meta property="og:locale:alternate" content="es_ES" />
 <meta property="og:locale:alternate" content="ar_MA" />
@@ -135,7 +160,17 @@
   --shadow:0 18px 44px rgba(0,0,0,.45);
   --shadow-sm:0 8px 22px rgba(0,0,0,.35);
 }
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+  /* The closed mobile drawer (.m-panel) is position:fixed and, in RTL, parked
+     just past the right edge — which is real scrollable space, so Arabic pages
+     scrolled sideways. overflow-x on <body> can't clip a fixed element, and
+     visibility:hidden doesn't remove it from the scroll area either. `clip`
+     clips without creating a scroll container, so position:sticky on the nav
+     keeps working; `hidden` is the fallback for browsers without `clip`. */
+  overflow-x:hidden;
+  overflow-x:clip;
+}
 body{
   font-family:"Nunito",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   color:var(--ink); background:var(--bg); line-height:1.6;
@@ -533,13 +568,14 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
   *{animation:none!important;transition:none!important}
 }
 </style>
+<script src="/analytics.js" defer></script>
 </head>
 <body>
 
 <!-- ═══════════ Loading screen ═══════════ -->
 <div id="loader">
   <div class="loader-box">
-    <img src="logos/hub-logo.png" alt="Kids Learning Hub" />
+    <img src="/logos/hub-logo.png" alt="Kids Learning Hub" />
     <div class="loader-ring"></div>
     <p>Kids Learning Hub</p>
   </div>
@@ -549,7 +585,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
 <nav class="nav">
   <div class="nav-inner">
     <a class="nav-logo" href="#top" aria-label="Kids Learning Hub home">
-      <img src="logos/hub-logo.png" alt="Kids Learning Hub logo" />
+      <img src="/logos/hub-logo.png" alt="Kids Learning Hub logo" />
       <span><b><i>Kids</i> Learning Hub</b><small data-i="tagline">Learn • Play • Discover</small></span>
     </a>
 
@@ -577,9 +613,9 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
         <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
       </button>
 
-      <a class="btn-login" href="#" data-i="login">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-        <span data-i="login">Login</span>
+      <a class="btn-login" href="/apps/" id="navAppsBtn" data-i="getApps">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
+        <span data-i="getApps">Get the Apps</span>
       </a>
 
       <button class="icon-btn hamburger" id="hamBtn" aria-label="Open menu">
@@ -595,7 +631,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
   <button class="icon-btn m-close" id="mClose" aria-label="Close menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
-  <div class="nav-logo"><img src="logos/hub-logo.png" alt=""><b><i>Kids</i> Learning Hub</b></div>
+  <div class="nav-logo"><img src="/logos/hub-logo.png" alt=""><b><i>Kids</i> Learning Hub</b></div>
   <div id="mMenu"></div>
 </aside>
 
@@ -621,15 +657,15 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
             <div class="lead"><span class="kids">Kids</span> <span class="lr">Learning</span> <span class="hub">Hub</span> — <span data-i="lead">Learn, Play, and Discover Every Day!</span></div>
             <p data-i="heroPara">Maths, science, coding, geography and six languages — in 10 free Android apps, printable worksheets and browser games. Offline, safe, no sign-up.</p>
             <div class="hero-cta">
-              <a class="btn btn-primary" href="apps/" id="startBtn">
+              <a class="btn btn-primary" href="/apps/" id="startBtn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="7" y="2.5" width="10" height="19" rx="3"/><path d="M11 18h2"/></svg>
                 <span data-i="exploreApps">Explore Apps</span>
               </a>
-              <a class="btn btn-ghost" href="worksheets/">
+              <a class="btn btn-ghost" href="/worksheets/">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg>
                 <span data-i="freeSheets">Free Worksheets</span>
               </a>
-              <a class="btn btn-text" href="play/">
+              <a class="btn btn-text" href="/play/">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="2.5" y="7" width="19" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3M16 12h.01M18.5 14h.01"/></svg>
                 <span data-i="freeGames">Play Free Games</span>
               </a>
@@ -741,7 +777,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
       <section class="card apps-card reveal" id="apps">
         <div class="sec-head">
           <h2 data-i="ourApps">Our Educational Apps</h2>
-          <a class="link" href="apps/" id="allAppsLink" data-i="viewAllApps">View All Apps →</a>
+          <a class="link" href="/apps/" id="allAppsLink" data-i="viewAllApps">View All Apps →</a>
         </div>
         <div class="apps-row" id="appsRow"></div>
       </section>
@@ -753,22 +789,22 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
       <section class="reveal">
         <div class="feat3">
           <article class="feat-card">
-            <div class="fc-top"><span class="feat-emoji">📋</span><a class="link" href="#" data-i="viewAll">View All →</a></div>
+            <div class="fc-top"><span class="feat-emoji">📋</span><a class="link secLink" href="/worksheets/" data-i="viewAll">View All →</a></div>
             <h3 data-i="wsTitle">Printable Worksheets</h3>
             <p data-i="wsDesc">Download and print high-quality worksheets for math, science, languages and more.</p>
-            <a class="btn-sm g-blue" href="worksheets/" data-i="wsBtn">Browse Worksheets</a>
+            <a class="btn-sm g-blue secLink" href="/worksheets/" data-i="wsBtn">Browse Worksheets</a>
           </article>
           <article class="feat-card">
-            <div class="fc-top"><span class="feat-emoji">🎮</span><a class="link" href="#" data-i="viewAll">View All →</a></div>
+            <div class="fc-top"><span class="feat-emoji">🎮</span><a class="link secLink" href="/play/" data-i="viewAll">View All →</a></div>
             <h3 data-i="gmTitle">Fun Educational Games</h3>
             <p data-i="gmDesc">Play interactive games that make learning fun and exciting!</p>
-            <a class="btn-sm g-green" href="#" data-i="gmBtn">Play Games</a>
+            <a class="btn-sm g-green secLink" href="/play/" data-i="gmBtn">Play Games</a>
           </article>
           <article class="feat-card">
-            <div class="fc-top"><span class="feat-emoji">🧪</span><a class="link" href="#" data-i="viewAll">View All →</a></div>
+            <div class="fc-top"><span class="feat-emoji">🧪</span><a class="link secLink" href="/apps/scienkids.html" data-i="viewAll">View All →</a></div>
             <h3 data-i="sciTitle">Science Experiments</h3>
             <p data-i="sciDesc">Discover amazing science experiments and learn how things work!</p>
-            <a class="btn-sm g-purple" href="#" data-i="sciBtn">Explore Science</a>
+            <a class="btn-sm g-purple secLink" href="/apps/scienkids.html" data-i="sciBtn">Explore Science</a>
           </article>
         </div>
       </section>
@@ -870,10 +906,10 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
         <div class="eyebrow-sm" data-i="playEyebrow">Play online</div>
         <h2 data-i="playTitle">Free games — right in your browser</h2>
       </div>
-      <a class="link" href="play/" data-i="playAll">All games →</a>
+      <a class="link" href="/play/" data-i="playAll">All games →</a>
     </div>
     <div class="posts">
-      <a class="postc" href="play/times-tables.html">
+      <a class="postc" href="/play/times-tables.html">
         <div class="cov" style="background:linear-gradient(135deg,#5B8CFF,#1E5BFF)">✖️</div>
         <div class="bd">
           <span class="tg" style="background:#1E5BFF" data-i="playAges612">Ages 6–12</span>
@@ -882,7 +918,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
           <span class="rd" data-i="playNow">Play now →</span>
         </div>
       </a>
-      <a class="postc" href="play/quick-count.html">
+      <a class="postc" href="/play/quick-count.html">
         <div class="cov" style="background:linear-gradient(135deg,#5FE08A,#15A34A)">🔢</div>
         <div class="bd">
           <span class="tg" style="background:#15A34A" data-i="playAges47">Ages 4–7</span>
@@ -891,7 +927,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
           <span class="rd" data-i="playNow">Play now →</span>
         </div>
       </a>
-      <a class="postc" href="play/word-match.html">
+      <a class="postc" href="/play/word-match.html">
         <div class="cov" style="background:linear-gradient(135deg,#FF7AB8,#FF4FA3)">🗣️</div>
         <div class="bd">
           <span class="tg" style="background:#FF4FA3" data-i="playAges512">Ages 5–12</span>
@@ -900,7 +936,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
           <span class="rd" data-i="playNow">Play now →</span>
         </div>
       </a>
-      <a class="postc" href="stories/" id="storiesCard">
+      <a class="postc" href="/stories/" id="storiesCard">
         <div class="cov" style="background:linear-gradient(135deg,#9B7BFF,#7A4DFF)">📖</div>
         <div class="bd">
           <span class="tg" style="background:#7A4DFF" data-i="playAges48">Ages 4–8</span>
@@ -919,7 +955,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
         <div class="eyebrow-sm" data-i="blogEyebrow">From the blog</div>
         <h2 data-i="blogTitle">Latest articles &amp; guides</h2>
       </div>
-      <a class="link" href="blog/" id="blogAllLink" data-i="blogAll">View all →</a>
+      <a class="link" href="/blog/" id="blogAllLink" data-i="blogAll">View all →</a>
     </div>
     <div class="posts" id="blogRow"></div>
   </section>
@@ -968,7 +1004,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
 <footer>
   <div class="foot-top">
     <div class="foot-brand">
-      <div class="nav-logo"><img src="logos/hub-logo.png" alt="" style="width:52px;height:52px"><b><i>Kids</i> Learning Hub</b></div>
+      <div class="nav-logo"><img src="/logos/hub-logo.png" alt="" style="width:52px;height:52px"><b><i>Kids</i> Learning Hub</b></div>
       <p data-i="footAbout">The world's friendliest multilingual learning platform for children aged 4–12. Math, science, languages, games &amp; worksheets.</p>
       <div class="socials">
         <a data-social="facebook" hidden target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg></a>
@@ -980,13 +1016,13 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
     </div>
     <div class="foot-col"><h4 data-i="footApps">Apps</h4><div id="footApps"></div></div>
     <div class="foot-col"><h4 data-i="footResources">Resources</h4>
-      <a href="worksheets/" data-i="fWorksheets">Worksheets</a><a href="play/" data-i="fGames">Games</a>
-      <a href="stories/" data-i="fStories">Stories</a>
-      <a href="blog/easy-science-experiments-for-kids.html" data-i="fScience">Science</a><a href="blog/" data-i="fBlog">Blog</a>
+      <a href="/worksheets/" data-i="fWorksheets">Worksheets</a><a href="/play/" data-i="fGames">Games</a>
+      <a href="/stories/" data-i="fStories">Stories</a>
+      <a href="/blog/easy-science-experiments-for-kids.html" data-i="fScience">Science</a><a href="/blog/" data-i="fBlog">Blog</a>
     </div>
     <div class="foot-col"><h4 data-i="footSupport">Support</h4>
-      <a href="about.html" data-i="fAbout">About</a><a href="mailto:vs.media.ste@gmail.com" data-i="fContact">Contact</a>
-      <a href="privacy.html" data-i="fPrivacy">Privacy Policy</a><a href="privacy.html#terms" data-i="fTerms">Terms of Use</a>
+      <a href="/about.html" data-i="fAbout">About</a><a href="mailto:vs.media.ste@gmail.com" data-i="fContact">Contact</a>
+      <a href="/privacy.html" data-i="fPrivacy">Privacy Policy</a><a href="/privacy.html#terms" data-i="fTerms">Terms of Use</a>
     </div>
   </div>
   <div class="foot-bottom">
@@ -1119,7 +1155,7 @@ const BLOG_POSTS = [
 const T = {
   en:{dir:'ltr',label:'English',flag:'🇬🇧',code:'EN',
     nav:{home:'Home',math:'Math',science:'Science',coding:'Coding',geography:'Geography',english:'English',french:'French',german:'German',arabic:'Arabic',spanish:'Spanish',chinese:'Chinese',games:'Games',worksheets:'Worksheets',stories:'Stories',blog:'Blog',apps:'Apps',pricing:'Pricing',contact:'Contact'},
-    tagline:'Learn • Play • Discover', login:'Login', navLangs:'Languages', navSubjects:'Subjects', wsMath:'Math', wsGeo:'Geography', wsWriting:'Writing & pre-school', wsActivities:'Coloring & activities', wsHolidays:'Holidays & seasons', wsAwards:'Certificates',
+    tagline:'Learn • Play • Discover', login:'Login', getApps:'Get the Apps', navLangs:'Languages', navSubjects:'Subjects', wsMath:'Math', wsGeo:'Geography', wsWriting:'Writing & pre-school', wsActivities:'Coloring & activities', wsHolidays:'Holidays & seasons', wsAwards:'Certificates',
     eyebrow:'Multilingual learning for ages 4–12',
     h1:'Free learning apps, games and worksheets for kids aged 4–12',
     lead:'Learn, Play, and Discover Every Day!',
@@ -1134,7 +1170,7 @@ const T = {
     playG2:'Quick Count', playG2d:'How many do you see? Counting fun for little ones.',
     playG3:'Word Match', playG3d:'Match pictures to words in 5 languages.',
     playAges612:'Ages 6–12', playAges47:'Ages 4–7', playAges512:'Ages 5–12', playAges48:'Ages 4–8', stT:'Bedtime stories', stD:'Three-minute stories with a gentle moral — in 4 languages.', readNow:'Read now →',
-    metaTitle:'Kids Learning Hub — Learn • Play • Discover', metaDesc:'A multilingual educational platform for children 4–12: math, science, languages, games and worksheets. Free apps on Google Play.', ogLocale:'en_US',
+    metaTitle:'Free Learning Apps, Games & Worksheets for Kids 4–12 | Kids Learning Hub', metaDesc:'Free educational apps, printable worksheets and browser games for children aged 4–12: maths, science, coding, geography and six languages. Offline, safe, no sign-up.', ogLocale:'en_US',
     share:'Share', shareText:'Fun learning apps for kids — maths, science & languages 🎓', shareCopied:'Link copied to clipboard!',
     wsTitle:'Printable Worksheets', wsDesc:'Download and print high-quality worksheets for math, science, languages and more.', wsBtn:'Browse Worksheets',
     gmTitle:'Fun Educational Games', gmDesc:'Play interactive games that make learning fun and exciting!', gmBtn:'Play Games',
@@ -1165,7 +1201,7 @@ const T = {
 
   fr:{dir:'ltr',label:'Français',flag:'🇫🇷',code:'FR',
     nav:{home:'Accueil',math:'Maths',science:'Sciences',coding:'Codage',geography:'Géographie',english:'Anglais',french:'Français',german:'Allemand',arabic:'Arabe',spanish:'Espagnol',chinese:'Chinois',games:'Jeux',worksheets:'Fiches',stories:'Histoires',blog:'Blog',apps:'Applis',pricing:'Tarifs',contact:'Contact'},
-    tagline:'Apprendre • Jouer • Découvrir', login:'Connexion', navLangs:'Langues', navSubjects:'Matières', wsMath:'Maths', wsGeo:'Géographie', wsWriting:'Écriture & maternelle', wsActivities:'Coloriage & activités', wsHolidays:'Fêtes & saisons', wsAwards:'Diplômes',
+    tagline:'Apprendre • Jouer • Découvrir', login:'Connexion', getApps:'Voir les applis', navLangs:'Langues', navSubjects:'Matières', wsMath:'Maths', wsGeo:'Géographie', wsWriting:'Écriture & maternelle', wsActivities:'Coloriage & activités', wsHolidays:'Fêtes & saisons', wsAwards:'Diplômes',
     eyebrow:'Apprentissage multilingue pour les 4–12 ans',
     h1:'Applis, jeux et fiches éducatives gratuits pour les enfants de 4 à 12 ans',
     lead:'Apprendre, jouer et découvrir chaque jour !',
@@ -1180,7 +1216,7 @@ const T = {
     playG2:'Compte vite', playG2d:'Combien en vois-tu ? Du comptage amusant pour les petits.',
     playG3:'Trouve le mot', playG3d:'Associe les images aux mots en 5 langues.',
     playAges612:'6–12 ans', playAges47:'4–7 ans', playAges512:'5–12 ans', playAges48:'4–8 ans', stT:'Histoires du soir', stD:'Des histoires de trois minutes avec une jolie morale — en 4 langues.', readNow:'Lire →',
-    metaTitle:'Kids Learning Hub — Apprendre • Jouer • Découvrir', metaDesc:'Plateforme éducative multilingue pour les enfants de 4 à 12 ans : maths, sciences, langues, jeux et fiches. Applis gratuites sur Google Play.', ogLocale:'fr_FR',
+    metaTitle:'Applis, jeux et fiches éducatives gratuits pour enfants 4–12 ans | Kids Learning Hub', metaDesc:'Applis éducatives, fiches à imprimer et jeux gratuits pour les 4–12 ans : maths, sciences, codage, géographie et six langues. Hors ligne, sûrs, sans inscription.', ogLocale:'fr_FR',
     share:'Partager', shareText:'Des applis éducatives amusantes pour enfants — maths, sciences et langues 🎓', shareCopied:'Lien copié !',
     wsTitle:'Fiches à imprimer', wsDesc:'Téléchargez et imprimez des fiches de qualité en maths, sciences, langues et plus encore.', wsBtn:'Voir les fiches',
     gmTitle:'Jeux éducatifs amusants', gmDesc:'Des jeux interactifs qui rendent l’apprentissage amusant et captivant !', gmBtn:'Jouer',
@@ -1211,7 +1247,7 @@ const T = {
 
   es:{dir:'ltr',label:'Español',flag:'🇪🇸',code:'ES',
     nav:{home:'Inicio',math:'Matemáticas',science:'Ciencias',coding:'Programación',geography:'Geografía',english:'Inglés',french:'Francés',german:'Alemán',arabic:'Árabe',spanish:'Español',chinese:'Chino',games:'Juegos',worksheets:'Fichas',stories:'Cuentos',blog:'Blog',apps:'Apps',pricing:'Precios',contact:'Contacto'},
-    tagline:'Aprende • Juega • Descubre', login:'Entrar', navLangs:'Idiomas', navSubjects:'Asignaturas', wsMath:'Matemáticas', wsGeo:'Geografía', wsWriting:'Escritura & preescolar', wsActivities:'Colorear & actividades', wsHolidays:'Fiestas & estaciones', wsAwards:'Diplomas',
+    tagline:'Aprende • Juega • Descubre', login:'Entrar', getApps:'Ver las apps', navLangs:'Idiomas', navSubjects:'Asignaturas', wsMath:'Matemáticas', wsGeo:'Geografía', wsWriting:'Escritura & preescolar', wsActivities:'Colorear & actividades', wsHolidays:'Fiestas & estaciones', wsAwards:'Diplomas',
     eyebrow:'Aprendizaje multilingüe para 4–12 años',
     h1:'Apps, juegos y fichas educativas gratis para niños de 4 a 12 años',
     lead:'¡Aprende, juega y descubre cada día!',
@@ -1226,7 +1262,7 @@ const T = {
     playG2:'Cuenta rápido', playG2d:'¿Cuántos ves? Contar divertido para los pequeños.',
     playG3:'Une la palabra', playG3d:'Une imágenes y palabras en 5 idiomas.',
     playAges612:'6–12 años', playAges47:'4–7 años', playAges512:'5–12 años', playAges48:'4–8 años', stT:'Cuentos para dormir', stD:'Cuentos de tres minutos con una moraleja amable — en 4 idiomas.', readNow:'Leer →',
-    metaTitle:'Kids Learning Hub — Aprende • Juega • Descubre', metaDesc:'Plataforma educativa multilingüe para niños de 4 a 12 años: matemáticas, ciencias, idiomas, juegos y fichas. Apps gratis en Google Play.', ogLocale:'es_ES',
+    metaTitle:'Apps, juegos y fichas educativas gratis para niños 4–12 | Kids Learning Hub', metaDesc:'Apps educativas, fichas imprimibles y juegos gratis para niños de 4 a 12 años: matemáticas, ciencias, programación, geografía y seis idiomas. Sin conexión y seguras.', ogLocale:'es_ES',
     share:'Compartir', shareText:'Apps educativas divertidas para niños — matemáticas, ciencias e idiomas 🎓', shareCopied:'¡Enlace copiado!',
     wsTitle:'Fichas imprimibles', wsDesc:'Descarga e imprime fichas de alta calidad de matemáticas, ciencias, idiomas y más.', wsBtn:'Ver fichas',
     gmTitle:'Juegos educativos divertidos', gmDesc:'¡Juegos interactivos que hacen el aprendizaje divertido y emocionante!', gmBtn:'Jugar',
@@ -1257,7 +1293,7 @@ const T = {
 
   ar:{dir:'rtl',label:'العربية',flag:'🇲🇦',code:'AR',
     nav:{home:'الرئيسية',math:'الرياضيات',science:'العلوم',coding:'البرمجة',geography:'الجغرافيا',english:'الإنجليزية',french:'الفرنسية',german:'الألمانية',arabic:'العربية',spanish:'الإسبانية',chinese:'الصينية',games:'ألعاب',worksheets:'أوراق عمل',stories:'القصص',blog:'المدونة',apps:'التطبيقات',pricing:'الأسعار',contact:'اتصل بنا'},
-    tagline:'تعلّم • العب • اكتشف', login:'دخول', navLangs:'اللغات', navSubjects:'المواد', wsMath:'الرياضيات', wsGeo:'الجغرافيا', wsWriting:'الكتابة وما قبل المدرسة', wsActivities:'التلوين والأنشطة', wsHolidays:'المناسبات والفصول', wsAwards:'الشهادات',
+    tagline:'تعلّم • العب • اكتشف', login:'دخول', getApps:'حمّل التطبيقات', navLangs:'اللغات', navSubjects:'المواد', wsMath:'الرياضيات', wsGeo:'الجغرافيا', wsWriting:'الكتابة وما قبل المدرسة', wsActivities:'التلوين والأنشطة', wsHolidays:'المناسبات والفصول', wsAwards:'الشهادات',
     eyebrow:'تعلّم متعدّد اللغات لأعمار 4–12',
     h1:'تطبيقات وألعاب وأوراق عمل تعليمية مجانية للأطفال من 4 إلى 12 سنة',
     lead:'تعلّم والعب واكتشف كل يوم!',
@@ -1272,7 +1308,7 @@ const T = {
     playG2:'العدّ السريع', playG2d:'كم ترى في الصورة؟ متعة العدّ للصغار.',
     playG3:'طابِق الكلمة', playG3d:'طابِق الصور مع الكلمات بخمس لغات.',
     playAges612:'6–12 سنة', playAges47:'4–7 سنوات', playAges512:'5–12 سنة', playAges48:'4–8 سنوات', stT:'قصص قبل النوم', stD:'قصص من ثلاث دقائق بعبرة لطيفة — بأربع لغات.', readNow:'اقرأ الآن ←',
-    metaTitle:'Kids Learning Hub — تعلّم • العب • اكتشف', metaDesc:'منصّة تعليمية متعدّدة اللغات للأطفال من 4 إلى 12 سنة: رياضيات وعلوم ولغات وألعاب وأوراق عمل. تطبيقات مجانية على Google Play.', ogLocale:'ar_AR',
+    metaTitle:'تطبيقات وألعاب وأوراق عمل تعليمية مجانية للأطفال 4–12 | Kids Learning Hub', metaDesc:'تطبيقات تعليمية وأوراق عمل للطباعة وألعاب مجانية للأطفال من 4 إلى 12 سنة: الرياضيات والعلوم والبرمجة والجغرافيا وستّ لغات. تعمل دون إنترنت وبأمان.', ogLocale:'ar_AR',
     share:'مشاركة', shareText:'تطبيقات تعليمية ممتعة للأطفال — رياضيات وعلوم ولغات 🎓', shareCopied:'تم نسخ الرابط!',
     wsTitle:'أوراق عمل للطباعة', wsDesc:'حمّل واطبع أوراق عمل عالية الجودة للرياضيات والعلوم واللغات وأكثر.', wsBtn:'تصفّح الأوراق',
     gmTitle:'ألعاب تعليمية ممتعة', gmDesc:'ألعاب تفاعلية تجعل التعلّم ممتعًا ومشوّقًا!', gmBtn:'العب الآن',
@@ -1321,19 +1357,19 @@ function render(){
     english:'englokids', french:'francokids', german:'germokids',
     arabic:'arabikids', spanish:'spanokids', chinese:'chinokids',
   };
-  const appsBase = () => 'apps/' + (lang==='en'?'':lang+'/');
+  const appsBase = () => '/apps/' + (lang==='en'?'':lang+'/');
   const navHref = k => {
     if(k==='home') return '#top';
-    if(k==='blog') return 'blog/' + (lang==='en'?'':lang+'/');
-    if(k==='stories') return 'stories/' + (lang==='en'?'':lang+'/');
-    if(k==='games') return 'play/' + (lang==='en'?'':'?lang='+lang);
-    if(k==='worksheets') return 'worksheets/' + (lang==='en'?'':'?lang='+lang);
+    if(k==='blog') return '/blog/' + (lang==='en'?'':lang+'/');
+    if(k==='stories') return '/stories/' + (lang==='en'?'':lang+'/');
+    if(k==='games') return '/play/' + (lang==='en'?'':'?lang='+lang);
+    if(k==='worksheets') return '/worksheets/' + (lang==='en'?'':'?lang='+lang);
     if(APP_SLUG[k]) return appsBase() + APP_SLUG[k] + '.html';
     return appsBase(); // fallback: the apps index
   };
   const SUBJ_KEYS = ['math','science','coding','geography'];
   const LANG_KEYS = ['english','french','spanish','german','arabic','chinese'];
-  const wsBase = 'worksheets/' + (lang==='en'?'':'?lang='+lang);
+  const wsBase = '/worksheets/' + (lang==='en'?'':'?lang='+lang);
   const WS_SECTIONS = [
     ['📐', t.wsMath,       wsBase + '#math'],
     ['🌍', t.wsGeo,        wsBase + '#geography'],
@@ -1372,7 +1408,7 @@ function render(){
   document.getElementById('mMenu').innerHTML =
     NAV_KEYS.map(k=>`<a href="${navHref(k)}" onclick="closeMobile()">${t.nav[k]}</a>`).join('') +
     `<a href="#" onclick="closeMobile();shareSite();return false">🔗 ${t.share}</a>` +
-    `<a href="#apps" onclick="closeMobile()" style="margin-top:10px;background:var(--grad-brand);color:#fff;text-align:center">${t.login}</a>`;
+    `<a href="${appsBase()}" onclick="closeMobile()" style="margin-top:10px;background:var(--grad-brand);color:#fff;text-align:center">${t.getApps}</a>`;
 
   // share button label
   const sBtn = document.getElementById('shareBtn');
@@ -1390,18 +1426,23 @@ function render(){
   });
   document.querySelectorAll('[data-ip]').forEach(el=>{ const v=t[el.dataset.ip]; if(v) el.placeholder=v; });
 
-  // language-aware hero / section links
-  const _sec = { startBtn:appsBase(), allAppsLink:appsBase() };
-  for(const id in _sec){ const el=document.getElementById(id); if(el) el.href=_sec[id]; }
-  document.querySelectorAll('.hero-cta a[href^="worksheets/"],.hero-cta a[href^="play/"]').forEach(el=>{
-    const base = el.getAttribute('href').split('?')[0].split('#')[0];
-    el.href = base + (lang==='en' ? '' : '?lang='+lang);
+  /* Language-aware internal links.
+     The original href is stashed on first run, so re-rendering on every
+     language switch always rewrites from the static path — never from the
+     already-localised one (which would compound to apps/ar/ar/…). */
+  document.querySelectorAll('.hero-cta a, .secLink, #allAppsLink, #navAppsBtn').forEach(el=>{
+    if(!el.dataset.href) el.dataset.href = el.getAttribute('href') || '';
+    const raw = el.dataset.href;
+    if(!raw || /^(https?:|#|mailto:)/.test(raw)) return;
+    el.href = raw.startsWith('/apps/')
+      ? appsBase() + raw.slice(6)                       // apps/x.html → apps/<lang>/x.html
+      : raw + (lang==='en' ? '' : '?lang='+lang);       // worksheets/ , play/
   });
 
   // apps
   document.getElementById('appsRow').innerHTML = APPS.map(a=>`
     <a class="app-chip" href="${appsBase()}${a.name.toLowerCase()}.html" aria-label="${a.name} — ${a.subject[lang]}">
-      <div class="ico" style="background:${a.color}">${a.emoji||''}<img src="logos/${a.file}" alt="${a.name}" loading="lazy" onerror="this.remove()"></div>
+      <div class="ico" style="background:${a.color}">${a.emoji||''}<img src="/logos/${a.file}" alt="${a.name}" loading="lazy" onerror="this.remove()"></div>
       <b>${a.name}</b>
       <small>${a.subject[lang]}</small>
       <span class="rate">${a.dl}</span>
@@ -1444,8 +1485,8 @@ function render(){
   document.getElementById('footApps').innerHTML = APPS.map(a=>`<a href="${playUrl(a.pkg)}" target="_blank" rel="noopener">${a.name}</a>`).join('');
 
   // latest from the blog
-  const bDir = 'blog/' + (lang==='en' ? '' : lang+'/');
-  const sc = document.getElementById('storiesCard'); if(sc) sc.href = 'stories/' + (lang==='en' ? '' : lang+'/');
+  const bDir = '/blog/' + (lang==='en' ? '' : lang+'/');
+  const sc = document.getElementById('storiesCard'); if(sc) sc.href = '/stories/' + (lang==='en' ? '' : lang+'/');
   document.getElementById('blogRow').innerHTML = BLOG_POSTS.slice(0,6).map(b=>`
     <a class="postc" href="${bDir}${b.slug}.html">
       <div class="cov" style="background:${b.grad}">${b.emoji}</div>

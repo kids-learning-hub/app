@@ -73,3 +73,41 @@
   .namebar{font-size:11.5pt}
   .sheet-foot{margin-top:8px}
 }
+
+/* ─────────────────────────────────────────────────────────────────────
+   Guide block under each worksheet generator
+   (injected by tools/build-worksheets.js — content in worksheets-data.js)
+   ───────────────────────────────────────────────────────────────────── */
+.ws-guide{
+  max-width:760px;margin:34px auto 0;padding:26px 24px;
+  background:var(--card);border:1px solid var(--line);
+  border-radius:20px;box-shadow:var(--shadow-sm);
+}
+.ws-guide h2{font-size:20px;margin:26px 0 10px;color:var(--blue)}
+.ws-guide h2:first-of-type{margin-top:22px}
+.ws-lede{font-size:16.5px;line-height:1.7;color:var(--ink2);margin:0}
+.ws-ages{
+  display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+  background:var(--card2);border:1px solid var(--line);border-radius:999px;
+  padding:7px 16px;font-size:14px;color:var(--muted);font-weight:700;
+}
+.ws-ages strong{color:var(--ink)}
+.ws-tips{margin:0;padding-inline-start:22px;color:var(--ink2)}
+.ws-tips li{margin-bottom:9px;font-size:15.5px;line-height:1.65}
+.ws-guide details.faq{
+  background:var(--card2);border:1px solid var(--line);
+  border-radius:14px;padding:14px 18px;margin:10px 0;
+}
+.ws-guide details.faq summary{
+  cursor:pointer;font-weight:800;color:var(--ink);list-style-position:inside;
+}
+.ws-guide details.faq summary::marker{color:var(--blue)}
+.ws-guide details.faq[open] summary{margin-bottom:8px;color:var(--blue)}
+.ws-guide details.faq p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.6}
+
+@media print{ .ws-guide{display:none} }
+
+@media(max-width:640px){
+  .ws-guide{padding:20px 18px;border-radius:16px}
+  .ws-lede{font-size:15.5px}
+}
