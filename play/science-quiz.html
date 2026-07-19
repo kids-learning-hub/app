@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Science Quiz — Free Online Science Game for Kids | Kids Learning Hub</title>
+<meta name="description" content="A free browser science quiz for children aged 6–11: space, animals, the body, water and weather. Ten questions, earn stars. No install and no sign-up." />
+<link rel="canonical" href="https://kids-learning-hub.cc/play/science-quiz.html" />
+<meta name="theme-color" content="#1E5BFF" />
+<link rel="icon" href="/logos/hub-logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Kids Learning Hub" />
+<meta property="og:url" content="https://kids-learning-hub.cc/play/science-quiz.html" />
+<meta property="og:title" content="Science Quiz — Free Science Game for Kids" />
+<meta property="og:description" content="Space, animals, the body and weather — ten questions, earn stars. Play free!" />
+<meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9202119066805107" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/play/play.css?v=2" />
+<style>
+  #topic{font-size:clamp(46px,12vw,68px);text-align:center;margin:8px 0 2px}
+  #q{font-size:clamp(17px,3.4vw,21px);font-weight:800;text-align:center;margin-bottom:4px}
+</style>
+<script src="/analytics.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <div class="top-actions">
+      <div class="langsw" role="group" aria-label="Language">
+        <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
+      </div>
+      <button class="icon-btn" aria-label="Dark mode" onclick="PLAY.toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Science Quiz</span></p>
+
+  <div class="gamecard">
+    <div class="gamehead">
+      <span class="gicon" style="background:linear-gradient(135deg,#5FE08A,#15A34A)">🔬</span>
+      <div><h1 data-t="title">Science Quiz</h1><p class="sub" data-t="sub">Space, animals, the body and weather — how much do you know?</p></div>
+    </div>
+
+    <div id="game">
+      <div class="hud"><span id="progress"></span><span id="score">⭐ 0</span></div>
+      <div id="topic" aria-hidden="true"></div>
+      <div id="q" aria-live="polite"></div>
+      <div class="choices answers" id="answers"></div>
+      <div class="feedback" id="feedback">&nbsp;</div>
+    </div>
+
+    <div id="end" hidden>
+      <div class="bigstars" id="bigstars"></div>
+      <div class="endscore" id="endscore"></div>
+      <p class="endmsg" id="endmsg"></p>
+      <div class="endbtns">
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=star" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="appcta">
+    <img src="/logos/scienkids.png" alt="ScienKids">
+    <div><b>ScienKids</b><p data-t="cta">Ten science topics, safe home experiments and colouring — learn science by playing, offline and free on Google Play.</p></div>
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.vsmedia.scienkids" target="_blank" rel="noopener">Google Play</a>
+  </div>
+
+  <div class="ad-slot"><div class="ad-label" data-t="ad">Advertisement</div><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-format="auto" data-ad-client="ca-pub-9202119066805107" data-ad-slot="4620284747" data-full-width-responsive="true"></ins></div>
+</div>
+
+<footer class="foot">
+  <div class="fb">Kids Learning Hub</div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
+</footer>
+
+<script src="/play/play.js?v=2"></script>
+<script>
+const STR = {
+  en:{home:'Home',games:'Games',title:'Science Quiz',sub:'Space, animals, the body and weather — how much do you know?',
+      again:'Play again',good:'Brilliant science! 🎉',ok:'Well done — keep exploring!',try:'Good try — play once more!',
+      correct:'Correct! 🎉',wrong:'The answer was',q:'Question',cert:'Print your certificate!',ad:'Advertisement',
+      cta:'Ten science topics, safe home experiments and colouring — learn science by playing, offline and free on Google Play.'},
+  fr:{home:'Accueil',games:'Jeux',title:'Quiz de sciences',sub:"L'espace, les animaux, le corps et le climat — que sais-tu ?",
+      again:'Rejouer',good:'Sciences brillantes ! 🎉',ok:'Bien joué — continue à explorer !',try:'Bel essai — encore une fois !',
+      correct:'Correct ! 🎉',wrong:'La réponse était',q:'Question',cert:'Imprime ton diplôme !',ad:'Publicité',
+      cta:"Dix sujets scientifiques, des expériences sûres à la maison et des coloriages — apprends les sciences en jouant, hors ligne et gratuit sur Google Play."},
+  es:{home:'Inicio',games:'Juegos',title:'Quiz de ciencias',sub:'El espacio, los animales, el cuerpo y el clima: ¿cuánto sabes?',
+      again:'Jugar otra vez',good:'¡Ciencia brillante! 🎉',ok:'¡Bien hecho! Sigue explorando.',try:'Buen intento, ¡una vez más!',
+      correct:'¡Correcto! 🎉',wrong:'La respuesta era',q:'Pregunta',cert:'¡Imprime tu diploma!',ad:'Publicidad',
+      cta:'Diez temas de ciencia, experimentos seguros en casa y dibujos para colorear: aprende ciencias jugando, sin conexión y gratis en Google Play.'},
+  ar:{home:'الرئيسية',games:'الألعاب',title:'اختبار العلوم',sub:'الفضاء والحيوانات والجسم والطقس — كم تعرف؟',
+      again:'العب مجددًا',good:'علوم رائعة! 🎉',ok:'أحسنت — واصل الاستكشاف!',try:'محاولة طيبة — جرّب مرة أخرى!',
+      correct:'إجابة صحيحة! 🎉',wrong:'الجواب هو',q:'سؤال',cert:'اطبع شهادتك!',ad:'إعلان',
+      cta:'عشرة مواضيع علمية وتجارب منزلية آمنة وصفحات تلوين — تعلّم العلوم باللعب، دون إنترنت ومجانًا على Google Play.'}
+};
+
+/* Fourteen questions, ten drawn per game, so a second play is not identical.
+   Answers are facts a primary-age child can verify, not trivia. */
+const QUESTIONS = [
+  {ic:'🪐', q:{en:'Which planet do we live on?',fr:'Sur quelle planète vivons-nous ?',es:'¿En qué planeta vivimos?',ar:'على أي كوكب نعيش؟'},
+   a:{en:'Earth',fr:'La Terre',es:'La Tierra',ar:'الأرض'},
+   w:[{en:'Mars',fr:'Mars',es:'Marte',ar:'المريخ'},{en:'The Moon',fr:'La Lune',es:'La Luna',ar:'القمر'}]},
+
+  {ic:'☀️', q:{en:'What is the Sun?',fr:"Qu'est-ce que le Soleil ?",es:'¿Qué es el Sol?',ar:'ما هي الشمس؟'},
+   a:{en:'A star',fr:'Une étoile',es:'Una estrella',ar:'نجم'},
+   w:[{en:'A planet',fr:'Une planète',es:'Un planeta',ar:'كوكب'},{en:'A moon',fr:'Une lune',es:'Una luna',ar:'قمر'}]},
+
+  {ic:'💧', q:{en:'What falls from clouds as rain?',fr:'Que tombe-t-il des nuages ?',es:'¿Qué cae de las nubes?',ar:'ماذا يسقط من الغيوم؟'},
+   a:{en:'Water',fr:"De l'eau",es:'Agua',ar:'الماء'},
+   w:[{en:'Sand',fr:'Du sable',es:'Arena',ar:'الرمل'},{en:'Air',fr:"De l'air",es:'Aire',ar:'الهواء'}]},
+
+  {ic:'🌱', q:{en:'What do plants need to grow?',fr:'De quoi les plantes ont-elles besoin ?',es:'¿Qué necesitan las plantas?',ar:'ماذا تحتاج النباتات لتنمو؟'},
+   a:{en:'Light and water',fr:'De lumière et d\'eau',es:'Luz y agua',ar:'الضوء والماء'},
+   w:[{en:'Only sand',fr:'Du sable seulement',es:'Solo arena',ar:'الرمل فقط'},{en:'Only wind',fr:'Du vent seulement',es:'Solo viento',ar:'الرياح فقط'}]},
+
+  {ic:'🫀', q:{en:'Which organ pumps your blood?',fr:'Quel organe pompe le sang ?',es:'¿Qué órgano bombea la sangre?',ar:'أي عضو يضخّ الدم؟'},
+   a:{en:'The heart',fr:'Le cœur',es:'El corazón',ar:'القلب'},
+   w:[{en:'The brain',fr:'Le cerveau',es:'El cerebro',ar:'الدماغ'},{en:'The stomach',fr:"L'estomac",es:'El estómago',ar:'المعدة'}]},
+
+  {ic:'🦴', q:{en:'What is your skeleton made of?',fr:'De quoi est fait ton squelette ?',es:'¿De qué está hecho tu esqueleto?',ar:'ممّ يتكوّن هيكلك العظمي؟'},
+   a:{en:'Bones',fr:'D\'os',es:'Huesos',ar:'العظام'},
+   w:[{en:'Muscles',fr:'De muscles',es:'Músculos',ar:'العضلات'},{en:'Skin',fr:'De peau',es:'Piel',ar:'الجلد'}]},
+
+  {ic:'🦋', q:{en:'What does a caterpillar become?',fr:'Que devient une chenille ?',es:'¿En qué se convierte una oruga?',ar:'إلى ماذا تتحوّل اليرقة؟'},
+   a:{en:'A butterfly',fr:'Un papillon',es:'Una mariposa',ar:'فراشة'},
+   w:[{en:'A bee',fr:'Une abeille',es:'Una abeja',ar:'نحلة'},{en:'A bird',fr:'Un oiseau',es:'Un pájaro',ar:'طائر'}]},
+
+  {ic:'🐟', q:{en:'How do fish breathe under water?',fr:'Comment les poissons respirent-ils ?',es:'¿Cómo respiran los peces?',ar:'كيف تتنفّس الأسماك تحت الماء؟'},
+   a:{en:'With gills',fr:'Avec des branchies',es:'Con branquias',ar:'بالخياشيم'},
+   w:[{en:'With lungs',fr:'Avec des poumons',es:'Con pulmones',ar:'بالرئتين'},{en:'With their skin',fr:'Avec la peau',es:'Con la piel',ar:'بالجلد'}]},
+
+  {ic:'🧊', q:{en:'What happens to water when it freezes?',fr:"Que devient l'eau qui gèle ?",es:'¿Qué le pasa al agua al congelarse?',ar:'ماذا يحدث للماء عند تجمّده؟'},
+   a:{en:'It becomes ice',fr:'Elle devient de la glace',es:'Se convierte en hielo',ar:'يصير جليدًا'},
+   w:[{en:'It becomes sand',fr:'Elle devient du sable',es:'Se convierte en arena',ar:'يصير رملًا'},{en:'It disappears',fr:'Elle disparaît',es:'Desaparece',ar:'يختفي'}]},
+
+  {ic:'🌙', q:{en:'What goes around the Earth?',fr:'Qu\'est-ce qui tourne autour de la Terre ?',es:'¿Qué gira alrededor de la Tierra?',ar:'ما الذي يدور حول الأرض؟'},
+   a:{en:'The Moon',fr:'La Lune',es:'La Luna',ar:'القمر'},
+   w:[{en:'The Sun',fr:'Le Soleil',es:'El Sol',ar:'الشمس'},{en:'Mars',fr:'Mars',es:'Marte',ar:'المريخ'}]},
+
+  {ic:'👂', q:{en:'Which sense do you use to hear?',fr:'Quel sens sert à entendre ?',es:'¿Qué sentido usas para oír?',ar:'أي حاسة تستعملها للسمع؟'},
+   a:{en:'Hearing',fr:"L'ouïe",es:'El oído',ar:'السمع'},
+   w:[{en:'Smell',fr:"L'odorat",es:'El olfato',ar:'الشمّ'},{en:'Touch',fr:'Le toucher',es:'El tacto',ar:'اللمس'}]},
+
+  {ic:'🌈', q:{en:'What makes a rainbow appear?',fr:"Qu'est-ce qui fait apparaître un arc-en-ciel ?",es:'¿Qué hace aparecer un arcoíris?',ar:'ما الذي يُظهر قوس قزح؟'},
+   a:{en:'Sun and rain together',fr:'Le soleil et la pluie ensemble',es:'Sol y lluvia juntos',ar:'الشمس والمطر معًا'},
+   w:[{en:'Wind and sand',fr:'Le vent et le sable',es:'Viento y arena',ar:'الرياح والرمل'},{en:'Snow and ice',fr:'La neige et la glace',es:'Nieve y hielo',ar:'الثلج والجليد'}]},
+
+  {ic:'🦕', q:{en:'When did dinosaurs live?',fr:'Quand vivaient les dinosaures ?',es:'¿Cuándo vivieron los dinosaurios?',ar:'متى عاشت الديناصورات؟'},
+   a:{en:'Long before people',fr:'Bien avant les humains',es:'Mucho antes que las personas',ar:'قبل البشر بزمن طويل'},
+   w:[{en:'At the same time as people',fr:'En même temps que les humains',es:'A la vez que las personas',ar:'في زمن البشر نفسه'},{en:'Last year',fr:"L'an dernier",es:'El año pasado',ar:'العام الماضي'}]},
+
+  {ic:'🧲', q:{en:'What does a magnet attract?',fr:"Qu'attire un aimant ?",es:'¿Qué atrae un imán?',ar:'ماذا يجذب المغناطيس؟'},
+   a:{en:'Iron',fr:'Le fer',es:'El hierro',ar:'الحديد'},
+   w:[{en:'Paper',fr:'Le papier',es:'El papel',ar:'الورق'},{en:'Water',fr:"L'eau",es:'El agua',ar:'الماء'}]},
+];
+
+let T = STR.en, lang = 'en', round = [], qi = 0, score = 0;
+
+PLAY.init(l => { lang = l; T = STR[l] || STR.en; PLAY.applyStrings(T); if(round.length) paint(); });
+startGame();
+
+function startGame(){
+  qi = 0; score = 0;
+  round = PLAY.shuffle([...QUESTIONS]).slice(0, 10);
+  document.getElementById('end').hidden = true;
+  document.getElementById('game').hidden = false;
+  paint();
+}
+
+function paint(){
+  if(qi >= 10) return;
+  const item = round[qi];
+  document.getElementById('progress').textContent = T.q + ' ' + (qi+1) + ' / 10';
+  document.getElementById('score').textContent = '⭐ ' + score;
+  document.getElementById('topic').textContent = item.ic;
+  document.getElementById('q').textContent = item.q[lang] || item.q.en;
+  document.getElementById('feedback').innerHTML = '&nbsp;';
+
+  const correct = item.a[lang] || item.a.en;
+  const opts = PLAY.shuffle([correct, ...item.w.map(w => w[lang] || w.en)]);
+
+  const box = document.getElementById('answers');
+  box.innerHTML = '';
+  opts.forEach(text => {
+    const b = document.createElement('button');
+    b.className = 'btn answer';
+    b.style.fontSize = '16px';
+    b.textContent = text;
+    b.onclick = () => answer(b, text, correct);
+    box.appendChild(b);
+  });
+}
+
+function answer(btn, chosen, correct){
+  document.querySelectorAll('.answer').forEach(b => b.disabled = true);
+  const fb = document.getElementById('feedback');
+  if(chosen === correct){
+    score++; btn.classList.add('right'); fb.textContent = T.correct;
+  }else{
+    btn.classList.add('bad');
+    document.querySelectorAll('.answer').forEach(b => { if(b.textContent === correct) b.classList.add('right'); });
+    fb.textContent = T.wrong + ' ' + correct;
+  }
+  qi++;
+  setTimeout(() => { qi >= 10 ? endGame() : paint(); }, 1200);
+}
+
+function endGame(){
+  document.getElementById('game').hidden = true;
+  document.getElementById('end').hidden = false;
+  const stars = score >= 9 ? 3 : score >= 6 ? 2 : 1;
+  document.getElementById('bigstars').textContent = '⭐'.repeat(stars) + '☆'.repeat(3-stars);
+  document.getElementById('endscore').textContent = score + ' / 10';
+  document.getElementById('endmsg').textContent = score >= 9 ? T.good : score >= 6 ? T.ok : T.try;
+  document.getElementById('certLink').hidden = score < 9;
+  if(score >= 9) PLAY.confetti();
+}
+</script>
+</body>
+</html>

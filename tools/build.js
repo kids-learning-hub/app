@@ -323,6 +323,7 @@ for (const lang of ORDER) sm += smEntryIn('stories', '', lang) + '\n';
 for (const s of STORY_SLUGS) for (const lang of ORDER) sm += smEntryIn('stories', s, lang) + '\n';
 for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'play/word-match.html',
                  'play/clock-game.html', 'play/memory.html', 'play/capitals.html',
+                 'play/math-race.html', 'play/flags.html', 'play/patterns.html', 'play/science-quiz.html',
                  'worksheets/', 'worksheets/addition.html', 'worksheets/subtraction.html',
                  'worksheets/multiplication.html', 'worksheets/missing-number.html', 'worksheets/arabic-letters.html',
                  'worksheets/latin-letters.html', 'worksheets/numbers.html',
