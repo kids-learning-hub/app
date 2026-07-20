@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'raising-young-scientists-secrets', date: '2026-07-26',
+    emoji: '🔬', grad: 'linear-gradient(135deg,#00E676,#00B0FF)', tagColor: '#00C853', tagClass: 'science',
+    tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
+    cardTitle: {
+      en: 'Raising Young Scientists: Critical Thinking Tips',
+      fr: 'Éveiller le petit scientifique : esprit critique',
+      es: 'Criando pequeños científicos: pensamiento crítico',
+      ar: 'إيقاظ العالم الصغير: كيف تبني الفضول العلمي لدى طفلك؟' },
+    excerpt: {
+      en: 'Discover how to transform everyday questions into structural scientific thinking and cognitive independence.',
+      fr: 'Découvrez comment transformer les questions quotidiennes de vos enfants en véritable raisonnement scientifique.',
+      es: 'Descubre cómo transformar las preguntas cotidianas de tus hijos en pensamiento analítico y lógico.',
+      ar: 'اكتشف كيف تحول أسئلة طفلك العفوية إلى منهجية علمية رصينة، وتبني في عقله مهارات التحليل والنقد المنطقي والذكاء الاستكشافي.' },
+  },
+  {
     slug: 'teaching-kids-coding-logic', date: '2026-07-25',
     emoji: '💻', grad: 'linear-gradient(135deg,#00B0FF,#0071BC)', tagColor: '#0071BC', tagClass: 'code',
     tagL: { en: 'Coding', fr: 'Code', es: 'Código', ar: 'برمجة' },
