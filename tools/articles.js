@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'diy-home-science-experiments', date: '2026-07-21',
+    emoji: '🧪', grad: 'linear-gradient(135deg,#4DB6AC,#00796B)', tagColor: '#00796B', tagClass: 'science',
+    tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
+    cardTitle: {
+      en: 'Turn Your Home Into a Science Lab: Fostering Curiosity',
+      fr: 'Transformez votre maison en labo de science : éveille la curiosité',
+      es: 'Convierta su hogar en un laboratorio de ciencia: criar niños curiosos',
+      ar: 'كيف تحول منزلك إلى مختبر علوم صغير؟ تنمية الشغف بالاكتشاف' },
+    excerpt: {
+      en: 'Discover how safe, everyday kitchen ingredients can be turned into magical hands-on physics and chemistry experiments.',
+      fr: 'Découvrez comment de simples ingrédients de cuisine se transforment en expériences de physique et chimie magiques.',
+      es: 'Descubre cómo ingredientes comestibles y seguros se transforman en experimentos de física y química mágicos para niños.',
+      ar: 'اكتشف كيف يمكن لأدوات المطبخ البسيطة والآمنة أن تتحول إلى تجارب فيزيائية وكيميائية ساحرة تنمي ذكاء طفلك.' },
+  },
+  {
     slug: 'kids-language-learning-secrets', date: '2026-07-20',
     emoji: '🗣️', grad: 'linear-gradient(135deg,#4F83CC,#01579B)', tagColor: '#01579B', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
