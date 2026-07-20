@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'teaching-kids-coding-logic', date: '2026-07-25',
+    emoji: '💻', grad: 'linear-gradient(135deg,#00B0FF,#0071BC)', tagColor: '#0071BC', tagClass: 'code',
+    tagL: { en: 'Coding', fr: 'Code', es: 'Código', ar: 'برمجة' },
+    cardTitle: {
+      en: 'How to Teach Kids Coding Logic Before School',
+      fr: 'Enseigner la logique du code aux enfants avant l’école',
+      es: 'Cómo enseñar lógica de programación a niños antes de la escuela',
+      ar: 'من التفكير المنطقي إلى الأكواد: كيف تُعلّم طفلك البرمجة مبكراً؟' },
+    excerpt: {
+      en: 'Discover how to introduce young minds to computational thinking through simple routines and visual playground environments.',
+      fr: 'Découvrez comment initier les jeunes esprits à la pensée algorithmique à travers des rituels simples et des blocs interactifs.',
+      es: 'Descubre cómo introducir a las mentes jóvenes en el pensamiento algorítmico mediante rutinas cotidianas y retos visuales.',
+      ar: 'اكتشف كيف تقود عقل طفلك نحو التفكير الحوسبي عبر البرمجة بدون شاشات ثم الانتقال للألعاب والكتل البصرية الذكية.' },
+  },
+  {
     slug: 'gamification-in-education-secrets', date: '2026-07-24',
     emoji: '🎮', grad: 'linear-gradient(135deg,#FF7043,#E64A19)', tagColor: '#E64A19', tagClass: 'tips',
     tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
