@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'gamification-in-education-secrets', date: '2026-07-24',
+    emoji: '🎮', grad: 'linear-gradient(135deg,#FF7043,#E64A19)', tagColor: '#E64A19', tagClass: 'tips',
+    tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
+    cardTitle: {
+      en: 'Gamification in Education: Play-Based Pedagogy Benefits',
+      fr: 'Le ludification dans l’éducation : les bienfaits du jeu',
+      es: 'Gamificación en la educación: el poder del juego',
+      ar: 'التلعيب والتعلم القائم على اللعب: كيف تصاغ عقول الأطفال؟' },
+    excerpt: {
+      en: 'Discover the cognitive neuroscience behind play-based pedagogy and why gamification is the future of early education.',
+      fr: 'Découvrez la neuroscience derrière la pédagogie par le jeu et pourquoi la ludification est l’avenir de l’éducation.',
+      es: 'Conoce los secretos neurológicos de la pedagogía lúdica y cómo el juego impulsa la retención a largo plazo.',
+      ar: 'اكتشف علم الأعصاب الإدراكي وراء التعلم القائم على اللعب، وكيف يفرز الدماغ الدوبامين ليتحول التعليم لشغف مستمر.' },
+  },
+  {
     slug: 'screen-time-guide-for-parents', date: '2026-07-23',
     emoji: '🛡️', grad: 'linear-gradient(135deg,#FFA726,#FB8C00)', tagColor: '#FB8C00', tagClass: 'tips',
     tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
