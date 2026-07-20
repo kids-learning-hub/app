@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'overcoming-math-anxiety-in-kids', date: '2026-07-22',
+    emoji: '🧠', grad: 'linear-gradient(135deg,#9B7BFF,#7A4DFF)', tagColor: '#7A4DFF', tagClass: 'math',
+    tagL: { en: 'Math', fr: 'Maths', es: 'Matemáticas', ar: 'رياضيات' },
+    cardTitle: {
+      en: 'Why Kids Hate Math & How to Fix It: Creative Strategies',
+      fr: 'Pourquoi les enfants détestent les maths et comment y remédier',
+      es: '¿Por qué los niños odian las matemáticas y cómo solucionarlo?',
+      ar: 'لماذا يكره الأطفال الرياضيات؟ أسرار تحويل الخوف إلى شغف' },
+    excerpt: {
+      en: 'Discover the root causes of math fear and how to transform abstract numbers into an exciting, stress-free playground.',
+      fr: 'Découvrez les causes de la peur des chiffres et transformez le calcul en un terrain de jeu captivant et sans stress.',
+      es: 'Conoce las causas del temor numérico y descubre cómo transformar la aritmética en un juego interactivo libre de estrés.',
+      ar: 'اكتشف الجذور النفسية لخوف الأطفال من الأرقام، وكيفية تحويل العمليات الحسابية الجافة إلى عوالم وتحديات ممتعة.' },
+  },
+  {
     slug: 'diy-home-science-experiments', date: '2026-07-21',
     emoji: '🧪', grad: 'linear-gradient(135deg,#4DB6AC,#00796B)', tagColor: '#00796B', tagClass: 'science',
     tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
