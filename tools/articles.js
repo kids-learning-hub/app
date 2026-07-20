@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'screen-time-guide-for-parents', date: '2026-07-23',
+    emoji: '🛡️', grad: 'linear-gradient(135deg,#FFA726,#FB8C00)', tagColor: '#FB8C00', tagClass: 'tips',
+    tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
+    cardTitle: {
+      en: 'The Parent Guide to Healthy Screen Time: Safe Apps',
+      fr: 'Le guide parental du temps d\'écran sain : applis sûres',
+      es: 'Guía para padres sobre el tiempo de pantalla: apps seguras',
+      ar: 'دليل أولياء الأمور لتنظيم وقت الشاشة: تطبيقات آمنة ومفيدة' },
+    excerpt: {
+      en: 'Discover the scientific difference between passive consumption and active interactive learning for early child development.',
+      fr: 'Découvrez la différence entre consommation passive et éveil interactif pour le bien-être de votre enfant.',
+      es: 'Descubre la gran diferencia científica entre el consumo pasivo de pantallas y el aprendizaje interactivo infantil.',
+      ar: 'اكتشف الفارق العلمي والجوهري بين الاستهلاك الرقمي السلبي والتعلم التفاعلي النشط لبناء مهارات الطفل وذكائه.' },
+  },
+  {
     slug: 'overcoming-math-anxiety-in-kids', date: '2026-07-22',
     emoji: '🧠', grad: 'linear-gradient(135deg,#9B7BFF,#7A4DFF)', tagColor: '#7A4DFF', tagClass: 'math',
     tagL: { en: 'Math', fr: 'Maths', es: 'Matemáticas', ar: 'رياضيات' },
