@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'child-language-acquisition-secrets', date: '2026-07-27',
+    emoji: '🔤', grad: 'linear-gradient(135deg,#FF4081,#E91E63)', tagColor: '#E91E63', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'Early Language Acquisition: Raising Bilingual Kids',
+      fr: 'L’apprentissage des langues : élever un enfant bilingue',
+      es: 'Adquisición temprana de idiomas: niños bilingües',
+      ar: 'طلاقة اللغات لدى الأطفال: كيف تكسب طفلك لغة ثانية؟' },
+    excerpt: {
+      en: 'Discover how interactive immersion creates fluent, confident young communicators without grammar anxiety.',
+      fr: 'Découvrez comment l’immersion ludique crée une réelle aisance linguistique sans blocage ni stress.',
+      es: 'Descubre cómo la inmersión interactiva estimula la plasticidad cerebral para hablar con fluidez.',
+      ar: 'اكتشف كيف تحول البيداغوجيا الحديثة اكتساب اللغات إلى رحلة بصرية ممتعة تبني طفلاً ثنائي اللغة بكل ثقة.' },
+  },
+  {
     slug: 'raising-young-scientists-secrets', date: '2026-07-26',
     emoji: '🔬', grad: 'linear-gradient(135deg,#00E676,#00B0FF)', tagColor: '#00C853', tagClass: 'science',
     tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
