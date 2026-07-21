@@ -25,7 +25,7 @@ module.exports = {
     <p>In simple terms, a child suffering from math anxiety isn't bad at mathematics; their working memory is simply hijacked by stress! Traditional timed drills and penalty-based testing compound this physiological blockage, causing students to shut down entirely.</p>
 
     <h2>2. Deconstructing the Abstract Myth Through Visual Models</h2>
-    <p>The primary driver of early math anxiety is forcing children to manipulate abstract symbols ($+$, $-$, $\times$, $\div$) before they have built an intuitive visual mental model of what those quantities actually represent in real life.</p>
+    <p>The primary driver of early math anxiety is forcing children to manipulate abstract symbols (+, -, x , /) before they have built an intuitive visual mental model of what those quantities actually represent in real life.</p>
     <p>When numbers are detached from tangible objects or visual progress, calculation feels like arbitrary rules. By shifting to interactive visual frameworks, quantities become intuitive geometric puzzles, eliminating the intimidation factor completely.</p>
 
     <h2>3. Structural Steps to Heal Math Fear at Home</h2>
@@ -100,7 +100,7 @@ module.exports = {
     <p>بكلمات بسيطة: الطفل الذي يعاني من "عقدة الرياضيات" ليس غبياً ولا يفتقر للذكاء الحسابي؛ بل إن ذاكرته العاملة اختُطفت كلياً بسبب التوتر النفسي! إن الاختبارات المؤطرة بمهل زمنية صارمة والتمارين الجافة تزيد من هذا الشلل الفسيولوجي، مما يدفع الطفل للاستسلام والانسحاب تماماً.</p>
 
     <h2>2. تفكيك أسطورة التجريد عبر النماذج البصرية الملموسة</h2>
-    <p>السبب الرئيسي لظهور قلق الرياضيات مبكراً هو إرغام أطفال الابتدائية على التعامل مع رموز تجريدية معقدة ($+$, $-$, $\times$, $\div$) قبل أن يبنوا في عقولهم صورة ذهنية وبصرية ملموسة لما تعنيه تلك الكميات في الواقع.</p>
+    <p>السبب الرئيسي لظهور قلق الرياضيات مبكراً هو إرغام أطفال الابتدائية على التعامل مع رموز تجريدية معقدة (+, -, x , /) قبل أن يبنوا في عقولهم صورة ذهنية وبصرية ملموسة لما تعنيه تلك الكميات في الواقع.</p>
     <p>عندما تُفصل الأرقام عن الأشكال التفاعلية والصور الحركة، تبدو الحسابات وكأنها قواعد عشوائية غير مفهومة. أما عندما ننتقل إلى الأطر البصرية التفاعلية، تتحول الأرقام إلى ألغاز هندسية ممتعة، مما يلغي عامل الخوف والهيبة النفسية نهائياً.</p>
 
     <h2>3. خطوات عملية داخل البيت لعلاج عقدة الرياضيات</h2>
