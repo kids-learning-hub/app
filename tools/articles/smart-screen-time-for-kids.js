@@ -36,7 +36,7 @@ module.exports = {
     </ul>
 
     <div class="appcta">
-      <div class="ico" style="background:#29B6F6"><img src="../logos/frenchkids.png" alt="FrenchKids"></div>
+      <div class="ico" style="background:#29B6F6"><img src="../logos/francokids.png" alt="FrenchKids"></div>
       <div class="txt"><b>FrenchKids</b><p>The ultimate interactive French learning companion! Engineered to turn device time into a rich educational quest through captivating vocabulary games, native audio guides, and rewarding interactive challenges for primary kids.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.frenchkids" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">GET IT ON</span><span class="g-main">Google Play</span></span></a>
     </div>
@@ -67,7 +67,7 @@ module.exports = {
     </ul>
 
     <div class="appcta">
-      <div class="ico" style="background:#29B6F6"><img src="../logos/frenchkids.png" alt="FrenchKids"></div>
+      <div class="ico" style="background:#29B6F6"><img src="../logos/francokids.png" alt="FrenchKids"></div>
       <div class="txt"><b>FrenchKids</b><p>L'application idéale pour apprendre le français en s'amusant ! Elle transforme le temps passé sur l'écran en une aventure éducative grâce à des jeux de vocabulaire, de la phonétique et des défis interactifs stimulants.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.frenchkids" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE SUR</span><span class="g-main">Google Play</span></span></a>
     </div>
@@ -98,7 +98,7 @@ module.exports = {
     </ul>
 
     <div class="appcta">
-      <div class="ico" style="background:#29B6F6"><img src="../logos/frenchkids.png" alt="FrenchKids"></div>
+      <div class="ico" style="background:#29B6F6"><img src="../logos/francokids.png" alt="FrenchKids"></div>
       <div class="txt"><b>FrenchKids</b><p>¡El entorno perfecto para aprender francés de forma interactiva! Transforma el tiempo frente a la pantalla en una aventura formativa llena de juegos de vocabulario, apoyo fonético y retos educativos adaptados.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.frenchkids" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE EN</span><span class="g-main">Google Play</span></span></a>
     </div>
@@ -129,7 +129,7 @@ module.exports = {
     </ul>
 
     <div class="appcta">
-      <div class="ico" style="background:#29B6F6"><img src="../logos/frenchkids.png" alt="FrenchKids"></div>
+      <div class="ico" style="background:#29B6F6"><img src="../logos/francokids.png" alt="FrenchKids"></div>
       <div class="txt"><b>FrenchKids</b><p>الرفيق التفاعلي الأروع لتعلم اللغة الفرنسية للأطفال! يحول وقت الشاشة إلى مغامرة تعليمية ممتعة عبر ألعاب المفردات، الصوتيات الواضحة، والتحديات التفاعلية التي تبني طفلاً واثقاً ومتحدثاً بطلاقة.</p></div>
       <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.frenchkids" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">احصل عليه من</span><span class="g-main">Google Play</span></span></a>
     </div>
