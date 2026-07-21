@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'mastering-languages-early-childhood', date: '2026-07-31',
+    emoji: '🗣️', grad: 'linear-gradient(135deg,#FF9800,#F57C00)', tagColor: '#FF9800', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'Mastering New Languages in Early Childhood',
+      fr: 'Maîtriser une nouvelle langue dès l’enfance',
+      es: 'Cómo aprender un nuevo idioma en la infancia',
+      ar: 'سرعة اكتساب اللغات لدى الأطفال وتجاوز خجل التحدث' },
+    excerpt: {
+      en: 'Discover how natural phonological immersion and low-stress interactive play eliminate speaking anxiety.',
+      fr: 'Découvrez comment l’immersion phonologique naturelle et le jeu interactif éliminent la peur de s’exprimer.',
+      es: 'Descubre cómo la inmersión fonológica natural y el juego interactivo eliminan el miedo a hablar.',
+      ar: 'اكتشف كيف تحول التفاعلات الصوتية والبصرية خجل طفلك إلى طلاقة لغوية وثقة عالية بالنفس.' },
+  },
+  {
     slug: 'smart-screen-time-for-kids', date: '2026-07-30',
     emoji: '📱', grad: 'linear-gradient(135deg,#00BCD4,#29B6F6)', tagColor: '#00BCD4', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
