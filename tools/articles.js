@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'boosting-child-focus-and-attention', date: '2026-07-29',
+    emoji: '🎯', grad: 'linear-gradient(135deg,#00E676,#00B0FF)', tagColor: '#00C853', tagClass: 'science',
+    tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
+    cardTitle: {
+      en: 'Boosting Child Focus & Attention Span',
+      fr: 'Améliorer la concentration de l’enfant',
+      es: 'Cómo mejorar la atención infantil',
+      ar: 'زيادة تركيز الطفل وانتباهه أثناء التعلم' },
+    excerpt: {
+      en: 'Discover how targeted interactive play rebuilds cognitive stamina and working memory naturally.',
+      fr: 'Découvrez comment le jeu interactif et les micro-objectifs renforcent l’attention et la mémoire de travail.',
+      es: 'Descubre cómo el juego interactivo y las microtareas reconstruyen la capacidad de atención.',
+      ar: 'اكتشف كيف تحول التفاعلات الألعابية التفاعلية تشتت طفلك إلى تركيز عميق وتطور الذاكرة العاملة.' },
+  },
+  {
     slug: 'overcoming-math-anxiety-kids', date: '2026-07-28',
     emoji: '📐', grad: 'linear-gradient(135deg,#7A4DFF,#4322BB)', tagColor: '#7A4DFF', tagClass: 'math',
     tagL: { en: 'Mathematics', fr: 'Mathématiques', es: 'Matemáticas', ar: 'رياضيات' },
