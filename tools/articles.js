@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'smart-screen-time-for-kids', date: '2026-07-30',
+    emoji: '📱', grad: 'linear-gradient(135deg,#00BCD4,#29B6F6)', tagColor: '#00BCD4', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'Smart Screen Time Habits for Kids',
+      fr: 'Gestion intelligente du temps d’écran',
+      es: 'Hábitos inteligentes de pantalla en niños',
+      ar: 'الإدارة الذكية لوقت الشاشة لدى الأطفال' },
+    excerpt: {
+      en: 'Discover how to build balanced digital habits that foster self-regulation and active learning.',
+      fr: 'Découvrez comment instaurer des habitudes numériques équilibrées et stimulantes pour votre enfant.',
+      es: 'Descubre cómo construir hábitos digitales equilibrados y formativos sin conflictos.',
+      ar: 'اكتشف كيف تحول الشاشة من مصدر للتشتت إلى أداة للتربية الرقمية والتعلم التفاعلي المتوازن.' },
+  },
+  {
     slug: 'boosting-child-focus-and-attention', date: '2026-07-29',
     emoji: '🎯', grad: 'linear-gradient(135deg,#00E676,#00B0FF)', tagColor: '#00C853', tagClass: 'science',
     tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
