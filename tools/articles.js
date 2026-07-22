@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'developing-logical-thinking-kids', date: '2026-08-01',
+    emoji: '🧩', grad: 'linear-gradient(135deg,#7A4DFF,#6200EA)', tagColor: '#7A4DFF', tagClass: 'math',
+    tagL: { en: 'Mathematics', fr: 'Mathématiques', es: 'Matemáticas', ar: 'رياضيات' },
+    cardTitle: {
+      en: 'Developing Logical Thinking in Primary Kids',
+      fr: 'Développer la pensée logique chez l’enfant',
+      es: 'Desarrollo del pensamiento lógico en niños',
+      ar: 'تنمية التفكير المنطقي وحل المشكلات لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how interactive visual puzzles transform abstract reasoning into an intuitive, joyful skill.',
+      fr: 'Découvrez comment les énigmes visuelles transforment la logique abstraite en une compétence intuitive.',
+      es: 'Descubre cómo los acertijos visuales transforman la lógica abstracta en una habilidad intuitiva.',
+      ar: 'اكتشف كيف تحول الألغاز البصرية التفاعلية المفاهيم المنطقية المجردة إلى مهارة ممتعة تبني ثقة طفلك التحليلية.' },
+  },
+  {
     slug: 'mastering-languages-early-childhood', date: '2026-07-31',
     emoji: '🗣️', grad: 'linear-gradient(135deg,#FF9800,#F57C00)', tagColor: '#FF9800', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
