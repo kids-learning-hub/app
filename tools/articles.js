@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'managing-stress-and-adhd-in-kids', date: '2026-08-05',
+    emoji: '🧘', grad: 'linear-gradient(135deg,#2196F3,#1976D2)', tagColor: '#2196F3', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'Managing Academic Stress & Supporting Active Learners',
+      fr: 'Gérer le stress scolaire et accompagner l’enfant hyperactif',
+      es: 'Cómo gestionar el estrés escolar y el TDAH en niños',
+      ar: 'إدارة التوتر وتشتت الانتباه وفرط الحركة لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how gentle micro-learning and low-stress play help high-energy children thrive.',
+      fr: 'Découvrez comment le micro-apprentissage et le jeu sans stress aident les enfants très actifs.',
+      es: 'Descubre cómo el microaprendizaje y los juegos sin estrés ayudan a los niños muy activos.',
+      ar: 'اكتشف كيف يزيل التعلم المصغر والتفاعل البصري توتر طفلك ويحول فرط الحركة إلى تركيز وشغف بالاستكشاف.' },
+  },
+  {
     slug: 'building-working-memory-and-focus', date: '2026-08-04',
     emoji: '🧠', grad: 'linear-gradient(135deg,#009688,#00796B)', tagColor: '#009688', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
