@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'emotional-intelligence-in-early-learning', date: '2026-08-02',
+    emoji: '❤️', grad: 'linear-gradient(135deg,#E91E63,#F48FB1)', tagColor: '#E91E63', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'Emotional Intelligence in Primary Kids',
+      fr: 'Développer l’intelligence émotionnelle chez l’enfant',
+      es: 'Desarrollo de la inteligencia emocional en niños',
+      ar: 'تنمية الذكاء العاطفي والاجتماعي لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how expressive storytelling helps children identify, articulate, and self-regulate their feelings.',
+      fr: 'Découvrez comment les contes interactifs aident les enfants du primaire à nommer leurs émotions.',
+      es: 'Descubre cómo las historias expresivas ayudan a los niños de primaria a nombrar sus emociones.',
+      ar: 'اكتشف كيف تساعد القصص التفاعلية واللغة البصرية طفلك على تسمية مشاعره وتطوير التعبير والتعاطف الاجتماعي.' },
+  },
+  {
     slug: 'developing-logical-thinking-kids', date: '2026-08-01',
     emoji: '🧩', grad: 'linear-gradient(135deg,#7A4DFF,#6200EA)', tagColor: '#7A4DFF', tagClass: 'math',
     tagL: { en: 'Mathematics', fr: 'Mathématiques', es: 'Matemáticas', ar: 'رياضيات' },
