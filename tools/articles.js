@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'building-working-memory-and-focus', date: '2026-08-04',
+    emoji: '🧠', grad: 'linear-gradient(135deg,#009688,#00796B)', tagColor: '#009688', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'Building Working Memory & Focus in Primary Kids',
+      fr: 'Développer la mémoire de travail et la concentration',
+      es: 'Cómo mejorar la memoria de trabajo y la atención',
+      ar: 'تنمية الذاكرة العاملة ومهارات التركيز لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how structured cognitive games and progressive visual challenges strengthen attention spans.',
+      fr: 'Découvrez comment les jeux cognitifs structurés et les défis visuels renforcent l’attention de l’enfant.',
+      es: 'Descubre cómo los juegos cognitivos estructurados y los retos visuales fortalecen la atención.',
+      ar: 'اكتشف كيف تحول التحديات البصرية والتدرج المعرفي تشتت طفلك إلى تركيز ذهني عميق وقدرة استيعاب استثنائية.' },
+  },
+  {
     slug: 'fostering-scientific-curiosity-kids', date: '2026-08-03',
     emoji: '🔬', grad: 'linear-gradient(135deg,#4CAF50,#2E7D32)', tagColor: '#4CAF50', tagClass: 'sci',
     tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
