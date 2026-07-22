@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'fostering-scientific-curiosity-kids', date: '2026-08-03',
+    emoji: '🔬', grad: 'linear-gradient(135deg,#4CAF50,#2E7D32)', tagColor: '#4CAF50', tagClass: 'sci',
+    tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
+    cardTitle: {
+      en: 'Fostering Scientific Curiosity in Primary Kids',
+      fr: 'Éveiller la curiosité scientifique chez l’enfant',
+      es: 'Cómo fomentar la curiosidad científica en niños',
+      ar: 'تنمية الفضول العلمي ومهارات الاستكشاف لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how inquiry-based learning and visual simulations transform passive wonder into structured thinking.',
+      fr: 'Découvrez comment la démarche d’investigation transforme la curiosité en un raisonnement scientifique structuré.',
+      es: 'Descubre cómo el aprendizaje por indagación transforma la curiosidad en pensamiento científico estructurado.',
+      ar: 'اكتشف كيف تحول المناهج الاستكشافية والتجارب البصرية تفكير طفلك إلى تفكير علمي منظم وشغف دائم.' },
+  },
+  {
     slug: 'emotional-intelligence-in-early-learning', date: '2026-08-02',
     emoji: '❤️', grad: 'linear-gradient(135deg,#E91E63,#F48FB1)', tagColor: '#E91E63', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
