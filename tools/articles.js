@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'building-verbal-fluency-in-kids', date: '2026-08-08',
+    emoji: '🗣️', grad: 'linear-gradient(135deg,#FF9800,#F57C00)', tagColor: '#FF9800', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'Building Verbal Fluency & Speaking Confidence in Primary Kids',
+      fr: 'Développer l’aisance verbale et la confiance à l’oral chez l’enfant',
+      es: 'Cómo mejorar la fluidez verbal y la confianza al hablar en niños',
+      ar: 'بناء مهارات التعبير الشفهي والتحدث بثقة لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how interactive storytelling and auditory repetition help primary kids speak with clarity and joy.',
+      fr: 'Découvrez comment les récits interactifs et le jeu d’imitation aident les enfants à s’exprimer avec aisance.',
+      es: 'Descubre cómo los cuentos interactivos y la repetición auditiva ayudan a los niños a hablar con soltura.',
+      ar: 'اكتشف كيف تسهم القصص التفاعلية والاستماع النشط في تدريب طفلك على التحدث بطلاقة ووضوح دون خوف أو تردد.' },
+  },
+  {
     slug: 'fostering-computational-thinking-kids', date: '2026-08-07',
     emoji: '🧩', grad: 'linear-gradient(135deg,#00BCD4,#0097A7)', tagColor: '#00BCD4', tagClass: 'math',
     tagL: { en: 'Mathematics', fr: 'Mathématiques', es: 'Matemáticas', ar: 'رياضيات' },
