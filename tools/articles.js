@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'fostering-computational-thinking-kids', date: '2026-08-07',
+    emoji: '🧩', grad: 'linear-gradient(135deg,#00BCD4,#0097A7)', tagColor: '#00BCD4', tagClass: 'math',
+    tagL: { en: 'Mathematics', fr: 'Mathématiques', es: 'Matemáticas', ar: 'رياضيات' },
+    cardTitle: {
+      en: 'Fostering Computational Thinking & Logic in Primary Kids',
+      fr: 'Développer la pensée informatique et la logique chez l’enfant',
+      es: 'Cómo fomentar el pensamiento computacional y la lógica en niños',
+      ar: 'تنمية التفكير البرمجي والمنطق الخوارزمي لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how visual logic games and sequential problem-solving help children structure complex ideas with clarity.',
+      fr: 'Découvrez comment les jeux de logique visuels aident les enfants à analyser et décomposer la complexité.',
+      es: 'Descubre cómo los juegos de lógica visual ayudan a los niños a descomponer y organizar ideas complejas.',
+      ar: 'اكتشف كيف تسهم الألعاب البصرية والتحديات التفاعلية في بناء عقلية تحليلية وخوارزمية منظمة لدى طفلك.' },
+  },
+  {
     slug: 'developing-spatial-reasoning-kids', date: '2026-08-06',
     emoji: '📐', grad: 'linear-gradient(135deg,#7A4DFF,#3F51B5)', tagColor: '#7A4DFF', tagClass: 'math',
     tagL: { en: 'Mathematics', fr: 'Mathématiques', es: 'Matemáticas', ar: 'رياضيات' },
