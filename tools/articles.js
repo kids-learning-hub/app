@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'developing-emotional-intelligence-in-kids', date: '2026-08-10',
+    emoji: '❤️', grad: 'linear-gradient(135deg,#E91E63,#C2185B)', tagColor: '#E91E63', tagClass: 'lang',
+    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    cardTitle: {
+      en: 'Developing Emotional Intelligence & Social Skills in Primary Kids',
+      fr: 'Développer l’intelligence émotionnelle et les compétences sociales chez l’enfant',
+      es: 'Cómo fomentar la inteligencia emocional y las habilidades sociales en niños',
+      ar: 'تنمية الذكاء العاطفي والمهارات الاجتماعية لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how interactive stories and expressive vocabulary help children understand and communicate feelings effectively.',
+      fr: 'Découvrez comment les histoires interactives aident l’enfant du primaire à comprendre et verbaliser ses émotions.',
+      es: 'Descubre cómo las historias interactivas y el vocabulario expresivo ayudan a los niños a entender sus emociones.',
+      ar: 'اكتشف كيف تسهم القصص التفاعلية وإثراء الحصيلة اللغوية في تدريب طفلك على فهم مشاعره والتعبير عنها بثقة.' },
+  },
+  {
     slug: 'developing-scientific-curiosity-in-kids', date: '2026-08-09',
     emoji: '🔬', grad: 'linear-gradient(135deg,#4CAF50,#2E7D32)', tagColor: '#4CAF50', tagClass: 'sci',
     tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
