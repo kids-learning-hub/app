@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'developing-scientific-curiosity-in-kids', date: '2026-08-09',
+    emoji: '🔬', grad: 'linear-gradient(135deg,#4CAF50,#2E7D32)', tagColor: '#4CAF50', tagClass: 'sci',
+    tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
+    cardTitle: {
+      en: 'Developing Scientific Curiosity & Inquiry in Primary Kids',
+      fr: 'Développer la curiosité scientifique et l’esprit d’observation chez l’enfant',
+      es: 'Cómo fomentar la curiosidad científica y el pensamiento experimental en niños',
+      ar: 'تنمية الفضول العلمي والتفكير التجريبي لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how interactive visual science and simple home experiments nurture an inquiring mind.',
+      fr: 'Découvrez comment les sciences visuelles et l’expérimentation éveillent l’esprit critique des enfants.',
+      es: 'Descubre cómo la ciencia visual e interactiva fomenta el pensamiento crítico en los niños.',
+      ar: 'اكتشف كيف تسهم العلوم البصرية والتجارب التفاعلية في بناء التفكير النقدي والفضول المعرفي لدى طفلك.' },
+  },
+  {
     slug: 'building-verbal-fluency-in-kids', date: '2026-08-08',
     emoji: '🗣️', grad: 'linear-gradient(135deg,#FF9800,#F57C00)', tagColor: '#FF9800', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
