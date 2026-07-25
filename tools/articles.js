@@ -14,6 +14,21 @@
    ═══════════════════════════════════════════════════════════════════════ */
 module.exports = [
   {
+    slug: 'developing-spatial-reasoning-kids', date: '2026-08-06',
+    emoji: '📐', grad: 'linear-gradient(135deg,#7A4DFF,#3F51B5)', tagColor: '#7A4DFF', tagClass: 'math',
+    tagL: { en: 'Mathematics', fr: 'Mathématiques', es: 'Matemáticas', ar: 'رياضيات' },
+    cardTitle: {
+      en: 'Developing Spatial Reasoning & Geometry in Primary Kids',
+      fr: 'Développer la géométrie et le repérage spatial chez l’enfant',
+      es: 'Desarrollo del razonamiento espacial y geometría en niños',
+      ar: 'تنمية التفكير الهندسي والحس الفضائي لدى أطفال الابتدائي' },
+    excerpt: {
+      en: 'Discover how visual geometry puzzles transform abstract spatial relationships into intuitive skills.',
+      fr: 'Découvrez comment la géométrie visuelle transforme les concepts spatiaux en compétences intuitives.',
+      es: 'Descubre cómo la geometría visual transforma los conceptos espaciales en habilidades intuitivas.',
+      ar: 'اكتشف كيف تحول الهندسة البصرية والألغاز التفاعلية المفاهيم الفضائية المجردة إلى مهارة ممتعة تبني الذكاء الهندسي لطفلك.' },
+  },
+  {
     slug: 'managing-stress-and-adhd-in-kids', date: '2026-08-05',
     emoji: '🧘', grad: 'linear-gradient(135deg,#2196F3,#1976D2)', tagColor: '#2196F3', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
