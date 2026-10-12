@@ -118,7 +118,7 @@ function footer(lang) {
   return `<footer class="foot">
   <div class="fb">Kids Learning Hub</div>
   <div style="opacity:.8">by VS MEDIA · <a href="${root}index.html">${L.home}</a> · <a href="${root}about.html">About</a> · <a href="${root}privacy.html">Privacy</a></div>
-  <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>`;
 }
 function headCommon(lang, o) {
@@ -205,7 +205,7 @@ for (const app of APPS) {
         image: BASE + '/logos/' + app.file, url: self,
         downloadUrl: playUrl(app.pkg),
         datePublished: app.released,
-        author: { '@type': 'Person', name: 'Ayyoub EL HAJJI' },
+        author: { '@type': 'Organization', name: 'Kids Learning Hub', url: BASE + '/' },
         publisher: { '@type': 'Organization', name: 'Kids Learning Hub',
           logo: { '@type': 'ImageObject', url: BASE + '/logos/hub-logo.png' } },
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

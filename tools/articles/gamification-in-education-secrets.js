@@ -16,7 +16,7 @@ module.exports = {
     en: `
     <span class="tag tips">Parenting</span>
     <h1>Gamification in Education: How Play-Based Pedagogy Rewires the Brain</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Updated July 2026</span> · <span>10 min read</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Updated July 2026</span> · <span>10 min read</span></div>
     
     <p class="lede">Traditional learning models are facing a silent crisis: dropping engagement and rising academic stress. Discover the cognitive neuroscience behind play-based pedagogy, and why gamification is no longer a luxury, but the ultimate future of early childhood education.</p>
 
@@ -47,7 +47,7 @@ module.exports = {
     fr: `
     <span class="tag tips">Parentalité</span>
     <h1>Le ludification dans l’éducation : comment le jeu transforme le cerveau</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Mis à jour en juillet 2026</span> · <span>10 min de lecture</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Mis à jour en juillet 2026</span> · <span>10 min de lecture</span></div>
     
     <p class="lede">Les modèles éducatifs traditionnels font face à une baisse d'engagement. Découvrez la neuroscience derrière la pédagogie par le jeu et pourquoi la ludification est devenue indispensable.</p>
 
@@ -69,7 +69,7 @@ module.exports = {
     es: `
     <span class="tag tips">Crianza</span>
     <h1>Gamificación en la educación: cómo el juego transforma la mente</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Actualizado en julio de 2026</span> · <span>10 min de lectura</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Actualizado en julio de 2026</span> · <span>10 min de lectura</span></div>
     
     <p class="lede">El aprendizaje tradicional se enfrenta a una crisis de desmotivación. Conoce los secretos neurológicos de la pedagogía lúdica y cómo el juego impulsa la retención a largo plazo.</p>
 
@@ -91,7 +91,7 @@ module.exports = {
     ar: `
     <span class="tag tips">تربية</span>
     <h1>التلعيب والتعلم القائم على اللعب: كيف تعيد البيداغوجيا الحديثة صياغة عقول الأطفال؟</h1>
-    <div class="meta"><span class="who"><span class="av">أ</span> أيوب الحاجي</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 10 دقائق</span></div>
+    <div class="meta"><span class="who"><span class="av">أ</span> Kids Learning Hub</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 10 دقائق</span></div>
     
     <p class="lede">تواجه نماذج التعليم التقليدية القائمة على التلقين أزمة صامتة حول العالم؛ تتمثل في تراجع شغف الطلاب وارتفاع مستويات القلق الأكاديمي. في هذا المقال المستوحى من أحدث الأبحاث العالمية، سنغوص في علم الأعصاب الإدراكي لنكتشف كيف يعيد "التلعيب" صياغة مسارات الدماغ لدى الأطفال، ولماذا لم يعد اللعب مجرد رفاهية، بل هو المستقبل الحتمي للتدريس الفعّال.</p>
 

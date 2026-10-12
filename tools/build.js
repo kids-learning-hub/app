@@ -36,10 +36,10 @@ const LANGS = {
 };
 const ORDER = ['en', 'fr', 'es', 'ar'];
 const AUTHOR = {
-  "en": "<aside class=\"author-box\"><div class=\"av\">AH</div><div><b>Ayyoub EL HAJJI</b><span>Mathematics teacher · Morocco</span><p>Ayyoub has taught mathematics for years and builds the Kids Learning Hub apps, games and worksheets from what he sees working in real classrooms. <a href=\"/about.html\">About the author →</a></p></div></aside>",
-  "fr": "<aside class=\"author-box\"><div class=\"av\">AH</div><div><b>Ayyoub EL HAJJI</b><span>Professeur de mathématiques · Maroc</span><p>Ayyoub enseigne les mathématiques depuis des années et conçoit les applis, jeux et fiches de Kids Learning Hub à partir de ce qui fonctionne vraiment en classe. <a href=\"/fr/about.html\">À propos de l’auteur →</a></p></div></aside>",
-  "es": "<aside class=\"author-box\"><div class=\"av\">AH</div><div><b>Ayyoub EL HAJJI</b><span>Profesor de matemáticas · Marruecos</span><p>Ayyoub enseña matemáticas desde hace años y crea las apps, juegos y fichas de Kids Learning Hub a partir de lo que funciona de verdad en el aula. <a href=\"/es/about.html\">Sobre el autor →</a></p></div></aside>",
-  "ar": "<aside class=\"author-box\"><div class=\"av\">AH</div><div><b>أيوب الحاجي</b><span>أستاذ رياضيات · المغرب</span><p>يدرّس أيوب الرياضيات منذ سنوات، ويصمّم تطبيقات وألعاب وأوراق عمل Kids Learning Hub انطلاقًا مما يراه ناجحًا فعلًا داخل القسم. <a href=\"/ar/about.html\">عن الكاتب →</a></p></div></aside>"
+  "en": "<aside class=\"author-box\"><div class=\"av\"><img src=\"/logos/owl.svg\" alt=\"\" style=\"width:86%;height:auto\"></div><div><b>Kids Learning Hub</b><span>Founded by a mathematics teacher · Morocco</span><p>Our founder has taught mathematics for years and builds the Kids Learning Hub apps, games and worksheets from what he sees working in real classrooms. <a href=\"/about.html\">About us →</a></p></div></aside>",
+  "fr": "<aside class=\"author-box\"><div class=\"av\"><img src=\"/logos/owl.svg\" alt=\"\" style=\"width:86%;height:auto\"></div><div><b>Kids Learning Hub</b><span>Fondé par un professeur de mathématiques · Maroc</span><p>Notre fondateur enseigne les mathématiques depuis des années et conçoit les applis, jeux et fiches de Kids Learning Hub à partir de ce qui fonctionne vraiment en classe. <a href=\"/fr/about.html\">À propos de nous →</a></p></div></aside>",
+  "es": "<aside class=\"author-box\"><div class=\"av\"><img src=\"/logos/owl.svg\" alt=\"\" style=\"width:86%;height:auto\"></div><div><b>Kids Learning Hub</b><span>Fundado por un profesor de matemáticas · Marruecos</span><p>Nuestro fundador enseña matemáticas desde hace años y crea las apps, juegos y fichas de Kids Learning Hub a partir de lo que funciona de verdad en el aula. <a href=\"/es/about.html\">Sobre nosotros →</a></p></div></aside>",
+  "ar": "<aside class=\"author-box\"><div class=\"av\"><img src=\"/logos/owl.svg\" alt=\"\" style=\"width:86%;height:auto\"></div><div><b>Kids Learning Hub</b><span>أسّسه أستاذ رياضيات · المغرب</span><p>يدرّس مؤسّس الموقع الرياضيات منذ سنوات، ويصمّم تطبيقات وألعاب وأوراق عمل Kids Learning Hub انطلاقًا مما يراه ناجحًا فعلًا داخل القسم. <a href=\"/ar/about.html\">من نحن →</a></p></div></aside>"
 };
 
 const INDEX_META = {
@@ -113,7 +113,7 @@ function footer(lang) {
   return `<footer class="foot">
   <div class="fb">Kids Learning Hub</div>
   <div style="opacity:.8">by VS MEDIA · <a href="${root}index.html">${L.home}</a> · <a href="${root}about.html">About</a> · <a href="${root}contact.html">Contact</a> · <a href="${root}privacy.html">Privacy</a></div>
-  <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>`;
 }
 function headCommon(lang, opts) {
@@ -201,7 +201,7 @@ for (const cf of contentFiles) {
     const jsonld = [
       { '@context': 'https://schema.org', '@type': 'Article',
         headline: h1, description: desc, image: OG_IMG,
-        author: { '@type': 'Person', name: 'Ayyoub EL HAJJI', jobTitle: 'Mathematics Teacher', url: BASE + '/about.html' },
+        author: { '@type': 'Organization', name: 'Kids Learning Hub', url: BASE + '/' },
         publisher: { '@type': 'Organization', name: 'Kids Learning Hub',
           logo: { '@type': 'ImageObject', url: BASE + '/logos/hub-logo.png' } },
         datePublished: art.date, dateModified: TODAY,

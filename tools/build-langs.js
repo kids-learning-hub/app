@@ -79,11 +79,11 @@ const PAGES = [
     urlEn: `${BASE}/about.html`,
     meta: {
       fr: { title: "À propos — Le projet d'un professeur de mathématiques | Kids Learning Hub",
-            desc: "Kids Learning Hub est créé par Ayyoub EL HAJJI, professeur de mathématiques au Maroc : 10 applis éducatives gratuites, fiches et jeux pour les 4–12 ans." },
+            desc: "Kids Learning Hub est créé par un professeur de mathématiques au Maroc : 10 applis éducatives gratuites, fiches et jeux pour les 4–12 ans." },
       es: { title: 'Sobre nosotros — El proyecto de un profesor de matemáticas | Kids Learning Hub',
-            desc: 'Kids Learning Hub lo crea Ayyoub EL HAJJI, profesor de matemáticas de Marruecos: 10 apps educativas gratis, fichas y juegos para niños de 4 a 12 años.' },
+            desc: 'Kids Learning Hub lo crea un profesor de matemáticas de Marruecos: 10 apps educativas gratis, fichas y juegos para niños de 4 a 12 años.' },
       ar: { title: 'من نحن — مشروع أستاذ رياضيات | Kids Learning Hub',
-            desc: 'Kids Learning Hub من إنشاء أيوب الحاجي، أستاذ رياضيات من المغرب: 10 تطبيقات تعليمية مجانية وأوراق عمل وألعاب للأطفال من 4 إلى 12 سنة.' },
+            desc: 'Kids Learning Hub من إنشاء أستاذ رياضيات من المغرب: 10 تطبيقات تعليمية مجانية وأوراق عمل وألعاب للأطفال من 4 إلى 12 سنة.' },
     },
   },
   {

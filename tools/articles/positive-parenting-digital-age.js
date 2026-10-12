@@ -16,7 +16,7 @@ module.exports = {
     en: `
     <span class="tag tips">Parenting</span>
     <h1>Positive Parenting in the Digital Age: Raising Confident Learners</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Updated July 2026</span> · <span>8 min read</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Updated July 2026</span> · <span>8 min read</span></div>
     
     <p class="lede">Discover the core pillars of positive parenting. Learn how to foster emotional intelligence, manage screen time constructively, and turn everyday digital interactions into powerful learning moments.</p>
 
@@ -52,7 +52,7 @@ module.exports = {
     fr: `
     <span class="tag tips">Parentalité</span>
     <h1>L'éducation positive à l'ère du numérique : élever des enfants épanouis</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Mis à jour en juillet 2026</span> · <span>8 min de lecture</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Mis à jour en juillet 2026</span> · <span>8 min de lecture</span></div>
     
     <p class="lede">Découvrez les piliers de l'éducation positive. Apprenez à nourrir l'intelligence émotionnelle de votre enfant, à gérer les écrans de manière constructive et à transformer la technologie en un moteur d'apprentissage.</p>
 
@@ -87,7 +87,7 @@ module.exports = {
     es: `
     <span class="tag tips">Crianza</span>
     <h1>Crianza positiva en la era digital: cómo criar niños seguros y curiosos</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Actualizado en julio de 2026</span> · <span>8 min de lectura</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Actualizado en julio de 2026</span> · <span>8 min de lectura</span></div>
     
     <p class="lede">Descubre los pilares fundamentales de la crianza positiva. Aprende a nutrir la inteligencia emocional de tus hijos, a gestionar las pantallas de forma constructiva y a convertir la tecnología en un aliado educativo.</p>
 
@@ -121,7 +121,7 @@ module.exports = {
     ar: `
     <span class="tag tips">تربية</span>
     <h1>التربية الإيجابية في العصر الرقمي: دليل شامل لبناء شخصية طفلك وتنمية فضوله</h1>
-    <div class="meta"><span class="who"><span class="av">أ</span> أيوب الحاجي</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 8 دقائق</span></div>
+    <div class="meta"><span class="who"><span class="av">أ</span> Kids Learning Hub</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 8 دقائق</span></div>
     
     <p class="lede">اكتشف الركائز الأساسية للتربية الإيجابية الحديثة. تعلم كيف تنمي الذكاء العاطفي لطفلك، تدير وقت الشاشات بذكاء، وتحول التفاعل الرقمي اليومي إلى فرص ذهبية لبناء عقل مفكر ومحب للتعلم.</p>
 

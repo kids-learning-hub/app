@@ -23,7 +23,7 @@ module.exports = {
     en: `
     <span class="tag math">Math</span>
     <h1>How to Teach Times Tables to Kids — A Calm 4-Week Plan That Works</h1>
-    <div class="meta"><span class="who"><span class="av">AH</span> Ayyoub EL HAJJI</span> · <span>Updated October 2026</span> · <span>12 min read</span></div>
+    <div class="meta"><span class="who"><span class="av">KL</span> Kids Learning Hub</span> · <span>Updated October 2026</span> · <span>12 min read</span></div>
     <p class="lede">A 10×10 times-table grid holds 100 facts, which can look huge to a child. Learn them in the right order, understand them before memorising, and practise ten minutes a day, and you are left with only six genuinely hard facts. This guide shows you exactly how.</p>
 
     <div class="toc"><b>In this guide</b><ol>
@@ -118,7 +118,7 @@ module.exports = {
     fr: `
     <span class="tag math">Maths</span>
     <h1>Apprendre les tables de multiplication — un plan serein en 4 semaines</h1>
-    <div class="meta"><span class="who"><span class="av">AH</span> Ayyoub EL HAJJI</span> · <span>Mis à jour en octobre 2026</span> · <span>12 min de lecture</span></div>
+    <div class="meta"><span class="who"><span class="av">KL</span> Kids Learning Hub</span> · <span>Mis à jour en octobre 2026</span> · <span>12 min de lecture</span></div>
     <p class="lede">Une table de 10 × 10 contient 100 résultats, ce qui paraît énorme pour un enfant. En les apprenant dans le bon ordre, en les comprenant avant de les mémoriser et en s'entraînant dix minutes par jour, il ne reste que six résultats vraiment difficiles. Voici comment faire, étape par étape.</p>
 
     <div class="toc"><b>Dans ce guide</b><ol>
@@ -213,7 +213,7 @@ module.exports = {
     es: `
     <span class="tag math">Matemáticas</span>
     <h1>Cómo enseñar las tablas de multiplicar — un plan tranquilo de 4 semanas</h1>
-    <div class="meta"><span class="who"><span class="av">AH</span> Ayyoub EL HAJJI</span> · <span>Actualizado en octubre de 2026</span> · <span>12 min de lectura</span></div>
+    <div class="meta"><span class="who"><span class="av">KL</span> Kids Learning Hub</span> · <span>Actualizado en octubre de 2026</span> · <span>12 min de lectura</span></div>
     <p class="lede">Una tabla de 10 × 10 contiene 100 resultados, y eso a un niño le parece enorme. Si se aprenden en el orden correcto, se entienden antes de memorizarlos y se practican diez minutos al día, solo quedan seis resultados realmente difíciles. Esta guía te explica cómo hacerlo, paso a paso.</p>
 
     <div class="toc"><b>En esta guía</b><ol>
@@ -308,7 +308,7 @@ module.exports = {
     ar: `
     <span class="tag math">الرياضيات</span>
     <h1>كيف تعلّم طفلك جدول الضرب — خطة هادئة في 4 أسابيع</h1>
-    <div class="meta"><span class="who"><span class="av">AH</span> أيوب الحاجي</span> · <span>تحديث أكتوبر 2026</span> · <span>قراءة 12 دقيقة</span></div>
+    <div class="meta"><span class="who"><span class="av">KL</span> Kids Learning Hub</span> · <span>تحديث أكتوبر 2026</span> · <span>قراءة 12 دقيقة</span></div>
     <p class="lede">يحتوي جدول الضرب من 10 × 10 على 100 نتيجة، وهذا يبدو كثيرًا جدًا في نظر الطفل. لكن حين نتعلّمها بالترتيب الصحيح، ونفهمها قبل حفظها، ونتدرّب عشر دقائق يوميًا، لا يبقى إلا ست نتائج صعبة فعلًا. يشرح لك هذا الدليل الطريقة خطوة بخطوة.</p>
 
     <div class="toc"><b>في هذا الدليل</b><ol>

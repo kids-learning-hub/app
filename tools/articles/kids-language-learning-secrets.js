@@ -16,7 +16,7 @@ module.exports = {
     en: `
     <span class="tag lang">Languages</span>
     <h1>How Kids Learn Languages Naturally: Secrets to Fluency at Home</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Updated July 2026</span> · <span>9 min read</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Updated July 2026</span> · <span>9 min read</span></div>
     
     <p class="lede">Children have a spectacular, almost magical ability to absorb new languages without formal instruction. Discover the neuroscience behind early language acquisition and how to create an effortless, immersive bilingual environment at home.</p>
 
@@ -51,7 +51,7 @@ module.exports = {
     fr: `
     <span class="tag lang">Langues</span>
     <h1>Comment les enfants apprennent les langues naturellement : les secrets à la maison</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Mis à jour en juillet 2026</span> · <span>9 min de lecture</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Mis à jour en juillet 2026</span> · <span>9 min de lecture</span></div>
     
     <p class="lede">Les enfants possèdent une capacité extraordinaire à absorber une nouvelle langue de manière fluide et intuitive. Découvrez les mécanismes neuroscientifiques de l'acquisition du langage et comment créer un environnement bilingue à la maison.</p>
 
@@ -83,7 +83,7 @@ module.exports = {
     es: `
     <span class="tag lang">Idiomas</span>
     <h1>Cómo aprenden idiomas los niños de forma natural: secretos en casa</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Actualizado en julio de 2026</span> · <span>9 min de lectura</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Actualizado en julio de 2026</span> · <span>9 min de lectura</span></div>
     
     <p class="lede">Los niños tienen una capacidad asombrosa para absorber nuevos idiomas sin esfuerzo consciente. Conoce los secretos de la neurociencia y aprende cómo crear un ambiente interactivo y bilingüe en el hogar.</p>
 
@@ -114,7 +114,7 @@ module.exports = {
     ar: `
     <span class="tag lang">لغات</span>
     <h1>كيف يتعلم الأطفال اللغات الأجنبية تلقائياً؟ أسرار التحدث بطلاقة من المنزل</h1>
-    <div class="meta"><span class="who"><span class="av">أ</span> أيوب الحاجي</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 9 دقائق</span></div>
+    <div class="meta"><span class="who"><span class="av">أ</span> Kids Learning Hub</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 9 دقائق</span></div>
     
     <p class="lede">يمتلك الأطفال قدرة مذهلة، تشبه السحر، على امتصاص اللغات الجديدة دون الحاجة لدروس أكاديمية جافة. في هذا المقال الشامل، سنغوص في أعماق علم الأعصاب لنكتشف كيف يكتسب عقل الطفل اللغات، وكيف تؤسس له بيئة تفاعلية ممتعة في البيت تضمن له التحدث بطلاقة وبلكنة أصلية.</p>
 

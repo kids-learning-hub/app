@@ -16,7 +16,7 @@ module.exports = {
     en: `
     <span class="tag lang">Languages</span>
     <h1>The Ultimate Guide to Teaching Chinese to Kids at Home</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Updated July 2026</span> · <span>8 min read</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Updated July 2026</span> · <span>8 min read</span></div>
     
     <p class="lede">Mandarin Chinese is rapidly becoming one of the most valuable global languages. While it may seem daunting to adults, young children have a unique, natural ability to acquire its complex tones and visual characters. This comprehensive guide explores practical, game-based strategies to introduce Chinese to your child at home without any stress.</p>
 
@@ -50,7 +50,7 @@ module.exports = {
     fr: `
     <span class="tag lang">Langues</span>
     <h1>Le guide complet pour enseigner le chinois aux enfants à la maison</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Mis à jour en juillet 2026</span> · <span>8 min de lecture</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Mis à jour en juillet 2026</span> · <span>8 min de lecture</span></div>
     
     <p class="lede">Le chinois mandarin s'impose aujourd'hui comme une compétence d'avenir essentielle. Si cette langue intimide souvent les adultes, les jeunes enfants possèdent une aptitude naturelle unique à en maîtriser les tons et les caractères visuels. Ce guide vous dévoile des méthodes ludiques et efficaces pour initier votre enfant en douceur.</p>
 
@@ -84,7 +84,7 @@ module.exports = {
     es: `
     <span class="tag lang">Idiomas</span>
     <h1>La guía definitiva para enseñar chino a los niños en casa</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Actualizado en julio de 2026</span> · <span>8 min de lectura</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Actualizado en julio de 2026</span> · <span>8 min de lectura</span></div>
     
     <p class="lede">El chino mandarín es uno de los idiomas más valiosos del mundo actual. Aunque a los adultos les pueda parecer complejo, los niños pequeños tienen una capacidad innata asombrosa para absorber sus tonos y sus caracteres visuales. Esta guía práctica te enseñará cómo hacerlo divertido y sin estrés en el hogar.</p>
 
@@ -118,7 +118,7 @@ module.exports = {
     ar: `
     <span class="tag lang">اللغات</span>
     <h1>الدليل الشامل لتعليم اللغة الصينية للأطفال في المنزل بسهولة</h1>
-    <div class="meta"><span class="who"><span class="av">أ</span> أيوب الحاجي</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 8 دقائق</span></div>
+    <div class="meta"><span class="who"><span class="av">أ</span> Kids Learning Hub</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 8 دقائق</span></div>
     
     <p class="lede">تعد اللغة الصينية (الماندرين) اليوم واحدة من أهم لغات المستقبل وأكثرها طلباً عالمياً. ورغم أنها قد تبدو للوهلة الأولى معقدة للكبار، إلا أن الأطفال يمتلكون قدرات فطرية استثنائية تتيح لهم التقاط نغماتها الصوتية المميزة ورسم رموزها البصرية بيسر وسهولة. في هذا الدليل الشامل والمفصل، سنستعرض معاً استراتيجيات عملية قائمة على اللعب والمرح لبناء أساس لغوي متين لطفلك في المنزل.</p>
 

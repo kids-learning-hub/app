@@ -16,7 +16,7 @@ module.exports = {
     en: `
     <span class="tag lang">Languages</span>
     <h1>5 Simple Ways to Help Your Child Speak English at Home</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Updated July 2026</span> · <span>5 min read</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Updated July 2026</span> · <span>5 min read</span></div>
     <p class="lede">Discover practical, stress-free ways to introduce English into your child’s daily routine through play, songs, and interactive apps.</p>
 
     <h2>Why Early Language Learning Should Be Playful</h2>
@@ -40,7 +40,7 @@ module.exports = {
     fr: `
     <span class="tag lang">Langues</span>
     <h1>5 astuces simples pour aider votre enfant à parler anglais à la maison</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Mis à jour en juillet 2026</span> · <span>5 min de lecture</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Mis à jour en juillet 2026</span> · <span>5 min de lecture</span></div>
     <p class="lede">Découvrez des moyens pratiques et ludiques d'introduire l'anglais dans la routine de votre enfant grâce au jeu, aux chansons et aux applications interactives.</p>
     
     <h2>L'apprentissage par le jeu : la clé du succès</h2>
@@ -63,7 +63,7 @@ module.exports = {
     es: `
     <span class="tag lang">Idiomas</span>
     <h1>5 formas sencillas de ayudar a tu hijo a hablar inglés en casa</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Actualizado en julio de 2026</span> · <span>5 min de lectura</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Actualizado en julio de 2026</span> · <span>5 min de lectura</span></div>
     <p class="lede">Descubre métodos prácticos y divertidos para incorporar el inglés en la rutina diaria de tu hijo a través de juegos, canciones y aplicaciones interactivas.</p>
     
     <h2>Aprender jugando es más efectivo</h2>
@@ -86,7 +86,7 @@ module.exports = {
     ar: `
     <span class="tag lang">اللغات</span>
     <h1>5 طرق بسيطة لمساعدة طفلك على التحدث باللغة الإنجليزية في المنزل</h1>
-    <div class="meta"><span class="who"><span class="av">أ</span> أيوب الحاجي</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 5 دقائق</span></div>
+    <div class="meta"><span class="who"><span class="av">أ</span> Kids Learning Hub</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 5 دقائق</span></div>
     <p class="lede">اكتشف حيلًا عملية وخالية من التوتر لإدخال اللغة الإنجليزية في روتين طفلك اليومي من خلال الألعاب، الأغاني، والتطبيقات التفاعلية.</p>
     
     <h2>لماذا يجب أن يكون تعلم اللغة ممتعاً باللعب؟</h2>

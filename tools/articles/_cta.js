@@ -29,9 +29,9 @@ function cta(id, txt) {
 
 const UPDATED = { en: 'Updated October 2026', fr: 'Mis à jour en octobre 2026', es: 'Actualizado en octubre de 2026', ar: 'تحديث أكتوبر 2026' };
 function meta(lang, minutes) {
-  const who = lang === 'ar' ? 'أيوب الحاجي' : 'Ayyoub EL HAJJI';
+  const who = 'Kids Learning Hub';
   const read = { en: `${minutes} min read`, fr: `${minutes} min de lecture`, es: `${minutes} min de lectura`, ar: `قراءة ${minutes} دقيقة` }[lang];
-  return `<div class="meta"><span class="who"><span class="av">AH</span> ${who}</span> · <span>${UPDATED[lang]}</span> · <span>${read}</span></div>`;
+  return `<div class="meta"><span class="who"><span class="av">KL</span> ${who}</span> · <span>${UPDATED[lang]}</span> · <span>${read}</span></div>`;
 }
 
 module.exports = { cta, meta };

@@ -16,7 +16,7 @@ module.exports = {
     en: `
     <span class="tag science">Geography</span>
     <h1>Why Geography Matters: How to Raise Global Citizens at Home</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Updated July 2026</span> · <span>8 min read</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Updated July 2026</span> · <span>8 min read</span></div>
     
     <p class="lede">In an interconnected world, understanding geography is no longer just about memorizing capital cities or tracing maps. It is about understanding how cultures, environments, and economies connect. Discover how to foster a natural curiosity about the world in your child.</p>
 
@@ -50,7 +50,7 @@ module.exports = {
     fr: `
     <span class="tag science">Géographie</span>
     <h1>L'importance de la géographie : comment éveiller un citoyen du monde à la maison</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Mis à jour en juillet 2026</span> · <span>8 min de lecture</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Mis à jour en juillet 2026</span> · <span>8 min de lecture</span></div>
     
     <p class="lede">Dans un monde de plus en plus connecté, l'apprentissage de la géographie ne se limite plus à mémoriser des capitales. Il s'agit de comprendre comment les cultures, l'environnement et l'économie interagissent. Découvrez comment éveiller la curiosité de votre enfant pour notre planète.</p>
 
@@ -83,7 +83,7 @@ module.exports = {
     es: `
     <span class="tag science">Geografía</span>
     <h1>Por qué importa la geografía: cómo criar ciudadanos del mundo en casa</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Ayyoub EL HAJJI</span> · <span>Actualizado en julio de 2026</span> · <span>8 min de lectura</span></div>
+    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Actualizado en julio de 2026</span> · <span>8 min de lectura</span></div>
     
     <p class="lede">En un mundo cada vez más interconectado, aprender geografía es mucho más que memorizar capitales. Se trata de comprender cómo se conectan las culturas, el medio ambiente y las personas. Descubre cómo despertar el interés de tu hijo por el planeta de forma divertida.</p>
 
@@ -115,7 +115,7 @@ module.exports = {
     ar: `
     <span class="tag science">جغرافيا</span>
     <h1>لماذا الجغرافيا مهمة؟ الدليل الشامل لتربية طفل منفتح على العالم في المنزل</h1>
-    <div class="meta"><span class="who"><span class="av">أ</span> أيوب الحاجي</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 8 دقائق</span></div>
+    <div class="meta"><span class="who"><span class="av">أ</span> Kids Learning Hub</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 8 دقائق</span></div>
     
     <p class="lede">في عالمنا المعاصر شديد الترابط، لم يعد تعلم الجغرافيا مجرد حفظ لأسماء العواصم أو تلوين الخرائط الصامتة. الجغرافيا هي المفتاح لفهم كيفية ترابط الثقافات، وتأثير البيئة على حياتنا، ودورنا في الحفاظ على كوكبنا. في هذا المقال المفصل، سنكتشف معاً كيف نبني في عقول أطفالنا شغفاً حقيقياً باستكشاف العالم من حولهم.</p>
 
