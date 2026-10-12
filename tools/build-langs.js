@@ -87,6 +87,20 @@ const PAGES = [
     },
   },
   {
+    src: 'kids.html',
+    out: l => `${l}/kids.html`,
+    url: l => `${BASE}/${l}/kids.html`,
+    urlEn: `${BASE}/kids.html`,
+    meta: {
+      fr: { title: 'Coin des enfants — jeux, histoires et coloriages | Kids Learning Hub',
+            desc: 'Le coin des enfants de Kids Learning Hub : de grands boutons colorés pour jouer, lire des histoires, colorier et gagner des étoiles. Gratuit, sans inscription.' },
+      es: { title: 'Rincón infantil — juegos, cuentos y dibujos | Kids Learning Hub',
+            desc: 'El rincón infantil de Kids Learning Hub: botones grandes y de colores para jugar, leer cuentos, colorear y ganar estrellas. Gratis y sin registro.' },
+      ar: { title: 'ركن الأطفال — ألعاب وقصص وتلوين | Kids Learning Hub',
+            desc: 'ركن الأطفال في Kids Learning Hub: أزرار كبيرة وملوّنة للّعب وقراءة القصص والتلوين وجمع النجوم. مجانًا ودون تسجيل.' },
+    },
+  },
+  {
     src: 'contact.html',
     out: l => `${l}/contact.html`,
     url: l => `${BASE}/${l}/contact.html`,

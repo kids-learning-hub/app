@@ -627,6 +627,29 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
   .nav-logo b{display:none}   /* logo icon already shows the brand name */
   .foot-top{grid-template-columns:1fr}
 }
+/* ═══ playful layer (2026-10): doodles, wavy footer, heading squiggles, illustrated covers ═══ */
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27260%27 height=%27260%27 fill=%27none%27 stroke=%27%231E5BFF%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 opacity=%27.13%27%3E%3Cpath d=%27M30 40l6 12 13 2-9 9 2 13-12-6-12 6 2-13-9-9 13-2z%27/%3E%3Ccircle cx=%27190%27 cy=%2750%27 r=%2712%27/%3E%3Cpath d=%27M120 120l14 24h-28z%27/%3E%3Cpath d=%27M210 170v20M200 180h20%27/%3E%3Cpath d=%27M40 200q10-12 20 0t20 0 20 0%27/%3E%3Crect x=%27150%27 y=%27225%27 width=%2716%27 height=%2716%27 rx=%273%27 transform=%27rotate(15 158 233)%27/%3E%3Cpath d=%27M95 30q8 8 0 16%27/%3E%3C/svg%3E") 0 0/260px 260px repeat}
+:root[data-theme="dark"] body::after{opacity:.55}
+.sec-head h2,.section-h h2,.ws-sec,h2.fun{position:relative;padding-bottom:10px}
+.sec-head h2::after,.section-h h2::after,.ws-sec::after{content:"";position:absolute;inset-inline-start:0;bottom:0;width:60px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2760%27 height=%2710%27 viewBox=%270 0 60 10%27%3E%3Cpath d=%27M2 6q7-6 14 0t14 0 14 0 14 0%27 fill=%27none%27 stroke=%27%23FFC72C%27 stroke-width=%273.5%27 stroke-linecap=%27round%27/%3E%3C/svg%3E") no-repeat}
+.sec-head[style*="center"] h2::after{inset-inline-start:50%;transform:translateX(-50%)}
+[dir="rtl"] .sec-head[style*="center"] h2::after{transform:translateX(50%)}
+footer,.foot{position:relative}
+footer::before,.foot::before{content:"";position:absolute;left:0;right:0;top:-38px;height:40px;background:var(--navy,#163A8C);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 1200 40%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27M0 40V22C150 2 300 2 450 18S750 38 900 20 1100 6 1200 16V40Z%27 fill=%27black%27/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 1200 40%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27M0 40V22C150 2 300 2 450 18S750 38 900 20 1100 6 1200 16V40Z%27 fill=%27black%27/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}
+:root[data-theme="dark"] footer::before{background:#0E1836}
+/* covers: doodles + soft glow behind the icon (works for blog, stories, games, homepage cards) */
+.pcard .cover,.postc .cov,.gcard .cover:not(.prev){position:relative;isolation:isolate;overflow:hidden}
+.pcard .cover::before,.postc .cov::before,.gcard .cover:not(.prev)::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(circle at 50% 52%,rgba(255,255,255,.55) 0 26px,rgba(255,255,255,.18) 27px 42px,transparent 43px),url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27150%27 height=%27120%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 opacity=%27.32%27%3E%3Cpath d=%27M18 18l4 8 9 1-6 6 1 9-8-4-8 4 1-9-6-6 9-1z%27/%3E%3Ccircle cx=%27128%27 cy=%2722%27 r=%278%27/%3E%3Cpath d=%27M120 92l10 18h-20z%27/%3E%3Cpath d=%27M22 92v14M15 99h14%27/%3E%3Cpath d=%27M60 112q7-8 14 0t14 0%27/%3E%3Ccircle cx=%2788%27 cy=%2714%27 r=%273%27 fill=%27white%27/%3E%3Ccircle cx=%27140%27 cy=%2770%27 r=%273%27 fill=%27white%27/%3E%3C/svg%3E") 0 0/150px 120px repeat}
+.pcard .cover,.postc .cov,.gcard .cover:not(.prev){text-shadow:0 6px 14px rgba(0,0,0,.18)}
+.pcard .cover.story{background:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27300%27 height=%27120%27%3E%3Crect width=%27300%27 height=%27120%27 fill=%27%231B2A6B%27/%3E%3Ccircle cx=%27250%27 cy=%2734%27 r=%2718%27 fill=%27%23FFE7A0%27/%3E%3Ccircle cx=%27258%27 cy=%2728%27 r=%2716%27 fill=%27%231B2A6B%27/%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%271.6%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%2760%27 cy=%2748%27 r=%271.2%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%2795%27 cy=%2716%27 r=%272%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%27140%27 cy=%2740%27 r=%271.3%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%27180%27 cy=%2718%27 r=%271.6%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%27210%27 cy=%2770%27 r=%271.2%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%2730%27 cy=%2790%27 r=%271.4%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%27120%27 cy=%2796%27 r=%271.7%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%27170%27 cy=%27104%27 r=%271.2%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%27280%27 cy=%2790%27 r=%271.5%27 fill=%27white%27 opacity=%27.85%27/%3E%3Ccircle cx=%2775%27 cy=%2778%27 r=%271%27 fill=%27white%27 opacity=%27.85%27/%3E%3Cpath d=%27M0 120 Q60 96 120 112 T240 106 T300 110 V120Z%27 fill=%27%2313205A%27/%3E%3C/svg%3E") center/cover no-repeat!important}
+.pcard .cover.story::before{background:radial-gradient(circle at 50% 55%,rgba(255,231,160,.35) 0 30px,transparent 46px)}
+@media(prefers-reduced-motion:no-preference){.pcard:hover .cover,.postc:hover .cov{animation:covWiggle .5s ease}}
+@keyframes covWiggle{30%{transform:rotate(-1.5deg)}60%{transform:rotate(1.5deg)}}
+/* Kids Corner pill in the menu */
+.nav-menu a.kids-pill{background:linear-gradient(135deg,#FFB300,#FF6F00);color:#fff!important;border-radius:999px;padding:7px 14px;box-shadow:0 6px 14px rgba(255,111,0,.3)}
+.nav-menu a.kids-pill:hover{filter:brightness(1.05)}
 /* ─── phone: swipeable rows instead of very long stacks (2026-10) ─── */
 @media(max-width:760px){
   .apps-row,.posts,.age3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;
@@ -1438,7 +1461,7 @@ const T = {
       {q:'هل هي آمنة للأطفال؟',a:'نعم. توجد بوّابة أبوية ودون جمع بيانات عن الأطفال. من عمر 4 سنوات فأكثر.'}]},
 };
 
-const NAV_KEYS = ['home','math','science','coding','geography','english','french','german','arabic','spanish','chinese','games','worksheets','stories','blog'];
+const NAV_KEYS = ['home','kids','math','science','coding','geography','english','french','german','arabic','spanish','chinese','games','worksheets','stories','blog'];
 const playSvg = '<svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg>';
 
 const _urlLang = new URLSearchParams(location.search).get('lang');
@@ -1551,6 +1574,8 @@ const T2 = {
     trust:['محتوى آمن','مناسب للأطفال','من إعداد أستاذ','متعدد اللغات','يعمل على كل الأجهزة']},
 };
 Object.keys(T2).forEach(k=>Object.assign(T[k],T2[k]));
+/* nav label for the Kids Corner page */
+Object.entries({en:'Kids corner',fr:'Coin des enfants',es:'Rincón infantil',ar:'ركن الأطفال'}).forEach(([k,v])=>{ T[k].nav.kids = v; });
 
 /* localised hrefs for the static sub-sites */
 function locHref(path){
@@ -1721,6 +1746,7 @@ function render(){
   const appsBase = () => '/apps/' + (lang==='en'?'':lang+'/');
   const navHref = k => {
     if(k==='home') return '#top';
+    if(k==='kids') return lang==='en' ? '/kids.html' : '/'+lang+'/kids.html';
     if(k==='blog') return '/blog/' + (lang==='en'?'':lang+'/');
     if(k==='stories') return '/stories/' + (lang==='en'?'':lang+'/');
     if(k==='games') return '/play/' + (lang==='en'?'':'?lang='+lang);
@@ -1763,7 +1789,7 @@ function render(){
       continue;
     }
     const home = k==='home';
-    navHtml += `<a href="${navHref(k)}" class="${home?'active':''}">${home?'🏠 ':''}${t.nav[k]}</a>`;
+    navHtml += `<a href="${navHref(k)}" class="${home?'active':''}${k==='kids'?' kids-pill':''}">${home?'🏠 ':''}${k==='kids'?'🎈 ':''}${t.nav[k]}</a>`;
   }
   document.getElementById('navMenu').innerHTML = navHtml;
   document.getElementById('mMenu').innerHTML =

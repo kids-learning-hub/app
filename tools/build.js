@@ -341,7 +341,7 @@ for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'pl
                  'worksheets/maze.html', 'worksheets/shapes.html', 'worksheets/line-tracing.html', 'worksheets/sudoku.html',
                  'worksheets/continents.html', 'worksheets/flags.html', 'worksheets/dot-to-dot.html', 'worksheets/color-by-number.html',
                  'worksheets/column-addition.html', 'worksheets/word-problems.html', 'worksheets/seasonal.html',
-                 'about.html', 'contact.html']) {
+                 'about.html', 'contact.html', 'kids.html']) {
   sm += `  <url>
     <loc>${BASE}/${p}</loc>
     <lastmod>${TODAY}</lastmod>
