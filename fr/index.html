@@ -434,6 +434,69 @@ body::before{
 .btn-yellow:hover{transform:translateY(-2px)}
 .premium .crown{position:absolute;bottom:-8px;inset-inline-end:-6px;font-size:64px;opacity:.9;z-index:1}
 
+/* ─────────── Daily challenge ─────────── */
+.dc{padding:26px;background:linear-gradient(135deg,#FFF7DB,#FFE9F4 55%,#E9F0FF);border:none;position:relative;overflow:hidden}
+:root[data-theme="dark"] .dc{background:linear-gradient(135deg,#2A2410,#2A1428 55%,#141D3B)}
+.dc-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.dc-sub{color:var(--muted);font-weight:700;font-size:14.5px;margin-top:4px}
+.dc-streak{background:#FF8A00;color:#fff;font-weight:900;padding:8px 14px;border-radius:999px;font-size:14px;box-shadow:0 8px 18px rgba(255,138,0,.35);white-space:nowrap}
+.dc-ages{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 18px}
+.dc-ages button{border:2px solid var(--line);background:var(--card);color:var(--ink);font:800 15px "Nunito",sans-serif;padding:10px 18px;border-radius:999px;cursor:pointer;transition:.18s}
+.dc-ages button:hover{transform:translateY(-2px)}
+.dc-ages button.on{background:var(--grad-brand);color:#fff;border-color:transparent;box-shadow:0 10px 20px rgba(30,91,255,.3)}
+.dc-stage{background:var(--card);border-radius:22px;padding:22px;box-shadow:var(--shadow-sm);min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px}
+.dc-dots{display:flex;gap:7px}
+.dc-dots i{width:12px;height:12px;border-radius:50%;background:var(--line);display:block}
+.dc-dots i.ok{background:#42C85A}.dc-dots i.no{background:#FF4F6A}.dc-dots i.cur{background:var(--blue);transform:scale(1.25)}
+.dc-q{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:clamp(22px,4.5vw,32px);line-height:1.2;color:var(--ink)}
+.dc-q .emo{display:block;font-size:clamp(26px,5vw,36px);letter-spacing:4px;line-height:1.35;margin-top:6px;word-break:break-all}
+.dc-q .big{display:block;font-size:clamp(30px,6vw,44px);color:var(--blue);direction:ltr;unicode-bidi:isolate}
+.dc-opts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%;max-width:560px}
+.dc-opts button{font:800 clamp(20px,4vw,26px) "Baloo 2",sans-serif;padding:14px 6px;border-radius:18px;border:2px solid var(--line);background:var(--card2);color:var(--ink);cursor:pointer;transition:.15s;direction:ltr}
+.dc-opts button:hover:not(:disabled){transform:translateY(-3px);border-color:var(--blue)}
+.dc-opts button.ok{background:#42C85A;border-color:#42C85A;color:#fff}
+.dc-opts button.no{background:#FF4F6A;border-color:#FF4F6A;color:#fff;animation:dcShake .35s}
+.dc-opts button:disabled{cursor:default}
+@keyframes dcShake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.dc-stars{font-size:38px;letter-spacing:4px}
+.dc-msg{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:24px}
+.dc-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.dc-start{font:900 18px "Nunito",sans-serif;padding:14px 30px;border-radius:999px;border:none;background:var(--grad-brand);color:#fff;cursor:pointer;box-shadow:0 12px 24px rgba(30,91,255,.35);transition:.18s}
+.dc-start:hover{transform:translateY(-2px) scale(1.03)}
+.dc-start.alt{background:var(--card2);color:var(--blue);box-shadow:none;border:2px solid var(--line)}
+.dc-mascot{font-size:54px;line-height:1;animation:dcBob 2.4s ease-in-out infinite}
+@keyframes dcBob{50%{transform:translateY(-6px) rotate(-4deg)}}
+@media(max-width:520px){.dc{padding:18px}.dc-opts{grid-template-columns:repeat(2,1fr)}.dc-stage{padding:16px}}
+@media(prefers-reduced-motion:reduce){.dc-mascot,.dc-opts button.no{animation:none}}
+
+/* ─────────── Choose by age ─────────── */
+.age3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.agec{border-radius:var(--radius);padding:20px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow-sm)}
+.agec .ae{position:absolute;top:10px;inset-inline-end:12px;font-size:46px;opacity:.95}
+.agec h3{font-size:21px;margin:0 0 2px;color:#fff}
+.agec .as{font-weight:700;font-size:13.5px;opacity:.92;margin-bottom:14px;padding-inline-end:52px;min-height:38px}
+.agec ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin:0;padding:0}
+.agec li a{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.18);border-radius:13px;padding:9px 12px;font-weight:800;font-size:14px;color:#fff;transition:.15s}
+.agec li a:hover{background:rgba(255,255,255,.3);transform:translateX(3px)}
+[dir="rtl"] .agec li a:hover{transform:translateX(-3px)}
+.agec li .k{font-size:11px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;opacity:.8;margin-inline-start:auto}
+@media(max-width:900px){.age3{grid-template-columns:1fr}}
+
+/* ─────────── Made by a teacher ─────────── */
+.teacher{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;margin-top:6px}
+.teacher .tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:24px}
+.teacher .who{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.teacher .av{width:58px;height:58px;border-radius:50%;background:var(--grad-brand);color:#fff;display:grid;place-items:center;font:800 20px "Baloo 2",sans-serif;flex:none}
+.teacher .who b{display:block;font-size:17px}
+.teacher .who small{color:var(--muted);font-weight:700}
+.teacher p{color:var(--ink2);font-size:14.5px}
+.teacher .tlink{display:inline-block;margin-top:12px;color:var(--blue);font-weight:800}
+.teacher ol{list-style:none;counter-reset:st;display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
+.teacher ol li{counter-increment:st;display:flex;align-items:center;gap:12px;background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:12px 14px;font-weight:800;font-size:14.5px}
+.teacher ol li::before{content:counter(st);width:32px;height:32px;border-radius:50%;background:var(--yellow);color:#5A3B00;display:grid;place-items:center;font-weight:900;flex:none}
+.teacher ol li a{color:inherit}
+@media(max-width:820px){.teacher{grid-template-columns:1fr}}
+
 /* ─────────── Why grid ─────────── */
 .why{padding:26px}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -780,6 +843,20 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
         </div>
       </section>
 
+      <!-- Daily challenge (kids) -->
+      <section class="card dc reveal" id="challenge">
+        <div class="dc-head">
+          <div>
+            <div class="eyebrow-sm" data-i="dcEyebrow">Daily challenge</div>
+            <h2 data-i="dcTitle">Today's 5-question challenge</h2>
+            <p class="dc-sub" data-i="dcSub">A new challenge every day. Pick your age and go!</p>
+          </div>
+          <div class="dc-streak" id="dcStreak" hidden></div>
+        </div>
+        <div class="dc-ages" id="dcAges" role="group"></div>
+        <div class="dc-stage" id="dcStage" aria-live="polite"></div>
+      </section>
+
       <!-- Our apps -->
       <section class="card apps-card reveal" id="apps">
         <div class="sec-head">
@@ -792,28 +869,15 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
       <!-- Ad · in-content 1 (in-article) -->
       <div class="ad-slot reveal" data-slot="1756272080" data-ad-type="inarticle"></div>
 
-      <!-- 3 feature cards -->
-      <section class="reveal">
-        <div class="feat3">
-          <article class="feat-card">
-            <div class="fc-top"><span class="feat-emoji">📋</span><a class="link secLink" href="/worksheets/" data-i="viewAll">View All →</a></div>
-            <h3 data-i="wsTitle">Printable Worksheets</h3>
-            <p data-i="wsDesc">Download and print high-quality worksheets for math, science, languages and more.</p>
-            <a class="btn-sm g-blue secLink" href="/worksheets/" data-i="wsBtn">Browse Worksheets</a>
-          </article>
-          <article class="feat-card">
-            <div class="fc-top"><span class="feat-emoji">🎮</span><a class="link secLink" href="/play/" data-i="viewAll">View All →</a></div>
-            <h3 data-i="gmTitle">Fun Educational Games</h3>
-            <p data-i="gmDesc">Play interactive games that make learning fun and exciting!</p>
-            <a class="btn-sm g-green secLink" href="/play/" data-i="gmBtn">Play Games</a>
-          </article>
-          <article class="feat-card">
-            <div class="fc-top"><span class="feat-emoji">🧪</span><a class="link secLink" href="/apps/scienkids.html" data-i="viewAll">View All →</a></div>
-            <h3 data-i="sciTitle">Science Experiments</h3>
-            <p data-i="sciDesc">Discover amazing science experiments and learn how things work!</p>
-            <a class="btn-sm g-purple secLink" href="/apps/scienkids.html" data-i="sciBtn">Explore Science</a>
-          </article>
+      <!-- Choose by age (parents) -->
+      <section class="reveal" id="byage">
+        <div class="sec-head">
+          <div>
+            <div class="eyebrow-sm" data-i="abEyebrow">For parents</div>
+            <h2 data-i="abTitle">Find the right activities for your child's age</h2>
+          </div>
         </div>
+        <div class="age3" id="ageGrid"></div>
       </section>
 
       <!-- Why families love the apps -->
@@ -848,18 +912,18 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
         <h3 data-i="trustedTitle">Trusted by Parents &amp; Teachers</h3>
         <div class="stats">
           <div class="stat">
-            <div class="s-ic" style="background:#FFF3D1">😊</div>
-            <div class="s-num" data-count="100000" data-suffix="+">0</div>
+            <div class="s-ic" style="background:#FFF3D1">📱</div>
+            <div class="s-num" data-count="10" data-suffix="">0</div>
             <div class="s-lab" data-i="statLearners">Happy Learners</div>
           </div>
           <div class="stat">
-            <div class="s-ic" style="background:#DBE7FF">📘</div>
-            <div class="s-num" data-count="500" data-suffix="+">0</div>
+            <div class="s-ic" style="background:#DBE7FF">🎮</div>
+            <div class="s-num" data-count="10" data-suffix="">0</div>
             <div class="s-lab" data-i="statLessons">Lessons</div>
           </div>
           <div class="stat">
             <div class="s-ic" style="background:#E0F8E7">📝</div>
-            <div class="s-num" data-count="1000" data-suffix="+">0</div>
+            <div class="s-num" data-count="25" data-suffix="+">0</div>
             <div class="s-lab" data-i="statWorksheets">Worksheets</div>
           </div>
           <div class="stat">
@@ -870,18 +934,12 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
         </div>
       </div>
 
-      <!-- Premium -->
-      <div class="card side-card premium reveal">
-        <span class="crown">🦸</span>
-        <h3>👑 <span data-i="premTitle">Join Our Premium Plan</span></h3>
-        <p data-i="premDesc">Unlock all lessons, worksheets, games and premium content.</p>
-        <ul class="plist">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="premF1">Access to All Content</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="premF2">Priority New Content</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="premF3">Offline Access</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="premF4">Certificates &amp; Rewards</span></li>
-        </ul>
-        <a class="btn-yellow" href="#apps" data-i="premBtn">Get Started Now</a>
+      <!-- Our promise to parents -->
+      <div class="card side-card premium promise reveal">
+        <span class="crown">🤝</span>
+        <h3 data-i="prTitle">Our promise to parents</h3>
+        <ul class="plist" id="promiseList"></ul>
+        <a class="btn-yellow" href="/about.html" id="promiseBtn" data-i="prBtn">Meet the creator</a>
       </div>
 
       <!-- Ad · sidebar (display, responsive) -->
@@ -973,7 +1031,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
       <div class="eyebrow-sm" data-i="testiEyebrow">Loved worldwide</div>
       <h2 data-i="testiTitle">What parents &amp; teachers say</h2>
     </div>
-    <div class="testi-grid" id="testiGrid"></div>
+    <div class="teacher" id="teacherBox"></div>
   </section>
 
   <!-- Ad · in-content 2 (in-feed) -->
@@ -1384,6 +1442,266 @@ const _urlLang = new URLSearchParams(location.search).get('lang');
 let lang = (['en','fr','es','ar'].includes(_urlLang) ? _urlLang : null) || localStorage.getItem('vsm_lang') || 'en';
 
 /* ─── render ─── */
+/* ─── Daily challenge · choose-by-age · promise · teacher (2026-10) ───
+   Strings for the newer homepage blocks live here and are merged into T,
+   so the four big dictionaries above stay untouched. */
+const T2 = {
+  en:{
+    dcEyebrow:'Daily challenge', dcTitle:"Today's 5-question challenge", dcSub:'A new challenge every day. Pick your age and go!',
+    dcAges:['Ages 4–6','Ages 7–9','Ages 10–12'], dcStart:'Start ▶', dcReady:'Ready? 5 questions, earn up to 5 stars!',
+    dcCount:'How many can you count?', dcBigger:'Which number is bigger?', dcNext:'What comes next?', dcSolve:'Solve it!',
+    dcMissing:'Find the missing number', dcHalf:'What is half of', dcPct:'What is 10% of', dcQuarter:'What is a quarter of',
+    dcGreat:'Amazing — you are a star!', dcGood:'Well done! Keep practising!', dcTry:'Good try! Play again to beat your score!',
+    dcAgain:'New questions', dcMore:'More games →', dcStreak:'day streak', dcDone:'You already played today — try new questions!',
+    abEyebrow:'For parents', abTitle:"Find the right activities for your child's age",
+    ages:[
+      {t:'Ages 4–6', s:'First numbers, letters and shapes — short playful activities.'},
+      {t:'Ages 7–9', s:'Adding, times tables, telling the time and reading.'},
+      {t:'Ages 10–12', s:'Mental maths, science, world capitals and logic.'}],
+    kGame:'Game', kSheet:'Print', kRead:'Read',
+    L:{quickCount:'Quick Count', memory:'Memory cards', tracing:'Letter tracing', coloring:'Colouring pages', stories:'Bedtime stories',
+       tables:'Times Tables Race', clock:'Clock game', addition:'Addition worksheets', money:'Counting money', words:'Word Match',
+       race:'Math Race', capitals:'World capitals', science:'Science quiz', division:'Division worksheets', sudoku:'Kids sudoku'},
+    prTitle:'Our promise to parents', prBtn:'Meet the creator',
+    pr:['100% free — no sign-up','No personalised ads for children','Made by a real teacher','Printable and offline-friendly'],
+    testiEyebrow:'Made by a teacher', testiTitle:'From the classroom to your home',
+    tcRole:'Mathematics teacher · Morocco',
+    tcText:'Every game, worksheet and app on this site grows out of real classroom experience: Ayyoub builds what he sees helping children learn, then shares it for free in four languages.',
+    tcAbout:'Read the story →', tcSteps:['Play today’s challenge (5 minutes)','Print a worksheet for tonight','Keep learning offline with a free app'],
+    tcFeedback:'Using the hub with your child or class? Tell us how it goes →',
+    trustedTitle:'Everything here is free', statLearners:'Free apps', statLessons:'Browser games', statWorksheets:'Worksheet types',
+    trust:['Safe Content','Kid-Friendly','Made by a Teacher','Multi-Language','Works on All Devices']},
+  fr:{
+    dcEyebrow:'Défi du jour', dcTitle:'Le défi du jour en 5 questions', dcSub:'Un nouveau défi chaque jour. Choisis ton âge et c’est parti !',
+    dcAges:['4–6 ans','7–9 ans','10–12 ans'], dcStart:'Commencer ▶', dcReady:'Prêt ? 5 questions, jusqu’à 5 étoiles à gagner !',
+    dcCount:'Combien peux-tu en compter ?', dcBigger:'Quel nombre est le plus grand ?', dcNext:'Quel nombre vient ensuite ?', dcSolve:'Calcule !',
+    dcMissing:'Trouve le nombre manquant', dcHalf:'Quelle est la moitié de', dcPct:'Combien font 10 % de', dcQuarter:'Quel est le quart de',
+    dcGreat:'Bravo, tu es une star !', dcGood:'Bien joué ! Continue à t’entraîner !', dcTry:'Bel essai ! Rejoue pour battre ton score !',
+    dcAgain:'Nouvelles questions', dcMore:'Plus de jeux →', dcStreak:'jours d’affilée', dcDone:'Tu as déjà joué aujourd’hui — essaie de nouvelles questions !',
+    abEyebrow:'Pour les parents', abTitle:'Trouvez les bonnes activités selon l’âge de votre enfant',
+    ages:[
+      {t:'4–6 ans', s:'Premiers nombres, lettres et formes — des activités courtes et ludiques.'},
+      {t:'7–9 ans', s:'Additions, tables de multiplication, lire l’heure et la lecture.'},
+      {t:'10–12 ans', s:'Calcul mental, sciences, capitales du monde et logique.'}],
+    kGame:'Jeu', kSheet:'Fiche', kRead:'Lire',
+    L:{quickCount:'Compte vite', memory:'Jeu de mémoire', tracing:'Tracer les lettres', coloring:'Coloriages', stories:'Histoires du soir',
+       tables:'Course aux tables', clock:'Lire l’heure', addition:'Fiches d’addition', money:'Compter l’argent', words:'Associer les mots',
+       race:'Course de calcul', capitals:'Capitales du monde', science:'Quiz de sciences', division:'Fiches de division', sudoku:'Sudoku enfants'},
+    prTitle:'Notre promesse aux parents', prBtn:'Découvrir le créateur',
+    pr:['100 % gratuit — sans inscription','Pas de publicité personnalisée pour les enfants','Créé par un vrai enseignant','À imprimer et utilisable hors ligne'],
+    testiEyebrow:'Créé par un enseignant', testiTitle:'De la classe à la maison',
+    tcRole:'Professeur de mathématiques · Maroc',
+    tcText:'Chaque jeu, fiche et appli de ce site naît d’une vraie expérience de classe : Ayyoub crée ce qu’il voit aider les enfants à apprendre, puis le partage gratuitement en quatre langues.',
+    tcAbout:'Lire son histoire →', tcSteps:['Jouez au défi du jour (5 minutes)','Imprimez une fiche pour ce soir','Continuez hors ligne avec une appli gratuite'],
+    tcFeedback:'Vous utilisez le site avec votre enfant ou votre classe ? Racontez-nous →',
+    trustedTitle:'Tout est gratuit ici', statLearners:'Applis gratuites', statLessons:'Jeux en ligne', statWorksheets:'Types de fiches',
+    trust:['Contenu sûr','Adapté aux enfants','Créé par un enseignant','Multilingue','Sur tous les appareils']},
+  es:{
+    dcEyebrow:'Reto del día', dcTitle:'El reto de hoy en 5 preguntas', dcSub:'Un reto nuevo cada día. ¡Elige tu edad y a jugar!',
+    dcAges:['4–6 años','7–9 años','10–12 años'], dcStart:'Empezar ▶', dcReady:'¿Listo? 5 preguntas, ¡gana hasta 5 estrellas!',
+    dcCount:'¿Cuántos puedes contar?', dcBigger:'¿Qué número es mayor?', dcNext:'¿Qué número sigue?', dcSolve:'¡Resuélvelo!',
+    dcMissing:'Encuentra el número que falta', dcHalf:'¿Cuál es la mitad de', dcPct:'¿Cuánto es el 10 % de', dcQuarter:'¿Cuál es la cuarta parte de',
+    dcGreat:'¡Increíble, eres una estrella!', dcGood:'¡Muy bien! ¡Sigue practicando!', dcTry:'¡Buen intento! ¡Juega otra vez para superarte!',
+    dcAgain:'Nuevas preguntas', dcMore:'Más juegos →', dcStreak:'días seguidos', dcDone:'Ya jugaste hoy — ¡prueba preguntas nuevas!',
+    abEyebrow:'Para familias', abTitle:'Encuentra las actividades adecuadas para la edad de tu hijo',
+    ages:[
+      {t:'4–6 años', s:'Primeros números, letras y formas — actividades cortas y divertidas.'},
+      {t:'7–9 años', s:'Sumas, tablas de multiplicar, leer la hora y lectura.'},
+      {t:'10–12 años', s:'Cálculo mental, ciencias, capitales del mundo y lógica.'}],
+    kGame:'Juego', kSheet:'Ficha', kRead:'Leer',
+    L:{quickCount:'Cuenta rápido', memory:'Juego de memoria', tracing:'Trazar letras', coloring:'Dibujos para colorear', stories:'Cuentos para dormir',
+       tables:'Carrera de tablas', clock:'Juego del reloj', addition:'Fichas de sumas', money:'Contar dinero', words:'Une las palabras',
+       race:'Carrera de cálculo', capitals:'Capitales del mundo', science:'Quiz de ciencias', division:'Fichas de división', sudoku:'Sudoku infantil'},
+    prTitle:'Nuestra promesa a las familias', prBtn:'Conoce al creador',
+    pr:['100 % gratis — sin registro','Sin publicidad personalizada para niños','Hecho por un profesor de verdad','Imprimible y sin conexión'],
+    testiEyebrow:'Hecho por un profesor', testiTitle:'Del aula a tu casa',
+    tcRole:'Profesor de matemáticas · Marruecos',
+    tcText:'Cada juego, ficha y app de este sitio nace de la experiencia real en el aula: Ayyoub crea lo que ve que ayuda a los niños a aprender y lo comparte gratis en cuatro idiomas.',
+    tcAbout:'Leer su historia →', tcSteps:['Juega el reto del día (5 minutos)','Imprime una ficha para esta noche','Sigue aprendiendo sin conexión con una app gratis'],
+    tcFeedback:'¿Usas el sitio con tu hijo o tu clase? Cuéntanos qué tal →',
+    trustedTitle:'Aquí todo es gratis', statLearners:'Apps gratis', statLessons:'Juegos online', statWorksheets:'Tipos de fichas',
+    trust:['Contenido seguro','Pensado para niños','Hecho por un profesor','Multilingüe','En todos los dispositivos']},
+  ar:{
+    dcEyebrow:'تحدّي اليوم', dcTitle:'تحدّي اليوم في 5 أسئلة', dcSub:'تحدٍّ جديد كل يوم. اختر عمرك وانطلق!',
+    dcAges:['4–6 سنوات','7–9 سنوات','10–12 سنة'], dcStart:'ابدأ ◀', dcReady:'مستعد؟ 5 أسئلة، اربح حتى 5 نجوم!',
+    dcCount:'كم عددها؟', dcBigger:'أيّ العددين أكبر؟', dcNext:'ما العدد التالي؟', dcSolve:'احسب!',
+    dcMissing:'جد العدد الناقص', dcHalf:'ما نصف', dcPct:'كم يساوي 10٪ من', dcQuarter:'ما ربع',
+    dcGreat:'رائع، أنت نجم!', dcGood:'أحسنت! واصل التدرّب!', dcTry:'محاولة جيدة! العب مرة أخرى لتحسّن نتيجتك!',
+    dcAgain:'أسئلة جديدة', dcMore:'ألعاب أخرى ←', dcStreak:'أيام متتالية', dcDone:'لعبت اليوم — جرّب أسئلة جديدة!',
+    abEyebrow:'لأولياء الأمور', abTitle:'اعثر على الأنشطة المناسبة لعمر طفلك',
+    ages:[
+      {t:'4–6 سنوات', s:'الأعداد والحروف والأشكال الأولى — أنشطة قصيرة وممتعة.'},
+      {t:'7–9 سنوات', s:'الجمع وجداول الضرب وقراءة الساعة والقراءة.'},
+      {t:'10–12 سنة', s:'الحساب الذهني والعلوم وعواصم العالم والمنطق.'}],
+    kGame:'لعبة', kSheet:'ورقة', kRead:'قصة',
+    L:{quickCount:'العدّ السريع', memory:'لعبة الذاكرة', tracing:'تتبّع الحروف', coloring:'صفحات التلوين', stories:'قصص قبل النوم',
+       tables:'سباق جداول الضرب', clock:'لعبة الساعة', addition:'أوراق الجمع', money:'عدّ النقود', words:'مطابقة الكلمات',
+       race:'سباق الحساب', capitals:'عواصم العالم', science:'مسابقة العلوم', division:'أوراق القسمة', sudoku:'سودوكو الأطفال'},
+    prTitle:'وعدنا لأولياء الأمور', prBtn:'تعرّف على صاحب المشروع',
+    pr:['مجاني 100٪ — بلا تسجيل','لا إعلانات مخصّصة للأطفال','من إعداد أستاذ حقيقي','قابل للطباعة ويعمل دون إنترنت'],
+    testiEyebrow:'من إعداد أستاذ', testiTitle:'من القسم إلى بيتك',
+    tcRole:'أستاذ رياضيات · المغرب',
+    tcText:'كل لعبة وورقة عمل وتطبيق في هذا الموقع وُلد من تجربة حقيقية داخل القسم: يصمّم أيوب ما يراه يساعد الأطفال على التعلّم، ثم يشاركه مجانًا بأربع لغات.',
+    tcAbout:'اقرأ القصة ←', tcSteps:['العب تحدّي اليوم (5 دقائق)','اطبع ورقة عمل لهذا المساء','واصل التعلّم دون إنترنت بتطبيق مجاني'],
+    tcFeedback:'تستعمل الموقع مع طفلك أو قسمك؟ أخبرنا بتجربتك ←',
+    trustedTitle:'كل شيء هنا مجاني', statLearners:'تطبيقات مجانية', statLessons:'ألعاب على المتصفّح', statWorksheets:'نوع ورقة عمل',
+    trust:['محتوى آمن','مناسب للأطفال','من إعداد أستاذ','متعدد اللغات','يعمل على كل الأجهزة']},
+};
+Object.keys(T2).forEach(k=>Object.assign(T[k],T2[k]));
+
+/* localised hrefs for the static sub-sites */
+function locHref(path){
+  if(lang==='en') return path;
+  if(path.startsWith('/stories/')) return '/stories/'+lang+'/';
+  if(path==='/about.html'||path==='/contact.html') return '/'+lang+path;
+  if(path.startsWith('/apps/')) return '/apps/'+lang+'/'+path.slice(6);
+  return path+'?lang='+lang;
+}
+
+/* parents blocks: choose-by-age, promise card, teacher section */
+const AGE_LINKS = [
+  {e:'🧸', g:'linear-gradient(135deg,#FF9A3C,#FF4FA3)', l:[
+    ['🔢','quickCount','/play/quick-count.html','kGame'],['🧠','memory','/play/memory.html','kGame'],
+    ['✍️','tracing','/worksheets/latin-letters.html','kSheet'],['🎨','coloring','/worksheets/coloring.html','kSheet'],
+    ['📖','stories','/stories/','kRead']]},
+  {e:'🚀', g:'linear-gradient(135deg,#42C85A,#0E9F6E)', l:[
+    ['✖️','tables','/play/times-tables.html','kGame'],['🕒','clock','/play/clock-game.html','kGame'],
+    ['🗣️','words','/play/word-match.html','kGame'],['➕','addition','/worksheets/addition.html','kSheet'],
+    ['💰','money','/worksheets/money.html','kSheet']]},
+  {e:'🧠', g:'linear-gradient(135deg,#1E5BFF,#7A4DFF)', l:[
+    ['🏎️','race','/play/math-race.html','kGame'],['🌍','capitals','/play/capitals.html','kGame'],
+    ['🔬','science','/play/science-quiz.html','kGame'],['➗','division','/worksheets/division.html','kSheet'],
+    ['🧩','sudoku','/worksheets/sudoku.html','kSheet']]},
+];
+function renderParents(t){
+  document.getElementById('ageGrid').innerHTML = AGE_LINKS.map((a,i)=>`
+    <div class="agec" style="background:${a.g}">
+      <span class="ae">${a.e}</span>
+      <h3>${t.ages[i].t}</h3>
+      <p class="as">${t.ages[i].s}</p>
+      <ul>${a.l.map(([emo,key,href,kind])=>`<li><a href="${locHref(href)}"><span>${emo}</span>${t.L[key]}<span class="k">${t[kind]}</span></a></li>`).join('')}</ul>
+    </div>`).join('');
+  const tick = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg>';
+  document.getElementById('promiseList').innerHTML = t.pr.map(x=>`<li>${tick}<span>${x}</span></li>`).join('');
+  document.getElementById('promiseBtn').href = locHref('/about.html');
+  document.getElementById('teacherBox').innerHTML = `
+    <div class="tcard">
+      <div class="who"><div class="av">AH</div><div><b>${lang==='ar'?'أيوب الحاجي':'Ayyoub EL HAJJI'}</b><small>${t.tcRole}</small></div></div>
+      <p>${t.tcText}</p>
+      <a class="tlink" href="${locHref('/about.html')}">${t.tcAbout}</a>
+    </div>
+    <div class="tcard">
+      <ol>
+        <li><a href="#challenge">${t.tcSteps[0]}</a></li>
+        <li><a href="${locHref('/worksheets/')}">${t.tcSteps[1]}</a></li>
+        <li><a href="${locHref('/apps/')}">${t.tcSteps[2]}</a></li>
+      </ol>
+      <a class="tlink" href="${locHref('/contact.html')}">${t.tcFeedback}</a>
+    </div>`;
+}
+
+/* ── daily challenge ──
+   Same 5 questions for everyone on a given day (seeded by date + age band),
+   so kids can compare at school; "New questions" switches to a random seed. */
+const DC = { band: 1, seed: 0, qs: [], i: 0, score: 0, res: [], state: 'intro' };
+try { const v = localStorage.getItem('klh_dc_band'); if (v !== null && +v >= 0 && +v <= 2) DC.band = +v; } catch(e){}
+const dcToday = () => { const d = new Date(); return d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate(); };
+function dcRng(seed){ let a = seed >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function dcMake(band, seed){
+  const r = dcRng(seed), ri = (a,b) => a + Math.floor(r()*(b-a+1)), pick = arr => arr[Math.floor(r()*arr.length)];
+  const EMO = ['🍎','⭐','🐟','🌸','🚗','🎈','🐞','🍓','⚽','🦋'];
+  const GEN = [
+    [ // 4–6
+      () => { const n = ri(3,9), e = pick(EMO); return {k:'dcCount', emo:e.repeat(n), a:n}; },
+      () => { const a = ri(1,5), b = ri(1,5); return {k:'dcSolve', big:`${a} + ${b} = ?`, a:a+b}; },
+      () => { let a = ri(1,20), b = ri(1,20); while(b===a) b = ri(1,20); return {k:'dcBigger', big:`${a}   ·   ${b}`, a:Math.max(a,b), opts:[a,b]}; },
+      () => { const s = ri(1,7); return {k:'dcNext', big:`${s}, ${s+1}, ${s+2}, ?`, a:s+3}; },
+      () => { const a = ri(4,10), b = ri(1,a-1); return {k:'dcSolve', big:`${a} − ${b} = ?`, a:a-b}; },
+    ],
+    [ // 7–9
+      () => { const a = ri(12,58), b = ri(11,39); return {k:'dcSolve', big:`${a} + ${b} = ?`, a:a+b}; },
+      () => { const a = ri(30,99), b = ri(11,a-5); return {k:'dcSolve', big:`${a} − ${b} = ?`, a:a-b}; },
+      () => { const a = ri(2,5), b = ri(2,10); return {k:'dcSolve', big:`${a} × ${b} = ?`, a:a*b}; },
+      () => { const a = ri(5,40), c = a + ri(5,40); return {k:'dcMissing', big:`${a} + ? = ${c}`, a:c-a}; },
+      () => { const st = pick([2,5,10]), s = ri(1,9)*st; return {k:'dcNext', big:`${s}, ${s+st}, ${s+2*st}, ?`, a:s+3*st}; },
+    ],
+    [ // 10–12
+      () => { const a = ri(6,12), b = ri(3,12); return {k:'dcSolve', big:`${a} × ${b} = ?`, a:a*b}; },
+      () => { const b = ri(3,12), q = ri(3,12); return {k:'dcSolve', big:`${b*q} ÷ ${b} = ?`, a:q}; },
+      () => { const n = ri(2,40)*10; return {k:'dcPct', big:`${n}?`, a:n/10}; },
+      () => { const n = ri(3,25)*4; return {k:'dcQuarter', big:`${n}?`, a:n/4}; },
+      () => { const a = ri(2,9), b = ri(2,9), c = ri(2,20); return {k:'dcSolve', big:`${a} × ${b} + ${c} = ?`, a:a*b+c}; },
+    ],
+  ][band];
+  const order = GEN.map((g,i)=>[r(),i]).sort((x,y)=>x[0]-y[0]).map(p=>p[1]);
+  return order.map(i => {
+    const q = GEN[i]();
+    if(!q.opts){
+      const set = new Set([q.a]); const steps = [1,-1,2,-2,10,-10,3,5];
+      while(set.size < 4){ const v = q.a + pick(steps) * (r() < .5 ? 1 : ri(1,2)); if(v >= 0) set.add(v); }
+      q.opts = [...set].map(v=>[r(),v]).sort((x,y)=>x[0]-y[0]).map(p=>p[1]);
+    }
+    return q;
+  });
+}
+function dcStreak(){
+  try{ const s = JSON.parse(localStorage.getItem('klh_dc') || '{}'); return s; }catch(e){ return {}; }
+}
+function dcRender(){
+  const t = T[lang];
+  document.getElementById('dcAges').innerHTML = t.dcAges.map((x,i)=>
+    `<button class="${i===DC.band?'on':''}" aria-pressed="${i===DC.band}" onclick="dcSetBand(${i})">${x}</button>`).join('');
+  const st = dcStreak(), sb = document.getElementById('dcStreak');
+  const alive = st.last === dcToday() || st.last === dcYesterday();
+  sb.hidden = !(alive && st.n > 1);
+  sb.textContent = `🔥 ${st.n||0} ${t.dcStreak}`;
+  const stage = document.getElementById('dcStage');
+  if(DC.state === 'intro'){
+    stage.innerHTML = `<div class="dc-mascot">🦉</div>
+      <div class="dc-msg">${st.last === dcToday() ? t.dcDone : t.dcReady}</div>
+      <button class="dc-start" onclick="dcBegin(${st.last === dcToday()})">${t.dcStart}</button>`;
+  } else if(DC.state === 'q'){
+    const q = DC.qs[DC.i];
+    const dots = DC.qs.map((_,j)=>`<i class="${j<DC.i?(DC.res[j]?'ok':'no'):(j===DC.i?'cur':'')}"></i>`).join('');
+    stage.innerHTML = `<div class="dc-dots">${dots}</div>
+      <div class="dc-q">${t[q.k]}${q.emo?`<span class="emo">${q.emo}</span>`:''}${q.big?`<span class="big">${q.big.replace('?','<b>?</b>')}</span>`:''}</div>
+      <div class="dc-opts" style="${q.opts.length===2?'grid-template-columns:repeat(2,1fr);max-width:300px':''}">
+        ${q.opts.map(v=>`<button onclick="dcAnswer(this,${v})">${v}</button>`).join('')}
+      </div>`;
+  } else {
+    const msg = DC.score >= 4 ? t.dcGreat : DC.score >= 2 ? t.dcGood : t.dcTry;
+    stage.innerHTML = `<div class="dc-stars" aria-label="${DC.score}/5">${'⭐'.repeat(DC.score)}${'☆'.repeat(5-DC.score)}</div>
+      <div class="dc-msg">${msg}</div>
+      <div class="dc-actions">
+        <button class="dc-start" onclick="dcBegin(true)">${t.dcAgain}</button>
+        <a class="dc-start alt" href="${locHref('/play/')}">${t.dcMore}</a>
+      </div>`;
+  }
+}
+function dcYesterday(){ const d = new Date(); d.setDate(d.getDate()-1); return d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate(); }
+function dcSetBand(b){ DC.band = b; try{ localStorage.setItem('klh_dc_band', b); }catch(e){} DC.state = 'intro'; dcRender(); }
+function dcBegin(random){
+  DC.seed = random ? Math.floor(Math.random()*1e9) : dcToday()*10 + DC.band;
+  DC.qs = dcMake(DC.band, DC.seed); DC.i = 0; DC.score = 0; DC.res = []; DC.state = 'q'; dcRender();
+}
+function dcAnswer(btn, v){
+  const q = DC.qs[DC.i], ok = v === q.a;
+  btn.parentElement.querySelectorAll('button').forEach(b=>{ b.disabled = true; if(+b.textContent === q.a) b.classList.add('ok'); });
+  if(!ok) btn.classList.add('no');
+  DC.res.push(ok); if(ok) DC.score++;
+  setTimeout(()=>{
+    DC.i++;
+    if(DC.i < DC.qs.length){ dcRender(); return; }
+    DC.state = 'done';
+    const st = dcStreak(), today = dcToday();
+    if(st.last !== today){ st.n = st.last === dcYesterday() ? (st.n||0) + 1 : 1; st.last = today; }
+    try{ localStorage.setItem('klh_dc', JSON.stringify(st)); }catch(e){}
+    dcRender();
+    if(DC.score >= 3 && typeof fireConfetti === 'function') fireConfetti();
+    if(typeof gtag === 'function') gtag('event', 'daily_challenge_done', { band: DC.band, score: DC.score });
+  }, ok ? 650 : 1200);
+}
+
 function render(){
   const t = T[lang];
   document.documentElement.lang = lang;
@@ -1501,13 +1819,7 @@ function render(){
     <div class="why-item"><div class="ic">${w.ic}</div><h4>${w.h[lang]}</h4><p>${w.p[lang]}</p></div>`).join('');
 
 
-  // testimonials
-  document.getElementById('testiGrid').innerHTML = t.testi.map(x=>`
-    <div class="testi">
-      <div class="stars">★★★★★</div>
-      <p>“${x.t}”</p>
-      <div class="who"><div class="av" style="background:${x.c}">${x.n[0]}</div><div><b>${x.n}</b><small>${x.r}</small></div></div>
-    </div>`).join('');
+  renderParents(t);
 
   // faq
   document.getElementById('faq').innerHTML = t.faqs.map((f,i)=>`
@@ -1538,6 +1850,7 @@ function render(){
     </a>`).join('');
   const bAll = document.getElementById('blogAllLink'); if(bAll) bAll.href = bDir;
 
+  dcRender();
   localizeMeta();
   localizeAds();
 }
