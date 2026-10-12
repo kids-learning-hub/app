@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" role="img" aria-label="Hoot the owl, Kids Learning Hub mascot">
+  <defs>
+    <linearGradient id="owlBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B8CFF"/>
+      <stop offset="1" stop-color="#7A4DFF"/>
+    </linearGradient>
+    <linearGradient id="owlBelly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF6D6"/>
+      <stop offset="1" stop-color="#FFE39A"/>
+    </linearGradient>
+  </defs>
+  <!-- shadow -->
+  <ellipse cx="100" cy="210" rx="56" ry="7" fill="#12224E" opacity=".12"/>
+  <!-- ear tufts -->
+  <path d="M44 62 L34 22 L72 46 Z" fill="#4A6FE8"/>
+  <path d="M156 62 L166 22 L128 46 Z" fill="#4A6FE8"/>
+  <!-- body -->
+  <path d="M100 34c-44 0-70 30-70 76 0 52 30 92 70 92s70-40 70-92c0-46-26-76-70-76z" fill="url(#owlBody)"/>
+  <!-- wings -->
+  <path d="M34 112c-14 18-14 48 4 64 6-22 8-44-4-64z" fill="#4A6FE8"/>
+  <path d="M166 112c14 18 14 48-4 64-6-22-8-44 4-64z" fill="#4A6FE8"/>
+  <!-- belly -->
+  <path d="M100 112c-28 0-44 22-44 48 0 24 18 40 44 40s44-16 44-40c0-26-16-48-44-48z" fill="url(#owlBelly)"/>
+  <path d="M84 146q8 7 16 0q8 7 16 0M76 164q8 7 16 0q8 7 16 0q8 7 16 0M84 182q8 7 16 0q8 7 16 0" fill="none" stroke="#F2B935" stroke-width="3" stroke-linecap="round"/>
+  <!-- eyes -->
+  <circle cx="72" cy="88" r="25" fill="#fff"/>
+  <circle cx="128" cy="88" r="25" fill="#fff"/>
+  <circle cx="75" cy="91" r="12" fill="#12224E"/>
+  <circle cx="125" cy="91" r="12" fill="#12224E"/>
+  <circle cx="79" cy="86" r="4.5" fill="#fff"/>
+  <circle cx="129" cy="86" r="4.5" fill="#fff"/>
+  <!-- cheeks -->
+  <ellipse cx="54" cy="112" rx="8" ry="5" fill="#FF7AB8" opacity=".55"/>
+  <ellipse cx="146" cy="112" rx="8" ry="5" fill="#FF7AB8" opacity=".55"/>
+  <!-- beak -->
+  <path d="M92 106 L108 106 L100 120 Z" fill="#FF8A00" stroke="#E07400" stroke-width="2" stroke-linejoin="round"/>
+  <!-- feet -->
+  <path d="M80 200c0 6 4 9 8 9M86 200c0 6 2 9 4 9M92 200c0 6 0 9 0 9" stroke="#FF8A00" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M120 200c0 6-4 9-8 9M114 200c0 6-2 9-4 9M108 200c0 6 0 9 0 9" stroke="#FF8A00" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- graduation cap -->
+  <path d="M100 8 L150 26 L100 44 L50 26 Z" fill="#12224E"/>
+  <path d="M70 33v12c0 6 14 11 30 11s30-5 30-11V33l-30 11z" fill="#1B2E63"/>
+  <path d="M150 26v24" stroke="#FFC72C" stroke-width="3"/>
+  <circle cx="150" cy="53" r="5" fill="#FFC72C"/>
+</svg>

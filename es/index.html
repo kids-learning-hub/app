@@ -458,7 +458,7 @@ body::before{
 .dc-start{font:900 18px "Nunito",sans-serif;padding:14px 30px;border-radius:999px;border:none;background:var(--grad-brand);color:#fff;cursor:pointer;box-shadow:0 12px 24px rgba(30,91,255,.35);transition:.18s}
 .dc-start:hover{transform:translateY(-2px) scale(1.03)}
 .dc-start.alt{background:var(--card2);color:var(--blue);box-shadow:none;border:2px solid var(--line)}
-.dc-mascot{font-size:54px;line-height:1;animation:dcBob 2.4s ease-in-out infinite}
+.dc-mascot{width:92px;height:auto;animation:dcBob 2.4s ease-in-out infinite}
 @keyframes dcBob{50%{transform:translateY(-6px) rotate(-4deg)}}
 @media(max-width:520px){.dc{padding:18px}.dc-opts{grid-template-columns:repeat(2,1fr)}.dc-stage{padding:16px}}
 @media(prefers-reduced-motion:reduce){.dc-mascot,.dc-opts button.no{animation:none}}
@@ -1103,7 +1103,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
 <button id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 19V6M6 11l6-6 6 6"/></svg></button>
 <div id="toast"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span id="toastMsg"></span></div>
 <canvas id="confetti"></canvas>
-<script src="/stars.js?v=1" defer></script>
+<script src="/stars.js?v=2" defer></script>
 
 <script>
 /* ════════════ App catalogue (source: lib/data/family_apps.dart) ════════════ */
@@ -1660,7 +1660,7 @@ function dcRender(){
   sb.textContent = `🔥 ${st.n||0} ${t.dcStreak}`;
   const stage = document.getElementById('dcStage');
   if(DC.state === 'intro'){
-    stage.innerHTML = `<div class="dc-mascot">🦉</div>
+    stage.innerHTML = `<img class="dc-mascot" src="/logos/owl.svg" alt="" width="92" height="101">
       <div class="dc-msg">${st.last === dcToday() ? t.dcDone : t.dcReady}</div>
       <button class="dc-start" onclick="dcBegin(${st.last === dcToday()})">${t.dcStart}</button>`;
   } else if(DC.state === 'q'){
@@ -1673,7 +1673,7 @@ function dcRender(){
       </div>`;
   } else {
     const msg = DC.score >= 4 ? t.dcGreat : DC.score >= 2 ? t.dcGood : t.dcTry;
-    stage.innerHTML = `<div class="dc-stars" aria-label="${DC.score}/5">${'⭐'.repeat(DC.score)}${'☆'.repeat(5-DC.score)}</div>
+    stage.innerHTML = `<img class="dc-mascot" src="/logos/owl.svg" alt="" width="72" height="79" style="width:72px"><div class="dc-stars" aria-label="${DC.score}/5">${'⭐'.repeat(DC.score)}${'☆'.repeat(5-DC.score)}</div>
       <div class="dc-msg">${msg}</div>
       <div class="dc-actions">
         <button class="dc-start" onclick="dcBegin(true)">${t.dcAgain}</button>

@@ -56,6 +56,85 @@
 
   PLAY.shuffle = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(p=>p[1]);
 
+  /* ── sounds (2026-10): tiny synthesized effects, no audio files ──────
+     On by default, quiet, with a mute button in the header (remembered). */
+  let actx = null, muted = false;
+  try{ muted = localStorage.getItem('klh_sound') === 'off'; }catch(e){}
+  function tone(freq, start, dur, type, vol){
+    const o = actx.createOscillator(), g = actx.createGain();
+    o.type = type || 'sine'; o.frequency.value = freq;
+    g.gain.setValueAtTime(0.0001, actx.currentTime + start);
+    g.gain.exponentialRampToValueAtTime(vol || 0.12, actx.currentTime + start + 0.015);
+    g.gain.exponentialRampToValueAtTime(0.0001, actx.currentTime + start + dur);
+    o.connect(g).connect(actx.destination);
+    o.start(actx.currentTime + start); o.stop(actx.currentTime + start + dur + 0.02);
+  }
+  const SOUNDS = {
+    right: ()=>{ tone(660,0,.12,'triangle'); tone(990,.09,.18,'triangle'); },
+    wrong: ()=>{ tone(220,0,.18,'sine',.09); tone(180,.12,.22,'sine',.08); },
+    tap:   ()=>{ tone(520,0,.06,'sine',.06); },
+    win:   ()=>{ [523,659,784,1047].forEach((f,i)=>tone(f,i*.11,.25,'triangle',.11)); },
+  };
+  PLAY.sound = function(name){
+    if(muted || !SOUNDS[name]) return;
+    try{
+      actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+      if(actx.state === 'suspended') actx.resume();
+      SOUNDS[name]();
+    }catch(e){}
+  };
+  const confettiOrig = PLAY.confetti;
+  PLAY.confetti = function(){ PLAY.sound('win'); confettiOrig(); };
+
+  function addMuteButton(){
+    const bar = document.querySelector('.top-actions');
+    if(!bar || document.getElementById('muteBtn')) return;
+    const b = document.createElement('button');
+    b.className = 'icon-btn'; b.id = 'muteBtn'; b.type = 'button';
+    const paint = ()=>{ b.textContent = muted ? '🔇' : '🔊'; b.setAttribute('aria-label', muted ? 'Sound off' : 'Sound on'); b.setAttribute('aria-pressed', String(!muted)); };
+    b.addEventListener('click', ()=>{ muted = !muted; try{ localStorage.setItem('klh_sound', muted ? 'off' : 'on'); }catch(e){} paint(); PLAY.sound('tap'); });
+    paint(); bar.insertBefore(b, bar.firstChild);
+  }
+
+  /* ── automatic feedback for every game ──
+     Games mark answers with .right/.bad and memory cards with .flip/.done;
+     we listen for those classes instead of editing each game.           */
+  function watchAnswers(){
+    let pending = null;
+    new MutationObserver(list=>{
+      for(const m of list){
+        const el = m.target; if(!el.classList) continue;
+        const was = m.oldValue || '';
+        const added = c => el.classList.contains(c) && !(' '+was+' ').includes(' '+c+' ');
+        if(el.classList.contains('answer')){
+          if(added('bad')) pending = 'wrong';
+          else if(added('right') && pending !== 'wrong') pending = pending || 'right';
+          if(added('right')){ el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
+        } else if(el.classList.contains('mcard')){
+          if(added('done')) pending = 'right'; else if(added('flip') && !pending) pending = 'tap';
+        }
+      }
+      if(pending){ const s = pending; setTimeout(()=>{ if(pending === s){ PLAY.sound(s); pending = null; } }, 0); }
+    }).observe(document.body, { subtree:true, attributes:true, attributeFilter:['class'], attributeOldValue:true });
+  }
+
+  /* ── progress bar under the "Question 3 / 10" counter ── */
+  function progressBar(){
+    const p = document.getElementById('progress');
+    if(!p) return;
+    const bar = document.createElement('div'); bar.className = 'pbar'; bar.innerHTML = '<i></i>';
+    (p.closest('.hud') || p).insertAdjacentElement('afterend', bar);
+    const upd = ()=>{ const m = (p.textContent||'').match(/(\d+)\s*\/\s*(\d+)/); bar.firstChild.style.width = m ? Math.min(100, (m[1]-1)/m[2]*100)+'%' : '0'; };
+    new MutationObserver(upd).observe(p, { childList:true, characterData:true, subtree:true }); upd();
+  }
+
+  document.addEventListener('DOMContentLoaded', ()=>{
+    if(!document.querySelector('#game, .hud, .mcard, #board')) return;   // hub pages: no game here
+    addMuteButton(); watchAnswers(); progressBar();
+    const end = document.getElementById('end');   // the mascot cheers on every result screen
+    if(end && !end.querySelector('.owl')) end.insertAdjacentHTML('afterbegin','<img class="owl" src="/logos/owl.svg" alt="" width="90" height="99">');
+  });
+
   window.PLAY = PLAY;
   window.addEventListener('load', ()=>{
     document.querySelectorAll('ins.adsbygoogle').forEach(()=>{

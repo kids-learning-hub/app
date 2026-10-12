@@ -125,7 +125,7 @@
     css();
     var s = load(), l = lang(), t = L[l], i = IDX[l];
     box.className = 'mystars';
-    box.innerHTML = '<h2>⭐ ' + t.title + '</h2><p class="sub">' + t.sub + '</p>' +
+    box.innerHTML = '<h2><img src="/logos/owl.svg" alt="" width="40" height="44" style="width:40px;height:auto;vertical-align:-10px;margin-inline-end:8px">' + t.title + '</h2><p class="sub">' + t.sub + '</p>' +
       '<div class="tot"><span><b>' + s.total + '</b>' + t.stars + '</span><span><b>' + s.plays + '</b>' + t.played + '</span>' +
       '<span><b>' + s.badges.length + '/' + BADGES.length + '</b>🏅</span></div>' +
       '<div class="bgrid">' + BADGES.map(function (b) {
