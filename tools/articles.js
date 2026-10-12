@@ -29,21 +29,6 @@ module.exports = [
       ar: 'اكتشف كيف تسهم القصص التفاعلية وإثراء الحصيلة اللغوية في تدريب طفلك على فهم مشاعره والتعبير عنها بثقة.' },
   },
   {
-    slug: 'developing-scientific-curiosity-in-kids', date: '2026-08-09',
-    emoji: '🔬', grad: 'linear-gradient(135deg,#4CAF50,#2E7D32)', tagColor: '#4CAF50', tagClass: 'sci',
-    tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
-    cardTitle: {
-      en: 'Developing Scientific Curiosity & Inquiry in Primary Kids',
-      fr: 'Développer la curiosité scientifique et l’esprit d’observation chez l’enfant',
-      es: 'Cómo fomentar la curiosidad científica y el pensamiento experimental en niños',
-      ar: 'تنمية الفضول العلمي والتفكير التجريبي لدى أطفال الابتدائي' },
-    excerpt: {
-      en: 'Discover how interactive visual science and simple home experiments nurture an inquiring mind.',
-      fr: 'Découvrez comment les sciences visuelles et l’expérimentation éveillent l’esprit critique des enfants.',
-      es: 'Descubre cómo la ciencia visual e interactiva fomenta el pensamiento crítico en los niños.',
-      ar: 'اكتشف كيف تسهم العلوم البصرية والتجارب التفاعلية في بناء التفكير النقدي والفضول المعرفي لدى طفلك.' },
-  },
-  {
     slug: 'building-verbal-fluency-in-kids', date: '2026-08-08',
     emoji: '🗣️', grad: 'linear-gradient(135deg,#FF9800,#F57C00)', tagColor: '#FF9800', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
@@ -104,51 +89,6 @@ module.exports = [
       ar: 'اكتشف كيف يزيل التعلم المصغر والتفاعل البصري توتر طفلك ويحول فرط الحركة إلى تركيز وشغف بالاستكشاف.' },
   },
   {
-    slug: 'building-working-memory-and-focus', date: '2026-08-04',
-    emoji: '🧠', grad: 'linear-gradient(135deg,#009688,#00796B)', tagColor: '#009688', tagClass: 'lang',
-    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
-    cardTitle: {
-      en: 'Building Working Memory & Focus in Primary Kids',
-      fr: 'Développer la mémoire de travail et la concentration',
-      es: 'Cómo mejorar la memoria de trabajo y la atención',
-      ar: 'تنمية الذاكرة العاملة ومهارات التركيز لدى أطفال الابتدائي' },
-    excerpt: {
-      en: 'Discover how structured cognitive games and progressive visual challenges strengthen attention spans.',
-      fr: 'Découvrez comment les jeux cognitifs structurés et les défis visuels renforcent l’attention de l’enfant.',
-      es: 'Descubre cómo los juegos cognitivos estructurados y los retos visuales fortalecen la atención.',
-      ar: 'اكتشف كيف تحول التحديات البصرية والتدرج المعرفي تشتت طفلك إلى تركيز ذهني عميق وقدرة استيعاب استثنائية.' },
-  },
-  {
-    slug: 'fostering-scientific-curiosity-kids', date: '2026-08-03',
-    emoji: '🔬', grad: 'linear-gradient(135deg,#4CAF50,#2E7D32)', tagColor: '#4CAF50', tagClass: 'sci',
-    tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
-    cardTitle: {
-      en: 'Fostering Scientific Curiosity in Primary Kids',
-      fr: 'Éveiller la curiosité scientifique chez l’enfant',
-      es: 'Cómo fomentar la curiosidad científica en niños',
-      ar: 'تنمية الفضول العلمي ومهارات الاستكشاف لدى أطفال الابتدائي' },
-    excerpt: {
-      en: 'Discover how inquiry-based learning and visual simulations transform passive wonder into structured thinking.',
-      fr: 'Découvrez comment la démarche d’investigation transforme la curiosité en un raisonnement scientifique structuré.',
-      es: 'Descubre cómo el aprendizaje por indagación transforma la curiosidad en pensamiento científico estructurado.',
-      ar: 'اكتشف كيف تحول المناهج الاستكشافية والتجارب البصرية تفكير طفلك إلى تفكير علمي منظم وشغف دائم.' },
-  },
-  {
-    slug: 'emotional-intelligence-in-early-learning', date: '2026-08-02',
-    emoji: '❤️', grad: 'linear-gradient(135deg,#E91E63,#F48FB1)', tagColor: '#E91E63', tagClass: 'lang',
-    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
-    cardTitle: {
-      en: 'Emotional Intelligence in Primary Kids',
-      fr: 'Développer l’intelligence émotionnelle chez l’enfant',
-      es: 'Desarrollo de la inteligencia emocional en niños',
-      ar: 'تنمية الذكاء العاطفي والاجتماعي لدى أطفال الابتدائي' },
-    excerpt: {
-      en: 'Discover how expressive storytelling helps children identify, articulate, and self-regulate their feelings.',
-      fr: 'Découvrez comment les contes interactifs aident les enfants du primaire à nommer leurs émotions.',
-      es: 'Descubre cómo las historias expresivas ayudan a los niños de primaria a nombrar sus emociones.',
-      ar: 'اكتشف كيف تساعد القصص التفاعلية واللغة البصرية طفلك على تسمية مشاعره وتطوير التعبير والتعاطف الاجتماعي.' },
-  },
-  {
     slug: 'developing-logical-thinking-kids', date: '2026-08-01',
     emoji: '🧩', grad: 'linear-gradient(135deg,#7A4DFF,#6200EA)', tagColor: '#7A4DFF', tagClass: 'math',
     tagL: { en: 'Mathematics', fr: 'Mathématiques', es: 'Matemáticas', ar: 'رياضيات' },
@@ -162,36 +102,6 @@ module.exports = [
       fr: 'Découvrez comment les énigmes visuelles transforment la logique abstraite en une compétence intuitive.',
       es: 'Descubre cómo los acertijos visuales transforman la lógica abstracta en una habilidad intuitiva.',
       ar: 'اكتشف كيف تحول الألغاز البصرية التفاعلية المفاهيم المنطقية المجردة إلى مهارة ممتعة تبني ثقة طفلك التحليلية.' },
-  },
-  {
-    slug: 'mastering-languages-early-childhood', date: '2026-07-31',
-    emoji: '🗣️', grad: 'linear-gradient(135deg,#FF9800,#F57C00)', tagColor: '#FF9800', tagClass: 'lang',
-    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
-    cardTitle: {
-      en: 'Mastering New Languages in Early Childhood',
-      fr: 'Maîtriser une nouvelle langue dès l’enfance',
-      es: 'Cómo aprender un nuevo idioma en la infancia',
-      ar: 'سرعة اكتساب اللغات لدى الأطفال وتجاوز خجل التحدث' },
-    excerpt: {
-      en: 'Discover how natural phonological immersion and low-stress interactive play eliminate speaking anxiety.',
-      fr: 'Découvrez comment l’immersion phonologique naturelle et le jeu interactif éliminent la peur de s’exprimer.',
-      es: 'Descubre cómo la inmersión fonológica natural y el juego interactivo eliminan el miedo a hablar.',
-      ar: 'اكتشف كيف تحول التفاعلات الصوتية والبصرية خجل طفلك إلى طلاقة لغوية وثقة عالية بالنفس.' },
-  },
-  {
-    slug: 'smart-screen-time-for-kids', date: '2026-07-30',
-    emoji: '📱', grad: 'linear-gradient(135deg,#00BCD4,#29B6F6)', tagColor: '#00BCD4', tagClass: 'lang',
-    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
-    cardTitle: {
-      en: 'Smart Screen Time Habits for Kids',
-      fr: 'Gestion intelligente du temps d’écran',
-      es: 'Hábitos inteligentes de pantalla en niños',
-      ar: 'الإدارة الذكية لوقت الشاشة لدى الأطفال' },
-    excerpt: {
-      en: 'Discover how to build balanced digital habits that foster self-regulation and active learning.',
-      fr: 'Découvrez comment instaurer des habitudes numériques équilibrées et stimulantes pour votre enfant.',
-      es: 'Descubre cómo construir hábitos digitales equilibrados y formativos sin conflictos.',
-      ar: 'اكتشف كيف تحول الشاشة من مصدر للتشتت إلى أداة للتربية الرقمية والتعلم التفاعلي المتوازن.' },
   },
   {
     slug: 'boosting-child-focus-and-attention', date: '2026-07-29',
@@ -209,36 +119,6 @@ module.exports = [
       ar: 'اكتشف كيف تحول التفاعلات الألعابية التفاعلية تشتت طفلك إلى تركيز عميق وتطور الذاكرة العاملة.' },
   },
   {
-    slug: 'overcoming-math-anxiety-kids', date: '2026-07-28',
-    emoji: '📐', grad: 'linear-gradient(135deg,#7A4DFF,#4322BB)', tagColor: '#7A4DFF', tagClass: 'math',
-    tagL: { en: 'Mathematics', fr: 'Mathématiques', es: 'Matemáticas', ar: 'رياضيات' },
-    cardTitle: {
-      en: 'Overcoming Math Anxiety in Primary Kids',
-      fr: 'Vaincre l’anxiété des mathématiques chez l’enfant',
-      es: 'Cómo superar la ansiedad matemática en niños',
-      ar: 'تفكيك عقدة الرياضيات: كيف تحمي طفلك من الرهاب؟' },
-    excerpt: {
-      en: 'Discover how to transform fear, numbers, and rigid operations into an engaging journey of confidence and visual problem-solving.',
-      fr: 'Découvrez comment transformer la peur des chiffres en une expérience visuelle stimulante et rassurante.',
-      es: 'Descubre cómo transformar el miedo a los números en confianza analítica mediante la pedagogía visual.',
-      ar: 'اكتشف كيف تحول الخوف والأرقام والعمليات التجريدية إلى رحلة آمنة من الثقة والتحليل البصري والتفوق الذهني.' },
-  },
-  {
-    slug: 'child-language-acquisition-secrets', date: '2026-07-27',
-    emoji: '🔤', grad: 'linear-gradient(135deg,#FF4081,#E91E63)', tagColor: '#E91E63', tagClass: 'lang',
-    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
-    cardTitle: {
-      en: 'Early Language Acquisition: Raising Bilingual Kids',
-      fr: 'L’apprentissage des langues : élever un enfant bilingue',
-      es: 'Adquisición temprana de idiomas: niños bilingües',
-      ar: 'طلاقة اللغات لدى الأطفال: كيف تكسب طفلك لغة ثانية؟' },
-    excerpt: {
-      en: 'Discover how interactive immersion creates fluent, confident young communicators without grammar anxiety.',
-      fr: 'Découvrez comment l’immersion ludique crée une réelle aisance linguistique sans blocage ni stress.',
-      es: 'Descubre cómo la inmersión interactiva estimula la plasticidad cerebral para hablar con fluidez.',
-      ar: 'اكتشف كيف تحول البيداغوجيا الحديثة اكتساب اللغات إلى رحلة بصرية ممتعة تبني طفلاً ثنائي اللغة بكل ثقة.' },
-  },
-  {
     slug: 'raising-young-scientists-secrets', date: '2026-07-26',
     emoji: '🔬', grad: 'linear-gradient(135deg,#00E676,#00B0FF)', tagColor: '#00C853', tagClass: 'science',
     tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
@@ -252,21 +132,6 @@ module.exports = [
       fr: 'Découvrez comment transformer les questions quotidiennes de vos enfants en véritable raisonnement scientifique.',
       es: 'Descubre cómo transformar las preguntas cotidianas de tus hijos en pensamiento analítico y lógico.',
       ar: 'اكتشف كيف تحول أسئلة طفلك العفوية إلى منهجية علمية رصينة، وتبني في عقله مهارات التحليل والنقد المنطقي والذكاء الاستكشافي.' },
-  },
-  {
-    slug: 'teaching-kids-coding-logic', date: '2026-07-25',
-    emoji: '💻', grad: 'linear-gradient(135deg,#00B0FF,#0071BC)', tagColor: '#0071BC', tagClass: 'code',
-    tagL: { en: 'Coding', fr: 'Code', es: 'Código', ar: 'برمجة' },
-    cardTitle: {
-      en: 'How to Teach Kids Coding Logic Before School',
-      fr: 'Enseigner la logique du code aux enfants avant l’école',
-      es: 'Cómo enseñar lógica de programación a niños antes de la escuela',
-      ar: 'من التفكير المنطقي إلى الأكواد: كيف تُعلّم طفلك البرمجة مبكراً؟' },
-    excerpt: {
-      en: 'Discover how to introduce young minds to computational thinking through simple routines and visual playground environments.',
-      fr: 'Découvrez comment initier les jeunes esprits à la pensée algorithmique à travers des rituels simples et des blocs interactifs.',
-      es: 'Descubre cómo introducir a las mentes jóvenes en el pensamiento algorítmico mediante rutinas cotidianas y retos visuales.',
-      ar: 'اكتشف كيف تقود عقل طفلك نحو التفكير الحوسبي عبر البرمجة بدون شاشات ثم الانتقال للألعاب والكتل البصرية الذكية.' },
   },
   {
     slug: 'gamification-in-education-secrets', date: '2026-07-24',
@@ -284,21 +149,6 @@ module.exports = [
       ar: 'اكتشف علم الأعصاب الإدراكي وراء التعلم القائم على اللعب، وكيف يفرز الدماغ الدوبامين ليتحول التعليم لشغف مستمر.' },
   },
   {
-    slug: 'screen-time-guide-for-parents', date: '2026-07-23',
-    emoji: '🛡️', grad: 'linear-gradient(135deg,#FFA726,#FB8C00)', tagColor: '#FB8C00', tagClass: 'tips',
-    tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
-    cardTitle: {
-      en: 'The Parent Guide to Healthy Screen Time: Safe Apps',
-      fr: 'Le guide parental du temps d\'écran sain : applis sûres',
-      es: 'Guía para padres sobre el tiempo de pantalla: apps seguras',
-      ar: 'دليل أولياء الأمور لتنظيم وقت الشاشة: تطبيقات آمنة ومفيدة' },
-    excerpt: {
-      en: 'Discover the scientific difference between passive consumption and active interactive learning for early child development.',
-      fr: 'Découvrez la différence entre consommation passive et éveil interactif pour le bien-être de votre enfant.',
-      es: 'Descubre la gran diferencia científica entre el consumo pasivo de pantallas y el aprendizaje interactivo infantil.',
-      ar: 'اكتشف الفارق العلمي والجوهري بين الاستهلاك الرقمي السلبي والتعلم التفاعلي النشط لبناء مهارات الطفل وذكائه.' },
-  },
-  {
     slug: 'overcoming-math-anxiety-in-kids', date: '2026-07-22',
     emoji: '🧠', grad: 'linear-gradient(135deg,#9B7BFF,#7A4DFF)', tagColor: '#7A4DFF', tagClass: 'math',
     tagL: { en: 'Math', fr: 'Maths', es: 'Matemáticas', ar: 'رياضيات' },
@@ -314,21 +164,6 @@ module.exports = [
       ar: 'اكتشف الجذور النفسية لخوف الأطفال من الأرقام، وكيفية تحويل العمليات الحسابية الجافة إلى عوالم وتحديات ممتعة.' },
   },
   {
-    slug: 'diy-home-science-experiments', date: '2026-07-21',
-    emoji: '🧪', grad: 'linear-gradient(135deg,#4DB6AC,#00796B)', tagColor: '#00796B', tagClass: 'science',
-    tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
-    cardTitle: {
-      en: 'Turn Your Home Into a Science Lab: Fostering Curiosity',
-      fr: 'Transformez votre maison en labo de science : éveille la curiosité',
-      es: 'Convierta su hogar en un laboratorio de ciencia: criar niños curiosos',
-      ar: 'كيف تحول منزلك إلى مختبر علوم صغير؟ تنمية الشغف بالاكتشاف' },
-    excerpt: {
-      en: 'Discover how safe, everyday kitchen ingredients can be turned into magical hands-on physics and chemistry experiments.',
-      fr: 'Découvrez comment de simples ingrédients de cuisine se transforment en expériences de physique et chimie magiques.',
-      es: 'Descubre cómo ingredientes comestibles y seguros se transforman en experimentos de física y química mágicos para niños.',
-      ar: 'اكتشف كيف يمكن لأدوات المطبخ البسيطة والآمنة أن تتحول إلى تجارب فيزيائية وكيميائية ساحرة تنمي ذكاء طفلك.' },
-  },
-  {
     slug: 'kids-language-learning-secrets', date: '2026-07-20',
     emoji: '🗣️', grad: 'linear-gradient(135deg,#4F83CC,#01579B)', tagColor: '#01579B', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
@@ -342,21 +177,6 @@ module.exports = [
       fr: 'Découvrez les mécanismes neuroscientifiques de l\'acquisition du langage et créez un environnement bilingue à la maison.',
       es: 'Conoce los secretos de la neurociencia y aprende cómo crear un ambiente interactivo y bilingüe en el hogar de forma sencilla.',
       ar: 'اكتشف حقائق علم الأعصاب وراء الاكتساب المبكر للغات، وكيفية تأسيس بيئة انغماس تفاعلية ممتعة للطفل داخل المنزل.' },
-  },
-  {
-    slug: 'teaching-coding-kids-home', date: '2026-07-19',
-    emoji: '💻', grad: 'linear-gradient(135deg,#9575CD,#5E35B1)', tagColor: '#5E35B1', tagClass: 'code',
-    tagL: { en: 'Coding', fr: 'Codage', es: 'Código', ar: 'برمجة' },
-    cardTitle: {
-      en: 'The Ultimate Guide to Teaching Coding to Kids at Home',
-      fr: 'Le guide ultime pour enseigner la programmation aux enfants à la maison',
-      es: 'La guía definitiva para enseñar programación a los niños en casa',
-      ar: 'الدليل الشامل لتعليم البرمجة للأطفال في المنزل بدون تعقيد' },
-    excerpt: {
-      en: 'Discover how unplugged games, algorithmic routines, and visual block tools can turn your child into an innovative digital creator.',
-      fr: 'Découvrez comment les jeux physiques, les rituels et les blocs visuels transforment votre enfant en un créateur numérique innovant.',
-      es: 'Descubre cómo los juegos sin pantallas, rutinas y bloques visuales convierten a tu hijo en un creador digital innovador.',
-      ar: 'اكتشف كيف يمكن للألعاب الحركية، تنظيم الأنشطة اليومية والأدوات المرئية التفاعلية أن تحول طفلك إلى مبتكر وصانع رقمي ذكي.' },
   },
   {
     slug: 'positive-parenting-digital-age', date: '2026-07-18',
@@ -417,21 +237,6 @@ module.exports = [
       fr: 'Découvrez des moyens pratiques et ludiques d\'introduire l\'anglais dans la routine de votre enfant grâce au jeu et aux applications interactives.',
       es: 'Descubre métodos prácticos y divertidos para incorporar el inglés en la rutina diaria de tu hijo a través de juegos y aplicaciones.',
       ar: 'اكتشف حيلًا عملية وخالية من التوتر لإدخال اللغة الإنجليزية في روتين طفلك اليومي من خلال الألعاب والتطبيقات التفاعلية.' },
-  },
-  {
-    slug: 'math-games-primary', date: '2026-07-15',
-    emoji: '🎮', grad: 'linear-gradient(135deg,#49B6FF,#1E5BFF)', tagColor: '#1E5BFF', tagClass: 'math',
-    tagL: { en: 'Math', fr: 'Maths', es: 'Matemáticas', ar: 'رياضيات' },
-    cardTitle: {
-      en: 'How to Teach Primary Math Using Fun Games',
-      fr: 'Comment enseigner les maths au primaire par le jeu',
-      es: 'Cómo enseñar matemáticas de primaria jugando',
-      ar: 'كيفية تعليم الرياضيات للمرحلة الابتدائية بالألعاب المرحة' },
-    excerpt: {
-      en: 'Discover how interactive games and educational apps can transform primary mathematics from a dry chore into an exciting daily adventure.',
-      fr: 'Découvrez comment les jeux interactifs et les applications éducatives transforment les mathématiques du primaire en aventure quotidienne.',
-      es: 'Descubre cómo los juegos interactivos y las aplicaciones transforman las matemáticas de primaria en una emocionante aventura.',
-      ar: 'اكتشف كيف تحوّل الألعاب التفاعلية والتطبيقات التعليمية مادة الرياضيات بالمرحلة الابتدائية إلى متعة ومغامرة يومية.' },
   },
   {
     slug: 'mental-math-tricks-for-kids', date: '2026-07-14',

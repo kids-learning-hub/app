@@ -35,6 +35,12 @@ const LANGS = {
   ar: { dir: 'rtl', folder: 'ar/', ogl: 'ar_MA', home: 'الرئيسية', blog: 'المدوّنة', back: 'كل المقالات',          read: 'اقرأ المقال ←',   faq: 'أسئلة شائعة',                 keep: 'اقرأ أيضًا',   ad: 'إعلان' },
 };
 const ORDER = ['en', 'fr', 'es', 'ar'];
+const AUTHOR = {
+  "en": "<aside class=\"author-box\"><div class=\"av\">AH</div><div><b>Ayyoub EL HAJJI</b><span>Mathematics teacher · Morocco</span><p>Ayyoub has taught mathematics for years and builds the Kids Learning Hub apps, games and worksheets from what he sees working in real classrooms. <a href=\"/about.html\">About the author →</a></p></div></aside>",
+  "fr": "<aside class=\"author-box\"><div class=\"av\">AH</div><div><b>Ayyoub EL HAJJI</b><span>Professeur de mathématiques · Maroc</span><p>Ayyoub enseigne les mathématiques depuis des années et conçoit les applis, jeux et fiches de Kids Learning Hub à partir de ce qui fonctionne vraiment en classe. <a href=\"/fr/about.html\">À propos de l’auteur →</a></p></div></aside>",
+  "es": "<aside class=\"author-box\"><div class=\"av\">AH</div><div><b>Ayyoub EL HAJJI</b><span>Profesor de matemáticas · Marruecos</span><p>Ayyoub enseña matemáticas desde hace años y crea las apps, juegos y fichas de Kids Learning Hub a partir de lo que funciona de verdad en el aula. <a href=\"/es/about.html\">Sobre el autor →</a></p></div></aside>",
+  "ar": "<aside class=\"author-box\"><div class=\"av\">AH</div><div><b>أيوب الحاجي</b><span>أستاذ رياضيات · المغرب</span><p>يدرّس أيوب الرياضيات منذ سنوات، ويصمّم تطبيقات وألعاب وأوراق عمل Kids Learning Hub انطلاقًا مما يراه ناجحًا فعلًا داخل القسم. <a href=\"/ar/about.html\">عن الكاتب →</a></p></div></aside>"
+};
 
 const INDEX_META = {
   en: { title: 'Blog — Kids Learning Hub | Learning tips, activities & guides',
@@ -106,7 +112,7 @@ function footer(lang) {
   const root = lang === 'en' ? '../' : '../../';
   return `<footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="${root}index.html">${L.home}</a> · <a href="${root}privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="${root}index.html">${L.home}</a> · <a href="${root}about.html">About</a> · <a href="${root}contact.html">Contact</a> · <a href="${root}privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
 </footer>`;
 }
@@ -195,7 +201,7 @@ for (const cf of contentFiles) {
     const jsonld = [
       { '@context': 'https://schema.org', '@type': 'Article',
         headline: h1, description: desc, image: OG_IMG,
-        author: { '@type': 'Organization', name: 'VS MEDIA' },
+        author: { '@type': 'Person', name: 'Ayyoub EL HAJJI', jobTitle: 'Mathematics Teacher', url: BASE + '/about.html' },
         publisher: { '@type': 'Organization', name: 'Kids Learning Hub',
           logo: { '@type': 'ImageObject', url: BASE + '/logos/hub-logo.png' } },
         datePublished: art.date, dateModified: TODAY,
@@ -215,6 +221,8 @@ for (const cf of contentFiles) {
   <p class="crumbs"><a href="${lang === 'en' ? '../' : '../../'}index.html">${L.home}</a> › <a href="index.html">${L.blog}</a> › ${cat.tagL[lang]}</p>
 
   <article class="post">${content}${faqSection(art.faq, lang)}  </article>
+
+  ${AUTHOR[lang]}
 
   <div class="ad-slot"><div class="ad-label">${L.ad}</div><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9202119066805107" data-ad-slot="1756272080"></ins></div>
 
@@ -333,7 +341,7 @@ for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'pl
                  'worksheets/maze.html', 'worksheets/shapes.html', 'worksheets/line-tracing.html', 'worksheets/sudoku.html',
                  'worksheets/continents.html', 'worksheets/flags.html', 'worksheets/dot-to-dot.html', 'worksheets/color-by-number.html',
                  'worksheets/column-addition.html', 'worksheets/word-problems.html', 'worksheets/seasonal.html',
-                 'about.html']) {
+                 'about.html', 'contact.html']) {
   sm += `  <url>
     <loc>${BASE}/${p}</loc>
     <lastmod>${TODAY}</lastmod>

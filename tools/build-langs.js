@@ -87,6 +87,20 @@ const PAGES = [
     },
   },
   {
+    src: 'contact.html',
+    out: l => `${l}/contact.html`,
+    url: l => `${BASE}/${l}/contact.html`,
+    urlEn: `${BASE}/contact.html`,
+    meta: {
+      fr: { title: 'Nous contacter | Kids Learning Hub',
+            desc: 'Contactez Kids Learning Hub : questions sur nos applis, fiches et jeux gratuits pour enfants, partenariats scolaires, confidentialité ou corrections.' },
+      es: { title: 'Contacto | Kids Learning Hub',
+            desc: 'Contacta con Kids Learning Hub: preguntas sobre nuestras apps, fichas y juegos gratis para niños, colaboraciones escolares, privacidad o correcciones.' },
+      ar: { title: 'تواصل معنا | Kids Learning Hub',
+            desc: 'تواصل مع Kids Learning Hub: أسئلة حول تطبيقاتنا وأوراق العمل والألعاب المجانية للأطفال، الشراكات المدرسية، الخصوصية أو التصحيحات.' },
+    },
+  },
+  {
     src: 'play/index.html',
     out: l => `play/${l}/index.html`,
     url: l => `${BASE}/play/${l}/`,

@@ -24,6 +24,39 @@
    Note: GA4 still writes a first-party analytics cookie (_ga). If you
    want zero cookies and no consent banner, Plausible is the alternative.
    ═══════════════════════════════════════════════════════════════════════ */
+/* ── Collapse empty ad slots ────────────────────────────────────────────
+   An ad box that Google leaves empty would otherwise stay on the page as
+   a blank gap (up to 1000+ px for the multiplex unit). Hide its whole
+   .ad-slot (label included) when AdSense marks it "unfilled", or when no
+   ad iframe has appeared after 10 s (site not approved / blocked).      */
+(function () {
+  'use strict';
+  function hide(ins) {
+    var box = ins.closest('.ad-slot') || ins;
+    box.style.display = 'none';
+  }
+  function check(ins) {
+    if (ins.getAttribute('data-ad-status') === 'unfilled') hide(ins);
+  }
+  function start() {
+    var all = document.querySelectorAll('ins.adsbygoogle');
+    if (!all.length) return;
+    var mo = new MutationObserver(function (list) {
+      list.forEach(function (m) { if (m.target.matches && m.target.matches('ins.adsbygoogle')) check(m.target); });
+    });
+    all.forEach(function (ins) { check(ins); mo.observe(ins, { attributes: true, attributeFilter: ['data-ad-status'] }); });
+    setTimeout(function () {
+      document.querySelectorAll('ins.adsbygoogle').forEach(function (ins) {
+        if (ins.getAttribute('data-ad-status') !== 'filled' && !ins.querySelector('iframe')) hide(ins);
+        else check(ins);
+      });
+    }, 10000);
+  }
+  /* homepage builds its <ins> tags after load, so wait for that */
+  if (document.readyState === 'complete') setTimeout(start, 500);
+  else window.addEventListener('load', function () { setTimeout(start, 500); });
+})();
+
 (function () {
   'use strict';
 
