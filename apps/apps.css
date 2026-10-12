@@ -84,3 +84,7 @@
   .play-btn{width:100%;justify-content:center}
   .app-actions{width:100%}
 }
+/* Bouton Premium (codes pour les versions distribuées depuis le site) */
+.prem-btn{display:inline-flex;align-items:center;gap:6px;padding:12px 18px;border-radius:14px;background:#EF9F27;color:#fff;
+  font-weight:900;text-decoration:none;box-shadow:0 5px 0 #BA7517;transition:transform .1s}
+.prem-btn:active{transform:translateY(4px);box-shadow:0 1px 0 #BA7517}

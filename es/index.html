@@ -672,6 +672,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
 </style>
 <script src="/analytics.js" defer></script>
 <script>try{localStorage.setItem('vsm_lang',"es")}catch(e){}document.documentElement.lang="es";document.documentElement.dir="ltr";</script>
+<style>
+.premium-banner{display:flex;align-items:center;gap:14px;margin-top:22px;padding:18px 20px;border-radius:24px;
+  background:#EF9F27;color:#fff;text-decoration:none;box-shadow:0 7px 0 #BA7517;transition:transform .1s}
+.premium-banner:active{transform:translateY(4px);box-shadow:0 3px 0 #BA7517}
+.premium-banner .pb-emoji{font-size:34px}
+.premium-banner .pb-text{flex:1;display:flex;flex-direction:column;line-height:1.3}
+.premium-banner b{font-size:20px;font-weight:900}
+.premium-banner small{font-size:14px;font-weight:700;opacity:.95}
+.premium-banner .pb-cta{background:#fff;color:#BA7517;font-weight:900;border-radius:14px;padding:8px 14px;white-space:nowrap}
+@media(max-width:520px){.premium-banner{flex-wrap:wrap}.premium-banner .pb-cta{width:100%;text-align:center}}
+</style>
 </head>
 <body>
 
@@ -891,6 +902,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
         <div class="apps-row" id="appsRow"></div>
       </section>
 
+      <!-- Premium (versions distribuées depuis le site) -->
+      <a class="premium-banner reveal" href="/premium.html">
+        <span class="pb-emoji">✨</span>
+        <span class="pb-text"><b data-i="premTitle">Go Premium</b><small data-i="premSub">Unlock everything in one app — or in all 10 with the Pass.</small></span>
+        <span class="pb-cta" data-i="premCta">See plans →</span>
+      </a>
+
+
       <!-- Ad · in-content 1 (in-article) -->
       <div class="ad-slot reveal" data-slot="1756272080" data-ad-type="inarticle"></div>
 
@@ -1106,7 +1125,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
     </div>
     <div class="foot-col"><h4 data-i="footApps">Apps</h4><div id="footApps"></div></div>
     <div class="foot-col"><h4 data-i="footResources">Resources</h4>
-      <a href="/worksheets/" data-i="fWorksheets">Worksheets</a><a href="/play/" data-i="fGames">Games</a>
+      <a href="/worksheets/" data-i="fWorksheets">Worksheets</a><a href="/play/" data-i="fGames">Games</a><a href="/premium.html" data-i="fPremium">Premium ✨</a>
       <a href="/stories/" data-i="fStories">Stories</a>
       <a href="/blog/easy-science-experiments-for-kids.html" data-i="fScience">Science</a><a href="/blog/" data-i="fBlog">Blog</a>
     </div>
@@ -1309,7 +1328,7 @@ const T = {
     trust:['Safe Content','Kid-Friendly','Expert Approved','Multi-Language','Works on All Devices'],
     footAbout:"The world's friendliest multilingual learning platform for children aged 4–12. Math, science, languages, games & worksheets.",
     footApps:'Apps', footResources:'Resources', footSupport:'Support',
-    fWorksheets:'Worksheets', fGames:'Games', fStories:'Stories', fScience:'Science', fBlog:'Blog',
+    premTitle:'Go Premium', premSub:'Unlock everything in one app — or in all 10 with the Pass.', premCta:'See plans →', fPremium:'Premium', fWorksheets:'Worksheets', fGames:'Games', fStories:'Stories', fScience:'Science', fBlog:'Blog',
     fAbout:'About', fContact:'Contact', fPrivacy:'Privacy Policy', fTerms:'Terms of Use',
     footMade:'Made with 💙 for young learners',
     testi:[
@@ -1355,7 +1374,7 @@ const T = {
     trust:['Contenu sûr','Adapté aux enfants','Approuvé par des experts','Multilingue','Sur tous les appareils'],
     footAbout:'La plateforme d’apprentissage multilingue la plus conviviale pour les enfants de 4 à 12 ans. Maths, sciences, langues, jeux et fiches.',
     footApps:'Applis', footResources:'Ressources', footSupport:'Aide',
-    fWorksheets:'Fiches', fGames:'Jeux', fStories:'Histoires', fScience:'Sciences', fBlog:'Blog',
+    premTitle:'Passez à Premium', premSub:'Débloquez tout dans une appli — ou dans les 10 avec le Pass.', premCta:'Voir les formules →', fPremium:'Premium', fWorksheets:'Fiches', fGames:'Jeux', fStories:'Histoires', fScience:'Sciences', fBlog:'Blog',
     fAbout:'À propos', fContact:'Contact', fPrivacy:'Confidentialité', fTerms:'Conditions',
     footMade:'Fait avec 💙 pour les jeunes apprenants',
     testi:[
@@ -1401,7 +1420,7 @@ const T = {
     trust:['Contenido seguro','Apto para niños','Aprobado por expertos','Multilingüe','En todos los dispositivos'],
     footAbout:'La plataforma de aprendizaje multilingüe más amigable para niños de 4 a 12 años. Matemáticas, ciencias, idiomas, juegos y fichas.',
     footApps:'Apps', footResources:'Recursos', footSupport:'Ayuda',
-    fWorksheets:'Fichas', fGames:'Juegos', fStories:'Cuentos', fScience:'Ciencias', fBlog:'Blog',
+    premTitle:'Hazte Premium', premSub:'Desbloquea todo en una app — o en las 10 con el Pase.', premCta:'Ver planes →', fPremium:'Premium', fWorksheets:'Fichas', fGames:'Juegos', fStories:'Cuentos', fScience:'Ciencias', fBlog:'Blog',
     fAbout:'Acerca de', fContact:'Contacto', fPrivacy:'Privacidad', fTerms:'Términos',
     footMade:'Hecho con 💙 para pequeños estudiantes',
     testi:[
@@ -1447,7 +1466,7 @@ const T = {
     trust:['محتوى آمن','مناسب للأطفال','معتمد من الخبراء','متعدّد اللغات','يعمل على كل الأجهزة'],
     footAbout:'أفضل منصّة تعلّم متعدّدة اللغات وأكثرها ودّية للأطفال من 4 إلى 12 سنة. رياضيات وعلوم ولغات وألعاب وأوراق عمل.',
     footApps:'التطبيقات', footResources:'مصادر', footSupport:'الدعم',
-    fWorksheets:'أوراق عمل', fGames:'ألعاب', fStories:'قصص', fScience:'علوم', fBlog:'المدونة',
+    premTitle:'اشترك في Premium', premSub:'افتح كل شيء في تطبيق واحد — أو في التطبيقات العشرة بالبطاقة الشاملة.', premCta:'شاهد الخطط ←', fPremium:'Premium', fWorksheets:'أوراق عمل', fGames:'ألعاب', fStories:'قصص', fScience:'علوم', fBlog:'المدونة',
     fAbout:'من نحن', fContact:'اتصل بنا', fPrivacy:'الخصوصية', fTerms:'الشروط',
     footMade:'صُنع بحبّ 💙 لصغار المتعلّمين',
     testi:[
