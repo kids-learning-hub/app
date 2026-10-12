@@ -89,6 +89,7 @@
   <div style="opacity:.6;margin-top:6px">© 2026 Ayyoub EL HAJJI</div>
 </footer>
 
+<script src="/stars.js?v=1"></script>
 <script src="play.js?v=2"></script>
 <script>
 const STR = {
@@ -172,6 +173,7 @@ function endGame(){
   document.getElementById('endscore').textContent=score+' / 10';
   document.getElementById('endmsg').textContent=score>=9?T.good:score>=6?T.ok:T.try;
   document.getElementById('certLink').hidden = score<9;
+  if(window.KLH_STARS) KLH_STARS.record('clock-game', stars);
   if(score>=9) PLAY.confetti();
 }
 </script>

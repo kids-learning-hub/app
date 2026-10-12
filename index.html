@@ -1100,6 +1100,7 @@ footer{margin-top:56px;background:linear-gradient(180deg,var(--navy),#0E255E);co
 <button id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 19V6M6 11l6-6 6 6"/></svg></button>
 <div id="toast"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12l5 5L20 6"/></svg><span id="toastMsg"></span></div>
 <canvas id="confetti"></canvas>
+<script src="/stars.js?v=1" defer></script>
 
 <script>
 /* ════════════ App catalogue (source: lib/data/family_apps.dart) ════════════ */
@@ -1695,6 +1696,7 @@ function dcAnswer(btn, v){
     const st = dcStreak(), today = dcToday();
     if(st.last !== today){ st.n = st.last === dcYesterday() ? (st.n||0) + 1 : 1; st.last = today; }
     try{ localStorage.setItem('klh_dc', JSON.stringify(st)); }catch(e){}
+    if(window.KLH_STARS) KLH_STARS.record('daily', DC.score>=4?3:DC.score>=2?2:1);
     dcRender();
     if(DC.score >= 3 && typeof fireConfetti === 'function') fireConfetti();
     if(typeof gtag === 'function') gtag('event', 'daily_challenge_done', { band: DC.band, score: DC.score });
