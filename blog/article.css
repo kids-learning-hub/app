@@ -112,3 +112,17 @@ details.faq p{margin:0;color:var(--muted)}
 .author-box span{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:4px}
 .author-box p{margin:0;font-size:14.5px;line-height:1.55}
 .author-box a{font-weight:800}
+
+/* deep-article helpers (2026-10) */
+.post table{width:100%;border-collapse:collapse;margin:16px 0 20px;font-size:15px;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.post th,.post td{padding:10px 12px;text-align:start;border-bottom:1px solid var(--line);vertical-align:top}
+.post th{background:var(--card2,#f4f7ff);font-weight:900}
+.post tr:last-child td{border-bottom:none}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tipbox{border-inline-start:5px solid #FFC72C;background:rgba(255,199,44,.12);border-radius:14px;padding:14px 16px;margin:18px 0}
+.tipbox b:first-child{display:block;margin-bottom:4px}
+.tipbox.warn{border-color:#FF4F6A;background:rgba(255,79,106,.09)}
+.tipbox.try{border-color:#42C85A;background:rgba(66,200,90,.10)}
+.toc{background:var(--card2,#f4f7ff);border:1px solid var(--line);border-radius:14px;padding:12px 18px;margin:16px 0}
+.toc b{display:block;margin-bottom:4px}
+.toc ol{margin:0;padding-inline-start:20px}
