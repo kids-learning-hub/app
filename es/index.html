@@ -213,7 +213,7 @@ body::before{
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line);
 }
-.nav-inner{max-width:1400px;margin:0 auto;height:100%;padding:0 22px;display:flex;align-items:center;gap:18px}
+.nav-inner{max-width:1800px;margin:0 auto;height:100%;padding:0 22px;display:flex;align-items:center;gap:18px}
 .nav-logo{display:flex;align-items:center;gap:10px;flex:none}
 .nav-logo img{width:46px;height:46px;object-fit:contain;border-radius:12px}
 .nav-logo b{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:18px;line-height:1;letter-spacing:.2px}
@@ -682,6 +682,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
 .premium-banner small{font-size:14px;font-weight:700;opacity:.95}
 .premium-banner .pb-cta{background:#fff;color:#BA7517;font-weight:900;border-radius:14px;padding:8px 14px;white-space:nowrap}
 @media(max-width:520px){.premium-banner{flex-wrap:wrap}.premium-banner .pb-cta{width:100%;text-align:center}}
+.premium-banner.school-banner{background:#378ADD;box-shadow:0 7px 0 #185FA5;margin-top:14px}
+.premium-banner.school-banner .pb-cta{color:#185FA5}
+.nav-menu a.nav-cta{background:#EF9F27;color:#fff!important;border-radius:12px;padding:6px 12px}
+@media(max-width:1560px){.nav-menu{display:none}.hamburger{display:grid}.nav-actions{margin-inline-start:auto}}
+@media(max-width:1800px){.nav-menu a.nav-x{display:none}}
 </style>
 </head>
 <body>
@@ -908,6 +913,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
         <span class="pb-text"><b data-i="premTitle">Go Premium</b><small data-i="premSub">Unlock everything in one app — or in all 10 with the Pass.</small></span>
         <span class="pb-cta" data-i="premCta">See plans →</span>
       </a>
+
+      <!-- Écoles : licence pour tous les élèves -->
+      <a class="premium-banner school-banner reveal" href="/schools.html">
+        <span class="pb-emoji">🏫</span>
+        <span class="pb-text"><b data-i="schTitle">For schools</b><small data-i="schSub">One yearly licence for all your pupils — free 1-month trial.</small></span>
+        <span class="pb-cta" data-i="schCta">See school plans →</span>
+      </a>
+
 
 
       <!-- Ad · in-content 1 (in-article) -->
@@ -1328,7 +1341,7 @@ const T = {
     trust:['Safe Content','Kid-Friendly','Expert Approved','Multi-Language','Works on All Devices'],
     footAbout:"The world's friendliest multilingual learning platform for children aged 4–12. Math, science, languages, games & worksheets.",
     footApps:'Apps', footResources:'Resources', footSupport:'Support',
-    fSchools:'For schools 🏫', premTitle:'Go Premium', premSub:'Unlock everything in one app — or in all 10 with the Pass.', premCta:'See plans →', fPremium:'Premium', fWorksheets:'Worksheets', fGames:'Games', fStories:'Stories', fScience:'Science', fBlog:'Blog',
+    fSchools:'For schools 🏫', schTitle:'For schools', schSub:'One yearly licence for all your pupils — free 1-month trial.', schCta:'See school plans →', premTitle:'Go Premium', premSub:'Unlock everything in one app — or in all 10 with the Pass.', premCta:'See plans →', fPremium:'Premium', fWorksheets:'Worksheets', fGames:'Games', fStories:'Stories', fScience:'Science', fBlog:'Blog',
     fAbout:'About', fContact:'Contact', fPrivacy:'Privacy Policy', fTerms:'Terms of Use',
     footMade:'Made with 💙 for young learners',
     testi:[
@@ -1374,7 +1387,7 @@ const T = {
     trust:['Contenu sûr','Adapté aux enfants','Approuvé par des experts','Multilingue','Sur tous les appareils'],
     footAbout:'La plateforme d’apprentissage multilingue la plus conviviale pour les enfants de 4 à 12 ans. Maths, sciences, langues, jeux et fiches.',
     footApps:'Applis', footResources:'Ressources', footSupport:'Aide',
-    fSchools:'Écoles 🏫', premTitle:'Passez à Premium', premSub:'Débloquez tout dans une appli — ou dans les 10 avec le Pass.', premCta:'Voir les formules →', fPremium:'Premium', fWorksheets:'Fiches', fGames:'Jeux', fStories:'Histoires', fScience:'Sciences', fBlog:'Blog',
+    fSchools:'Écoles 🏫', schTitle:'Pour les écoles', schSub:'Une licence annuelle pour tous vos élèves — essai gratuit d’un mois.', schCta:'Voir les offres écoles →', premTitle:'Passez à Premium', premSub:'Débloquez tout dans une appli — ou dans les 10 avec le Pass.', premCta:'Voir les formules →', fPremium:'Premium', fWorksheets:'Fiches', fGames:'Jeux', fStories:'Histoires', fScience:'Sciences', fBlog:'Blog',
     fAbout:'À propos', fContact:'Contact', fPrivacy:'Confidentialité', fTerms:'Conditions',
     footMade:'Fait avec 💙 pour les jeunes apprenants',
     testi:[
@@ -1420,7 +1433,7 @@ const T = {
     trust:['Contenido seguro','Apto para niños','Aprobado por expertos','Multilingüe','En todos los dispositivos'],
     footAbout:'La plataforma de aprendizaje multilingüe más amigable para niños de 4 a 12 años. Matemáticas, ciencias, idiomas, juegos y fichas.',
     footApps:'Apps', footResources:'Recursos', footSupport:'Ayuda',
-    fSchools:'Escuelas 🏫', premTitle:'Hazte Premium', premSub:'Desbloquea todo en una app — o en las 10 con el Pase.', premCta:'Ver planes →', fPremium:'Premium', fWorksheets:'Fichas', fGames:'Juegos', fStories:'Cuentos', fScience:'Ciencias', fBlog:'Blog',
+    fSchools:'Escuelas 🏫', schTitle:'Para escuelas', schSub:'Una licencia anual para todos tus alumnos — prueba gratis de un mes.', schCta:'Ver planes para escuelas →', premTitle:'Hazte Premium', premSub:'Desbloquea todo en una app — o en las 10 con el Pase.', premCta:'Ver planes →', fPremium:'Premium', fWorksheets:'Fichas', fGames:'Juegos', fStories:'Cuentos', fScience:'Ciencias', fBlog:'Blog',
     fAbout:'Acerca de', fContact:'Contacto', fPrivacy:'Privacidad', fTerms:'Términos',
     footMade:'Hecho con 💙 para pequeños estudiantes',
     testi:[
@@ -1466,7 +1479,7 @@ const T = {
     trust:['محتوى آمن','مناسب للأطفال','معتمد من الخبراء','متعدّد اللغات','يعمل على كل الأجهزة'],
     footAbout:'أفضل منصّة تعلّم متعدّدة اللغات وأكثرها ودّية للأطفال من 4 إلى 12 سنة. رياضيات وعلوم ولغات وألعاب وأوراق عمل.',
     footApps:'التطبيقات', footResources:'مصادر', footSupport:'الدعم',
-    fSchools:'للمدارس 🏫', premTitle:'اشترك في Premium', premSub:'افتح كل شيء في تطبيق واحد — أو في التطبيقات العشرة بالبطاقة الشاملة.', premCta:'شاهد الخطط ←', fPremium:'Premium', fWorksheets:'أوراق عمل', fGames:'ألعاب', fStories:'قصص', fScience:'علوم', fBlog:'المدونة',
+    fSchools:'للمدارس 🏫', schTitle:'للمدارس', schSub:'ترخيص سنوي واحد لكل تلاميذكم — تجربة مجانية لمدة شهر.', schCta:'شاهد عروض المدارس ←', premTitle:'اشترك في Premium', premSub:'افتح كل شيء في تطبيق واحد — أو في التطبيقات العشرة بالبطاقة الشاملة.', premCta:'شاهد الخطط ←', fPremium:'Premium', fWorksheets:'أوراق عمل', fGames:'ألعاب', fStories:'قصص', fScience:'علوم', fBlog:'المدونة',
     fAbout:'من نحن', fContact:'اتصل بنا', fPrivacy:'الخصوصية', fTerms:'الشروط',
     footMade:'صُنع بحبّ 💙 لصغار المتعلّمين',
     testi:[
@@ -1810,9 +1823,13 @@ function render(){
     const home = k==='home';
     navHtml += `<a href="${navHref(k)}" class="${home?'active':''}${k==='kids'?' kids-pill':''}">${home?'🏠 ':''}${k==='kids'?'🎈 ':''}${t.nav[k]}</a>`;
   }
+  // Accès Écoles + Premium (pages hors catalogue d'applis)
+  navHtml += `<a href="/schools.html" class="nav-x">🏫 ${t.fSchools.replace(' 🏫','')}</a>` + `<a href="/premium.html" class="nav-cta nav-x">✨ ${t.fPremium}</a>`;
   document.getElementById('navMenu').innerHTML = navHtml;
   document.getElementById('mMenu').innerHTML =
     NAV_KEYS.map(k=>`<a href="${navHref(k)}" onclick="closeMobile()">${t.nav[k]}</a>`).join('') +
+    `<a href="/schools.html" onclick="closeMobile()">🏫 ${t.fSchools.replace(' 🏫','')}</a>` +
+    `<a href="/premium.html" onclick="closeMobile()">✨ ${t.fPremium}</a>` +
     `<a href="#" onclick="closeMobile();shareSite();return false">🔗 ${t.share}</a>` +
     `<a href="${appsBase()}" onclick="closeMobile()" style="margin-top:10px;background:var(--grad-brand);color:#fff;text-align:center">${t.getApps}</a>`;
 
