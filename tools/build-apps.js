@@ -100,7 +100,7 @@ function header(lang, slug) {
     `<a data-l="${l}"${l === lang ? ' class="active" aria-current="page"' : ''} href="${relLink(lang, l, slug)}" hreflang="${l}">${l.toUpperCase()}</a>`).join('\n        ');
   return `<header class="top">
   <div class="top-in">
-    <a class="brand" href="${root}index.html"><img src="${root}logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="${root}"><img src="${root}logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         ${links}
@@ -117,7 +117,7 @@ function footer(lang) {
   const L = LANGS[lang];
   return `<footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="${root}index.html">${L.home}</a> · <a href="${root}about.html">About</a> · <a href="${root}privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="${root}">${L.home}</a> · <a href="${root}about.html">About</a> · <a href="${root}privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>`;
 }
@@ -238,7 +238,7 @@ for (const app of APPS) {
     const page = headCommon(lang, { slug: app.slug, self, title, ogTitle: `${app.name} — ${app.tagline[lang]}`, desc, jsonld, ogImage: BASE + '/logos/' + app.file })
       + header(lang, app.slug) + `
 <div class="wrap wide">
-  <p class="crumbs"><a href="${root}index.html">${L.home}</a> › <a href="./">${L.apps}</a> › <span>${app.name}</span></p>
+  <p class="crumbs"><a href="${root}">${L.home}</a> › <a href="./">${L.apps}</a> › <span>${app.name}</span></p>
 
   <section class="app-hero">
     <img class="app-icon" src="${logo}" alt="${app.name} app icon" width="112" height="112" />
@@ -330,7 +330,7 @@ for (const lang of ORDER) {
   const page = headCommon(lang, { slug: '', self, title: S.idxTitle, ogTitle: S.idxH1, desc: S.idxDesc, jsonld })
     + header(lang, '') + `
 <div class="wrap wide">
-  <p class="crumbs"><a href="${root}index.html">${L.home}</a> › <span>${L.apps}</span></p>
+  <p class="crumbs"><a href="${root}">${L.home}</a> › <span>${L.apps}</span></p>
 
   <h1>${esc(S.idxH1)}</h1>
   <p class="lede">${esc(S.idxLede)}</p>

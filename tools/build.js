@@ -95,7 +95,7 @@ function header(lang, slug) {
     `<a data-l="${l}"${l === lang ? ' class="active" aria-current="page"' : ''} href="${relLink(lang, l, slug)}" hreflang="${l}">${l.toUpperCase()}</a>`).join('\n        ');
   return `<header class="top">
   <div class="top-in">
-    <a class="brand" href="${root}index.html"><img src="${root}logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="${root}"><img src="${root}logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         ${links}
@@ -112,7 +112,7 @@ function footer(lang) {
   const root = lang === 'en' ? '../' : '../../';
   return `<footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="${root}index.html">${L.home}</a> · <a href="${root}about.html">About</a> · <a href="${root}contact.html">Contact</a> · <a href="${root}privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="${root}">${L.home}</a> · <a href="${root}about.html">About</a> · <a href="${root}contact.html">Contact</a> · <a href="${root}privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>`;
 }
@@ -218,7 +218,7 @@ for (const cf of contentFiles) {
       + header(lang, art.slug) + `
 
 <div class="wrap">
-  <p class="crumbs"><a href="${lang === 'en' ? '../' : '../../'}index.html">${L.home}</a> › <a href="index.html">${L.blog}</a> › ${cat.tagL[lang]}</p>
+  <p class="crumbs"><a href="${lang === 'en' ? '../' : '../../'}">${L.home}</a> › <a href="./">${L.blog}</a> › ${cat.tagL[lang]}</p>
 
   <article class="post">${content}${faqSection(art.faq, lang)}  </article>
 
@@ -231,7 +231,7 @@ for (const cf of contentFiles) {
 ${related.map(r => pcard(r, lang)).join('\n')}
   </div>
 
-  <p style="margin:28px 0 8px"><a class="backlink" href="index.html">← ${L.back}</a></p>
+  <p style="margin:28px 0 8px"><a class="backlink" href="./">← ${L.back}</a></p>
 </div>
 
 ` + footer(lang) + `
@@ -264,7 +264,7 @@ for (const lang of ORDER) {
     + header(lang, '') + `
 
 <div class="wrap wide">
-  <p class="crumbs"><a href="${lang === 'en' ? '../' : '../../'}index.html">${L.home}</a> › ${L.blog}</p>
+  <p class="crumbs"><a href="${lang === 'en' ? '../' : '../../'}">${L.home}</a> › ${L.blog}</p>
 
   <span class="tag tips">Kids Learning Hub</span>
   <h1 style="font-size:clamp(28px,5vw,44px);margin:14px 0 8px">${M.h1}</h1>
