@@ -329,6 +329,9 @@ for (const lang of ORDER) sm += smEntry('', lang, 'weekly', lang === 'en' ? '0.8
 for (const art of CATALOGUE) for (const lang of ORDER) sm += smEntry(art.slug, lang, 'monthly', lang === 'en' ? '0.7' : '0.6') + '\n';
 for (const lang of ORDER) sm += smEntryIn('stories', '', lang) + '\n';
 for (const s of STORY_SLUGS) for (const lang of ORDER) sm += smEntryIn('stories', s, lang) + '\n';
+/* worksheets that build-worksheets.js publishes in 4 languages are listed
+   in its own <!--WSPAGES--> block — skip them here to avoid duplicates */
+const WS_TOPIC_URLS = new Set(require('./worksheets-data.js').map(t => 'worksheets/' + t.slug + '.html'));
 for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'play/word-match.html',
                  'play/clock-game.html', 'play/memory.html', 'play/capitals.html',
                  'play/math-race.html', 'play/flags.html', 'play/patterns.html', 'play/science-quiz.html',
@@ -341,7 +344,7 @@ for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'pl
                  'worksheets/maze.html', 'worksheets/shapes.html', 'worksheets/line-tracing.html', 'worksheets/sudoku.html',
                  'worksheets/continents.html', 'worksheets/flags.html', 'worksheets/dot-to-dot.html', 'worksheets/color-by-number.html',
                  'worksheets/column-addition.html', 'worksheets/word-problems.html', 'worksheets/seasonal.html',
-                 'about.html', 'contact.html', 'kids.html']) {
+                 'about.html', 'contact.html', 'kids.html'].filter(p => !WS_TOPIC_URLS.has(p))) {
   sm += `  <url>
     <loc>${BASE}/${p}</loc>
     <lastmod>${TODAY}</lastmod>
