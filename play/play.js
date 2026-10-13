@@ -16,10 +16,25 @@
 
     const p = new URLSearchParams(location.search).get('lang');
     let saved = null; try{ saved = localStorage.getItem('vsm_lang'); }catch(e){}
+    /* English original of a page that has real /fr/ /es/ /ar/ copies, but the
+       visitor wants another language → open the real copy instead */
+    const want = ['fr','es','ar'].includes(p) ? p : (p ? null : saved);
+    if(['fr','es','ar'].includes(want) && !/^\/(fr|es|ar)\//.test(location.pathname) && !/\/(fr|es|ar)\/(index\.html)?$/.test(location.pathname)){
+      const u = staticUrl(want);
+      if(u){ location.replace(u + location.hash); return; }
+    }
     setLang(['en','fr','es','ar'].includes(p) ? p : (['en','fr','es','ar'].includes(saved) ? saved : 'en'));
 
     document.querySelectorAll('.langsw button').forEach(b=>{
-      b.addEventListener('click', ()=>{ try{ localStorage.setItem('vsm_lang', b.dataset.l); }catch(e){} setLang(b.dataset.l); });
+      b.addEventListener('click', ()=>{
+        const l = b.dataset.l;
+        try{ localStorage.setItem('vsm_lang', l); }catch(e){}
+        /* pages that exist as real /fr/ /es/ /ar/ copies: open that copy, so
+           Google (search and AdSense) sees the language the visitor reads */
+        const u = staticUrl(l);
+        if(u && u !== location.pathname){ location.href = u + location.hash; return; }
+        setLang(l);
+      });
     });
   };
 
@@ -29,6 +44,13 @@
     document.documentElement.dir = (l === 'ar') ? 'rtl' : 'ltr';
     document.querySelectorAll('.langsw button').forEach(b=>b.classList.toggle('active', b.dataset.l===l));
     if(onLang) onLang(l);
+  }
+
+  function staticUrl(l){
+    const p = location.pathname; let m;
+    if((m = p.match(/^\/(?:(?:fr|es|ar)\/)?(about|contact|kids|privacy)\.html$/))) return (l==='en' ? '/' : '/'+l+'/') + m[1] + '.html';
+    if((m = p.match(/^\/(play|worksheets)\/(?:(?:fr|es|ar)\/)?(?:index\.html)?$/))) return '/'+m[1]+'/' + (l==='en' ? '' : l+'/');
+    return null;
   }
 
   PLAY.lang = ()=>lang;

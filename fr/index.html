@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="lemonsqueezy-verification" content="95aa829a-4c6a-4e1a-8cd1-da91a75c697b" />
 <title>Applis, jeux et fiches éducatives gratuits pour enfants 4–12 ans | Kids Learning Hub</title>
 <meta name="description" content="Applis éducatives, fiches à imprimer et jeux gratuits pour les 4–12 ans : maths, sciences, codage, géographie et six langues. Hors ligne, sûrs, sans inscription." />
 
@@ -671,7 +672,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
 }
 </style>
 <script src="/analytics.js" defer></script>
-<script>try{localStorage.setItem('vsm_lang',"fr")}catch(e){}document.documentElement.lang="fr";document.documentElement.dir="ltr";</script>
 <style>
 .premium-banner{display:flex;align-items:center;gap:14px;margin-top:22px;padding:18px 20px;border-radius:24px;
   background:#EF9F27;color:#fff;text-decoration:none;box-shadow:0 7px 0 #BA7517;transition:transform .1s}
@@ -688,6 +688,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,[
 @media(max-width:1560px){.nav-menu{display:none}.hamburger{display:grid}.nav-actions{margin-inline-start:auto}}
 @media(max-width:1800px){.nav-menu a.nav-x{display:none}}
 </style>
+<script>try{localStorage.setItem('vsm_lang',"fr")}catch(e){}document.documentElement.lang="fr";document.documentElement.dir="ltr";</script>
 </head>
 <body>
 
@@ -1497,7 +1498,15 @@ const NAV_KEYS = ['home','kids','math','science','coding','geography','english',
 const playSvg = '<svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg>';
 
 const _urlLang = new URLSearchParams(location.search).get('lang');
-let lang = (['en','fr','es','ar'].includes(_urlLang) ? _urlLang : null) || localStorage.getItem('vsm_lang') || 'en';
+/* language of THIS page's URL: /fr/ /es/ /ar/ copies, otherwise English */
+const pageLang = (location.pathname.match(/^\/(fr|es|ar)\//) || [,'en'])[1];
+/* the English URL with a non-English choice (saved or ?lang=) → go to the real page */
+(function(){
+  let want = null;
+  try{ want = (['fr','es','ar'].includes(_urlLang) ? _urlLang : null) || (_urlLang ? null : localStorage.getItem('vsm_lang')); }catch(e){}
+  if(pageLang === 'en' && ['fr','es','ar'].includes(want)) location.replace('/'+want+'/'+location.hash);
+})();
+let lang = pageLang;
 
 /* ─── render ─── */
 /* ─── Daily challenge · choose-by-age · promise · teacher (2026-10) ───
@@ -1615,6 +1624,7 @@ function locHref(path){
   if(path.startsWith('/stories/')) return '/stories/'+lang+'/';
   if(path==='/about.html'||path==='/contact.html') return '/'+lang+path;
   if(path.startsWith('/apps/')) return '/apps/'+lang+'/'+path.slice(6);
+  if(path==='/play/' || path==='/worksheets/') return path+lang+'/';
   return path+'?lang='+lang;
 }
 
@@ -1781,14 +1791,14 @@ function render(){
     if(k==='kids') return lang==='en' ? '/kids.html' : '/'+lang+'/kids.html';
     if(k==='blog') return '/blog/' + (lang==='en'?'':lang+'/');
     if(k==='stories') return '/stories/' + (lang==='en'?'':lang+'/');
-    if(k==='games') return '/play/' + (lang==='en'?'':'?lang='+lang);
-    if(k==='worksheets') return '/worksheets/' + (lang==='en'?'':'?lang='+lang);
+    if(k==='games') return '/play/' + (lang==='en'?'':lang+'/');
+    if(k==='worksheets') return '/worksheets/' + (lang==='en'?'':lang+'/');
     if(APP_SLUG[k]) return appsBase() + APP_SLUG[k] + '.html';
     return appsBase(); // fallback: the apps index
   };
   const SUBJ_KEYS = ['math','science','coding','geography'];
   const LANG_KEYS = ['english','french','spanish','german','arabic','chinese'];
-  const wsBase = '/worksheets/' + (lang==='en'?'':'?lang='+lang);
+  const wsBase = '/worksheets/' + (lang==='en'?'':lang+'/');
   const WS_SECTIONS = [
     ['📐', t.wsMath,       wsBase + '#math'],
     ['🌍', t.wsGeo,        wsBase + '#geography'],
@@ -1859,7 +1869,7 @@ function render(){
     if(!raw || /^(https?:|#|mailto:)/.test(raw)) return;
     el.href = raw.startsWith('/apps/')
       ? appsBase() + raw.slice(6)                       // apps/x.html → apps/<lang>/x.html
-      : raw + (lang==='en' ? '' : '?lang='+lang);       // worksheets/ , play/
+      : raw + (lang==='en' ? '' : (/^\/(play|worksheets)\/$/.test(raw) ? lang+'/' : '?lang='+lang));   // hubs have real /xx/ pages
   });
 
   // apps
@@ -1921,7 +1931,15 @@ function render(){
   localizeAds();
 }
 
-function setLang(k){ lang=k; localStorage.setItem('vsm_lang',k); document.getElementById('langMenu').classList.remove('open'); render(); resetCounters(); }
+/* Switching language opens that language's real page (/, /fr/, /es/, /ar/)
+   instead of translating in place: Google (search and AdSense) reads the
+   page at its URL, so ads and results match only when the URL matches. */
+function homeUrl(k){ return (k==='en' ? '/' : '/'+k+'/') + location.hash; }
+function setLang(k){
+  try{ localStorage.setItem('vsm_lang',k); }catch(e){}
+  if(k !== pageLang){ location.href = homeUrl(k); return; }
+  lang=k; document.getElementById('langMenu').classList.remove('open'); render(); resetCounters();
+}
 
 /* Localize the page title + meta/OG description for the current language.
    NOTE: social scrapers (WhatsApp/Facebook) don't run JS, so the shared
