@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/play/play.css?v=4" />
-<link rel="stylesheet" href="/worksheets/ws.css?v=3" />
+<link rel="stylesheet" href="/worksheets/ws.css?v=4" />
 <style>
 .prob.moneyp{white-space:normal;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .coin{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:2.5px solid #C89B3C;background:#FFF3D6;color:#8a6d1f;font-weight:800;font-size:13px}
@@ -96,7 +96,7 @@
 </footer>
 
 <script src="/play/play.js?v=4"></script>
-<script src="/worksheets/ws.js"></script>
+<script src="/worksheets/ws.js?v=2"></script>
 <script>
 /* denominations per currency: [value, kind coin-gold|coin-silver|bill] */
 const CURRENCIES={
@@ -123,12 +123,12 @@ WS.setup({
     const out=[];
     for(let i=0;i<8;i++){
       const n=WS.rnd(3,5);
-      let pieces='';
+      let pieces='', total=0;
       for(let k=0;k<n;k++){
         const [v,kind]=C.denoms[WS.rnd(0,C.denoms.length-1)];
-        pieces+=pieceHtml(v,kind,C.sym);
+        pieces+=pieceHtml(v,kind,C.sym); total+=v;
       }
-      out.push(`<span style="display:inline-flex;gap:5px;flex-wrap:wrap;align-items:center">${pieces}</span> <span class="eq">= ${WS.blank} ${C.sym}</span>`);
+      out.push({q:`<span style="display:inline-flex;gap:5px;flex-wrap:wrap;align-items:center">${pieces}</span> <span class="eq">= ${WS.blank} ${C.sym}</span>`, a:total+' '+C.sym});
     }
     return out;
   }

@@ -497,4 +497,7 @@ module.exports = [
   },
 },
 
+/* ── October 2026 additions (fractions … arrays) live in their own file ── */
+...require('./worksheets-data-2026-10.js'),
+
 ];

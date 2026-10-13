@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/play/play.css?v=4" />
-<link rel="stylesheet" href="/worksheets/ws.css?v=3" />
+<link rel="stylesheet" href="/worksheets/ws.css?v=4" />
 <style>
 .prob.clockp{white-space:normal;text-align:center}
 .prob.clockp svg{width:100%;max-width:150px;height:auto}
@@ -122,7 +122,7 @@
 </footer>
 
 <script src="/play/play.js?v=4"></script>
-<script src="/worksheets/ws.js"></script>
+<script src="/worksheets/ws.js?v=2"></script>
 <script>
 function clockSvg(h,m){
   const cx=50,cy=50,r=46;
@@ -152,7 +152,7 @@ WS.setup({
     for(let i=0;i<9;i++){
       const h=WS.rnd(1,12);
       const m=(step===60)?0:WS.rnd(0,(60/step)-1)*step;
-      out.push(`<div class="clockp-in">${clockSvg(h,m)}<div class="ans">____ : ____</div></div>`);
+      out.push({q:`<div class="clockp-in">${clockSvg(h,m)}<div class="ans">____ : ____</div></div>`, a:h+':'+String(m).padStart(2,'0')});
     }
     return out;
   }

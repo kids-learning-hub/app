@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/play/play.css?v=4" />
-<link rel="stylesheet" href="/worksheets/ws.css?v=3" />
+<link rel="stylesheet" href="/worksheets/ws.css?v=4" />
 <style>.prob{white-space:normal;text-align:start;font-weight:600;font-size:15px;line-height:1.5}
 .prob .blank{min-width:70px}
 .probs{grid-template-columns:1fr!important;gap:16px!important}</style>
@@ -87,7 +87,7 @@
 </footer>
 
 <script src="/play/play.js?v=4"></script>
-<script src="/worksheets/ws.js"></script>
+<script src="/worksheets/ws.js?v=2"></script>
 <script>
 WS.setup({
   strings:{
@@ -123,8 +123,8 @@ WS.setup({
     const out=[];
     for(let i=0;i<6;i++){
       const n=D.names[WS.rnd(0,D.names.length-1)], it=D.items[WS.rnd(0,D.items.length-1)];
-      if(Math.random()<0.5){ const x=WS.rnd(2,max), y=WS.rnd(1,max); out.push(D.add(n,x,it,y)); }
-      else{ const x=WS.rnd(3,max), y=WS.rnd(1,x-1); out.push(D.sub(n,x,it,y)); }
+      if(WS.random()<0.5){ const x=WS.rnd(2,max), y=WS.rnd(1,max); out.push({q:D.add(n,x,it,y), a:x+y}); }
+      else{ const x=WS.rnd(3,max), y=WS.rnd(1,x-1); out.push({q:D.sub(n,x,it,y), a:x-y}); }
     }
     return out;
   }

@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/play/play.css?v=4" />
-<link rel="stylesheet" href="/worksheets/ws.css?v=3" />
+<link rel="stylesheet" href="/worksheets/ws.css?v=4" />
 <script src="/analytics.js" defer></script>
 <meta property="og:locale" content="en" />
 <script type="application/ld+json">
@@ -116,7 +116,7 @@
 </footer>
 
 <script src="/play/play.js?v=4"></script>
-<script src="/worksheets/ws.js"></script>
+<script src="/worksheets/ws.js?v=2"></script>
 <script>
 WS.setup({
   strings:{
@@ -131,7 +131,7 @@ WS.setup({
     const out=[];
     for(let i=0;i<24;i++){
       const div=d||WS.rnd(2,10), q=WS.rnd(1,10);
-      out.push(`${div*q} ÷ ${div} = ${WS.blank}`);
+      out.push({q:`${div*q} ÷ ${div} = ${WS.blank}`, a:q});
     }
     return out;
   }

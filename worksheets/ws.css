@@ -150,3 +150,24 @@
   .trace-row{height:38px;margin-bottom:12px;column-gap:14px}
   .trace-row .tw{font-size:23px}
 }
+
+/* ── 2026-10: instruction line, self-check, sheet number, answer key ── */
+.instr{text-align:center;color:#4a5677;font-weight:700;font-size:14px;margin:-2px 0 12px}
+.selfcheck{display:flex;justify-content:flex-end;align-items:center;gap:12px;margin-top:12px;font-weight:800;color:#3b4766;font-size:14px}
+.selfcheck .stars{font-size:24px;letter-spacing:6px;color:#F2B935}
+.sheetno{opacity:.75;font-weight:700}
+.sheet[hidden]{display:none!important}
+.sheet.answers{margin-top:22px}
+.sheet.answers .sheet-title{font-size:18px}
+.keygrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 18px;font-size:16px;margin-top:12px;direction:ltr}
+.keygrid .k b{color:#7a86a6;font-weight:700;margin-inline-end:4px}
+.btn.keytoggle{display:inline-flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
+.btn.keytoggle[hidden]{display:none}
+.btn.keytoggle input{width:18px;height:18px;accent-color:#1E5BFF}
+@media(max-width:640px){.keygrid{grid-template-columns:repeat(3,1fr)}}
+@media print{
+  .sheet.answers{break-before:page;page-break-before:always;margin-top:0}
+  .keygrid{flex:0 0 auto;align-content:start;font-size:13pt}
+  .instr{font-size:11pt}
+  .selfcheck{font-size:11pt}
+}
