@@ -15,8 +15,8 @@
 module.exports = [
   {
     slug: 'developing-emotional-intelligence-in-kids', date: '2026-08-10',
-    emoji: '❤️', grad: 'linear-gradient(135deg,#E91E63,#C2185B)', tagColor: '#E91E63', tagClass: 'lang',
-    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    emoji: '❤️', grad: 'linear-gradient(135deg,#E91E63,#C2185B)', tagColor: '#E91E63', tagClass: 'tips',
+    tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
     cardTitle: {
       en: 'Developing Emotional Intelligence & Social Skills in Primary Kids',
       fr: 'Développer l’intelligence émotionnelle et les compétences sociales chez l’enfant',
@@ -228,15 +228,15 @@ module.exports = [
     emoji: '🇬🇧', grad: 'linear-gradient(135deg,#FF7E7E,#FF4B4B)', tagColor: '#FF4B4B', tagClass: 'lang',
     tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
     cardTitle: {
-      en: '5 Simple Ways to Help Your Child Speak English at Home',
-      fr: '5 astuces simples pour aider votre enfant à parler anglais à la maison',
-      es: '5 formas sencillas de ayudar a tu hijo a hablar inglés en casa',
-      ar: '5 طرق بسيطة لمساعدة طفلك على التحدث باللغة الإنجليزية في المنزل' },
+      en: '10 Fun Games to Help Your Child Speak English at Home',
+      fr: '10 jeux pour aider votre enfant à parler anglais à la maison',
+      es: '10 juegos para que tu hijo hable inglés en casa',
+      ar: '10 ألعاب تساعد طفلك على التحدّث بالإنجليزية في البيت' },
     excerpt: {
-      en: 'Discover practical, stress-free ways to introduce English into your child’s daily routine through play, songs, and interactive apps.',
-      fr: 'Découvrez des moyens pratiques et ludiques d\'introduire l\'anglais dans la routine de votre enfant grâce au jeu et aux applications interactives.',
-      es: 'Descubre métodos prácticos y divertidos para incorporar el inglés en la rutina diaria de tu hijo a través de juegos y aplicaciones.',
-      ar: 'اكتشف حيلًا عملية وخالية من التوتر لإدخال اللغة الإنجليزية في روتين طفلك اليومي من خلال الألعاب والتطبيقات التفاعلية.' },
+      en: 'Ten short games, a phrase bank and a weekly plan — even if your own English is basic.',
+      fr: 'Dix jeux courts, une banque de phrases et un plan pour la semaine — même avec un anglais de base.',
+      es: 'Diez juegos cortos, un banco de frases y un plan semanal, aunque tu inglés sea básico.',
+      ar: 'عشر ألعاب قصيرة وبنك عبارات وخطة أسبوعية، حتى لو كانت إنجليزيتك بسيطة.' },
   },
   {
     slug: 'mental-math-tricks-for-kids', date: '2026-07-14',
