@@ -1,177 +1,361 @@
+/* Deepened 2026-10 (was ~600 words). Angle: positive discipline, encouragement, connection
+   and digital citizenship; screen-time limits/app choice live in screen-time-safe-apps-for-kids. */
+const { cta, meta } = require('./_cta.js');
+
 module.exports = {
   slug: 'positive-parenting-digital-age',
-  date: '2026-07-18',        // تاريخ النشر
-  minutes: 8,                // مقال طويل ومفصل بقراءة 8 دقائق
+  date: '2026-07-18',
+  minutes: 10,
 
-  /* SEO <title> */
   dataTitle: {
     en: 'Positive Parenting in the Digital Age: Raising Confident Learners | Kids Learning Hub',
-    fr: "L'éducation positive à l'ère du numérique : élever des enfants épanouis | Kids Learning Hub",
-    es: 'Crianza positiva en la era digital: cómo criar niños seguros y curiosos | Kids Learning Hub',
-    ar: 'التربية الإيجابية في العصر الرقمي: دليل شامل لبناء شخصية طفلك وتنمية فضوله | Kids Learning Hub',
+    fr: "L'éducation positive à l'ère du numérique : élever des enfants confiants | Kids Learning Hub",
+    es: 'Crianza positiva en la era digital: criar niños seguros y curiosos | Kids Learning Hub',
+    ar: 'التربية الإيجابية في العصر الرقمي: كيف نربّي أطفالًا واثقين | Kids Learning Hub',
   },
 
-  /* محتوى المقال الطويل بالأربع لغات */
   body: {
     en: `
     <span class="tag tips">Parenting</span>
-    <h1>Positive Parenting in the Digital Age: Raising Confident Learners</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Updated July 2026</span> · <span>8 min read</span></div>
-    
-    <p class="lede">Discover the core pillars of positive parenting. Learn how to foster emotional intelligence, manage screen time constructively, and turn everyday digital interactions into powerful learning moments.</p>
+    <h1>Positive Parenting in the Digital Age: Raising Confident, Kind and Curious Learners</h1>
+    ${meta('en', 10)}
+    <p class="lede">Positive parenting is not permissive parenting. It means being warm and firm at the same time: clear rules, explained calmly, with a strong relationship underneath. In a world of tablets, games and group chats, these principles matter more than ever — not to fight technology, but to raise children who can use it wisely and who still come to us when something goes wrong.</p>
 
-    <h2>1. What is Positive Parenting? Connection Over Control</h2>
-    <p>Positive parenting is not about being permissive, nor is it about strict control. Instead, it focuses on building a strong, respectful relationship between parent and child. It assumes that children naturally want to behave well when they feel safe, valued, and understood.</p>
-    <p>When we discipline through connection rather than fear, we teach children internal self-regulation. Instead of asking "How can I punish this behavior?", positive parenting encourages us to ask, "What is my child trying to communicate through this behavior, and how can I teach them to do better?"</p>
+    <div class="toc"><b>In this guide</b><ol>
+      <li>What positive parenting really means</li>
+      <li>Encouragement that builds confidence</li>
+      <li>Calm, firm discipline without shouting</li>
+      <li>Connection: the daily "10 minutes"</li>
+      <li>Raising a good digital citizen</li>
+      <li>Family technology agreements by age</li>
+    </ol></div>
 
-    <h2>2. Navigating the Digital World: Quality Over Quantity</h2>
-    <p>In today's world, completely banning screens is neither realistic nor helpful. Technology is an integral part of modern education and communication. The key shift for parents should be moving from tracking "screen time hours" to evaluating "screen time quality."</p>
-    <p>Passive screen time (like mindlessly scrolling through short videos) can shorten attention spans. Active screen time, on the other hand, engages the brain. When children play interactive educational games, solve math puzzles, or learn languages through play, their brains are actively building new neural pathways.</p>
+    <h2>1. What positive parenting really means</h2>
+    <p>Researchers often describe four parenting styles. The one most consistently linked with confident, well-adjusted children is the "authoritative" style — high warmth and high structure:</p>
+    <div class="tablewrap"><table>
+      <tr><th>Style</th><th>Warmth</th><th>Rules</th><th>What children often learn</th></tr>
+      <tr><td>Authoritarian</td><td>Low</td><td>High</td><td>"Obey or be punished" — may hide mistakes</td></tr>
+      <tr><td>Permissive</td><td>High</td><td>Low</td><td>"Rules don't really apply" — struggles with limits</td></tr>
+      <tr><td>Uninvolved</td><td>Low</td><td>Low</td><td>"Nobody is watching" — feels alone</td></tr>
+      <tr><td><strong>Positive (authoritative)</strong></td><td>High</td><td>High</td><td>"I am loved, and there are fair limits" — self-discipline</td></tr>
+    </table></div>
+    <p>In practice: you listen to feelings, explain the reasons for rules, involve children in some decisions — and you still hold the line when it matters.</p>
 
-    <h2>3. How to Turn Screen Time Into an Active Learning Tool</h2>
-    <p>To make the most of technology at home, follow these simple parenting rules:</p>
+    <h2>2. Encouragement that builds confidence</h2>
+    <p>Children need encouragement, but the type matters. Praising effort and strategy ("You tried three ways until it worked!") builds persistence. Praising only talent ("You're so clever") can make children afraid of failing.</p>
+    <div class="tablewrap"><table>
+      <tr><th>Instead of…</th><th>Try…</th></tr>
+      <tr><td>"You're so smart!"</td><td>"You kept going even when it was hard."</td></tr>
+      <tr><td>"Good job."</td><td>"I noticed you checked your answers — that's careful work."</td></tr>
+      <tr><td>"Don't cry, it's nothing."</td><td>"You're disappointed. That makes sense. Shall we try again together?"</td></tr>
+      <tr><td>"Why can't you be like your sister?"</td><td>"Look how much better you are than last week."</td></tr>
+    </table></div>
+    <p>Mistakes are part of learning. Saying "Mistakes help our brain grow — what can we learn from this one?" turns a bad moment into a lesson. Read more in our guide on <a href="overcoming-math-anxiety-in-kids.html">overcoming math anxiety</a>.</p>
+
+    <h2>3. Calm, firm discipline without shouting</h2>
+    <p>Discipline means teaching, not punishing. These tools work at most ages:</p>
     <ul>
-      <li><strong>Co-Play and Co-Learn:</strong> Sit with your child for 10 minutes while they use educational apps. Ask questions about the challenges they are solving to show that you value their efforts.</li>
-      <li><strong>Establish Clear Tech-Free Zones:</strong> Keep family mealtimes and the hour before bed completely screen-free to protect quality sleep and emotional connection.</li>
-      <li><strong>Choose Mindful, Ad-Free Apps:</strong> Ensure the digital tools your children use are safe, age-appropriate, and designed by educators.</li>
+      <li><strong>Name the feeling, hold the limit:</strong> "You're angry that the game ended. The tablet is still going off now."</li>
+      <li><strong>Give limited choices:</strong> "Do you want to brush your teeth before or after your story?" Children cooperate more when they have some control.</li>
+      <li><strong>Use natural and logical consequences:</strong> if a toy is thrown, it goes on the shelf for the afternoon. The consequence is linked to the behaviour, not a random punishment.</li>
+      <li><strong>Warn before transitions:</strong> "Five more minutes, then we stop." Sudden endings cause most screen-time battles.</li>
+      <li><strong>Repair after conflict:</strong> if you lose your temper, apologise. "I shouted, and I'm sorry. Let's try again." This teaches children how to fix relationships.</li>
     </ul>
+    <div class="tipbox"><b>Teacher's note</b>In class, the calmest teachers are rarely the strictest — they are the most predictable. Children behave better when they know exactly what will happen. Fewer rules, applied every time, work better than many rules applied when the adult is tired.</div>
 
-    <div class="appcta">
-      <div class="ico" style="background:#4CAF50"><img src="../logos/mathokids.png" alt="Matho"></div>
-      <div class="txt"><b>Matho</b><p>The perfect example of active, safe screen time! Designed by educators to help primary school children master mathematical thinking, logical reasoning, and core arithmetic through interactive, gamified challenges.</p></div>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.matho" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">GET IT ON</span><span class="g-main">Google Play</span></span></a>
-    </div>
+    <h2>4. Connection: the daily "10 minutes"</h2>
+    <p>Children who feel connected cooperate more, and they talk to us when they have a problem online. A simple habit: spend 10 minutes a day of one-to-one time where your child chooses the activity and your phone is away. Other connection moments:</p>
+    <ul>
+      <li>Ask better questions after school: "What made you laugh today?" instead of "How was school?"</li>
+      <li>Family meals without screens, even a few times a week.</li>
+      <li>Bedtime chats — children often share the most important things just before sleep.</li>
+      <li>Play their games with them sometimes, and let them teach you.</li>
+    </ul>
+    <div class="tipbox try"><b>Try this week</b>Put your own phone in another room for the first 30 minutes after your child comes home. Notice how much more they tell you. Our children learn screen habits by watching ours.</div>
 
-    <h2>4. Cultivating a Growth Mindset at Home</h2>
-    <p>One of the greatest gifts you can give your child is a "growth mindset"—the belief that intelligence and abilities can be developed through dedication and hard work. When praising your child, focus on their effort rather than their innate intelligence. Instead of saying, "You are so smart," try saying, "I am so proud of how hard you worked to solve that difficult puzzle!"</p>
-    <p>This subtle shift teaches children not to fear mistakes, but to view them as natural steps toward learning and growing.</p>
+    <h2>5. Raising a good digital citizen</h2>
+    <p>Rules are only half the job. Children also need the skills to behave well and stay safe online:</p>
+    <ul>
+      <li><strong>Kindness online:</strong> "Would you say it to their face?" is a simple rule for messages and comments.</li>
+      <li><strong>Privacy:</strong> never share your full name, school, address, photos or passwords with people you don't know.</li>
+      <li><strong>Thinking critically:</strong> not everything online is true. Ask: "Who made this? Why? How do they know?"</li>
+      <li><strong>Ads and in-app purchases:</strong> explain that some games are designed to make you watch ads or buy things — and that you will decide together.</li>
+      <li><strong>The "tell me" rule:</strong> if anything online makes them feel scared, sad or uncomfortable, they tell you — and they will not be punished for telling.</li>
+    </ul>
+    <div class="tipbox warn"><b>The most important rule</b>Children hide problems when they fear losing their device. Promise calmly: "If something goes wrong online, tell me. You won't be in trouble for telling me." This one promise protects them more than any filter.</div>
 
-    <h2>5. A Mindful Parenting Checklist</h2>
-    <p>Remember, there is no such thing as a perfect parent. What matters most is consistency, warmth, and the willingness to learn alongside your children. By combining positive discipline with high-quality educational digital tools, you are setting your child up to become a confident, curious, and empathetic lifelong learner.</p>`,
+    <h2>6. Family technology agreements by age</h2>
+    <p>A written family agreement, made together, turns daily arguments into shared rules. Adapt it as children grow:</p>
+    <div class="tablewrap"><table>
+      <tr><th>Age</th><th>Good agreement points</th></tr>
+      <tr><td>3–5</td><td>Short sessions with an adult nearby; calm, slow content; no screens at meals or bedtime</td></tr>
+      <tr><td>6–8</td><td>Agreed times and apps; devices in shared rooms; educational games first; parents set up accounts</td></tr>
+      <tr><td>9–12</td><td>Child helps write the rules; homework before games; privacy and kindness rules; phones charge outside the bedroom at night</td></tr>
+    </table></div>
+    <p>For time limits and choosing apps, see our guide to <a href="screen-time-safe-apps-for-kids.html">screen time and safe apps</a>. To support feelings and behaviour, read <a href="developing-emotional-intelligence-in-kids.html">developing emotional intelligence</a> and <a href="managing-stress-and-adhd-in-kids.html">helping children with stress and restlessness</a>.</p>
+    ${cta('mathokids', 'Structured learning games with clear progress — a screen-time choice parents can feel good about.')}
+
+    <p>Warmth and limits, encouragement and honesty, connection before correction: positive parenting does not need perfect parents. It needs parents who keep coming back, calmly, to the relationship.</p>`,
 
     fr: `
     <span class="tag tips">Parentalité</span>
-    <h1>L'éducation positive à l'ère du numérique : élever des enfants épanouis</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Mis à jour en juillet 2026</span> · <span>8 min de lecture</span></div>
-    
-    <p class="lede">Découvrez les piliers de l'éducation positive. Apprenez à nourrir l'intelligence émotionnelle de votre enfant, à gérer les écrans de manière constructive et à transformer la technologie en un moteur d'apprentissage.</p>
+    <h1>L'éducation positive à l'ère du numérique : élever des enfants confiants, bienveillants et curieux</h1>
+    ${meta('fr', 10)}
+    <p class="lede">L'éducation positive n'est pas une éducation laxiste. Elle consiste à être chaleureux et ferme à la fois : des règles claires, expliquées calmement, appuyées sur une relation solide. Dans un monde de tablettes, de jeux et de groupes de discussion, ces principes comptent plus que jamais — non pour combattre la technologie, mais pour élever des enfants qui savent l'utiliser avec sagesse et qui viennent encore vers nous quand quelque chose ne va pas.</p>
 
-    <h2>1. Qu'est-ce que l'éducation positive ? Privilégier le lien sur le contrôle</h2>
-    <p>L'éducation positive ne signifie pas être laxiste, ni imposer un contrôle rigide. Elle repose sur la construction d'une relation solide, bienveillante et respectueuse entre le parent et l'enfant. Les enfants ont naturellement envie de coopérer lorsqu'ils se sentent en sécurité, aimés et écoutés.</p>
-    <p>En choisissant d'éduquer par la connexion plutôt que par la peur, nous enseignons à nos enfants l'autorégulation émotionnelle. Au lieu de se demander "Comment punir ce comportement ?", le parent positif se demande : "Quel besoin mon enfant exprime-t-il, et comment puis-je l'aider à faire mieux ?"</p>
+    <div class="toc"><b>Dans ce guide</b><ol>
+      <li>Ce que signifie vraiment l'éducation positive</li>
+      <li>Des encouragements qui donnent confiance</li>
+      <li>Une discipline calme et ferme, sans crier</li>
+      <li>Le lien : les « 10 minutes » quotidiennes</li>
+      <li>Élever un bon citoyen numérique</li>
+      <li>Les accords familiaux sur les écrans selon l'âge</li>
+    </ol></div>
 
-    <h2>2. Gérer le numérique : la qualité plutôt que la quantité</h2>
-    <p>À notre époque, interdire totalement les écrans est irréaliste et souvent contre-productif. Les outils numériques font partie intégrante de l'éducation moderne. Le secret réside dans la transition d'un contrôle de la "durée" d'utilisation vers une évaluation de la "qualité" du contenu.</p>
-    <p>Le temps d'écran passif (comme regarder des vidéos courtes en boucle) fatigue l'attention. À l'inverse, le temps d'écran actif stimule le cerveau. Lorsque l'enfant résout des énigmes mathématiques ou joue à des jeux interactifs conçus pour l'apprentissage, il développe sa logique et sa plasticité cérébrale.</p>
+    <h2>1. Ce que signifie vraiment l'éducation positive</h2>
+    <p>Les chercheurs décrivent souvent quatre styles parentaux. Celui qui est le plus régulièrement associé à des enfants confiants et équilibrés est le style « démocratique » — beaucoup de chaleur et beaucoup de cadre :</p>
+    <div class="tablewrap"><table>
+      <tr><th>Style</th><th>Chaleur</th><th>Règles</th><th>Ce que l'enfant apprend souvent</th></tr>
+      <tr><td>Autoritaire</td><td>Faible</td><td>Fortes</td><td>« Obéis ou tu seras puni » — peut cacher ses erreurs</td></tr>
+      <tr><td>Permissif</td><td>Forte</td><td>Faibles</td><td>« Les règles ne comptent pas vraiment » — a du mal avec les limites</td></tr>
+      <tr><td>Désengagé</td><td>Faible</td><td>Faibles</td><td>« Personne ne fait attention » — se sent seul</td></tr>
+      <tr><td><strong>Positif (démocratique)</strong></td><td>Forte</td><td>Fortes</td><td>« Je suis aimé et il y a des limites justes » — autodiscipline</td></tr>
+    </table></div>
+    <p>Concrètement : vous écoutez les émotions, vous expliquez les raisons des règles, vous associez l'enfant à certaines décisions — et vous tenez bon quand c'est important.</p>
 
-    <h2>3. Comment faire des écrans des alliés éducatifs</h2>
-    <p>Pour intégrer intelligemment la technologie dans la routine familiale :</p>
+    <h2>2. Des encouragements qui donnent confiance</h2>
+    <p>Les enfants ont besoin d'encouragements, mais leur forme compte. Féliciter l'effort et la stratégie (« Tu as essayé trois façons jusqu'à ce que ça marche ! ») développe la persévérance. Ne féliciter que le talent (« Tu es si intelligent ») peut rendre l'enfant peureux face à l'échec.</p>
+    <div class="tablewrap"><table>
+      <tr><th>Au lieu de…</th><th>Essayez…</th></tr>
+      <tr><td>« Tu es trop intelligent ! »</td><td>« Tu as continué même quand c'était difficile. »</td></tr>
+      <tr><td>« C'est bien. »</td><td>« J'ai vu que tu as vérifié tes réponses — c'est du travail soigné. »</td></tr>
+      <tr><td>« Ne pleure pas, ce n'est rien. »</td><td>« Tu es déçu. Je comprends. On réessaie ensemble ? »</td></tr>
+      <tr><td>« Pourquoi tu n'es pas comme ta sœur ? »</td><td>« Regarde tes progrès depuis la semaine dernière. »</td></tr>
+    </table></div>
+    <p>Les erreurs font partie de l'apprentissage. Dire « Les erreurs font grandir notre cerveau — qu'est-ce que celle-ci nous apprend ? » transforme un mauvais moment en leçon. Pour aller plus loin, lisez notre guide pour <a href="overcoming-math-anxiety-in-kids.html">vaincre l'anxiété en maths</a>.</p>
+
+    <h2>3. Une discipline calme et ferme, sans crier</h2>
+    <p>Discipliner, c'est enseigner, pas punir. Ces outils fonctionnent à la plupart des âges :</p>
     <ul>
-      <li><strong>Jouez ensemble :</strong> Passez 10 minutes avec votre enfant sur ses applications éducatives. Posez-lui des questions sur ce qu'il accomplit pour valoriser son travail.</li>
-      <li><strong>Instaurez des moments sans écrans :</strong> Les repas et l'heure précédant le coucher doivent rester totalement déconnectés pour préserver le sommeil et les échanges familiaux.</li>
-      <li><strong>Sélectionnez des applications sûres et sans publicité :</strong> Privilégiez des outils conçus avec soin par des pédagogues.</li>
+      <li><strong>Nommer l'émotion, tenir la limite :</strong> « Tu es en colère que le jeu soit fini. La tablette s'éteint quand même maintenant. »</li>
+      <li><strong>Proposer des choix limités :</strong> « Tu veux te brosser les dents avant ou après l'histoire ? » L'enfant coopère davantage quand il a un peu de contrôle.</li>
+      <li><strong>Utiliser des conséquences naturelles et logiques :</strong> si un jouet est lancé, il va sur l'étagère pour l'après-midi. La conséquence est liée au comportement, ce n'est pas une punition au hasard.</li>
+      <li><strong>Prévenir avant les transitions :</strong> « Encore cinq minutes, puis on arrête. » Les arrêts brusques causent la plupart des disputes autour des écrans.</li>
+      <li><strong>Réparer après un conflit :</strong> si vous vous êtes énervé, excusez-vous. « J'ai crié, je suis désolé. On recommence. » L'enfant apprend ainsi à réparer une relation.</li>
     </ul>
+    <div class="tipbox"><b>Le mot de l'enseignant</b>En classe, les enseignants les plus sereins sont rarement les plus sévères — ce sont les plus prévisibles. Les enfants se comportent mieux quand ils savent exactement ce qui va se passer. Peu de règles, appliquées à chaque fois, valent mieux que beaucoup de règles appliquées seulement quand l'adulte est fatigué.</div>
 
-    <div class="appcta">
-      <div class="ico" style="background:#4CAF50"><img src="../logos/mathokids.png" alt="Matho"></div>
-      <div class="txt"><b>Matho</b><p>L'exemple parfait d'un temps d'écran actif et sécurisé ! Conçue pour les enfants du primaire, cette application transforme les mathématiques et la logique en aventures de jeu passionnantes et stimulantes.</p></div>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.matho" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE SUR</span><span class="g-main">Google Play</span></span></a>
-    </div>
+    <h2>4. Le lien : les « 10 minutes » quotidiennes</h2>
+    <p>Les enfants qui se sentent proches de nous coopèrent davantage, et ils nous parlent quand ils ont un problème en ligne. Une habitude simple : 10 minutes par jour en tête-à-tête, où l'enfant choisit l'activité et votre téléphone est rangé. D'autres moments de lien :</p>
+    <ul>
+      <li>Posez de meilleures questions après l'école : « Qu'est-ce qui t'a fait rire aujourd'hui ? » plutôt que « Ça s'est bien passé ? ».</li>
+      <li>Des repas en famille sans écran, même quelques fois par semaine.</li>
+      <li>Les discussions du coucher — c'est souvent juste avant de dormir que l'enfant confie l'essentiel.</li>
+      <li>Jouez parfois à ses jeux avec lui, et laissez-le vous apprendre.</li>
+    </ul>
+    <div class="tipbox try"><b>À essayer cette semaine</b>Posez votre propre téléphone dans une autre pièce pendant les 30 premières minutes après le retour de l'école. Remarquez tout ce que votre enfant vous raconte de plus. Nos enfants apprennent leurs habitudes d'écran en observant les nôtres.</div>
 
-    <h2>4. Cultiver l'esprit de croissance chez votre enfant</h2>
-    <p>L'un des plus beaux cadeaux à offrir à votre enfant est l'esprit de croissance : la certitude que l'intelligence et le talent se développent par l'effort et la persévérance. Félicitez toujours le processus plutôt que le résultat. Au lieu de dire "Tu es si intelligent", préférez : "Je suis fier des efforts que tu as fournis pour résoudre ce défi complexe !"</p>
+    <h2>5. Élever un bon citoyen numérique</h2>
+    <p>Les règles ne sont que la moitié du travail. L'enfant a aussi besoin de compétences pour bien se comporter et rester en sécurité en ligne :</p>
+    <ul>
+      <li><strong>La gentillesse en ligne :</strong> « Le dirais-tu en face ? » est une règle simple pour les messages et commentaires.</li>
+      <li><strong>La vie privée :</strong> ne jamais partager son nom complet, son école, son adresse, ses photos ou ses mots de passe avec des inconnus.</li>
+      <li><strong>L'esprit critique :</strong> tout n'est pas vrai sur Internet. Demandez : « Qui a fait ça ? Pourquoi ? Comment le savent-ils ? »</li>
+      <li><strong>Publicités et achats intégrés :</strong> expliquez que certains jeux sont conçus pour faire regarder des pubs ou acheter — et que vous déciderez ensemble.</li>
+      <li><strong>La règle du « dis-le-moi » :</strong> si quelque chose en ligne lui fait peur, le rend triste ou mal à l'aise, il vous le dit — sans être puni pour l'avoir dit.</li>
+    </ul>
+    <div class="tipbox warn"><b>La règle la plus importante</b>Les enfants cachent leurs problèmes quand ils ont peur de perdre leur appareil. Promettez calmement : « Si quelque chose ne va pas en ligne, dis-le-moi. Tu ne seras pas puni pour me l'avoir dit. » Cette promesse le protège plus que n'importe quel filtre.</div>
 
-    <h2>5. Le parent parfait n'existe pas</h2>
-    <p>Ce qui compte le plus, c'est la régularité, l'écoute chaleureuse et la complicité. En mariant une éducation bienveillante à des technologies d'apprentissage saines, vous donnez à votre enfant toutes les clés pour devenir un adulte curieux, confiant et épanoui.</p>`,
+    <h2>6. Les accords familiaux sur les écrans selon l'âge</h2>
+    <p>Un accord familial écrit, rédigé ensemble, transforme les disputes quotidiennes en règles partagées. Adaptez-le à mesure que l'enfant grandit :</p>
+    <div class="tablewrap"><table>
+      <tr><th>Âge</th><th>Bons points d'accord</th></tr>
+      <tr><td>3–5 ans</td><td>Séances courtes avec un adulte à côté ; contenus calmes et lents ; pas d'écran aux repas ni au coucher</td></tr>
+      <tr><td>6–8 ans</td><td>Horaires et applications convenus ; appareils dans les pièces communes ; jeux éducatifs d'abord ; comptes créés par les parents</td></tr>
+      <tr><td>9–12 ans</td><td>L'enfant participe à l'écriture des règles ; devoirs avant les jeux ; règles de vie privée et de gentillesse ; téléphone qui charge hors de la chambre la nuit</td></tr>
+    </table></div>
+    <p>Pour les limites de temps et le choix des applications, consultez notre guide <a href="screen-time-safe-apps-for-kids.html">écrans et applications sûres</a>. Pour accompagner les émotions et le comportement, lisez <a href="developing-emotional-intelligence-in-kids.html">développer l'intelligence émotionnelle</a> et <a href="managing-stress-and-adhd-in-kids.html">aider l'enfant face au stress et à l'agitation</a>.</p>
+    ${cta('mathokids', 'Des jeux éducatifs structurés avec des progrès visibles — un choix d’écran rassurant pour les parents.')}
+
+    <p>Chaleur et limites, encouragement et honnêteté, le lien avant la correction : l'éducation positive n'exige pas des parents parfaits. Elle demande des parents qui reviennent, calmement, toujours vers la relation.</p>`,
 
     es: `
     <span class="tag tips">Crianza</span>
-    <h1>Crianza positiva en la era digital: cómo criar niños seguros y curiosos</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Actualizado en julio de 2026</span> · <span>8 min de lectura</span></div>
-    
-    <p class="lede">Descubre los pilares fundamentales de la crianza positiva. Aprende a nutrir la inteligencia emocional de tus hijos, a gestionar las pantallas de forma constructiva y a convertir la tecnología en un aliado educativo.</p>
+    <h1>Crianza positiva en la era digital: criar niños seguros, amables y curiosos</h1>
+    ${meta('es', 10)}
+    <p class="lede">La crianza positiva no es una crianza permisiva. Significa ser cálido y firme a la vez: normas claras, explicadas con calma, sobre una relación sólida. En un mundo de tabletas, videojuegos y chats de grupo, estos principios importan más que nunca — no para luchar contra la tecnología, sino para criar niños que sepan usarla con sensatez y que sigan acudiendo a nosotros cuando algo va mal.</p>
 
-    <h2>1. ¿Qué es la crianza positiva? Conexión sobre control</h2>
-    <p>La crianza positiva no es sinónimo de permisividad ni de autoritarismo rígido. Consiste en construir una relación de respeto mutuo y confianza profunda entre padres e hijos. Se basa en la idea de que los niños cooperan mejor cuando se sienten seguros, valorados y comprendidos.</p>
-    <p>Al educar desde la empatía y la conexión en lugar del miedo, enseñamos a los niños a regular sus propias emociones. En lugar de castigar el comportamiento, nos invita a preguntarnos: "¿Qué necesita expresar mi hijo y cómo puedo enseñarle a actuar mejor?"</p>
+    <div class="toc"><b>En esta guía</b><ol>
+      <li>Qué significa de verdad la crianza positiva</li>
+      <li>Ánimo que construye confianza</li>
+      <li>Disciplina tranquila y firme, sin gritos</li>
+      <li>Conexión: los «10 minutos» diarios</li>
+      <li>Criar a un buen ciudadano digital</li>
+      <li>Acuerdos familiares sobre tecnología por edad</li>
+    </ol></div>
 
-    <h2>2. Tecnología en el hogar: calidad por encima de cantidad</h2>
-    <p>Prohibir por completo las pantallas es poco realista y contraproducente en el siglo XXI. La tecnología forma parte del aprendizaje contemporáneo. El verdadero reto de los padres es pasar de medir las "horas frente a la pantalla" a evaluar la "calidad de la pantalla".</p>
-    <p>El consumo pasivo de videos daña la atención. Por el contrario, el tiempo de pantalla activo involucra la mente. Cuando los niños usan juegos educativos diseñados para razonar, resolver matemáticas o aprender idiomas, están entrenando su cerebro de forma óptima.</p>
+    <h2>1. Qué significa de verdad la crianza positiva</h2>
+    <p>Los investigadores suelen describir cuatro estilos de crianza. El que más se asocia con niños seguros y equilibrados es el estilo «democrático» — mucho afecto y mucha estructura:</p>
+    <div class="tablewrap"><table>
+      <tr><th>Estilo</th><th>Afecto</th><th>Normas</th><th>Lo que el niño suele aprender</th></tr>
+      <tr><td>Autoritario</td><td>Bajo</td><td>Altas</td><td>«Obedece o te castigo» — puede ocultar errores</td></tr>
+      <tr><td>Permisivo</td><td>Alto</td><td>Bajas</td><td>«Las normas no cuentan» — le cuesta aceptar límites</td></tr>
+      <tr><td>Negligente</td><td>Bajo</td><td>Bajas</td><td>«Nadie me mira» — se siente solo</td></tr>
+      <tr><td><strong>Positivo (democrático)</strong></td><td>Alto</td><td>Altas</td><td>«Me quieren y hay límites justos» — autodisciplina</td></tr>
+    </table></div>
+    <p>En la práctica: escuchas las emociones, explicas las razones de las normas, haces participar al niño en algunas decisiones — y te mantienes firme cuando importa.</p>
 
-    <h2>3. Pautas para un uso digital saludable</h2>
+    <h2>2. Ánimo que construye confianza</h2>
+    <p>Los niños necesitan ánimo, pero el tipo importa. Elogiar el esfuerzo y la estrategia («¡Probaste tres formas hasta que funcionó!») desarrolla la perseverancia. Elogiar solo el talento («Qué listo eres») puede hacer que teman fallar.</p>
+    <div class="tablewrap"><table>
+      <tr><th>En lugar de…</th><th>Prueba…</th></tr>
+      <tr><td>«¡Qué listo eres!»</td><td>«Seguiste aunque era difícil».</td></tr>
+      <tr><td>«Muy bien».</td><td>«Me fijé en que revisaste tus respuestas: es un trabajo cuidadoso».</td></tr>
+      <tr><td>«No llores, no es nada».</td><td>«Estás decepcionado. Lo entiendo. ¿Lo intentamos juntos otra vez?».</td></tr>
+      <tr><td>«¿Por qué no eres como tu hermana?»</td><td>«Mira cuánto has mejorado desde la semana pasada».</td></tr>
+    </table></div>
+    <p>Los errores forman parte del aprendizaje. Decir «Los errores hacen crecer el cerebro: ¿qué aprendemos de este?» convierte un mal momento en una lección. Más ideas en nuestra guía para <a href="overcoming-math-anxiety-in-kids.html">superar la ansiedad matemática</a>.</p>
+
+    <h2>3. Disciplina tranquila y firme, sin gritos</h2>
+    <p>Disciplinar es enseñar, no castigar. Estas herramientas funcionan a casi cualquier edad:</p>
     <ul>
-      <li><strong>Involúcrate y comparte:</strong> Juega 10 minutos al día junto a tu hijo en sus apps educativas. Pregúntale sobre sus logros para valorar su esfuerzo de forma activa.</li>
-      <li><strong>Zonas libres de tecnología:</strong> Mantén las comidas familiares y la hora previa a dormir totalmente libres de pantallas para proteger la comunicación y el descanso.</li>
-      <li><strong>Selecciona aplicaciones interactivas y seguras:</strong> Asegúrate de que las herramientas digitales estén diseñadas por educadores y no contengan publicidad molesta.</li>
+      <li><strong>Nombra la emoción, mantén el límite:</strong> «Estás enfadado porque se acabó el juego. Aun así, la tableta se apaga ahora».</li>
+      <li><strong>Ofrece opciones limitadas:</strong> «¿Te lavas los dientes antes o después del cuento?». Los niños colaboran más cuando tienen algo de control.</li>
+      <li><strong>Usa consecuencias naturales y lógicas:</strong> si se lanza un juguete, se queda en la estantería toda la tarde. La consecuencia está ligada a la conducta, no es un castigo al azar.</li>
+      <li><strong>Avisa antes de los cambios:</strong> «Cinco minutos más y paramos». Los finales bruscos causan la mayoría de las peleas por las pantallas.</li>
+      <li><strong>Repara después del conflicto:</strong> si pierdes los nervios, pide perdón. «Grité y lo siento. Volvamos a intentarlo». Así el niño aprende a reparar relaciones.</li>
     </ul>
+    <div class="tipbox"><b>Nota del profesor</b>En clase, los profesores más tranquilos rara vez son los más estrictos: son los más previsibles. Los niños se portan mejor cuando saben exactamente qué va a pasar. Pocas normas aplicadas siempre funcionan mejor que muchas normas aplicadas solo cuando el adulto está cansado.</div>
 
-    <div class="appcta">
-      <div class="ico" style="background:#4CAF50"><img src="../logos/mathokids.png" alt="Matho"></div>
-      <div class="txt"><b>Matho</b><p>¡El ejemplo perfecto de pantalla activa y segura! Diseñada para niños de escuela primaria con el objetivo de dominar el pensamiento matemático y lógico mediante emocionantes desafíos gamificados.</p></div>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.matho" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE EN</span><span class="g-main">Google Play</span></span></a>
-    </div>
+    <h2>4. Conexión: los «10 minutos» diarios</h2>
+    <p>Los niños que se sienten conectados colaboran más, y nos cuentan cuándo tienen un problema en internet. Un hábito sencillo: 10 minutos al día a solas, en los que el niño elige la actividad y tu móvil está guardado. Otros momentos de conexión:</p>
+    <ul>
+      <li>Haz mejores preguntas después del colegio: «¿Qué te ha hecho reír hoy?» en lugar de «¿Qué tal el cole?».</li>
+      <li>Comidas en familia sin pantallas, aunque sea unas veces por semana.</li>
+      <li>Charlas antes de dormir: los niños suelen contar lo más importante justo antes de dormirse.</li>
+      <li>Juega de vez en cuando a sus juegos y deja que te enseñe.</li>
+    </ul>
+    <div class="tipbox try"><b>Pruébalo esta semana</b>Deja tu propio móvil en otra habitación durante los primeros 30 minutos después de que tu hijo vuelva del colegio. Fíjate en cuánto más te cuenta. Nuestros hijos aprenden sus hábitos de pantalla observando los nuestros.</div>
 
-    <h2>4. Cultivar una mentalidad de crecimiento</h2>
-    <p>La mentalidad de crecimiento es la creencia de que las habilidades se desarrollan con esfuerzo. Felicita el proceso y no solo el talento innato de tu hijo. En lugar de un simple "Eres un genio", dile: "¡Me encanta el empeño y el esfuerzo que pusiste para resolver ese problema matemático!"</p>
+    <h2>5. Criar a un buen ciudadano digital</h2>
+    <p>Las normas son solo la mitad del trabajo. Los niños también necesitan habilidades para comportarse bien y estar seguros en internet:</p>
+    <ul>
+      <li><strong>Amabilidad en línea:</strong> «¿Se lo dirías a la cara?» es una regla sencilla para mensajes y comentarios.</li>
+      <li><strong>Privacidad:</strong> nunca compartir el nombre completo, el colegio, la dirección, fotos ni contraseñas con desconocidos.</li>
+      <li><strong>Pensamiento crítico:</strong> no todo lo que hay en internet es verdad. Pregunta: «¿Quién hizo esto? ¿Por qué? ¿Cómo lo saben?».</li>
+      <li><strong>Anuncios y compras en la app:</strong> explica que algunos juegos están diseñados para que veas anuncios o compres cosas — y que lo decidiréis juntos.</li>
+      <li><strong>La regla de «cuéntamelo»:</strong> si algo en internet le da miedo, le pone triste o le incomoda, te lo cuenta — y no le castigarás por contarlo.</li>
+    </ul>
+    <div class="tipbox warn"><b>La norma más importante</b>Los niños ocultan los problemas cuando temen perder su dispositivo. Promete con calma: «Si algo va mal en internet, cuéntamelo. No te meterás en líos por decírmelo». Esta promesa le protege más que cualquier filtro.</div>
 
-    <h2>5. El camino hacia una crianza feliz</h2>
-    <p>No existen los padres perfectos. Lo que verdaderamente importa es la consistencia, el afecto y el aprendizaje mutuo. Al combinar el respeto afectivo con herramientas de aprendizaje digital de alta calidad, estás preparando a tu hijo para un futuro brillante y lleno de curiosidad.</p>`,
+    <h2>6. Acuerdos familiares sobre tecnología por edad</h2>
+    <p>Un acuerdo familiar escrito, hecho entre todos, convierte las discusiones diarias en normas compartidas. Adáptalo a medida que crecen:</p>
+    <div class="tablewrap"><table>
+      <tr><th>Edad</th><th>Buenos puntos de acuerdo</th></tr>
+      <tr><td>3–5 años</td><td>Sesiones cortas con un adulto cerca; contenidos tranquilos y lentos; nada de pantallas en comidas ni al acostarse</td></tr>
+      <tr><td>6–8 años</td><td>Horarios y apps acordados; dispositivos en zonas comunes; primero juegos educativos; los padres crean las cuentas</td></tr>
+      <tr><td>9–12 años</td><td>El niño ayuda a escribir las normas; deberes antes que juegos; normas de privacidad y amabilidad; el móvil se carga fuera del dormitorio por la noche</td></tr>
+    </table></div>
+    <p>Para límites de tiempo y elección de apps, consulta nuestra guía de <a href="screen-time-safe-apps-for-kids.html">pantallas y apps seguras</a>. Para acompañar emociones y conducta, lee <a href="developing-emotional-intelligence-in-kids.html">desarrollar la inteligencia emocional</a> y <a href="managing-stress-and-adhd-in-kids.html">ayudar al niño con el estrés y la inquietud</a>.</p>
+    ${cta('mathokids', 'Juegos educativos estructurados con progreso visible: una opción de pantalla tranquila para los padres.')}
+
+    <p>Afecto y límites, ánimo y honestidad, conexión antes que corrección: la crianza positiva no necesita padres perfectos. Necesita padres que vuelvan, con calma, una y otra vez a la relación.</p>`,
 
     ar: `
     <span class="tag tips">تربية</span>
-    <h1>التربية الإيجابية في العصر الرقمي: دليل شامل لبناء شخصية طفلك وتنمية فضوله</h1>
-    <div class="meta"><span class="who"><span class="av">أ</span> Kids Learning Hub</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 8 دقائق</span></div>
-    
-    <p class="lede">اكتشف الركائز الأساسية للتربية الإيجابية الحديثة. تعلم كيف تنمي الذكاء العاطفي لطفلك، تدير وقت الشاشات بذكاء، وتحول التفاعل الرقمي اليومي إلى فرص ذهبية لبناء عقل مفكر ومحب للتعلم.</p>
+    <h1>التربية الإيجابية في العصر الرقمي: كيف نربّي أطفالًا واثقين ولطفاء وفضوليين</h1>
+    ${meta('ar', 10)}
+    <p class="lede">التربية الإيجابية ليست تساهلًا. إنها الجمع بين الدفء والحزم في الوقت نفسه: قواعد واضحة تُشرح بهدوء، وتقوم على علاقة متينة. وفي عالم مليء باللوحات الإلكترونية والألعاب ومجموعات الدردشة، تزداد أهمية هذه المبادئ — لا لمحاربة التكنولوجيا، بل لتربية أطفال يستعملونها بحكمة، ويظلّون يلجؤون إلينا حين يحدث خطأ ما.</p>
 
-    <h2>1. ما هي التربية الإيجابية؟ بناء الجسور لا جدران السيطرة</h2>
-    <p>التربية الإيجابية ليست تربية متساهلة تترك الحبل على الغارب، وليست تسلطاً صارماً يقمع شخصية الطفل. بل هي نهج متوازن يركز على بناء علاقة قوية قائمة على الاحترام المتبادل والتفاهم العميق بين الوالدين والطفل. تنطلق هذه الفلسفة من حقيقة أن الأطفال يرغبون فطرياً في التصرف بشكل جيد عندما يشعرون بالأمان والتقدير والمحبة.</p>
-    <p>عندما نعتمد على "التواصل والاحتواء" بدلاً من إثارة الخوف أو التهديد، فإننا نغرس في طفلنا مهارة الرقابة الذاتية وضبط النفس. بدلاً من التساؤل الغاضب: "كيف أعاقب طفلي على هذا التصرف؟"، تشجعنا التربية الإيجابية على التفكير الهادئ: "ما الذي يحاول طفلي التعبير عنه من خلال سلوكه، وكيف يمكنني توجيهه ليتعلم الصواب؟"</p>
+    <div class="toc"><b>في هذا الدليل</b><ol>
+      <li>ما المعنى الحقيقي للتربية الإيجابية</li>
+      <li>تشجيع يبني الثقة</li>
+      <li>انضباط هادئ وحازم دون صراخ</li>
+      <li>التواصل: «الدقائق العشر» اليومية</li>
+      <li>تربية مواطن رقمي جيّد</li>
+      <li>اتفاقات عائلية حول التكنولوجيا حسب العمر</li>
+    </ol></div>
 
-    <h2>2. التعامل مع الشاشات في المنزل: جودة المحتوى تفوق وقت الاستخدام</h2>
-    <p>في عصرنا الحالي، يعد المنع التام للشاشات أمراً غير واقعي بل قد يسبب فجوة معرفية للطفل؛ فالتكنولوجيا جزء أساسي من التعليم الحديث والتواصل المستقبلي. التحول الجوهري الذي يجب أن يتبعه الآباء هو الانتقال من هوس حساب "عدد ساعات الشاشة" إلى التركيز على "جودة محتوى الشاشة".</p>
-    <p>وقت الشاشة السلبي (مثل التصفح اللانهائي لمقاطع الفيديو القصيرة) يؤدي لتشتت الانتباه وضعف الصبر. في المقابل، وقت الشاشة الإيجابي والتفاعلي ينشط العقل؛ فعندما يلعب الأطفال ألعاباً تعليمية تفاعلية، أو يحلون ألغازاً رياضية، أو يتعلمون لغات جديدة من خلال اللعب، فإن عقولهم تبني مسارات عصبية جديدة كلياً تعزز من ذكائهم.</p>
+    <h2>1. ما المعنى الحقيقي للتربية الإيجابية</h2>
+    <p>يصف الباحثون غالبًا أربعة أساليب تربوية. وأكثرها ارتباطًا بأطفال واثقين ومتوازنين هو الأسلوب «الحازم الدافئ» — دفء كبير وتنظيم واضح:</p>
+    <div class="tablewrap"><table>
+      <tr><th>الأسلوب</th><th>الدفء</th><th>القواعد</th><th>ما يتعلّمه الطفل غالبًا</th></tr>
+      <tr><td>متسلّط</td><td>ضعيف</td><td>صارمة</td><td>«أطِع وإلا عوقبت» — قد يخفي أخطاءه</td></tr>
+      <tr><td>متساهل</td><td>قويّ</td><td>ضعيفة</td><td>«القواعد لا تهمّ فعلًا» — يصعب عليه قبول الحدود</td></tr>
+      <tr><td>مُهمِل</td><td>ضعيف</td><td>ضعيفة</td><td>«لا أحد ينتبه إليّ» — يشعر بالوحدة</td></tr>
+      <tr><td><strong>إيجابي (حازم دافئ)</strong></td><td>قويّ</td><td>واضحة</td><td>«أنا محبوب، وهناك حدود عادلة» — انضباط ذاتي</td></tr>
+    </table></div>
+    <p>عمليًا: تستمع إلى المشاعر، وتشرح أسباب القواعد، وتُشرك الطفل في بعض القرارات — وتبقى ثابتًا حين يكون الأمر مهمًّا.</p>
 
-    <h2>3. خطوات عملية لتحويل الأجهزة الذكية إلى أدوات تعلم نشطة</h2>
-    <p>لتحقيق أقصى استفادة من التكنولوجيا في منزلك دون أضرار جانبية، اتبع هذه القواعد البسيطة:</p>
+    <h2>2. تشجيع يبني الثقة</h2>
+    <p>يحتاج الأطفال إلى التشجيع، لكن نوعه مهمّ. فمدح الجهد والطريقة («جرّبت ثلاث طرق حتى نجحت!») ينمّي المثابرة، أما مدح الذكاء وحده («أنت ذكيّ جدًّا») فقد يجعل الطفل يخاف من الفشل.</p>
+    <div class="tablewrap"><table>
+      <tr><th>بدلًا من…</th><th>جرّب…</th></tr>
+      <tr><td>«أنت ذكيّ جدًّا!»</td><td>«واصلت حتى حين كان الأمر صعبًا».</td></tr>
+      <tr><td>«أحسنت».</td><td>«لاحظت أنك راجعت أجوبتك — هذا عمل متقن».</td></tr>
+      <tr><td>«لا تبكِ، ليس بالأمر المهمّ».</td><td>«أنت محبط، وهذا مفهوم. هل نحاول من جديد معًا؟».</td></tr>
+      <tr><td>«لماذا لست مثل أختك؟»</td><td>«انظر كم تحسّنت منذ الأسبوع الماضي».</td></tr>
+    </table></div>
+    <p>الأخطاء جزء من التعلّم. وقول «الأخطاء تجعل دماغنا ينمو — ماذا نتعلّم من هذا الخطأ؟» يحوّل لحظة سيئة إلى درس. ولمزيد من الأفكار اقرأ دليلنا عن <a href="overcoming-math-anxiety-in-kids.html">التغلّب على قلق الرياضيات</a>.</p>
+
+    <h2>3. انضباط هادئ وحازم دون صراخ</h2>
+    <p>الانضباط تعليم وليس عقابًا. وهذه الأدوات تنفع في معظم الأعمار:</p>
     <ul>
-      <li><strong>اللعب والمشاركة الثنائية:</strong> خصص 10 دقائق يومياً لتجلس بجانب طفلك أثناء استخدامه لتطبيق تعليمي مفيد، وتفاعل معه حول التحديات التي يحلها لتبين له أنك تقدر مساعيه.</li>
-      <li><strong>تحديد مساحات خالية من التكنولوجيا:</strong> امنع الشاشات تماماً أثناء تناول الوجبات العائلية وقبل موعد النوم بساعة واحدة لضمان تواصل اجتماعي دافئ ونوم عميق وصحي.</li>
-      <li><strong>اختيار تطبيقات هادفة وخالية من الإعلانات:</strong> احرص على تزويد أجهزة طفلك بتطبيقات صممت بعناية فائقة بواسطة خبراء في التعليم والتربية.</li>
+      <li><strong>سمِّ الشعور وتمسّك بالحدّ:</strong> «أنت غاضب لأن اللعبة انتهت. ومع ذلك تُطفأ اللوحة الآن».</li>
+      <li><strong>اعرض خيارات محدودة:</strong> «هل تريد تنظيف أسنانك قبل القصة أم بعدها؟». فالطفل يتعاون أكثر حين يملك شيئًا من التحكّم.</li>
+      <li><strong>استعمل العواقب الطبيعية والمنطقية:</strong> إن رُميت لعبة، توضع على الرفّ بقية المساء. فالعاقبة مرتبطة بالسلوك، لا عقاب عشوائي.</li>
+      <li><strong>نبّه قبل الانتقال:</strong> «خمس دقائق أخرى ثم نتوقّف». فالتوقّف المفاجئ سبب معظم الخلافات حول الشاشات.</li>
+      <li><strong>أصلِح بعد الخلاف:</strong> إن فقدت أعصابك فاعتذر: «صرخت وأنا آسف، لنحاول من جديد». وهكذا يتعلّم الطفل كيف يُصلح العلاقات.</li>
     </ul>
+    <div class="tipbox"><b>ملاحظة الأستاذ</b>في القسم، نادرًا ما يكون أهدأ الأساتذة أشدّهم صرامة، بل أكثرهم وضوحًا وثباتًا. فالأطفال يتصرّفون أفضل حين يعرفون بالضبط ما سيحدث. وقواعد قليلة تُطبَّق كل مرة أنفع من قواعد كثيرة تُطبَّق فقط حين يكون الكبير متعبًا.</div>
 
-    <div class="appcta">
-      <div class="ico" style="background:#4CAF50"><img src="../logos/mathokids.png" alt="Matho"></div>
-      <div class="txt"><b>Matho</b><p>النموذج المثالي لوقت الشاشة المفيد والآمن! تطبيق صمم خصيصاً لمساعدة أطفال المرحلة الابتدائية على إتقان التفكير الرياضي والمنطقي عبر تحديات وألعاب تفاعلية ممتعة تأسر العقول وتنمي الذكاء.</p></div>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.matho" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">احصل عليه من</span><span class="g-main">Google Play</span></span></a>
-    </div>
+    <h2>4. التواصل: «الدقائق العشر» اليومية</h2>
+    <p>الأطفال الذين يشعرون بالقرب منّا يتعاونون أكثر، ويخبروننا حين تواجههم مشكلة على الإنترنت. عادة بسيطة: 10 دقائق يوميًا على انفراد، يختار فيها الطفل النشاط، وهاتفك بعيد. ولحظات تواصل أخرى:</p>
+    <ul>
+      <li>اطرح أسئلة أفضل بعد المدرسة: «ما الذي أضحكك اليوم؟» بدل «كيف كانت المدرسة؟».</li>
+      <li>وجبات عائلية دون شاشات، ولو بضع مرات في الأسبوع.</li>
+      <li>أحاديث قبل النوم — فالأطفال غالبًا ما يبوحون بأهمّ الأشياء قبيل النوم.</li>
+      <li>العب ألعابه معه أحيانًا، ودعه يعلّمك.</li>
+    </ul>
+    <div class="tipbox try"><b>جرّب هذا الأسبوع</b>ضع هاتفك في غرفة أخرى خلال أول 30 دقيقة بعد عودة طفلك من المدرسة. ولاحظ كم سيحكي لك أكثر. فأطفالنا يتعلّمون عاداتهم مع الشاشات بمراقبة عاداتنا.</div>
 
-    <h2>4. غرس "عقلية النمو" في طفلك لمواجهة صعوبات الحياة</h2>
-    <p>من أعظم الهدايا التربوية التي تقدمها لطفلك هي زرع "عقلية النمو" (Growth Mindset) لديه، وهي الإيمان الصادق بأن الذكاء والمهارات ليسا صفتين ثابتتين بل هما صفتان تتطوران بالتدريب والمحاولة الجادة والاستمرار. عندما تثني على طفلك، ركز على جهده ومحاولته لا على ذكائه الفطري؛ فبدلاً من قول "أنت عبقري بالفطرة"، قل له: "أنا فخور جداً بتركيزك ومحاولاتك المستمرة لحل هذا اللغز الصعب!"</p>
-    <p>هذا التغيير البسيط في أسلوب المديح يبني طفلاً لا يخاف الفشل، بل يرى في الخطأ خطوة طبيعية وممتعة على طريق التعلم واكتساب الخبرة.</p>
+    <h2>5. تربية مواطن رقمي جيّد</h2>
+    <p>القواعد نصف المهمّة فقط. فالطفل يحتاج أيضًا إلى مهارات ليتصرّف جيّدًا ويبقى آمنًا على الإنترنت:</p>
+    <ul>
+      <li><strong>اللطف على الإنترنت:</strong> «هل كنت ستقولها في وجهه؟» قاعدة بسيطة للرسائل والتعليقات.</li>
+      <li><strong>الخصوصية:</strong> لا نشارك أبدًا الاسم الكامل أو المدرسة أو العنوان أو الصور أو كلمات السرّ مع الغرباء.</li>
+      <li><strong>التفكير النقدي:</strong> ليس كل ما على الإنترنت صحيحًا. اسأل: «من صنع هذا؟ ولماذا؟ وكيف يعرفون؟».</li>
+      <li><strong>الإعلانات والمشتريات داخل التطبيقات:</strong> اشرح أن بعض الألعاب مصمّمة لتجعلك تشاهد الإعلانات أو تشتري، وأنكما ستقرّران معًا.</li>
+      <li><strong>قاعدة «أخبرني»:</strong> إن أخافه شيء على الإنترنت أو أحزنه أو أزعجه، يخبرك — ولن يُعاقَب لأنه أخبرك.</li>
+    </ul>
+    <div class="tipbox warn"><b>القاعدة الأهمّ</b>يُخفي الأطفال مشاكلهم حين يخافون أن يُحرموا من أجهزتهم. فَعِده بهدوء: «إن حدث شيء سيّئ على الإنترنت فأخبرني، ولن تقع في مشكلة لأنك أخبرتني». هذا الوعد يحميه أكثر من أيّ برنامج مراقبة.</div>
 
-    <h2>5. رسالة إلى كل مربٍّ</h2>
-    <p>تذكر دائماً أنه لا وجود للوالد المثالي أو المربي الخالي من الأخطاء؛ فالأهم هو المحبة، والاتساق، والرغبة الصادقة في التطور والتعلم مع أطفالنا. من خلال دمج التوجيه التربوي الدافئ مع أدوات التعلم الرقمية عالية الجودة والمصممة بحب، فإنك تمهد لطفلك طريقاً مشرقاً ليصبح متعلماً واثقاً، مبدعاً، ومنفتحاً على العالم طوال حياته.</p>`,
+    <h2>6. اتفاقات عائلية حول التكنولوجيا حسب العمر</h2>
+    <p>اتفاق عائلي مكتوب، تصوغونه معًا، يحوّل الخلافات اليومية إلى قواعد مشتركة. عدّلوه كلما كبر الطفل:</p>
+    <div class="tablewrap"><table>
+      <tr><th>العمر</th><th>بنود اتفاق جيّدة</th></tr>
+      <tr><td>3–5 سنوات</td><td>جلسات قصيرة بحضور شخص كبير؛ محتوى هادئ وبطيء؛ لا شاشات أثناء الوجبات ولا عند النوم</td></tr>
+      <tr><td>6–8 سنوات</td><td>أوقات وتطبيقات متّفق عليها؛ الأجهزة في الغرف المشتركة؛ الألعاب التعليمية أولًا؛ الوالدان ينشئان الحسابات</td></tr>
+      <tr><td>9–12 سنة</td><td>الطفل يشارك في كتابة القواعد؛ الواجبات قبل الألعاب؛ قواعد الخصوصية واللطف؛ يُشحن الهاتف خارج غرفة النوم ليلًا</td></tr>
+    </table></div>
+    <p>لتحديد الوقت واختيار التطبيقات، راجع دليلنا عن <a href="screen-time-safe-apps-for-kids.html">وقت الشاشة والتطبيقات الآمنة</a>. ولدعم المشاعر والسلوك، اقرأ <a href="developing-emotional-intelligence-in-kids.html">تنمية الذكاء العاطفي</a> و<a href="managing-stress-and-adhd-in-kids.html">مساعدة الطفل على التوتّر وفرط الحركة</a>.</p>
+    ${cta('mathokids', 'ألعاب تعليمية منظّمة وتقدّم واضح — خيار شاشة يطمئنّ إليه الآباء.')}
+
+    <p>الدفء والحدود، والتشجيع والصدق، والتواصل قبل التصحيح: التربية الإيجابية لا تحتاج إلى آباء مثاليين، بل إلى آباء يعودون دائمًا، بهدوء، إلى العلاقة.</p>`,
   },
 
-  /* الأسئلة الشائعة */
   faq: {
-    en: [
-      ['How does positive discipline handle misbehavior?', 'It focuses on teaching and problem-solving. Instead of punishing, parents set firm boundaries and help children understand the natural consequences of their actions.'],
-      ['What are the signs of bad screen time?', 'Signs include extreme irritability when screens are removed, isolation, passive scrolling, and a lack of interest in physical play.'],
-      ['Is Matho safe for independent play?', 'Absolutely! Matho is fully ad-free, designed under strict privacy guidelines, and encourages independent logical thinking in a completely safe digital environment.']],
-    fr: [
-      ['Comment la discipline positive gère-t-elle les bêtises ?', 'Elle se concentre sur la recherche de solutions. Au lieu de punir, les parents posent des limites claires et guident l\'enfant vers la réparation de son erreur.'],
-      ['Quels sont les signes d\'un mauvais temps d\'écran ?', 'L\'irritabilité excessive à l\'arrêt des écrans, le repli sur soi, l\'inactivité physique et le défilement passif de vidéos.'],
-      ['L\'application Matho est-elle sûre pour un jeu en autonomie ?', 'Tout à fait. Matho ne contient aucune publicité, respecte scrupuleusement la vie privée et est conçue pour stimuler la réflexion autonome en toute sécurité.']],
-    es: [
-      ['¿Cómo maneja la disciplina positiva el mal comportamiento?', 'Se enfoca en enseñar y resolver problemas. En lugar de castigar, los padres establecen límites firmes y ayudan a comprender las consecuencias de sus actos.'],
-      ['¿Cuáles son las señales de un mal uso de pantallas?', 'Irritabilidad extrema al apagar el dispositivo, aislamiento, falta de interés por el juego físico y consumo puramente pasivo.'],
-      ['¿Es Matho segura para que los niños jueguen solos?', '¡Sí, totalmente! Matho no tiene anuncios, respeta la privacidad de los niños y fomenta el pensamiento lógico autónomo en un entorno seguro.']],
-    ar: [
-      ['كيف تتعامل التربية الإيجابية مع السلوك الخاطئ للطفل؟', 'تركز على التعليم وحل المشكلات بدلاً من العقاب الجسدي أو النفسي؛ حيث يضع الوالدان حدوداً حازمة مع مساعدة الطفل على فهم العواقب الطبيعية لتصرفاته وإصلاح خطئه.'],
-      ['ما هي علامات الاستخدام السلبي أو الخاطئ للشاشات؟', 'تشمل الغضب الشديد والعدوانية عند سحب الجهاز، العزلة الاجتماعية، الكسل البدني، وتفضيل التصفح السلبي للفيديوهات على حساب الألعاب التفاعلية.'],
-      ['هل تطبيق Matho آمن ليستعمله الطفل بمفرده في البيت؟', 'بكل تأكيد! تطبيق Matho خالي تماماً من الإعلانات، ويحترم الخصوصية بشكل صارم، ومصمم لتنمية التفكير المنطقي المستقل في بيئة رقمية آمنة ومحمية بالكامل.']],
+    en: [['Is positive parenting the same as being permissive?', 'No. Positive parenting combines warmth with clear, consistent limits. Parents listen to feelings and explain rules, but still hold the line on what matters.'],
+         ['How can I discipline my child without shouting?', 'Name the feeling and hold the limit, offer limited choices, warn before transitions, use logical consequences linked to the behaviour, and apologise and repair if you lose your temper.'],
+         ['How do I keep my child safe online?', 'Teach privacy and kindness rules, talk about ads and in-app purchases, keep devices in shared rooms for younger children, and promise they will not be punished for telling you about a problem online.']],
+    fr: [['L’éducation positive, est-ce du laxisme ?', 'Non. L’éducation positive associe la chaleur à des limites claires et constantes. Les parents écoutent les émotions et expliquent les règles, mais tiennent bon sur l’essentiel.'],
+         ['Comment discipliner mon enfant sans crier ?', 'Nommez l’émotion et tenez la limite, proposez des choix limités, prévenez avant les transitions, utilisez des conséquences logiques liées au comportement, et excusez-vous pour réparer si vous vous êtes énervé.'],
+         ['Comment protéger mon enfant en ligne ?', 'Enseignez des règles de vie privée et de gentillesse, parlez des publicités et des achats intégrés, gardez les appareils dans les pièces communes pour les plus jeunes et promettez qu’il ne sera pas puni s’il vous parle d’un problème.']],
+    es: [['¿La crianza positiva es lo mismo que ser permisivo?', 'No. La crianza positiva combina el afecto con límites claros y constantes. Los padres escuchan las emociones y explican las normas, pero se mantienen firmes en lo importante.'],
+         ['¿Cómo disciplinar a mi hijo sin gritar?', 'Nombra la emoción y mantén el límite, ofrece opciones limitadas, avisa antes de los cambios, usa consecuencias lógicas ligadas a la conducta y pide perdón para reparar si pierdes los nervios.'],
+         ['¿Cómo proteger a mi hijo en internet?', 'Enseña normas de privacidad y amabilidad, habla de anuncios y compras en las apps, mantén los dispositivos en zonas comunes con los pequeños y promete que no le castigarás por contarte un problema.']],
+    ar: [['هل التربية الإيجابية هي التساهل؟', 'لا. التربية الإيجابية تجمع بين الدفء وحدود واضحة وثابتة. فالوالدان يستمعان إلى المشاعر ويشرحان القواعد، لكنهما يبقيان ثابتين في ما هو مهمّ.'],
+         ['كيف أؤدّب طفلي دون صراخ؟', 'سمِّ الشعور وتمسّك بالحدّ، واعرض خيارات محدودة، ونبّه قبل الانتقال، واستعمل عواقب منطقية مرتبطة بالسلوك، واعتذر لإصلاح العلاقة إن فقدت أعصابك.'],
+         ['كيف أحمي طفلي على الإنترنت؟', 'علّمه قواعد الخصوصية واللطف، وتحدّث عن الإعلانات والمشتريات داخل التطبيقات، وأبقِ الأجهزة في الغرف المشتركة للصغار، وعِده بأنه لن يُعاقَب إن أخبرك بمشكلة.']],
   },
 };

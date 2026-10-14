@@ -1,143 +1,305 @@
+/* Deepened 2026-10 (was ~510 words). Angle for parents: which game elements help
+   learning, when rewards backfire, and how to gamify homework at home. */
+const { cta, meta } = require('./_cta.js');
+
 module.exports = {
   slug: 'gamification-in-education-secrets',
-  date: '2026-07-24',        // تاريخ النشر الأحدث
-  minutes: 10,               // مقال طويل جداً وعميق (قراءة 10 دقائق)
+  date: '2026-07-24',
+  minutes: 10,
 
-  /* SEO <title> */
   dataTitle: {
-    en: 'Gamification in Education: How Play-Based Pedagogy Rewires the Brain | Kids Learning Hub',
-    fr: 'Le ludification dans l’éducation : comment le jeu transforme le cerveau | Kids Learning Hub',
-    es: 'Gamificación en la educación: cómo el juego transforma la mente | Kids Learning Hub',
-    ar: 'التلعيب والتعلم القائم على اللعب: كيف تعيد البيداغوجيا الحديثة صياغة عقول الأطفال؟ | Kids Learning Hub',
+    en: 'Gamification for Kids: What Works, What Backfires, and How to Use It at Home | Kids Learning Hub',
+    fr: 'La ludification pour les enfants : ce qui marche, ce qui échoue | Kids Learning Hub',
+    es: 'Gamificación para niños: qué funciona, qué falla y cómo usarla en casa | Kids Learning Hub',
+    ar: 'التلعيب في تعلّم الأطفال: ما الذي ينجح وما الذي يضرّ وكيف نطبّقه | Kids Learning Hub',
   },
 
-  /* محتوى المقال بالأربع لغات */
   body: {
     en: `
     <span class="tag tips">Parenting</span>
-    <h1>Gamification in Education: How Play-Based Pedagogy Rewires the Brain</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Updated July 2026</span> · <span>10 min read</span></div>
-    
-    <p class="lede">Traditional learning models are facing a silent crisis: dropping engagement and rising academic stress. Discover the cognitive neuroscience behind play-based pedagogy, and why gamification is no longer a luxury, but the ultimate future of early childhood education.</p>
+    <h1>Gamification in Learning: What Really Works — and What Backfires</h1>
+    ${meta('en', 10)}
+    <p class="lede">Children will play the same level twenty times to beat their score, yet groan at ten minutes of spelling. Gamification tries to borrow what makes games so engaging and bring it into learning. Done well, it builds motivation, persistence and confidence. Done badly, it turns learning into a hunt for points and stickers. Here is how to tell the difference, and how to use the good parts at home.</p>
 
-    <h2>1. The Neurobiology of Play: Why the Brain Craves Challenges</h2>
-    <p>For decades, traditional teaching viewed play as the opposite of serious study. Modern neuroscience has completely overturned this assumption. When a child is actively engaged in a well-designed educational game, their brain releases Dopamine—the neurotransmitter responsible for motivation, memory consolidation, and deep focus.</p>
-    <p>In a rigid environment, mistakes are penalized with bad grades, which triggers cortisol (the stress hormone) and shuts down working memory. In a gamified framework, mistakes are treated merely as a regular part of the gameplay cycle. This single psychological shift fosters a resilient mind that loves problem-solving.</p>
+    <div class="toc"><b>In this guide</b><ol>
+      <li>What gamification is (and isn't)</li>
+      <li>Six game elements that genuinely help learning</li>
+      <li>When rewards backfire</li>
+      <li>Gamifying homework and routines at home</li>
+      <li>How to judge a "gamified" learning app</li>
+    </ol></div>
 
-    <h2>2. Abstract Overload vs. Immediate Visual Feedback</h2>
-    <p>One of the biggest obstacles in primary education is "abstract overload." Introducing complex mathematical operations or coding logic purely via text can feel like reading a foreign language to an 8-year-old child.</p>
-    <p>Gamification solves this by providing immediate, interactive visual feedback. When an abstract concept is tied to a moving object, a visual puzzle, or a leveling-up mechanic, the child instantly bridges the gap between theoretical rules and concrete logical realities.</p>
+    <h2>1. What gamification is (and isn't)</h2>
+    <p>Gamification means using elements of games — goals, levels, feedback, challenges, progress bars — in an activity that is not itself a game. It is different from simply playing educational games, and different again from giving a sweet for every finished worksheet. The best gamification makes the <em>learning itself</em> feel like a game; the worst just attaches prizes to tasks children still dislike.</p>
 
-    <h2>3. The Secret Pillars of Effective Play-Based Teaching</h2>
+    <h2>2. Six game elements that genuinely help learning</h2>
+    <div class="tablewrap"><table>
+      <tr><th>Element</th><th>Why it works</th><th>Learning example</th></tr>
+      <tr><td>Clear goal</td><td>Children know exactly what success looks like</td><td>"Answer 10 times-table questions"</td></tr>
+      <tr><td>Immediate feedback</td><td>Mistakes are corrected while the thinking is still fresh</td><td>An answer turns green or red straight away</td></tr>
+      <tr><td>Visible progress</td><td>Seeing improvement is motivating in itself</td><td>A progress bar, a chart of weekly scores</td></tr>
+      <tr><td>Just-right challenge</td><td>Too easy is boring, too hard is discouraging</td><td>Levels that unlock as skills improve</td></tr>
+      <tr><td>Safe failure</td><td>Trying again costs nothing, so children dare to try</td><td>"Try again" instead of a lost life</td></tr>
+      <tr><td>Choice</td><td>A sense of control increases effort</td><td>Choosing which topic or level to practise</td></tr>
+    </table></div>
+    <p>Notice that none of these require prizes. They are about making progress visible and making effort feel worthwhile.</p>
+    <div class="tipbox"><b>Teacher's note</b>The most motivating "reward" in a classroom is often simply visible progress: a child who sees that they answered 6 questions last week and 9 this week needs no sticker. Make improvement visible and much of the motivation takes care of itself.</div>
+
+    <h2>3. When rewards backfire</h2>
+    <p>Psychology research has repeatedly found that giving rewards for activities children already enjoy can reduce their interest once the rewards stop. Rewards are not bad, but they need care:</p>
     <ul>
-      <li><strong>The Safe Failure Cycle:</strong> Ensure that the educational environment allows the child to restart a challenge instantly. This removes test anxiety and encourages experimentation.</li>
-      <li><strong>Progressive Scaffolding:</strong> The difficulty curve must adapt dynamically. If a challenge is too easy, the child gets bored; if it is too hard, they experience frustration. The sweet spot keeps them in the psychological state of "Flow."</li>
-      <li><strong>Intrinsically Rewarding Goals:</strong> Move away from hollow competition. Instead, reward steady personal improvement with visual milestones, badges, and positive audio cues.</li>
+      <li><strong>Reward effort and progress, not just results.</strong> "You practised five days in a row" builds the right habit.</li>
+      <li><strong>Prefer unexpected recognition</strong> to "if you do this, you get that" deals.</li>
+      <li><strong>Keep rewards small and symbolic:</strong> a star on a chart, choosing the next game, a special badge.</li>
+      <li><strong>Avoid paying for learning:</strong> money or big gifts for grades can shift attention from learning to the prize.</li>
+      <li><strong>Avoid public rankings</strong> for young children: leaderboards motivate the top few and discourage everyone else.</li>
+    </ul>
+    <div class="tipbox warn"><b>Watch for this</b>If your child asks "What do I get?" before every task, rewards have become the goal. Gradually move back to praise, progress charts and the satisfaction of improvement.</div>
+
+    <h2>4. Gamifying homework and routines at home</h2>
+    <ul>
+      <li><strong>The streak calendar:</strong> a sticker for each day with 10 minutes of reading or maths practice. Children love not breaking the chain.</li>
+      <li><strong>Levels:</strong> times tables become "Level 1: ×2, ×5, ×10", "Level 2: ×3, ×4"… A child who knows they are on level 3 of 6 sees the path ahead.</li>
+      <li><strong>Quests:</strong> turn a list of tasks into a mission: "Quest: pack your bag, read 10 pages, prepare clothes. Reward: choose tonight's story."</li>
+      <li><strong>Boss level:</strong> before a test, a final "boss challenge" of mixed questions to show everything they learned.</li>
+      <li><strong>Beat your own record:</strong> how many correct answers in two minutes? Compare only with your child's previous score, never with siblings.</li>
+      <li><strong>Team challenges:</strong> parent and child against the timer, or the whole family collecting stars towards a shared outing.</li>
+    </ul>
+    <div class="tipbox try"><b>Try this tonight</b>Draw a simple progress bar with ten boxes on paper and stick it on the fridge. Each day of practice, your child colours one box. When it is full, they choose a family activity. Simple, visible, and focused on effort.</div>
+
+    <h2>5. How to judge a "gamified" learning app</h2>
+    <p>Many apps call themselves gamified. Ask these questions:</p>
+    <ul>
+      <li><strong>Do the points come from learning?</strong> Stars should follow correct answers and practice, not just time spent or watching ads.</li>
+      <li><strong>Is the difficulty adapted?</strong> Good apps get harder as your child improves, and easier when they struggle.</li>
+      <li><strong>Is there a natural end?</strong> Sessions with a clear finish are healthier than endless loops designed to keep children playing.</li>
+      <li><strong>No paid shortcuts:</strong> avoid apps where progress can be bought, or that use random paid "surprise boxes".</li>
+      <li><strong>Are mistakes safe?</strong> Losing everything after a wrong answer discourages exactly the children who most need practice.</li>
     </ul>
 
-    <div class="appcta">
-      <div class="ico" style="background:#7A4DFF"><img src="../logos/mathokids.png" alt="MathoKids"></div>
-      <div class="txt"><b>MathoKids</b><p>The perfect real-world application of play-based pedagogy! Seamlessly transforms complex primary school arithmetic and mental math into an exciting world of interactive challenges, helping kids build structural analytical logic completely stress-free.</p></div>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">GET IT ON</span><span class="g-main">Google Play</span></span></a>
-    </div>
+    <h2>How we use game elements on Kids Learning Hub</h2>
+    <p>Our free <a href="../play/">browser games</a> give 1 to 3 stars per round, unlock badges such as "Times-table hero" and "Explorer", and show a progress bar during each game — all saved only on your device, with no account and nothing to buy. The homepage daily challenge adds a gentle day streak. Read more about choosing safe apps in our guide to <a href="screen-time-safe-apps-for-kids.html">good screen time</a>.</p>
+    ${cta('mathokids', 'Levels, stars and a friendly buddy that celebrates progress — game design in the service of real maths learning. Offline and free.')}
 
-    <h2>4. Preparing Thinkers for a Technological Tomorrow</h2>
-    <p>We are raising a generation that will interact with complex AI architectures, automation, and advanced engineering fields. Teaching them through passive memorization prepares them for a world that no longer exists. Play-based interactive learning, however, trains them to become adaptive, logical thinkers who can solve unstructured problems with confidence and joy.</p>`,
+    <p>Use the best of games — clear goals, quick feedback, visible progress and the freedom to fail — and keep rewards small. Then the most powerful prize of all appears on its own: the pleasure of getting better.</p>`,
 
     fr: `
     <span class="tag tips">Parentalité</span>
-    <h1>Le ludification dans l’éducation : comment le jeu transforme le cerveau</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Mis à jour en juillet 2026</span> · <span>10 min de lecture</span></div>
-    
-    <p class="lede">Les modèles éducatifs traditionnels font face à une baisse d'engagement. Découvrez la neuroscience derrière la pédagogie par le jeu et pourquoi la ludification est devenue indispensable.</p>
+    <h1>La ludification des apprentissages : ce qui marche vraiment — et ce qui se retourne contre nous</h1>
+    ${meta('fr', 10)}
+    <p class="lede">Un enfant rejouera vingt fois le même niveau pour battre son score, mais soupire devant dix minutes d'orthographe. La ludification cherche à emprunter ce qui rend les jeux si captivants pour l'appliquer aux apprentissages. Bien faite, elle nourrit la motivation, la persévérance et la confiance. Mal faite, elle transforme l'apprentissage en chasse aux points et aux autocollants. Voici comment faire la différence, et comment en garder le meilleur à la maison.</p>
 
-    <h2>1. La neurobiologie du jeu : l'effet Dopamine</h2>
-    <p>Lorsque l'enfant résout un défi sous forme de jeu, son cerveau sécrète de la dopamine. Ce neurotransmetteur stimule la mémoire et l'apprentissage tout en éliminant le stress lié aux notes traditionnelles.</p>
+    <div class="toc"><b>Dans ce guide</b><ol>
+      <li>Ce qu'est la ludification (et ce qu'elle n'est pas)</li>
+      <li>Six éléments de jeu qui aident vraiment à apprendre</li>
+      <li>Quand les récompenses se retournent contre nous</li>
+      <li>Ludifier les devoirs et les routines à la maison</li>
+      <li>Comment juger une appli « ludifiée »</li>
+    </ol></div>
 
-    <h2>2. Donner un sens visuel concret aux notions abstraites</h2>
-    <p>La gamification transforme les concepts abstraits (comme l'arithmétique أو الكود) en objets visuels manipulables. L'enfant comprend instantanément la logique derrière la règle.</p>
+    <h2>1. Ce qu'est la ludification (et ce qu'elle n'est pas)</h2>
+    <p>Ludifier, c'est utiliser des éléments de jeu — objectifs, niveaux, retours, défis, barres de progression — dans une activité qui n'est pas un jeu. C'est différent de jouer à des jeux éducatifs, et encore différent de donner un bonbon pour chaque fiche terminée. La meilleure ludification rend <em>l'apprentissage lui-même</em> ludique ; la pire se contente d'accrocher des prix à des tâches que l'enfant n'aime toujours pas.</p>
 
-    <div class="appcta">
-      <div class="ico" style="background:#7A4DFF"><img src="../logos/mathokids.png" alt="MathoKids"></div>
-      <div class="txt"><b>MathoKids</b><p>L'application concrète de la pédagogie par le jeu ! Transformez l'arithmétique en défis stimulants pour aider votre enfant à développer une agilité logique sans aucune anxiété.</p></div>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE SUR</span><span class="g-main">Google Play</span></span></a>
-    </div>
+    <h2>2. Six éléments de jeu qui aident vraiment à apprendre</h2>
+    <div class="tablewrap"><table>
+      <tr><th>Élément</th><th>Pourquoi ça marche</th><th>Exemple d'apprentissage</th></tr>
+      <tr><td>Un objectif clair</td><td>L'enfant sait exactement à quoi ressemble la réussite</td><td>« Réponds à 10 questions de tables »</td></tr>
+      <tr><td>Un retour immédiat</td><td>Les erreurs sont corrigées pendant que la réflexion est encore fraîche</td><td>La réponse devient verte ou rouge tout de suite</td></tr>
+      <tr><td>Des progrès visibles</td><td>Voir qu'on s'améliore motive en soi</td><td>Une barre de progression, un graphique des scores de la semaine</td></tr>
+      <tr><td>Un défi à sa mesure</td><td>Trop facile ennuie, trop difficile décourage</td><td>Des niveaux qui se débloquent avec les progrès</td></tr>
+      <tr><td>Le droit à l'erreur</td><td>Réessayer ne coûte rien, donc l'enfant ose essayer</td><td>« Essaie encore » au lieu d'une vie perdue</td></tr>
+      <tr><td>Le choix</td><td>Se sentir maître de son activité augmente l'effort</td><td>Choisir le thème ou le niveau à travailler</td></tr>
+    </table></div>
+    <p>Remarquez qu'aucun de ces éléments n'exige de prix. Il s'agit de rendre les progrès visibles et de donner du sens à l'effort.</p>
+    <div class="tipbox"><b>Le mot de l'enseignant</b>En classe, la « récompense » la plus motivante est souvent simplement le progrès visible : un enfant qui voit qu'il a répondu à 6 questions la semaine dernière et à 9 cette semaine n'a pas besoin d'autocollant. Rendez les progrès visibles, et une grande partie de la motivation vient d'elle-même.</div>
 
-    <h2>3. Un esprit résilient face aux défis du futur</h2>
-    <p>En apprenant par le jeu, l'enfant n'a plus peur de faire des erreurs. Il considère l'échec comme une simple étape vers la solution, une qualité essentielle pour son avenir académique.</p>`,
+    <h2>3. Quand les récompenses se retournent contre nous</h2>
+    <p>Les recherches en psychologie ont montré à plusieurs reprises que récompenser des activités que l'enfant aime déjà peut réduire son intérêt quand les récompenses s'arrêtent. Les récompenses ne sont pas mauvaises, mais elles demandent du soin :</p>
+    <ul>
+      <li><strong>Récompensez l'effort et le progrès, pas seulement le résultat.</strong> « Tu t'es entraîné cinq jours de suite » construit la bonne habitude.</li>
+      <li><strong>Préférez la reconnaissance inattendue</strong> aux marchés du type « si tu fais ça, tu auras ça ».</li>
+      <li><strong>Gardez des récompenses petites et symboliques :</strong> une étoile sur un tableau, choisir le prochain jeu, un badge spécial.</li>
+      <li><strong>Évitez de payer pour apprendre :</strong> de l'argent ou de gros cadeaux pour les notes déplacent l'attention de l'apprentissage vers le prix.</li>
+      <li><strong>Évitez les classements publics</strong> pour les jeunes enfants : ils motivent les quelques premiers et découragent tous les autres.</li>
+    </ul>
+    <div class="tipbox warn"><b>À surveiller</b>Si votre enfant demande « Qu'est-ce que je gagne ? » avant chaque tâche, la récompense est devenue le but. Revenez progressivement aux encouragements, aux tableaux de progrès et à la satisfaction de s'améliorer.</div>
+
+    <h2>4. Ludifier les devoirs et les routines à la maison</h2>
+    <ul>
+      <li><strong>Le calendrier des séries :</strong> un autocollant par jour avec 10 minutes de lecture ou de maths. Les enfants adorent ne pas casser la chaîne.</li>
+      <li><strong>Les niveaux :</strong> les tables deviennent « Niveau 1 : ×2, ×5, ×10 », « Niveau 2 : ×3, ×4 »… Un enfant qui sait qu'il est au niveau 3 sur 6 voit le chemin devant lui.</li>
+      <li><strong>Les quêtes :</strong> transformez une liste de tâches en mission : « Quête : préparer son cartable, lire 10 pages, sortir ses vêtements. Récompense : choisir l'histoire du soir. »</li>
+      <li><strong>Le niveau du boss :</strong> avant un contrôle, un « défi final » de questions mélangées pour montrer tout ce qu'il a appris.</li>
+      <li><strong>Battre son propre record :</strong> combien de bonnes réponses en deux minutes ? Comparez uniquement avec son score précédent, jamais avec ses frères et sœurs.</li>
+      <li><strong>Les défis d'équipe :</strong> parent et enfant contre le chronomètre, ou toute la famille qui collectionne des étoiles pour une sortie commune.</li>
+    </ul>
+    <div class="tipbox try"><b>À essayer ce soir</b>Dessinez une barre de progression de dix cases sur une feuille et collez-la sur le frigo. Chaque jour d'entraînement, l'enfant colorie une case. Quand elle est pleine, il choisit une activité en famille. Simple, visible et centré sur l'effort.</div>
+
+    <h2>5. Comment juger une appli « ludifiée »</h2>
+    <p>Beaucoup d'applis se disent ludiques. Posez-vous ces questions :</p>
+    <ul>
+      <li><strong>Les points viennent-ils de l'apprentissage ?</strong> Les étoiles doivent suivre les bonnes réponses et l'entraînement, pas seulement le temps passé ou les publicités regardées.</li>
+      <li><strong>La difficulté s'adapte-t-elle ?</strong> Une bonne appli devient plus difficile quand l'enfant progresse, et plus facile quand il peine.</li>
+      <li><strong>Y a-t-il une fin naturelle ?</strong> Des séances qui se terminent sont plus saines que des boucles sans fin conçues pour retenir l'enfant.</li>
+      <li><strong>Pas de raccourcis payants :</strong> évitez les applis où l'on peut acheter sa progression, ou qui utilisent des « coffres surprises » payants.</li>
+      <li><strong>L'erreur est-elle sans danger ?</strong> Tout perdre après une mauvaise réponse décourage justement les enfants qui ont le plus besoin de s'entraîner.</li>
+    </ul>
+
+    <h2>Comment nous utilisons les éléments de jeu sur Kids Learning Hub</h2>
+    <p>Nos <a href="../play/fr/">jeux gratuits dans le navigateur</a> donnent 1 à 3 étoiles par partie, débloquent des badges comme « Héros des tables » ou « Explorateur » et affichent une barre de progression pendant chaque jeu — le tout enregistré uniquement sur votre appareil, sans compte et sans rien à acheter. Le défi du jour de la page d'accueil ajoute une série de jours en douceur. Pour bien choisir ses applis, lisez notre guide sur <a href="screen-time-safe-apps-for-kids.html">un bon temps d'écran</a>.</p>
+    ${cta('mathokids', 'Des niveaux, des étoiles et un compagnon qui fête les progrès — le design de jeu au service d’un vrai apprentissage des maths. Hors ligne et gratuit.')}
+
+    <p>Gardez le meilleur des jeux — objectifs clairs, retours rapides, progrès visibles et liberté de se tromper — et des récompenses modestes. Alors le plus beau des prix apparaît de lui-même : le plaisir de progresser.</p>`,
 
     es: `
     <span class="tag tips">Crianza</span>
-    <h1>Gamificación en la educación: cómo el juego transforma la mente</h1>
-    <div class="meta"><span class="who"><span class="av">A</span> Kids Learning Hub</span> · <span>Actualizado en julio de 2026</span> · <span>10 min de lectura</span></div>
-    
-    <p class="lede">El aprendizaje tradicional se enfrenta a una crisis de desmotivación. Conoce los secretos neurológicos de la pedagogía lúdica y cómo el juego impulsa la retención a largo plazo.</p>
+    <h1>Gamificación en el aprendizaje: qué funciona de verdad y qué sale al revés</h1>
+    ${meta('es', 10)}
+    <p class="lede">Un niño juega veinte veces el mismo nivel para batir su récord, pero suspira ante diez minutos de ortografía. La gamificación intenta tomar lo que hace tan atractivos los juegos y llevarlo al aprendizaje. Bien hecha, alimenta la motivación, la constancia y la confianza. Mal hecha, convierte aprender en una caza de puntos y pegatinas. Así puedes distinguirlas y aprovechar lo mejor en casa.</p>
 
-    <h2>1. Neurobiología del juego y la resiliencia mental</h2>
-    <p>Los entornos lúdicos bien diseñados liberan dopamina en el cerebro del niño, mejorando el enfoque. Al eliminar el miedo al castigo de las notas, el error se convierte en una pista emocionante para mejorar.</p>
+    <div class="toc"><b>En esta guía</b><ol>
+      <li>Qué es la gamificación (y qué no es)</li>
+      <li>Seis elementos de juego que ayudan de verdad a aprender</li>
+      <li>Cuándo los premios salen al revés</li>
+      <li>Gamificar los deberes y las rutinas en casa</li>
+      <li>Cómo evaluar una app «gamificada»</li>
+    </ol></div>
 
-    <h2>2. Feedback visual inmediato contra la frustración</h2>
-    <p>Manipular retos visuales interactivos permite que conceptos complejos de matemáticas o lógica cobren sentido real al instante, eliminando el bloqueo abstracto.</p>
+    <h2>1. Qué es la gamificación (y qué no es)</h2>
+    <p>Gamificar es usar elementos de juego — objetivos, niveles, respuestas inmediatas, retos, barras de progreso — en una actividad que no es un juego. Es distinto de jugar a juegos educativos, y distinto también de dar un caramelo por cada ficha terminada. La mejor gamificación hace que <em>el propio aprendizaje</em> parezca un juego; la peor solo pega premios a tareas que al niño le siguen sin gustar.</p>
 
-    <div class="appcta">
-      <div class="ico" style="background:#7A4DFF"><img src="../logos/mathokids.png" alt="MathoKids"></div>
-      <div class="txt"><b>MathoKids</b><p>La aplicación práctica de la gamificación educativa. Convierte las operaciones aritméticas en retos dinámicos que siembran la confianza y el pensamiento analítico nativo.</p></div>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">DISPONIBLE EN</span><span class="g-main">Google Play</span></span></a>
-    </div>
+    <h2>2. Seis elementos de juego que ayudan de verdad a aprender</h2>
+    <div class="tablewrap"><table>
+      <tr><th>Elemento</th><th>Por qué funciona</th><th>Ejemplo de aprendizaje</th></tr>
+      <tr><td>Objetivo claro</td><td>El niño sabe exactamente cómo es el éxito</td><td>«Responde 10 preguntas de las tablas»</td></tr>
+      <tr><td>Respuesta inmediata</td><td>Los errores se corrigen con el razonamiento aún fresco</td><td>La respuesta se pone verde o roja al momento</td></tr>
+      <tr><td>Progreso visible</td><td>Ver que mejoras ya motiva</td><td>Una barra de progreso, un gráfico de las puntuaciones semanales</td></tr>
+      <tr><td>Reto a su medida</td><td>Demasiado fácil aburre, demasiado difícil desanima</td><td>Niveles que se desbloquean al mejorar</td></tr>
+      <tr><td>Equivocarse sin miedo</td><td>Volver a intentarlo no cuesta nada, así que se atreve</td><td>«Inténtalo de nuevo» en vez de perder una vida</td></tr>
+      <tr><td>Elegir</td><td>Sentir control aumenta el esfuerzo</td><td>Elegir qué tema o nivel practicar</td></tr>
+    </table></div>
+    <p>Fíjate en que ninguno de estos elementos necesita premios. Se trata de hacer visible el progreso y que el esfuerzo merezca la pena.</p>
+    <div class="tipbox"><b>Nota del profesor</b>En clase, el «premio» más motivador suele ser simplemente el progreso visible: un niño que ve que la semana pasada respondió 6 preguntas y esta semana 9 no necesita pegatinas. Haz visible la mejora y buena parte de la motivación llega sola.</div>
 
-    <h2>3. Preparar mentes analíticas para el mañana</h2>
-    <p>Aprender jugando fomenta un pensamiento adaptativo y resolutivo, dotando a los niños de primaria de las herramientas cognitivas necesarias para triunfar en un mundo tecnológico.</p>`,
+    <h2>3. Cuándo los premios salen al revés</h2>
+    <p>La investigación en psicología ha encontrado repetidamente que premiar actividades que al niño ya le gustan puede reducir su interés cuando los premios desaparecen. Los premios no son malos, pero requieren cuidado:</p>
+    <ul>
+      <li><strong>Premia el esfuerzo y el progreso, no solo el resultado.</strong> «Has practicado cinco días seguidos» construye el hábito correcto.</li>
+      <li><strong>Mejor el reconocimiento inesperado</strong> que los tratos del tipo «si haces esto, te doy aquello».</li>
+      <li><strong>Premios pequeños y simbólicos:</strong> una estrella en un cuadro, elegir el próximo juego, una insignia especial.</li>
+      <li><strong>No pagues por aprender:</strong> dinero o grandes regalos por las notas desvían la atención del aprendizaje hacia el premio.</li>
+      <li><strong>Evita las clasificaciones públicas</strong> con niños pequeños: motivan a los primeros y desaniman a todos los demás.</li>
+    </ul>
+    <div class="tipbox warn"><b>Atención a esto</b>Si tu hijo pregunta «¿Qué me das?» antes de cada tarea, el premio se ha convertido en el objetivo. Vuelve poco a poco a los elogios, los cuadros de progreso y la satisfacción de mejorar.</div>
+
+    <h2>4. Gamificar los deberes y las rutinas en casa</h2>
+    <ul>
+      <li><strong>El calendario de rachas:</strong> una pegatina por cada día con 10 minutos de lectura o matemáticas. A los niños les encanta no romper la cadena.</li>
+      <li><strong>Niveles:</strong> las tablas se convierten en «Nivel 1: ×2, ×5, ×10», «Nivel 2: ×3, ×4»… Quien sabe que está en el nivel 3 de 6 ve el camino por delante.</li>
+      <li><strong>Misiones:</strong> convierte una lista de tareas en una misión: «Misión: preparar la mochila, leer 10 páginas, sacar la ropa. Premio: elegir el cuento de esta noche».</li>
+      <li><strong>El jefe final:</strong> antes de un examen, un «reto final» de preguntas mezcladas para demostrar todo lo aprendido.</li>
+      <li><strong>Batir tu propio récord:</strong> ¿cuántas respuestas correctas en dos minutos? Compara solo con su puntuación anterior, nunca con los hermanos.</li>
+      <li><strong>Retos en equipo:</strong> adulto y niño contra el reloj, o toda la familia sumando estrellas para una salida juntos.</li>
+    </ul>
+    <div class="tipbox try"><b>Pruébalo esta noche</b>Dibuja una barra de progreso de diez casillas en un papel y pégala en la nevera. Cada día de práctica, tu hijo colorea una casilla. Cuando esté llena, elige una actividad en familia. Sencillo, visible y centrado en el esfuerzo.</div>
+
+    <h2>5. Cómo evaluar una app «gamificada»</h2>
+    <p>Muchas apps dicen estar gamificadas. Hazte estas preguntas:</p>
+    <ul>
+      <li><strong>¿Los puntos vienen del aprendizaje?</strong> Las estrellas deben llegar por las respuestas correctas y la práctica, no solo por el tiempo de uso o por ver anuncios.</li>
+      <li><strong>¿Se adapta la dificultad?</strong> Una buena app se vuelve más difícil cuando el niño mejora y más fácil cuando le cuesta.</li>
+      <li><strong>¿Tiene un final natural?</strong> Las sesiones que terminan son más sanas que los bucles infinitos diseñados para retenerlo.</li>
+      <li><strong>Sin atajos de pago:</strong> evita apps donde se puede comprar el progreso o que usan «cajas sorpresa» de pago.</li>
+      <li><strong>¿Equivocarse es seguro?</strong> Perderlo todo tras una respuesta mal desanima justo a los niños que más necesitan practicar.</li>
+    </ul>
+
+    <h2>Cómo usamos los elementos de juego en Kids Learning Hub</h2>
+    <p>Nuestros <a href="../play/es/">juegos gratis en el navegador</a> dan de 1 a 3 estrellas por partida, desbloquean insignias como «Héroe de las tablas» o «Explorador» y muestran una barra de progreso durante cada juego — todo guardado solo en tu dispositivo, sin cuenta y sin nada que comprar. El reto diario de la página de inicio añade una racha de días suave. Para elegir bien las apps, lee nuestra guía sobre <a href="screen-time-safe-apps-for-kids.html">pantallas con sentido</a>.</p>
+    ${cta('mathokids', 'Niveles, estrellas y un compañero que celebra el progreso — diseño de juego al servicio del aprendizaje real de las matemáticas. Sin conexión y gratis.')}
+
+    <p>Quédate con lo mejor de los juegos — objetivos claros, respuestas rápidas, progreso visible y libertad para equivocarse — y con premios pequeños. Entonces aparece solo el mejor premio de todos: el placer de mejorar.</p>`,
 
     ar: `
     <span class="tag tips">تربية</span>
-    <h1>التلعيب والتعلم القائم على اللعب: كيف تعيد البيداغوجيا الحديثة صياغة عقول الأطفال؟</h1>
-    <div class="meta"><span class="who"><span class="av">أ</span> Kids Learning Hub</span> · <span>تحديث يوليو 2026</span> · <span>قراءة 10 دقائق</span></div>
-    
-    <p class="lede">تواجه نماذج التعليم التقليدية القائمة على التلقين أزمة صامتة حول العالم؛ تتمثل في تراجع شغف الطلاب وارتفاع مستويات القلق الأكاديمي. في هذا المقال المستوحى من أحدث الأبحاث العالمية، سنغوص في علم الأعصاب الإدراكي لنكتشف كيف يعيد "التلعيب" صياغة مسارات الدماغ لدى الأطفال، ولماذا لم يعد اللعب مجرد رفاهية، بل هو المستقبل الحتمي للتدريس الفعّال.</p>
+    <h1>التلعيب في التعلّم: ما الذي ينجح فعلًا وما الذي ينقلب ضدّنا</h1>
+    ${meta('ar', 10)}
+    <p class="lede">يعيد الطفل المرحلة نفسها عشرين مرة ليحطّم رقمه القياسي، لكنه يتذمّر من عشر دقائق من الإملاء. التلعيب محاولة لأخذ ما يجعل الألعاب جذّابة ونقله إلى التعلّم. وحين يُحسَن تطبيقه، يغذّي الدافعية والمثابرة والثقة. وحين يُساء، يحوّل التعلّم إلى سباق خلف النقاط والملصقات. إليك كيف تميّز بين الحالتين، وكيف تأخذ أفضل ما فيه إلى البيت.</p>
 
-    <h2>1. البيولوجيا العصبية للعب: لماذا يعشق الدماغ التحديات الرقمية؟</h2>
-    <p>لعقود طويلة، كانت النظرة التقليدية للتدريس ترى اللعب كأمر مضاد تماماً للجدية والتحصيل العلمي. لكن علم الأعصاب الحديث قلب هذه الفرضية رأساً على عقب؛ فعندما يندمج الطفل في لعبة تعليمية مصممة بذكاء، يفرز دماغه مادة "الدوبامين" (Dopamine)، وهو الناقل العصبي المسؤول بشكل مباشر عن توليد التحفيز الداخلي، وتثبيت الذاكرة بعيدة المدى، وتعميق التركيز.</p>
-    <p>في البيئات الصارمة، يُعاقب الخطأ بدرجات سيئة، مما يفرز هرمون الكورتيزول (هرمون الإجهاد) الذي يشل الذاكرة العاملة للطفل. أما في نظام "التلعيب"، يُعامل الخطأ ببساطة كجزء طبيعي وممتع من دورة اللعبة لإعادة المحاولة. هذا التحول النفسي البسيط يصنع عقلاً مرناً وجريئاً يعشق مواجهة المشكلات وحلها.</p>
+    <div class="toc"><b>في هذا الدليل</b><ol>
+      <li>ما التلعيب (وما ليس منه)</li>
+      <li>ستة عناصر من الألعاب تساعد التعلّم فعلًا</li>
+      <li>متى تنقلب المكافآت ضدّنا</li>
+      <li>تلعيب الواجبات والروتين في البيت</li>
+      <li>كيف نحكم على تطبيق «مُلعَّب»</li>
+    </ol></div>
 
-    <h2>2. التغلب على "العبء التجريدي" عبر التغذية البصرية الفورية</h2>
-    <p>من أكبر العوائق في التدريس للمرحلة الابتدائية هو تقديم المفاهيم بشكل تجريدي مفرط. إن شرح العمليات الحسابية المعقدة أو المنطق البرمجي عبر نصوص جافة على السبورة قد يبدو لعقل طفل في الثامنة من عمره وكأنه طلاسم غير مفهومة.</p>
-    <p>هنا يأتي دور التلعيب ليقدم الحل عبر "التغذية الراجعة البصرية الفورية". عندما يرتبط المفهوم التجريدي بحركة تفاعلية، أو لغز بصري، أو آلية لرفع مستوى الصعوبة (Level-up)، ينجح عقل الطفل على الفور في بناء جسر إدراكي متين بين القاعدة النظرية والواقع المنطقي الملموس أمام عينيه.</p>
+    <h2>1. ما التلعيب (وما ليس منه)</h2>
+    <p>التلعيب هو استعمال عناصر الألعاب — الأهداف والمستويات والتغذية الراجعة والتحدّيات وأشرطة التقدّم — في نشاط ليس لعبة. وهو يختلف عن مجرّد لعب ألعاب تعليمية، ويختلف أيضًا عن إعطاء قطعة حلوى مقابل كل ورقة عمل منجزة. أفضل التلعيب يجعل <em>التعلّم نفسه</em> ممتعًا كاللعب، وأسوؤه يعلّق جوائز على مهامّ ما زال الطفل يكرهها.</p>
 
-    <h2>3. الركائز الأساسية للتلعيب التعليمي الناجح داخل البيت</h2>
+    <h2>2. ستة عناصر من الألعاب تساعد التعلّم فعلًا</h2>
+    <div class="tablewrap"><table>
+      <tr><th>العنصر</th><th>لماذا ينجح</th><th>مثال من التعلّم</th></tr>
+      <tr><td>هدف واضح</td><td>يعرف الطفل بالضبط شكل النجاح</td><td>«أجِب عن 10 أسئلة من جداول الضرب»</td></tr>
+      <tr><td>تغذية راجعة فورية</td><td>تُصحَّح الأخطاء والتفكير ما زال حاضرًا</td><td>يتحوّل الجواب إلى الأخضر أو الأحمر فورًا</td></tr>
+      <tr><td>تقدّم مرئي</td><td>رؤية التحسّن محفّزة في حدّ ذاتها</td><td>شريط تقدّم، أو رسم بياني لنتائج الأسبوع</td></tr>
+      <tr><td>تحدٍّ على المقاس</td><td>السهل جدًا مملّ والصعب جدًا محبط</td><td>مستويات تُفتح كلما تحسّنت المهارات</td></tr>
+      <tr><td>خطأ بلا خوف</td><td>المحاولة من جديد لا تكلّف شيئًا، فيجرؤ الطفل</td><td>«حاول مجددًا» بدل خسارة حياة في اللعبة</td></tr>
+      <tr><td>الاختيار</td><td>الإحساس بالتحكّم يزيد الجهد</td><td>اختيار الموضوع أو المستوى الذي يتدرّب عليه</td></tr>
+    </table></div>
+    <p>لاحظ أن أيًّا من هذه العناصر لا يحتاج إلى جوائز، فالمقصود جعل التقدّم مرئيًا والجهد ذا معنى.</p>
+    <div class="tipbox"><b>ملاحظة الأستاذ</b>في القسم، كثيرًا ما تكون أقوى «مكافأة» هي التقدّم المرئي ببساطة: الطفل الذي يرى أنه أجاب عن 6 أسئلة الأسبوع الماضي وعن 9 هذا الأسبوع لا يحتاج إلى ملصق. اجعل التحسّن مرئيًا، وسيأتي جزء كبير من الدافعية وحده.</div>
+
+    <h2>3. متى تنقلب المكافآت ضدّنا</h2>
+    <p>وجدت أبحاث علم النفس مرارًا أن مكافأة الطفل على أنشطة يحبّها أصلًا قد تُضعف اهتمامه بها حين تتوقّف المكافآت. فالمكافآت ليست سيئة، لكنها تحتاج إلى حذر:</p>
     <ul>
-      <li><strong>دورة الفشل الآمن (Safe Failure Cycle):</strong> تأكد من أن التطبيق أو الأداة المستخدمة تسمح للطفل بإعادة المحاولة فوراً دون عقاب نفسي، مما يزيل قلق الاختبارات تماماً ويشجع على التجريب المستمر.</li>
-      <li><strong>التدرج السلس الموزون (Scaffolding):</strong> يجب أن يتغير منحنى الصعوبة ديناميكياً؛ فإذا كان التحدي سهلاً جداً شعر الطفل بالملل، وإذا كان معقداً مفرطاً شعر بالإحباط. التوازن المثالي يبقيه في حالة اندماج ذهني كامل.</li>
-      <li><strong>المكافآت المرتبطة بالنمو الشخصي:</strong> ابتعد عن المقارنات التنافسية المحبطة، واستبدلها بمكافآت تحتفي بالتقدم الشخصي المستمر للطفل عبر أوسمة وشارات ومؤثرات صوتية محفزة.</li>
+      <li><strong>كافئ الجهد والتقدّم لا النتيجة وحدها.</strong> «تدرّبت خمسة أيام متتالية» تبني العادة الصحيحة.</li>
+      <li><strong>فضّل التقدير المفاجئ</strong> على صفقات «إذا فعلت هذا ستحصل على ذاك».</li>
+      <li><strong>اجعل المكافآت صغيرة ورمزية:</strong> نجمة على لوحة، أو اختيار اللعبة التالية، أو شارة خاصة.</li>
+      <li><strong>تجنّب الدفع مقابل التعلّم:</strong> المال أو الهدايا الكبيرة مقابل النقاط تنقل الاهتمام من التعلّم إلى الجائزة.</li>
+      <li><strong>تجنّب الترتيب العلني</strong> للأطفال الصغار: فهو يحفّز القلّة الأولى ويُحبط الباقين.</li>
+    </ul>
+    <div class="tipbox warn"><b>انتبه لهذا</b>إذا كان طفلك يسأل «ماذا سأربح؟» قبل كل مهمّة، فقد صارت المكافأة هي الهدف. عُد تدريجيًا إلى التشجيع ولوحات التقدّم والرضا بالتحسّن.</div>
+
+    <h2>4. تلعيب الواجبات والروتين في البيت</h2>
+    <ul>
+      <li><strong>تقويم الأيام المتتالية:</strong> ملصق عن كل يوم فيه 10 دقائق من القراءة أو الرياضيات. يحبّ الأطفال ألّا تنقطع السلسلة.</li>
+      <li><strong>المستويات:</strong> تصبح جداول الضرب «المستوى 1: ×2 و×5 و×10» و«المستوى 2: ×3 و×4»… والطفل الذي يعرف أنه في المستوى 3 من 6 يرى الطريق أمامه.</li>
+      <li><strong>المهامّ البطولية:</strong> حوّل قائمة المهامّ إلى مهمّة: «المهمّة: جهّز محفظتك، واقرأ 10 صفحات، وحضّر ملابسك. المكافأة: اختيار قصة الليلة».</li>
+      <li><strong>المرحلة النهائية:</strong> قبل الاختبار، «تحدٍّ أخير» بأسئلة مختلطة يُظهر كل ما تعلّمه.</li>
+      <li><strong>حطّم رقمك القياسي:</strong> كم جوابًا صحيحًا في دقيقتين؟ قارِن فقط بنتيجته السابقة، لا بإخوته أبدًا.</li>
+      <li><strong>تحدّيات الفريق:</strong> الوالد والطفل ضدّ المؤقّت، أو العائلة كلها تجمع النجوم لنزهة مشتركة.</li>
+    </ul>
+    <div class="tipbox try"><b>جرّب هذا الليلة</b>ارسم شريط تقدّم من عشر خانات على ورقة وألصقه على الثلاجة. في كل يوم تدريب يلوّن طفلك خانة، وحين يمتلئ يختار نشاطًا عائليًا. بسيط ومرئي ويركّز على الجهد.</div>
+
+    <h2>5. كيف نحكم على تطبيق «مُلعَّب»</h2>
+    <p>تطبيقات كثيرة تصف نفسها بأنها تعليمية ممتعة. اطرح هذه الأسئلة:</p>
+    <ul>
+      <li><strong>هل تأتي النقاط من التعلّم؟</strong> يجب أن تتبع النجوم الأجوبة الصحيحة والتدريب، لا مجرّد الوقت المستهلك أو مشاهدة الإعلانات.</li>
+      <li><strong>هل تتكيّف الصعوبة؟</strong> التطبيق الجيد يصعب حين يتحسّن الطفل ويسهل حين يتعثّر.</li>
+      <li><strong>هل لكل حصة نهاية طبيعية؟</strong> الحصص التي تنتهي أصحّ من الحلقات اللانهائية المصمّمة لإبقاء الطفل يلعب.</li>
+      <li><strong>لا اختصارات مدفوعة:</strong> تجنّب التطبيقات التي يُشترى فيها التقدّم أو تستعمل «صناديق مفاجآت» مدفوعة.</li>
+      <li><strong>هل الخطأ آمن؟</strong> خسارة كل شيء بعد جواب خاطئ تُحبط تحديدًا الأطفال الأكثر حاجة إلى التدريب.</li>
     </ul>
 
-    <div class="appcta">
-      <div class="ico" style="background:#7A4DFF"><img src="../logos/mathokids.png" alt="MathoKids"></div>
-      <div class="txt"><b>MathoKids</b><p>التطبيق العملي الأمثل لبيداغوجيا التعلم القائم على اللعب! يحول الحساب الذهني والعمليات الحسابية للمرحلة الابتدائية إلى رحلة شيقة من الألغاز والتحديات البصرية، لتبني في عقل طفلك منطقاً تحليلياً فولاذياً دون أي ضغوط نفسية.</p></div>
-      <a class="play" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener"><svg viewBox="0 0 512 512"><path fill="#34A853" d="M60 12c-5 3-8 9-8 17v454c0 8 3 14 8 17l246-244z"/><path fill="#EA4335" d="M306 256 63 13c1 0 2 0 3 1l312 180-72 62z"/><path fill="#FBBC04" d="M375 194 447 236c18 11 18 30 0 41l-72 42-73-63z"/><path fill="#4285F4" d="M66 499l240-243 69 63L66 500c-1 0-2-1 0-1z"/></svg><span><span class="g-sub">احصل عليه من</span><span class="g-main">Google Play</span></span></a>
-    </div>
+    <h2>كيف نستعمل عناصر اللعب في Kids Learning Hub</h2>
+    <p><a href="../play/ar/">ألعابنا المجانية في المتصفّح</a> تمنح من 1 إلى 3 نجوم في كل جولة، وتفتح شارات مثل «بطل جدول الضرب» و«المستكشف»، وتعرض شريط تقدّم أثناء اللعب — وكل ذلك محفوظ على جهازك فقط، دون حساب ودون أي شيء للشراء. ويضيف تحدّي اليوم في الصفحة الرئيسية سلسلة أيام لطيفة. ولاختيار التطبيقات جيدًا اقرأ دليلنا عن <a href="screen-time-safe-apps-for-kids.html">وقت الشاشة المفيد</a>.</p>
+    ${cta('mathokids', 'مستويات ونجوم ورفيق يحتفي بالتقدّم — تصميم الألعاب في خدمة تعلّم حقيقي للرياضيات. دون إنترنت ومجانًا.')}
 
-    <h2>4. بناء عقول جاهزة لمستقبل تكنولوجي متسارع</h2>
-    <p>نحن نربي جيلاً سيتعامل بشكل يومي مع الذكاء الاصطناعي، الأتمتة، والمجالات الهندسية المتقدمة. تعليمه بالطرق التقليدية القائمة على التلقين والحفظ يجهزه لعالم لم يعد موجوداً في الأصل! بينما التعلم التفاعلي القائم على اللعب يبني عقلاً مرناً، قادراً على التكيف، والتعامل مع المشكلات غير المنظمة بكل ثقة وشغف واستمتاع.</p>`,
+    <p>خذ أفضل ما في الألعاب — أهداف واضحة، وتغذية راجعة سريعة، وتقدّم مرئي، وحرية الخطأ — واجعل المكافآت صغيرة. عندها تظهر أعظم جائزة وحدها: متعة التحسّن.</p>`,
   },
 
-  /* الأسئلة الشائعة */
   faq: {
-    en: [
-      ['Does educational gamification replace classroom textbooks?', 'No. It acts as a powerful cognitive accelerator that converts theoretical concepts into practical intuition and boosts retention.'],
-      ['Can video games cause short attention spans?', 'Commercial entertainment games designed for addiction might. However, structured, ad-free educational apps are designed with strict pacing to build logic and stamina.'],
-      ['Why is MathoKids highly recommended for gamified math?', 'Because it fully removes worksheet anxiety and replaces it with immersive visual progression where mistakes are just hints to find the solution.']],
-    fr: [
-      ['La ludification remplace-t-elle les livres scolaires ?', 'Non, elle agit comme un accélérateur cognitif qui transforme la théorie en intuition pratique et durable.'],
-      ['Le jeu vidéo réduit-il l’attention des enfants ?', 'Les jeux addictifs oui. En revanche, les applications éducatives saines et sans publicité entraînent la patience et la logique.'],
-      ['Pourquoi choisir MathoKids pour le calcul mental ?', 'Car elle élimine l’anxiété des exercices traditionnels et valorise chaque essai comme une opportunité d’apprendre.']],
-    es: [
-      ['¿La gamificación sustituye a los libros escolares?', 'No. Funciona como un acelerador cognitivo que transforma los datos abstractos en intuición lógica aplicada.'],
-      ['¿Los juegos reducen la capacidad de concentración?', 'Los comerciales adictivos sí. Pero las apps educativas estructuradas y sin anuncios entrenan la paciencia lógica.'],
-      ['¿Qué ventajas ofrece MathoKids en este campo?', 'Elimina el estrés de las fichas de estudio y premia el razonamiento del niño, convirtiendo los errores en pistas divertidas.']],
-    ar: [
-      ['هل يحل التلعيب التعليمي محل الكتب المدرسية التقليدية؟', 'لا، بل يعمل كمسرّع إدراكي قوي يحول القواعد النظرية الجافة إلى بديهة تطبيقية ملموسة، مما يضاعف سرعة وثبات الاستيعاب.'],
-      ['هل يمكن للألعاب الرقمية أن تسبب تشتت الانتباه لدى الأطفال؟', 'ألعاب الترفيه التجارية المصممة للإدمان قد تفعل ذلك. أما التطبيقات التعليمية الموزونة والخالية من الإعلانات فهي مصممة بوتيرة هادئة ومدروسة لتدريب العقل على الصبر والتحليل العقلاني.'],
-      ['لماذا يُعد تطبيق MathoKids نموذجاً مثالياً للتلعيب؟', 'لأنه يلغي تماماً قلق ورعب أوراق العمل الحسابية التقليدية، ويستبدلها برحلة بصرية ممتعة يرى فيها الطفل أخطاءه كمجرد إشارات مشوقة للوصول للحل الصحيح.'],
-    ],
+    en: [['What is gamification in education?', 'Using game elements such as clear goals, levels, immediate feedback, progress bars and safe retries in learning activities, so that practising feels more like playing.'],
+         ['Are rewards good for motivating children to learn?', 'Small, symbolic rewards for effort and progress can help. Large rewards, payment for grades, or rewards for activities children already enjoy can reduce their interest over time.'],
+         ['How can I gamify homework at home?', 'Use a streak calendar, turn skills into levels, write tasks as quests, add a "boss challenge" before tests and let your child try to beat their own record rather than someone else’s.']],
+    fr: [['Qu’est-ce que la ludification des apprentissages ?', 'C’est utiliser des éléments de jeu comme des objectifs clairs, des niveaux, des retours immédiats, des barres de progression et le droit de réessayer dans les activités d’apprentissage, pour que s’entraîner ressemble davantage à jouer.'],
+         ['Les récompenses motivent-elles les enfants à apprendre ?', 'De petites récompenses symboliques pour l’effort et les progrès peuvent aider. De grosses récompenses, payer pour les notes ou récompenser des activités déjà appréciées peuvent réduire l’intérêt avec le temps.'],
+         ['Comment ludifier les devoirs à la maison ?', 'Utilisez un calendrier des séries, transformez les compétences en niveaux, présentez les tâches comme des quêtes, ajoutez un « défi final » avant les contrôles et laissez l’enfant battre son propre record plutôt que celui d’un autre.']],
+    es: [['¿Qué es la gamificación en la educación?', 'Usar elementos de juego como objetivos claros, niveles, respuestas inmediatas, barras de progreso y la posibilidad de reintentar en actividades de aprendizaje, para que practicar se parezca más a jugar.'],
+         ['¿Los premios motivan a los niños a aprender?', 'Los premios pequeños y simbólicos por el esfuerzo y el progreso pueden ayudar. Los premios grandes, pagar por las notas o premiar actividades que ya les gustan pueden reducir su interés con el tiempo.'],
+         ['¿Cómo gamificar los deberes en casa?', 'Usa un calendario de rachas, convierte las habilidades en niveles, plantea las tareas como misiones, añade un «reto final» antes de los exámenes y deja que tu hijo intente batir su propio récord, no el de otro.']],
+    ar: [['ما التلعيب في التعليم؟', 'هو استعمال عناصر الألعاب مثل الأهداف الواضحة والمستويات والتغذية الراجعة الفورية وأشرطة التقدّم وإمكانية إعادة المحاولة في أنشطة التعلّم، حتى يشبه التدريب اللعب أكثر.'],
+         ['هل تحفّز المكافآت الأطفال على التعلّم؟', 'المكافآت الصغيرة الرمزية على الجهد والتقدّم قد تساعد، أما المكافآت الكبيرة أو الدفع مقابل النقاط أو مكافأة أنشطة يحبّها الطفل أصلًا فقد تُضعف اهتمامه مع الوقت.'],
+         ['كيف ألعّب الواجبات في البيت؟', 'استعمل تقويم الأيام المتتالية، وحوّل المهارات إلى مستويات، واكتب المهامّ كمهمّات بطولية، وأضِف «تحدّيًا أخيرًا» قبل الاختبارات، ودع طفلك يحاول تحطيم رقمه هو لا رقم غيره.']],
   },
 };

@@ -75,8 +75,8 @@ module.exports = [
   },
   {
     slug: 'managing-stress-and-adhd-in-kids', date: '2026-08-05',
-    emoji: '🧘', grad: 'linear-gradient(135deg,#2196F3,#1976D2)', tagColor: '#2196F3', tagClass: 'lang',
-    tagL: { en: 'Languages', fr: 'Langues', es: 'Idiomas', ar: 'لغات' },
+    emoji: '🧘', grad: 'linear-gradient(135deg,#2196F3,#1976D2)', tagColor: '#2196F3', tagClass: 'tips',
+    tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
     cardTitle: {
       en: 'Managing Academic Stress & Supporting Active Learners',
       fr: 'Gérer le stress scolaire et accompagner l’enfant hyperactif',
@@ -105,8 +105,8 @@ module.exports = [
   },
   {
     slug: 'boosting-child-focus-and-attention', date: '2026-07-29',
-    emoji: '🎯', grad: 'linear-gradient(135deg,#00E676,#00B0FF)', tagColor: '#00C853', tagClass: 'science',
-    tagL: { en: 'Science', fr: 'Sciences', es: 'Ciencias', ar: 'علوم' },
+    emoji: '🎯', grad: 'linear-gradient(135deg,#00E676,#00B0FF)', tagColor: '#00C853', tagClass: 'tips',
+    tagL: { en: 'Parenting', fr: 'Parentalité', es: 'Crianza', ar: 'تربية' },
     cardTitle: {
       en: 'Boosting Child Focus & Attention Span',
       fr: 'Améliorer la concentration de l’enfant',
