@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fraction Pizza — Free Online Fractions Game for Kids | Kids Learning Hub</title>
+<meta name="description" content="What fraction of the pizza has toppings? A free fractions game for kids aged 7–11: read halves, thirds, quarters and eighths on a pizza, earn stars. No install." />
+<link rel="canonical" href="https://kids-learning-hub.cc/play/fraction-pizza.html" />
+<meta name="theme-color" content="#1E5BFF" />
+<link rel="icon" href="../logos/hub-logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Kids Learning Hub" />
+<meta property="og:url" content="https://kids-learning-hub.cc/play/fraction-pizza.html" />
+<meta property="og:title" content="Fraction Pizza — Free Fractions Game for Kids" />
+<meta property="og:description" content="Count the slices, find the fraction, earn stars. Play free in your browser!" />
+<meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9202119066805107" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="play.css?v=4" />
+<script src="../analytics.js" defer></script>
+<style>
+.howto{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px;margin-top:22px;text-align:start}
+.howto h2{font-size:19px;margin-bottom:6px}
+.howto p{color:var(--muted);font-size:14.5px}
+#pizza{width:min(240px,62vw);height:auto;display:block;margin:4px auto 14px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.18))}
+.frac{display:inline-flex;flex-direction:column;align-items:center;line-height:1.05;font-family:"Baloo 2",sans-serif}
+.frac b{display:block;padding:0 8px 2px;border-bottom:3px solid currentColor}
+.frac i{font-style:normal;display:block;padding-top:2px}
+.pz .btn.answer{font-size:28px;padding:10px 6px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <div class="top-actions">
+      <div class="langsw" role="group" aria-label="Language">
+        <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
+      </div>
+      <button class="icon-btn" aria-label="Dark mode" onclick="PLAY.toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Fraction Pizza</span></p>
+
+  <div class="gamecard">
+    <div class="gamehead">
+      <span class="gicon" style="background:linear-gradient(135deg,#FFB84D,#E53935)">🍕</span>
+      <div><h1 data-t="title">Fraction Pizza</h1><p class="sub" data-t="sub">What fraction of the pizza has pepperoni?</p></div>
+    </div>
+
+    <div id="game">
+      <div class="hud"><span id="progress"></span><span id="score">⭐ 0</span></div>
+      <svg id="pizza" viewBox="0 0 220 220" role="img" aria-label="pizza"></svg>
+      <div class="choices answers pz" id="answers"></div>
+      <div class="feedback" id="feedback">&nbsp;</div>
+    </div>
+
+    <div id="end" hidden>
+      <div class="bigstars" id="bigstars"></div>
+      <div class="endscore" id="endscore"></div>
+      <p class="endmsg" id="endmsg"></p>
+      <div class="endbtns">
+        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="howto">
+    <h2 data-t="howT">How to read a fraction</h2>
+    <p data-t="howP">The bottom number (denominator) says how many equal slices the pizza is cut into. The top number (numerator) says how many of those slices we are talking about. 3 slices with pepperoni out of 8 slices = 3/8.</p>
+  </div>
+
+  <div class="appcta">
+    <img src="../logos/mathokids.png" alt="MathoKids">
+    <div><b>MathoKids</b><p data-t="cta">Fractions, times tables, column maths and more — learn by playing, offline and free on Google Play.</p></div>
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
+  </div>
+
+  <div class="ad-slot"><div class="ad-label" data-t="ad">Advertisement</div><ins class="adsbygoogle" style="display:block;text-align:center" data-ad-format="auto" data-ad-client="ca-pub-9202119066805107" data-ad-slot="4620284747" data-full-width-responsive="true"></ins></div>
+</div>
+
+<footer class="foot">
+  <div class="fb">Kids Learning Hub</div>
+  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
+</footer>
+
+<script src="/stars.js?v=3"></script>
+<script src="play.js?v=4"></script>
+<script>
+const STR = {
+  en:{home:'Home',games:'Games',title:'Fraction Pizza',sub:'What fraction of the pizza has pepperoni?',again:'Play again',good:'Fraction master! 🎉',ok:'Well done — tasty work!',try:'Good try — play once more!',correct:'Yes! 🎉',wrong:'Almost! The answer is',q:'Pizza',cert:'Print your certificate!',ad:'Advertisement',howT:'How to read a fraction',howP:'The bottom number (denominator) says how many equal slices the pizza is cut into. The top number (numerator) says how many of those slices we are talking about. 3 slices with pepperoni out of 8 slices = 3/8.',cta:'Fractions, times tables, column maths and more — learn by playing, offline and free on Google Play.'},
+  fr:{home:'Accueil',games:'Jeux',title:'Pizza des fractions',sub:'Quelle fraction de la pizza a du pepperoni ?',again:'Rejouer',good:'Champion des fractions ! 🎉',ok:'Bien joué — délicieux !',try:'Bel essai — encore une fois !',correct:'Oui ! 🎉',wrong:'Presque ! La réponse est',q:'Pizza',cert:'Imprime ton diplôme !',ad:'Publicité',howT:'Comment lire une fraction',howP:'Le nombre du bas (dénominateur) indique en combien de parts égales la pizza est coupée. Le nombre du haut (numérateur) indique combien de ces parts on regarde. 3 parts avec du pepperoni sur 8 parts = 3/8.',cta:'Fractions, tables, calcul posé et plus — apprends en jouant, hors ligne et gratuit sur Google Play.'},
+  es:{home:'Inicio',games:'Juegos',title:'Pizza de fracciones',sub:'¿Qué fracción de la pizza tiene pepperoni?',again:'Jugar otra vez',good:'¡Maestro de fracciones! 🎉',ok:'¡Bien hecho, qué rico!',try:'Buen intento, ¡una vez más!',correct:'¡Sí! 🎉',wrong:'¡Casi! La respuesta es',q:'Pizza',cert:'¡Imprime tu diploma!',ad:'Publicidad',howT:'Cómo leer una fracción',howP:'El número de abajo (denominador) dice en cuántas porciones iguales se corta la pizza. El número de arriba (numerador) dice cuántas de esas porciones contamos. 3 porciones con pepperoni de 8 porciones = 3/8.',cta:'Fracciones, tablas, operaciones en columna y más — aprende jugando, sin conexión y gratis en Google Play.'},
+  ar:{home:'الرئيسية',games:'الألعاب',title:'بيتزا الكسور',sub:'ما الكسر الذي يمثّل الجزء المغطّى بالببروني؟',again:'العب مجددًا',good:'بطل الكسور! 🎉',ok:'أحسنت — عمل لذيذ!',try:'محاولة طيبة — جرّب مرة أخرى!',correct:'نعم! 🎉',wrong:'قريب! الجواب هو',q:'بيتزا',cert:'اطبع شهادتك!',ad:'إعلان',howT:'كيف نقرأ الكسر',howP:'العدد في الأسفل (المقام) يدلّ على عدد الأجزاء المتساوية التي قُسّمت إليها البيتزا. والعدد في الأعلى (البسط) يدلّ على عدد الأجزاء التي نتحدّث عنها. 3 أجزاء بالببروني من 8 أجزاء = 3/8.',cta:'الكسور وجداول الضرب والعمليات العمودية وأكثر — تعلّم باللعب، دون إنترنت ومجانًا على Google Play.'}
+};
+let T=STR.en, qi=0, score=0;
+const rnd=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+PLAY.init(l=>{ T=STR[l]||STR.en; PLAY.applyStrings(T); });
+startGame();
+
+function startGame(){
+  qi=0; score=0;
+  document.getElementById('end').hidden=true;
+  document.getElementById('game').hidden=false;
+  nextQ();
+}
+/* round plan: 1–3 unit fractions on small pizzas, then any fraction, scattered slices at the end */
+function makeQ(i){
+  const n = i<3 ? [2,3,4][rnd(0,2)] : [3,4,5,6,8][rnd(0,4)];
+  const k = i<3 ? 1 : rnd(1,n-1);
+  return {n,k,scatter:i>=7};
+}
+function fracHTML(a,b){ return '<span class="frac" dir="ltr"><b>'+a+'</b><i>'+b+'</i></span>'; }
+function drawPizza(n,k,scatter){
+  const cx=110, cy=110, r=92, svg=document.getElementById('pizza');
+  let order=[...Array(n).keys()];
+  if(scatter) order=PLAY.shuffle(order); else { const s=rnd(0,n-1); order=order.map(i=>(i+s)%n); }
+  const on=new Set(order.slice(0,k));
+  let out='<circle cx="110" cy="110" r="104" fill="#D9A15B"/><circle cx="110" cy="110" r="'+r+'" fill="#FFE08A"/>';
+  for(let i=0;i<n;i++){
+    const a0=-Math.PI/2+i*2*Math.PI/n, a1=a0+2*Math.PI/n, am=(a0+a1)/2;
+    const x0=cx+r*Math.cos(a0), y0=cy+r*Math.sin(a0), x1=cx+r*Math.cos(a1), y1=cy+r*Math.sin(a1);
+    if(on.has(i)){
+      out+='<path d="M'+cx+' '+cy+'L'+x0.toFixed(1)+' '+y0.toFixed(1)+'A'+r+' '+r+' 0 0 1 '+x1.toFixed(1)+' '+y1.toFixed(1)+'Z" fill="#FFC857"/>';
+      const spots = n<=4 ? [[.35,-.25],[.62,.18],[.7,-.18],[.45,.22]] : [[.45,0],[.72,-.12],[.72,.14]];
+      const span=2*Math.PI/n;
+      spots.forEach(([d,o])=>{ const a=am+o*span*.9; out+='<circle cx="'+(cx+d*r*Math.cos(a)).toFixed(1)+'" cy="'+(cy+d*r*Math.sin(a)).toFixed(1)+'" r="'+(n<=4?11:8)+'" fill="#C62828" stroke="#8E1B1B" stroke-width="1.5"/>'; });
+    }
+  }
+  for(let i=0;i<n;i++){ const a=-Math.PI/2+i*2*Math.PI/n;
+    out+='<line x1="'+cx+'" y1="'+cy+'" x2="'+(cx+104*Math.cos(a)).toFixed(1)+'" y2="'+(cy+104*Math.sin(a)).toFixed(1)+'" stroke="#8D5A2B" stroke-width="3" stroke-linecap="round"/>'; }
+  svg.innerHTML=out;
+}
+function nextQ(){
+  if(qi>=10) return endGame();
+  const {n,k,scatter}=makeQ(qi);
+  document.getElementById('progress').textContent=T.q+' '+(qi+1)+' / 10';
+  document.getElementById('score').textContent='⭐ '+score;
+  document.getElementById('feedback').innerHTML='&nbsp;';
+  drawPizza(n,k,scatter);
+  /* distractors: the unshaded part, a wrong denominator, numerator/denominator swapped… never an equivalent fraction */
+  const opts=[[k,n]], key=([a,b])=>a+'/'+b, seen=new Set([key([k,n])]);
+  const cands=PLAY.shuffle([[n-k,n],[k,n+1],[k,n-1],[k+1,n],[k-1,n],[n,k],[k,2*n]]);
+  for(const c of cands.concat([[1,n+2],[2,n+3],[1,n+4]])){
+    if(opts.length>=3) break;
+    const [a,b]=c;
+    if(a<1||b<2||seen.has(key(c))||a*n===k*b) continue;
+    seen.add(key(c)); opts.push(c);
+  }
+  const box=document.getElementById('answers'); box.innerHTML='';
+  PLAY.shuffle(opts).forEach(([a,b])=>{
+    const btn=document.createElement('button'); btn.className='btn answer'; btn.innerHTML=fracHTML(a,b);
+    btn.dataset.ok=(a===k&&b===n)?'1':''; btn.setAttribute('aria-label',a+'/'+b);
+    btn.onclick=()=>answer(btn,k,n); box.appendChild(btn);
+  });
+}
+function answer(btn,k,n){
+  document.querySelectorAll('.answer').forEach(b=>b.disabled=true);
+  const fb=document.getElementById('feedback');
+  if(btn.dataset.ok){ score++; btn.classList.add('right'); fb.textContent=T.correct; }
+  else{ btn.classList.add('bad');
+    document.querySelectorAll('.answer').forEach(b=>{ if(b.dataset.ok) b.classList.add('right'); });
+    fb.innerHTML=T.wrong+' '+fracHTML(k,n); }
+  qi++; setTimeout(nextQ,1500);
+}
+function endGame(){
+  document.getElementById('game').hidden=true;
+  document.getElementById('end').hidden=false;
+  const stars=score>=9?3:score>=6?2:1;
+  document.getElementById('bigstars').textContent='⭐'.repeat(stars)+'☆'.repeat(3-stars);
+  document.getElementById('endscore').textContent=score+' / 10';
+  document.getElementById('endmsg').textContent=score>=9?T.good:score>=6?T.ok:T.try;
+  document.getElementById('certLink').hidden=score<9;
+  if(window.KLH_STARS) KLH_STARS.record('fraction-pizza', stars);
+  if(score>=9) PLAY.confetti();
+}
+</script>
+</body>
+</html>

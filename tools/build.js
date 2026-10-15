@@ -335,6 +335,7 @@ const WS_TOPIC_URLS = new Set(require('./worksheets-data.js').map(t => 'workshee
 for (const p of ['play/', 'play/times-tables.html', 'play/quick-count.html', 'play/word-match.html',
                  'play/clock-game.html', 'play/memory.html', 'play/capitals.html',
                  'play/math-race.html', 'play/flags.html', 'play/patterns.html', 'play/science-quiz.html',
+                 'play/odd-one-out.html', 'play/fraction-pizza.html', 'play/robot-code.html', 'play/animal-homes.html',
                  'worksheets/', 'worksheets/addition.html', 'worksheets/subtraction.html',
                  'worksheets/multiplication.html', 'worksheets/missing-number.html', 'worksheets/arabic-letters.html',
                  'worksheets/latin-letters.html', 'worksheets/numbers.html', 'worksheets/words.html',
