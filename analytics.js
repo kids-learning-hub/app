@@ -128,3 +128,12 @@
     gtag('event', 'worksheet_print', { page_path: location.pathname });
   });
 })();
+
+/* ── Kids' menu bar + first-visit welcome tour (2026-10) ────────────────
+   Every page loads this file, so it also loads the site-wide kids' menu
+   from here. All the code lives in /kidbar.js.                          */
+(function () {
+  var s = document.createElement('script');
+  s.src = '/kidbar.js?v=2'; s.defer = true;
+  (document.head || document.documentElement).appendChild(s);
+})();
