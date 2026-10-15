@@ -500,4 +500,7 @@ module.exports = [
 /* ── October 2026 additions (fractions … arrays) live in their own file ── */
 ...require('./worksheets-data-2026-10.js'),
 
+/* ── printable games (snakes & ladders, bingo, I have…who has?, sea battle) ── */
+...require('./worksheets-data-games.js'),
+
 ];
