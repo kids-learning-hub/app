@@ -11,7 +11,8 @@
   var KEY = 'klh_stars';
   var GAMES = ['times-tables', 'quick-count', 'word-match', 'clock-game', 'memory',
                'capitals', 'math-race', 'flags', 'patterns', 'science-quiz',
-               'odd-one-out', 'fraction-pizza', 'robot-code', 'animal-homes'];
+               'odd-one-out', 'fraction-pizza', 'robot-code', 'animal-homes',
+               'compare-numbers', 'shape-detective', 'copy-the-lights', 'balance-scale'];
 
   var L = {
     en: { stars: 'stars', earned: 'You earned', total: 'Total', newBadge: 'New badge!', title: 'My stars & badges',
@@ -39,7 +40,7 @@
       h: ['Play 5 different games', 'Joue à 5 jeux différents', 'Juega a 5 juegos distintos', 'العب 5 ألعاب مختلفة'],
       t: function (s) { return Object.keys(s.best).filter(function (g) { return GAMES.indexOf(g) > -1; }).length >= 5; } },
     { id: 'adventurer', e: '🗺️', n: ['Adventurer', 'Aventurier', 'Aventurero', 'المغامر'],
-      h: ['Play all 14 games', 'Joue aux 14 jeux', 'Juega a los 14 juegos', 'العب الألعاب الأربع عشرة كلها'],
+      h: ['Play all 18 games', 'Joue aux 18 jeux', 'Juega a los 18 juegos', 'العب الألعاب الثماني عشرة كلها'],
       t: function (s) { return GAMES.every(function (g) { return g in s.best; }); } },
     { id: 'tables', e: '✖️', n: ['Times-table hero', 'Héros des tables', 'Héroe de las tablas', 'بطل جدول الضرب'],
       h: ['3 stars in Times Tables Race', '3 étoiles à la Course aux tables', '3 estrellas en Carrera de tablas', '3 نجوم في سباق جداول الضرب'],
@@ -53,6 +54,9 @@
     { id: 'coder', e: '🤖', n: ['Little coder', 'Petit codeur', 'Pequeño programador', 'المبرمج الصغير'],
       h: ['3 stars in Robot Code', '3 étoiles à Code le robot', '3 estrellas en Programa el robot', '3 نجوم في برمج الروبوت'],
       t: function (s) { return s.best['robot-code'] === 3; } },
+    { id: 'memory', e: '💡', n: ['Memory master', 'Maître de la mémoire', 'Maestro de la memoria', 'بطل الذاكرة'],
+      h: ['3 stars in Copy the Lights', '3 étoiles à Répète les lumières', '3 estrellas en Copia las luces', '3 نجوم في كرّر الأضواء'],
+      t: function (s) { return s.best['copy-the-lights'] === 3; } },
     { id: 'streak', e: '🔥', n: ['On fire', 'En feu', 'Imparable', 'المتحمّس'],
       h: ['Daily challenge 3 days in a row', 'Défi du jour 3 jours de suite', 'Reto diario 3 días seguidos', 'تحدّي اليوم 3 أيام متتالية'],
       t: function () { try { var d = JSON.parse(localStorage.getItem('klh_dc') || '{}'); return (d.n || 0) >= 3; } catch (e) { return false; } } },
