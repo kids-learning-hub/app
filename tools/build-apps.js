@@ -178,28 +178,28 @@ function playBadge(pkg, label) {
    scrolls into view, and skips autoplay when the visitor saves data.     */
 const PROMO = {
   en: { premBtn: '✨ Get Premium', watchT: 'See MathoKids in action',
-        watchP: 'A 30-second tour of the adventure map, the games and the buddies.',
+        watchP: 'A one-minute tour of the adventure map, the games and the buddies.',
         sound: '🔊 Sound on', mute: '🔇 Sound off',
         premT: 'Unlock MathoKids Premium',
         premP: 'Word problems, calculation rules, certificates, photo homework help, the AR treasure hunt and all badges.',
         premFrom: 'From $1.99 / month · or all 10 apps with the Kids Learning Hub Pass.',
         premNote: 'Bought by an adult on this website. Codes work in the web and Android versions from kids-learning-hub.cc; the Google Play version stays free.' },
   fr: { premBtn: '✨ Passer à Premium', watchT: 'MathoKids en action',
-        watchP: 'Une visite de 30 secondes : la carte d’aventure, les jeux et les compagnons.',
+        watchP: 'Une visite d’une minute : la carte d’aventure, les jeux et les compagnons.',
         sound: '🔊 Activer le son', mute: '🔇 Couper le son',
         premT: 'Débloquez MathoKids Premium',
         premP: 'Problèmes, règles de calcul, certificats, aide aux devoirs par photo, chasse au trésor AR et tous les badges.',
         premFrom: 'Dès 1,99 $ / mois · ou les 10 applis avec le Pass Kids Learning Hub.',
         premNote: 'Achat par un adulte sur ce site. Les codes fonctionnent dans les versions web et Android de kids-learning-hub.cc ; la version Google Play reste gratuite.' },
   es: { premBtn: '✨ Obtener Premium', watchT: 'MathoKids en acción',
-        watchP: 'Un recorrido de 30 segundos: el mapa de aventuras, los juegos y los compañeros.',
+        watchP: 'Un recorrido de un minuto: el mapa de aventuras, los juegos y los compañeros.',
         sound: '🔊 Activar sonido', mute: '🔇 Silenciar',
         premT: 'Desbloquea MathoKids Premium',
         premP: 'Problemas, reglas de cálculo, certificados, ayuda con deberes por foto, búsqueda del tesoro AR y todas las insignias.',
         premFrom: 'Desde 1,99 $ / mes · o las 10 apps con el Pase Kids Learning Hub.',
         premNote: 'Lo compra un adulto en este sitio. Los códigos funcionan en las versiones web y Android de kids-learning-hub.cc; la versión de Google Play sigue siendo gratuita.' },
   ar: { premBtn: '✨ احصل على Premium', watchT: 'شاهد MathoKids',
-        watchP: 'جولة في 30 ثانية: خريطة المغامرة والألعاب والرفاق.',
+        watchP: 'جولة في دقيقة واحدة: خريطة المغامرة والألعاب والرفاق.',
         sound: '🔊 شغّل الصوت', mute: '🔇 أوقف الصوت',
         premT: 'افتح MathoKids Premium',
         premP: 'المسائل، قواعد الحساب، الشهادات، المساعدة في الواجبات بالصورة، صيد الكنوز AR وكل الشارات.',
@@ -212,7 +212,7 @@ function promoSection(app, lang, root) {
   return `
   <section class="promo">
     <div class="promo-phone">
-      <video class="promo-v" id="promoV" muted loop playsinline preload="none" aria-label="${esc(P.watchT)}"
+      <video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="${root}media/mathokids-promo-${lang}.webp" aria-label="${esc(P.watchT)}"
              data-src="${root}media/mathokids-promo-${lang}.mp4"></video>
       <button class="promo-sound" id="promoSound" type="button" data-on="${esc(P.sound)}" data-off="${esc(P.mute)}">${esc(P.sound)}</button>
     </div>
@@ -233,7 +233,7 @@ function promoSection(app, lang, root) {
     var saveData=navigator.connection&&navigator.connection.saveData;
     function start(){ if(!v.getAttribute('src')){ v.src=v.dataset.src; } if(saveData){ v.controls=true; return; } var p=v.play(); if(p&&p.catch)p.catch(function(){ v.controls=true; }); }
     if('IntersectionObserver' in window){
-      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) start(); else if(v.getAttribute('src')&&!v.paused) v.pause(); }); },{threshold:.35}).observe(v);
+      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) start(); else if(v.getAttribute('src')&&!v.paused) v.pause(); }); },{threshold:.2}).observe(v);
     } else start();
     b.onclick=function(){ if(!v.getAttribute('src')) start(); v.muted=!v.muted; if(!v.muted){ v.currentTime=0; v.play(); } b.textContent=v.muted?b.dataset.on:b.dataset.off; };
   })();</script>

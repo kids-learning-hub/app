@@ -86,13 +86,13 @@
 
   <section class="promo">
     <div class="promo-phone">
-      <video class="promo-v" id="promoV" muted loop playsinline preload="none" aria-label="شاهد MathoKids"
+      <video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="../../media/mathokids-promo-ar.webp" aria-label="شاهد MathoKids"
              data-src="../../media/mathokids-promo-ar.mp4"></video>
       <button class="promo-sound" id="promoSound" type="button" data-on="🔊 شغّل الصوت" data-off="🔇 أوقف الصوت">🔊 شغّل الصوت</button>
     </div>
     <div class="promo-t">
       <h2>🎬 شاهد MathoKids</h2>
-      <p>جولة في 30 ثانية: خريطة المغامرة والألعاب والرفاق.</p>
+      <p>جولة في دقيقة واحدة: خريطة المغامرة والألعاب والرفاق.</p>
       <div class="promo-prem">
         <h3>افتح MathoKids Premium</h3>
         <p>المسائل، قواعد الحساب، الشهادات، المساعدة في الواجبات بالصورة، صيد الكنوز AR وكل الشارات.</p>
@@ -107,7 +107,7 @@
     var saveData=navigator.connection&&navigator.connection.saveData;
     function start(){ if(!v.getAttribute('src')){ v.src=v.dataset.src; } if(saveData){ v.controls=true; return; } var p=v.play(); if(p&&p.catch)p.catch(function(){ v.controls=true; }); }
     if('IntersectionObserver' in window){
-      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) start(); else if(v.getAttribute('src')&&!v.paused) v.pause(); }); },{threshold:.35}).observe(v);
+      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) start(); else if(v.getAttribute('src')&&!v.paused) v.pause(); }); },{threshold:.2}).observe(v);
     } else start();
     b.onclick=function(){ if(!v.getAttribute('src')) start(); v.muted=!v.muted; if(!v.muted){ v.currentTime=0; v.play(); } b.textContent=v.muted?b.dataset.on:b.dataset.off; };
   })();</script>
