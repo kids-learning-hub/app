@@ -48,7 +48,7 @@
 
   function staticUrl(l){
     const p = location.pathname; let m;
-    if((m = p.match(/^\/(?:(?:fr|es|ar)\/)?(about|contact|kids|privacy)\.html$/))) return (l==='en' ? '/' : '/'+l+'/') + m[1] + '.html';
+    if((m = p.match(/^\/(?:(?:fr|es|ar)\/)?(about|contact|kids|privacy|terms|refund)\.html$/))) return (l==='en' ? '/' : '/'+l+'/') + m[1] + '.html';
     if((m = p.match(/^\/(play|worksheets)\/(?:(?:fr|es|ar)\/)?(?:index\.html)?$/))) return '/'+m[1]+'/' + (l==='en' ? '' : l+'/');
     return null;
   }

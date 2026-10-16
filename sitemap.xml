@@ -2073,7 +2073,7 @@
   <!--LANGS-->
   <url>
     <loc>https://kids-learning-hub.cc/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/"/>
@@ -2084,7 +2084,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/fr/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/"/>
@@ -2095,7 +2095,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/es/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/"/>
@@ -2106,7 +2106,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/ar/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/"/>
@@ -2117,7 +2117,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/about.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/about.html"/>
@@ -2128,7 +2128,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/fr/about.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/about.html"/>
@@ -2139,7 +2139,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/es/about.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/about.html"/>
@@ -2150,7 +2150,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/ar/about.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/about.html"/>
@@ -2161,7 +2161,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/kids.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/kids.html"/>
@@ -2172,7 +2172,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/fr/kids.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/kids.html"/>
@@ -2183,7 +2183,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/es/kids.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/kids.html"/>
@@ -2194,7 +2194,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/ar/kids.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/kids.html"/>
@@ -2204,8 +2204,96 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/kids.html"/>
   </url>
   <url>
+    <loc>https://kids-learning-hub.cc/terms.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/ar/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/terms.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/fr/terms.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/ar/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/terms.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/es/terms.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/ar/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/terms.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/ar/terms.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/ar/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/terms.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/refund.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/ar/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/refund.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/fr/refund.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/ar/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/refund.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/es/refund.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/ar/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/refund.html"/>
+  </url>
+  <url>
+    <loc>https://kids-learning-hub.cc/ar/refund.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/ar/refund.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/refund.html"/>
+  </url>
+  <url>
     <loc>https://kids-learning-hub.cc/contact.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/contact.html"/>
@@ -2216,7 +2304,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/fr/contact.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/contact.html"/>
@@ -2227,7 +2315,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/es/contact.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/contact.html"/>
@@ -2238,7 +2326,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/ar/contact.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/contact.html"/>
@@ -2249,7 +2337,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/play/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/"/>
@@ -2260,7 +2348,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/play/fr/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/"/>
@@ -2271,7 +2359,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/play/es/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/"/>
@@ -2282,7 +2370,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/play/ar/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/"/>
@@ -2293,7 +2381,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/worksheets/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/worksheets/"/>
@@ -2304,7 +2392,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/worksheets/fr/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/worksheets/"/>
@@ -2315,7 +2403,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/worksheets/es/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/worksheets/"/>
@@ -2326,7 +2414,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/worksheets/ar/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/worksheets/"/>
@@ -2337,7 +2425,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/privacy.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/privacy.html"/>
@@ -2348,7 +2436,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/fr/privacy.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/privacy.html"/>
@@ -2359,7 +2447,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/es/privacy.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/privacy.html"/>
@@ -2370,7 +2458,7 @@
   </url>
   <url>
     <loc>https://kids-learning-hub.cc/ar/privacy.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/privacy.html"/>
