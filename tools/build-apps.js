@@ -154,7 +154,7 @@ ${hreflangBlock(o.slug, o.self)}<meta name="theme-color" content="#1E5BFF" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${root}blog/article.css" />
-<link rel="stylesheet" href="${appsRoot}apps.css" />
+<link rel="stylesheet" href="${appsRoot}apps.css?v=2" />
 <script src="${root}analytics.js" defer></script>
 <script>(function(){try{var t=localStorage.getItem('vsm_theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
 
@@ -170,6 +170,74 @@ function playBadge(pkg, label) {
       <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M3.6 1.8 13.3 11.5 3.6 21.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4z"/><path fill="#FBBC04" d="m17.1 7.7 3.6 2c.9.5.9 1.9 0 2.4l-3.6 2-3-3.6 3-2.8z"/><path fill="#34A853" d="M3.6 1.8c.5-.4 1.2-.4 1.8 0l11.7 6.6-2.8 2.8L3.6 1.8z"/><path fill="#4285F4" d="M3.6 21.2 14.3 11l2.8 2.8L5.4 21.2c-.6.4-1.3.4-1.8 0z"/></svg>
       <span>${label}</span>
     </a>`;
+}
+
+/* ── MathoKids: promo video + Premium card (2026-10) ─────────────────────
+   Voiced video per page language (media/mathokids-promo-<lang>.mp4). It
+   autoplays muted (browsers only allow muted autoplay), loads only when it
+   scrolls into view, and skips autoplay when the visitor saves data.     */
+const PROMO = {
+  en: { premBtn: '✨ Get Premium', watchT: 'See MathoKids in action',
+        watchP: 'A 30-second tour of the adventure map, the games and the buddies.',
+        sound: '🔊 Sound on', mute: '🔇 Sound off',
+        premT: 'Unlock MathoKids Premium',
+        premP: 'Word problems, calculation rules, certificates, photo homework help, the AR treasure hunt and all badges.',
+        premFrom: 'From $1.99 / month · or all 10 apps with the Kids Learning Hub Pass.',
+        premNote: 'Bought by an adult on this website. Codes work in the web and Android versions from kids-learning-hub.cc; the Google Play version stays free.' },
+  fr: { premBtn: '✨ Passer à Premium', watchT: 'MathoKids en action',
+        watchP: 'Une visite de 30 secondes : la carte d’aventure, les jeux et les compagnons.',
+        sound: '🔊 Activer le son', mute: '🔇 Couper le son',
+        premT: 'Débloquez MathoKids Premium',
+        premP: 'Problèmes, règles de calcul, certificats, aide aux devoirs par photo, chasse au trésor AR et tous les badges.',
+        premFrom: 'Dès 1,99 $ / mois · ou les 10 applis avec le Pass Kids Learning Hub.',
+        premNote: 'Achat par un adulte sur ce site. Les codes fonctionnent dans les versions web et Android de kids-learning-hub.cc ; la version Google Play reste gratuite.' },
+  es: { premBtn: '✨ Obtener Premium', watchT: 'MathoKids en acción',
+        watchP: 'Un recorrido de 30 segundos: el mapa de aventuras, los juegos y los compañeros.',
+        sound: '🔊 Activar sonido', mute: '🔇 Silenciar',
+        premT: 'Desbloquea MathoKids Premium',
+        premP: 'Problemas, reglas de cálculo, certificados, ayuda con deberes por foto, búsqueda del tesoro AR y todas las insignias.',
+        premFrom: 'Desde 1,99 $ / mes · o las 10 apps con el Pase Kids Learning Hub.',
+        premNote: 'Lo compra un adulto en este sitio. Los códigos funcionan en las versiones web y Android de kids-learning-hub.cc; la versión de Google Play sigue siendo gratuita.' },
+  ar: { premBtn: '✨ احصل على Premium', watchT: 'شاهد MathoKids',
+        watchP: 'جولة في 30 ثانية: خريطة المغامرة والألعاب والرفاق.',
+        sound: '🔊 شغّل الصوت', mute: '🔇 أوقف الصوت',
+        premT: 'افتح MathoKids Premium',
+        premP: 'المسائل، قواعد الحساب، الشهادات، المساعدة في الواجبات بالصورة، صيد الكنوز AR وكل الشارات.',
+        premFrom: 'ابتداءً من 1.99$ في الشهر · أو التطبيقات العشرة بالبطاقة الشاملة.',
+        premNote: 'الشراء يقوم به شخص بالغ على هذا الموقع. تعمل الأكواد في نسختي الويب وأندرويد من kids-learning-hub.cc، أما نسخة Google Play فتبقى مجانية.' },
+};
+function promoSection(app, lang, root) {
+  if (app.slug !== 'mathokids') return '';
+  const P = PROMO[lang];
+  return `
+  <section class="promo">
+    <div class="promo-phone">
+      <video class="promo-v" id="promoV" muted loop playsinline preload="none" aria-label="${esc(P.watchT)}"
+             data-src="${root}media/mathokids-promo-${lang}.mp4"></video>
+      <button class="promo-sound" id="promoSound" type="button" data-on="${esc(P.sound)}" data-off="${esc(P.mute)}">${esc(P.sound)}</button>
+    </div>
+    <div class="promo-t">
+      <h2>🎬 ${esc(P.watchT)}</h2>
+      <p>${esc(P.watchP)}</p>
+      <div class="promo-prem">
+        <h3>${esc(P.premT)}</h3>
+        <p>${esc(P.premP)}</p>
+        <p class="promo-from">${esc(P.premFrom)}</p>
+        <a class="prem-btn" href="${root}premium.html?app=mathokids">${esc(P.premBtn)}</a>
+        <p class="promo-note">${esc(P.premNote)}</p>
+      </div>
+    </div>
+  </section>
+  <script>(function(){
+    var v=document.getElementById('promoV'),b=document.getElementById('promoSound');if(!v)return;
+    var saveData=navigator.connection&&navigator.connection.saveData;
+    function start(){ if(!v.getAttribute('src')){ v.src=v.dataset.src; } if(saveData){ v.controls=true; return; } var p=v.play(); if(p&&p.catch)p.catch(function(){ v.controls=true; }); }
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) start(); else if(v.getAttribute('src')&&!v.paused) v.pause(); }); },{threshold:.35}).observe(v);
+    } else start();
+    b.onclick=function(){ if(!v.getAttribute('src')) start(); v.muted=!v.muted; if(!v.muted){ v.currentTime=0; v.play(); } b.textContent=v.muted?b.dataset.on:b.dataset.off; };
+  })();</script>
+`;
 }
 
 /* ═══════════════ 1 · individual app pages ═══════════════════════════════ */
@@ -248,11 +316,12 @@ for (const app of APPS) {
       <p class="lede">${esc(app.lede[lang])}</p>
       <div class="app-actions">
         ${playBadge(app.pkg, S.getOn)}
+        ${app.slug === 'mathokids' ? `<a class="prem-btn" href="${root}premium.html?app=mathokids">${esc(PROMO[lang].premBtn)}</a>` : ''}
         <span class="free-note">${esc(S.free)}</span>
       </div>
     </div>
   </section>
-
+${promoSection(app, lang, root)}
   <div class="stats">
 ${stats}
   </div>
