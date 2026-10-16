@@ -212,8 +212,8 @@ function promoSection(app, lang, root) {
   return `
   <section class="promo">
     <div class="promo-phone">
-      <video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="${root}media/mathokids-promo-${lang}.webp" aria-label="${esc(P.watchT)}"
-             data-src="${root}media/mathokids-promo-${lang}.mp4"></video>
+      <video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="${root}media/mathokids-promo.webp" aria-label="${esc(P.watchT)}"
+             data-src="${root}media/mathokids-promo.mp4"></video>
       <button class="promo-sound" id="promoSound" type="button" data-on="${esc(P.sound)}" data-off="${esc(P.mute)}">${esc(P.sound)}</button>
     </div>
     <div class="promo-t">
