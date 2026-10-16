@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Teacher Dashboard | Kids Learning Hub</title>
+<meta name="description" content="Free class dashboard for teachers: scan your pupils' progress codes from the Kids Learning Hub apps. No accounts, no server — data stays in your browser." />
+<link rel="canonical" href="https://kids-learning-hub.cc/teacher.html" />
+<meta name="robots" content="index,follow" />
+<link rel="icon" href="/logos/hub-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/play/play.css?v=4" />
+<style>
+h1,h2,h3{font-family:"Baloo 2",sans-serif}
+.hero{text-align:center;padding:10px 0 4px}
+.hero h1{font-size:clamp(28px,6vw,42px);margin:8px 0 4px}
+.hero p{color:var(--ink2);font-size:17px;max-width:700px;margin:0 auto}
+.card3{background:var(--card);border:3px solid var(--line);border-radius:24px;box-shadow:0 6px 0 var(--line);padding:20px;margin-top:18px}
+.card3 h2{font-size:22px;margin:0 0 10px}
+.btn3{display:inline-block;border:0;border-radius:14px;padding:10px 16px;font:900 15px "Nunito",sans-serif;color:#fff;background:var(--blue);box-shadow:0 4px 0 var(--navy);cursor:pointer;text-decoration:none}
+.btn3:active{transform:translateY(3px);box-shadow:0 1px 0 var(--navy)}
+.btn3.gold{background:#EF9F27;box-shadow:0 4px 0 #BA7517}
+.btn3.ghost{background:var(--card2);color:var(--ink);border:2px solid var(--line);box-shadow:none}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+select,input[type=text],textarea{font:700 15px "Nunito",sans-serif;border:2px solid var(--line);border-radius:12px;padding:9px 10px;background:var(--card);color:var(--ink)}
+textarea{width:100%;min-height:90px;box-sizing:border-box}
+.steps{margin:6px 0 0 20px;color:var(--ink2);line-height:1.8;font-weight:600}
+[dir="rtl"] .steps{margin:6px 20px 0 0}
+.note{font-size:14px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:14px;font-weight:800;z-index:9;max-width:90vw;text-align:center}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:12px}
+.kpi{background:var(--card2);border:2px solid var(--line);border-radius:16px;padding:12px}
+.kpi b{display:block;font-size:24px;color:var(--blue)}
+.kpi span{color:var(--muted);font-weight:700;font-size:13px}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;border:2px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:860px;font-size:14px}
+th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:start;vertical-align:top}
+th{background:var(--card2);font-weight:900;color:var(--ink2);cursor:pointer;white-space:nowrap}
+td small{color:var(--muted);display:block}
+td img{width:26px;height:26px;border-radius:7px;vertical-align:middle}
+tr.warn td{background:rgba(239,159,39,.10)}
+.bar{height:8px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:4px}
+.bar i{display:block;height:100%;background:var(--green)}
+.spark{display:inline-flex;gap:2px;align-items:flex-end;height:22px}
+.spark i{display:block;width:5px;background:var(--sky);border-radius:2px}
+.tag{display:inline-block;background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:1px 6px;margin:1px;font-size:12px;font-weight:700}
+.x{background:none;border:0;color:var(--muted);cursor:pointer;font-size:16px}
+.empty{text-align:center;color:var(--muted);font-weight:700;padding:24px}
+@media print{
+  header.top,.crumbs,.hero,.noprint,.x{display:none!important}
+  .card3{box-shadow:none;border:0;padding:0}
+  table{min-width:0;font-size:11px}
+  .tablewrap{overflow:visible;border:0}
+}
+</style>
+<script src="/analytics.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <div class="top-actions">
+      <div class="langsw" role="group" aria-label="Language">
+        <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
+      </div>
+      <button class="icon-btn" aria-label="Dark mode" onclick="PLAY.toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap" style="max-width:1100px">
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/schools.html" data-t="schools">For schools</a> › <span data-t="crumb">Teacher dashboard</span></p>
+
+  <div class="hero">
+    <h1 data-t="title">🧑‍🏫 Teacher dashboard</h1>
+    <p data-t="sub">Follow your class in the 10 Kids Learning Hub apps. Free, no accounts, nothing stored on a server.</p>
+  </div>
+
+  <div class="card3 noprint">
+    <h2 data-t="howT">How to add pupils</h2>
+    <ol class="steps">
+      <li data-t="s1">In the app, a parent opens Settings › Parents space › Share with the teacher.</li>
+      <li data-t="s2">Scan the QR code with your phone camera: this page opens and the pupil is added.</li>
+      <li data-t="s3">Or paste the links or codes received by WhatsApp or e-mail below (several at once is fine).</li>
+    </ol>
+    <textarea id="paste" data-tp="pastePh" placeholder="Paste links or KLH1-… codes here"></textarea>
+    <div class="row" style="margin-top:8px">
+      <button class="btn3" id="addBtn" data-t="add">Add to class</button>
+      <span class="note" data-t="privacy">🔒 Data stays in this browser only.</span>
+    </div>
+  </div>
+
+  <div class="card3">
+    <div class="row noprint" style="justify-content:space-between;margin-bottom:12px">
+      <div class="row">
+        <label class="note" for="classSel" data-t="classLbl">Class</label>
+        <select id="classSel"></select>
+        <button class="btn3 ghost" id="newClass" data-t="newClass">+ New class</button>
+        <button class="btn3 ghost" id="renameClass" data-t="rename">Rename</button>
+      </div>
+      <div class="row">
+        <button class="btn3 gold" onclick="window.print()" data-t="print">Print</button>
+        <button class="btn3 ghost" id="csvBtn" data-t="csv">Export CSV</button>
+        <button class="btn3 ghost" id="clearBtn" data-t="clear">Empty class</button>
+      </div>
+    </div>
+    <h2 id="className"></h2>
+    <div class="kpis" id="kpis"></div>
+    <div id="weakAll" class="note" style="margin-bottom:10px"></div>
+    <div class="tablewrap"><table>
+      <thead><tr>
+        <th data-sort="name" data-t="cPupil">Pupil</th>
+        <th data-sort="app" data-t="cApp">App</th>
+        <th data-sort="min" data-t="cWeek">This week</th>
+        <th data-sort="streak" data-t="cStreak">Streak</th>
+        <th data-sort="prog" data-t="cProg">Progress</th>
+        <th data-t="cStrong">Strong</th>
+        <th data-t="cWeak">Needs work</th>
+        <th data-t="cReview">To review</th>
+        <th data-sort="date" data-t="cDate">Shared</th>
+        <th class="noprint"></th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </div>
+</div>
+
+<script src="/play/play.js?v=4"></script>
+<script>
+const APP_NAMES = {mathokids:'MathoKids',englokids:'EngloKids',francokids:'FrancoKids',spanokids:'SpanoKids',arabikids:'ArabiKids',chinokids:'ChinoKids',germokids:'GermoKids',scienkids:'ScienKids',codokids:'CodoKids',geokids:'GeoKids'};
+const KEY = 'klh_teacher_v1';
+
+const STR = {
+  en:{home:'Home',schools:'For schools',crumb:'Teacher dashboard',title:'🧑‍🏫 Teacher dashboard',sub:'Follow your class in the 10 Kids Learning Hub apps. Free, no accounts, nothing stored on a server.',howT:'How to add pupils',s1:'In the app, a parent opens Settings › Parents space › Share with the teacher.',s2:'Scan the QR code with your phone camera: this page opens and the pupil is added.',s3:'Or paste the links or codes received by WhatsApp or e-mail below (several at once is fine).',pastePh:'Paste links or KLH1-… codes here',add:'Add to class',privacy:'🔒 Data stays in this browser only.',classLbl:'Class',newClass:'+ New class',rename:'Rename',print:'Print',csv:'Export CSV',clear:'Empty class',cPupil:'Pupil',cApp:'App',cWeek:'This week',cStreak:'Streak',cProg:'Progress',cStrong:'Strong',cWeak:'Needs work',cReview:'To review',cDate:'Shared',kPupils:'pupils',kAvg:'avg. minutes / week',kActive:'practised this week',kOld:'not shared for 8+ days',weakAll:'Topics to revise with the class: ',none:'No pupils yet. Scan a QR code or paste codes above.',added:'Added: {n}',updated:'Updated: {n}',bad:'{k} code(s) could not be read (damaged or incomplete).',nothing:'No code found in the text.',min:'min',days:'days',words:'words',lessons:'lessons',mastery:'mastery',noName:'(no name)',confirmClear:'Remove all pupils from this class?',classPrompt:'Class name',defaultClass:'My class',remove:'Remove',daysAgo:'{d} d ago',today:'today'},
+  fr:{home:'Accueil',schools:'Écoles',crumb:'Tableau enseignant',title:'🧑‍🏫 Tableau de bord enseignant',sub:'Suivez votre classe dans les 10 applis Kids Learning Hub. Gratuit, sans compte, rien n’est stocké sur un serveur.',howT:'Ajouter des élèves',s1:'Dans l’appli, un parent ouvre Réglages › Espace parents › Partager avec l’enseignant.',s2:'Scannez le QR code avec l’appareil photo de votre téléphone : cette page s’ouvre et l’élève est ajouté.',s3:'Ou collez ci-dessous les liens ou codes reçus par WhatsApp ou e-mail (plusieurs à la fois, c’est possible).',pastePh:'Collez ici les liens ou codes KLH1-…',add:'Ajouter à la classe',privacy:'🔒 Les données restent dans ce navigateur.',classLbl:'Classe',newClass:'+ Nouvelle classe',rename:'Renommer',print:'Imprimer',csv:'Exporter CSV',clear:'Vider la classe',cPupil:'Élève',cApp:'Appli',cWeek:'Cette semaine',cStreak:'Série',cProg:'Progression',cStrong:'Points forts',cWeak:'À travailler',cReview:'À revoir',cDate:'Partagé',kPupils:'élèves',kAvg:'minutes / semaine en moyenne',kActive:'ont pratiqué cette semaine',kOld:'pas de partage depuis 8 j ou plus',weakAll:'Thèmes à revoir en classe : ',none:'Aucun élève pour l’instant. Scannez un QR code ou collez des codes ci-dessus.',added:'Ajouté : {n}',updated:'Mis à jour : {n}',bad:'{k} code(s) illisible(s) (abîmé ou incomplet).',nothing:'Aucun code trouvé dans le texte.',min:'min',days:'j',words:'mots',lessons:'leçons',mastery:'maîtrise',noName:'(sans prénom)',confirmClear:'Retirer tous les élèves de cette classe ?',classPrompt:'Nom de la classe',defaultClass:'Ma classe',remove:'Retirer',daysAgo:'il y a {d} j',today:'aujourd’hui'},
+  es:{home:'Inicio',schools:'Escuelas',crumb:'Panel docente',title:'🧑‍🏫 Panel del docente',sub:'Sigue a tu clase en las 10 apps de Kids Learning Hub. Gratis, sin cuentas, nada se guarda en un servidor.',howT:'Cómo añadir alumnos',s1:'En la app, un padre abre Ajustes › Zona de padres › Compartir con el docente.',s2:'Escanea el código QR con la cámara de tu teléfono: se abre esta página y se añade el alumno.',s3:'O pega abajo los enlaces o códigos recibidos por WhatsApp o correo (varios a la vez está bien).',pastePh:'Pega aquí enlaces o códigos KLH1-…',add:'Añadir a la clase',privacy:'🔒 Los datos se quedan en este navegador.',classLbl:'Clase',newClass:'+ Nueva clase',rename:'Renombrar',print:'Imprimir',csv:'Exportar CSV',clear:'Vaciar clase',cPupil:'Alumno',cApp:'App',cWeek:'Esta semana',cStreak:'Racha',cProg:'Progreso',cStrong:'Fuerte en',cWeak:'Por reforzar',cReview:'Repasar',cDate:'Compartido',kPupils:'alumnos',kAvg:'minutos / semana de media',kActive:'practicaron esta semana',kOld:'sin compartir desde hace 8+ días',weakAll:'Temas para repasar en clase: ',none:'Aún no hay alumnos. Escanea un QR o pega códigos arriba.',added:'Añadido: {n}',updated:'Actualizado: {n}',bad:'{k} código(s) ilegible(s) (dañado o incompleto).',nothing:'No se encontró ningún código en el texto.',min:'min',days:'días',words:'palabras',lessons:'lecciones',mastery:'dominio',noName:'(sin nombre)',confirmClear:'¿Quitar a todos los alumnos de esta clase?',classPrompt:'Nombre de la clase',defaultClass:'Mi clase',remove:'Quitar',daysAgo:'hace {d} d',today:'hoy'},
+  ar:{home:'الرئيسية',schools:'للمدارس',crumb:'لوحة المعلّم',title:'🧑‍🏫 لوحة المعلّم',sub:'تابع قسمك في تطبيقات Kids Learning Hub العشرة. مجاناً، دون حسابات، ولا يُخزَّن شيء على خادم.',howT:'كيف تضيف التلاميذ',s1:'في التطبيق، يفتح الوالد الإعدادات › ركن الآباء › شارك مع المعلّم.',s2:'امسح رمز QR بكاميرا هاتفك: تُفتح هذه الصفحة ويُضاف التلميذ.',s3:'أو الصق أدناه الروابط أو الرموز التي وصلتك عبر واتساب أو البريد (يمكن لصق عدة رموز معاً).',pastePh:'الصق هنا الروابط أو رموز KLH1-…',add:'أضف إلى القسم',privacy:'🔒 تبقى البيانات في هذا المتصفح فقط.',classLbl:'القسم',newClass:'+ قسم جديد',rename:'إعادة التسمية',print:'طباعة',csv:'تصدير CSV',clear:'إفراغ القسم',cPupil:'التلميذ',cApp:'التطبيق',cWeek:'هذا الأسبوع',cStreak:'السلسلة',cProg:'التقدّم',cStrong:'نقاط القوة',cWeak:'يحتاج دعماً',cReview:'للمراجعة',cDate:'تاريخ المشاركة',kPupils:'تلميذ',kAvg:'متوسط الدقائق في الأسبوع',kActive:'تدرّبوا هذا الأسبوع',kOld:'لم يشاركوا منذ 8 أيام أو أكثر',weakAll:'مواضيع للمراجعة مع القسم: ',none:'لا تلاميذ بعد. امسح رمز QR أو الصق الرموز أعلاه.',added:'أُضيف: {n}',updated:'حُدِّث: {n}',bad:'تعذّرت قراءة {k} رمز (تالف أو ناقص).',nothing:'لم يُعثر على أي رمز في النص.',min:'د',days:'أيام',words:'كلمة',lessons:'درس',mastery:'إتقان',noName:'(دون اسم)',confirmClear:'إزالة كل التلاميذ من هذا القسم؟',classPrompt:'اسم القسم',defaultClass:'قسمي',remove:'إزالة',daysAgo:'منذ {d} أيام',today:'اليوم'}
+};
+let lang = 'en', sortBy = 'name';
+const S = () => STR[lang] || STR.en;
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ── Code KLH1 : même format et même somme de contrôle que l'appli (teacher_share.dart) ── */
+function fnv1a(s){
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+  return (h >>> 0).toString(16).padStart(8, '0');
+}
+function decode(body, sum){
+  if (fnv1a(body) !== sum) return null;
+  try {
+    const b64 = body.replace(/-/g, '+').replace(/_/g, '/');
+    const bin = atob(b64 + '='.repeat((4 - b64.length % 4) % 4));
+    const d = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, c => c.charCodeAt(0))));
+    if (!d || typeof d.a !== 'string' || !Array.isArray(d.m)) return null;
+    return d;
+  } catch (e) { return null; }
+}
+/* Tous les codes d'un texte ; les fragments « KLH1- » mal formés comptent comme abîmés. */
+function findCodes(text){
+  const ok = [], seen = new Set();
+  const re = /KLH1-([A-Za-z0-9_-]+)-([0-9a-f]{8})(?![A-Za-z0-9_-])/g; let m;
+  while ((m = re.exec(text))){
+    if (seen.has(m[0])) continue; seen.add(m[0]);
+    const d = decode(m[1], m[2]); if (d) ok.push(d);
+  }
+  // Chaque « KLH1- » qui n'a pas donné de rapport valide est compté comme abîmé.
+  const tries = new Set(text.match(/KLH1-[A-Za-z0-9_-]*/g) || []).size;
+  return {ok, bad: Math.max(0, tries - ok.length)};
+}
+
+/* ── Stockage local (navigateur de l'enseignant) ── */
+function load(){
+  let st = null; try { st = JSON.parse(localStorage.getItem(KEY)); } catch(e){}
+  if (!st || !st.classes) st = {classes:{c1:{name:'', pupils:{}}}, current:'c1'};
+  if (!st.classes[st.current]) st.current = Object.keys(st.classes)[0];
+  return st;
+}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+let state = load();
+const cls = () => state.classes[state.current];
+
+function addReports(list){
+  const added = [], updated = [];
+  for (const d of list){
+    const name = String(d.n || '').trim();
+    const key = d.a + '|' + (name ? name.toLowerCase() : fnv1a(JSON.stringify(d)));
+    const old = cls().pupils[key];
+    if (old && old.d > d.d) continue; // on garde le rapport le plus récent
+    cls().pupils[key] = d;
+    (old ? updated : added).push(name || S().noName);
+  }
+  save();
+  return {added, updated};
+}
+
+function toast(msg){
+  const t = document.createElement('div'); t.className = 'toast'; t.textContent = msg;
+  document.body.appendChild(t); setTimeout(() => t.remove(), 4000);
+}
+function report({added, updated}, bad){
+  const s = S(), parts = [];
+  if (added.length) parts.push(s.added.replace('{n}', added.join(', ')));
+  if (updated.length) parts.push(s.updated.replace('{n}', updated.join(', ')));
+  if (bad) parts.push(s.bad.replace('{k}', bad));
+  toast(parts.join(' • ') || s.nothing);
+}
+
+/* ── Affichage ── */
+const sumMin = d => d.m.reduce((a, b) => a + (+b || 0), 0);
+const pct = d => d.p && d.p[1] ? Math.round(100 * d.p[0] / d.p[1]) : 0;
+const ageDays = d => Math.floor((Date.now() - new Date(d.d + 'T12:00:00').getTime()) / 864e5);
+const isWarn = d => sumMin(d) === 0 || ageDays(d) >= 8;
+const tags = list => (list || []).map(t => `<span class="tag">${esc(Array.isArray(t) ? t[0] + ' ' + t[1] + '%' : t)}</span>`).join('');
+
+function render(){
+  const s = S(), c = cls();
+  const pupils = Object.entries(c.pupils).map(([k, d]) => ({k, d}));
+  const key = {
+    name: p => (p.d.n || '').toLowerCase(), app: p => p.d.a, min: p => -sumMin(p.d),
+    streak: p => -(p.d.s || 0), prog: p => -pct(p.d), date: p => p.d.d
+  }[sortBy] || (p => p.d.n);
+  pupils.sort((x, y) => { const a = key(x), b = key(y); return a < b ? -1 : a > b ? 1 : 0; });
+
+  document.getElementById('classSel').innerHTML = Object.entries(state.classes)
+    .map(([id, v]) => `<option value="${esc(id)}"${id === state.current ? ' selected' : ''}>${esc(v.name || s.defaultClass)}</option>`).join('');
+  document.getElementById('className').textContent = c.name || s.defaultClass;
+
+  const n = pupils.length;
+  const avg = n ? Math.round(pupils.reduce((a, p) => a + sumMin(p.d), 0) / n) : 0;
+  const active = pupils.filter(p => sumMin(p.d) > 0).length;
+  const old = pupils.filter(p => ageDays(p.d) >= 8).length;
+  document.getElementById('kpis').innerHTML = [
+    [n, s.kPupils], [avg, s.kAvg], [`${active}/${n}`, s.kActive], [old, s.kOld]
+  ].map(([v, l]) => `<div class="kpi"><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join('');
+
+  // Thèmes faibles les plus fréquents dans la classe.
+  const count = {};
+  pupils.forEach(p => (p.d.b || []).forEach(t => { count[t[0]] = (count[t[0]] || 0) + 1; }));
+  const top = Object.entries(count).sort((a, b) => b[1] - a[1]).slice(0, 5);
+  document.getElementById('weakAll').innerHTML = top.length
+    ? esc(s.weakAll) + top.map(([t, k]) => `<span class="tag">${esc(t)} × ${k}</span>`).join('') : '';
+
+  const rows = document.getElementById('rows');
+  if (!n){ rows.innerHTML = `<tr><td colspan="10" class="empty">${esc(s.none)}</td></tr>`; return; }
+  rows.innerHTML = pupils.map(({k, d}) => {
+    const mx = Math.max(1, ...d.m);
+    const spark = d.m.map(v => `<i style="height:${2 + 20 * v / mx}px"></i>`).join('');
+    const unit = d.u === 'l' ? s.lessons : s.words;
+    // 'p' (MathoKids) : maîtrise moyenne des modules, en %.
+    const prog = d.u === 'p' ? `${esc(pct(d))}% ${esc(s.mastery)}` : `${esc(d.p ? d.p[0] : 0)} / ${esc(d.p ? d.p[1] : 0)} ${esc(unit)}`;
+    const age = ageDays(d);
+    return `<tr class="${isWarn(d) ? 'warn' : ''}">
+      <td><b>${esc(d.n || s.noName)}</b></td>
+      <td><img src="/logos/${esc(d.a)}.png" alt=""> ${esc(APP_NAMES[d.a] || d.a)}</td>
+      <td><b>${sumMin(d)} ${esc(s.min)}</b><br><span class="spark">${spark}</span></td>
+      <td>🔥 ${esc(d.s || 0)} ${esc(s.days)}</td>
+      <td>${prog}<div class="bar"><i style="width:${pct(d)}%"></i></div><small>⭐ ${esc(d.x || 0)}</small></td>
+      <td>${tags(d.g)}</td>
+      <td>${tags(d.b)}</td>
+      <td>${tags(d.e)}</td>
+      <td>${esc(d.d)}<small>${esc(age <= 0 ? s.today : s.daysAgo.replace('{d}', age))}</small></td>
+      <td class="noprint"><button class="x" title="${esc(s.remove)}" data-del="${esc(k)}">✕</button></td>
+    </tr>`;
+  }).join('');
+  rows.querySelectorAll('[data-del]').forEach(b => b.onclick = () => {
+    delete cls().pupils[b.dataset.del]; save(); render();
+  });
+}
+
+function exportCsv(){
+  const s = S(), q = v => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+  const lines = [[s.cPupil, s.cApp, s.cDate, s.cWeek + ' (' + s.min + ')', s.cStreak, s.cProg, '%', '⭐', s.cStrong, s.cWeak, s.cReview].map(q).join(',')];
+  Object.values(cls().pupils).forEach(d => lines.push([
+    d.n || s.noName, APP_NAMES[d.a] || d.a, d.d, sumMin(d), d.s || 0,
+    (d.p ? d.p[0] + '/' + d.p[1] : ''), pct(d), d.x || 0,
+    (d.g || []).map(t => t[0] + ' ' + t[1] + '%').join('; '),
+    (d.b || []).map(t => t[0] + ' ' + t[1] + '%').join('; '),
+    (d.e || []).join('; ')
+  ].map(q).join(',')));
+  const blob = new Blob(['﻿' + lines.join('\r\n')], {type: 'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = (cls().name || s.defaultClass).replace(/[^\wÀ-￿ -]/g, '') + '.csv';
+  a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+/* ── Événements ── */
+document.getElementById('addBtn').onclick = () => {
+  const box = document.getElementById('paste');
+  const {ok, bad} = findCodes(box.value);
+  report(addReports(ok), bad);
+  if (ok.length) box.value = '';
+  render();
+};
+document.getElementById('classSel').onchange = e => { state.current = e.target.value; save(); render(); };
+document.getElementById('newClass').onclick = () => {
+  const name = prompt(S().classPrompt, ''); if (name === null) return;
+  const id = 'c' + Date.now(); state.classes[id] = {name: name.trim(), pupils: {}}; state.current = id; save(); render();
+};
+document.getElementById('renameClass').onclick = () => {
+  const name = prompt(S().classPrompt, cls().name || ''); if (name === null) return;
+  cls().name = name.trim(); save(); render();
+};
+document.getElementById('clearBtn').onclick = () => {
+  if (!confirm(S().confirmClear)) return; cls().pupils = {}; save(); render();
+};
+document.getElementById('csvBtn').onclick = exportCsv;
+document.querySelectorAll('th[data-sort]').forEach(th => th.onclick = () => { sortBy = th.dataset.sort; render(); });
+
+PLAY.init(l => {
+  lang = l;
+  PLAY.applyStrings(S());
+  document.getElementById('paste').placeholder = S().pastePh;
+  // Lien scanné : …/teacher.html#KLH1-… → on ajoute l'élève puis on efface le code de l'adresse.
+  if (location.hash.includes('KLH1-')){
+    const {ok, bad} = findCodes(decodeURIComponent(location.hash));
+    history.replaceState(null, '', location.pathname + location.search);
+    report(addReports(ok), bad);
+  }
+  render();
+});
+</script>
+</body>
+</html>
