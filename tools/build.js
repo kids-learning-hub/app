@@ -16,6 +16,7 @@
    Existing article pages are never touched by an index rebuild.
    ═══════════════════════════════════════════════════════════════════════ */
 'use strict';
+const SEO = require('./seo-meta.js');
 const fs = require('fs');
 const path = require('path');
 
@@ -196,7 +197,9 @@ for (const cf of contentFiles) {
     if (lang !== 'en') content = content.replace(/(["'(])\.\.\//g, '$1../../');
     const ledeM = content.match(/<p class="lede">([\s\S]*?)<\/p>/);
     if (!ledeM) { console.error(`✗ ${art.slug} (${lang}): body has no <p class="lede"> paragraph`); process.exit(1); }
-    const desc = truncate(stripTags(ledeM[1]), 158);
+    const seo = (SEO.articles[art.slug] || {});
+    const desc = (seo.desc && seo.desc[lang]) || truncate(stripTags(ledeM[1]), 158);   // hand-written snippet first (tools/seo-meta.js)
+    const pageTitle = (seo.title && seo.title[lang]) || art.dataTitle[lang];
     const h1 = stripTags((content.match(/<h1>([\s\S]*?)<\/h1>/) || [, cat.cardTitle[lang]])[1]);
     const jsonld = [
       { '@context': 'https://schema.org', '@type': 'Article',
@@ -214,7 +217,7 @@ for (const cf of contentFiles) {
         mainEntity: art.faq[lang].map(([q, a]) => (
           { '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     ];
-    const page = headCommon(lang, { slug: art.slug, self, title: art.dataTitle[lang], ogTitle: esc(decode(cat.cardTitle[lang])), desc, jsonld })
+    const page = headCommon(lang, { slug: art.slug, self, title: pageTitle, ogTitle: esc(decode(cat.cardTitle[lang])), desc, jsonld })
       + header(lang, art.slug) + `
 
 <div class="wrap">

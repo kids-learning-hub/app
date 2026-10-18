@@ -11,6 +11,7 @@
    the content is in the HTML, not rendered by JavaScript, so it indexes.
    ═══════════════════════════════════════════════════════════════════════ */
 'use strict';
+const SEO = require('./seo-meta.js');
 const fs = require('fs');
 const path = require('path');
 
@@ -273,12 +274,13 @@ for (const app of APPS) {
     const self = urlOf(app.slug, lang);
     const root = lang === 'en' ? '../' : '../../';
     const logo = `${root}logos/${app.file}`;
-    const title = lang === 'en'
+    const title = (SEO.apps[app.slug] && SEO.apps[app.slug].title && SEO.apps[app.slug].title[lang]) ? SEO.apps[app.slug].title[lang] : lang === 'en'
       ? `${app.name} — Free ${app.subject.en} App for Kids 4–12 | Kids Learning Hub`
       : lang === 'fr' ? `${app.name} — Appli de ${app.subject.fr} gratuite pour enfants | Kids Learning Hub`
       : lang === 'es' ? `${app.name} — App de ${app.subject.es} gratis para niños | Kids Learning Hub`
       : `${app.name} — تطبيق ${app.subject.ar} مجاني للأطفال | Kids Learning Hub`;
-    const desc = app.lede[lang].length > 158
+    const seo = (SEO.apps[app.slug] || {});
+    const desc = (seo.desc && seo.desc[lang]) ? seo.desc[lang] : app.lede[lang].length > 158
       ? app.lede[lang].slice(0, 155).replace(/\s\S*$/, '') + '…'
       : app.lede[lang];
 
