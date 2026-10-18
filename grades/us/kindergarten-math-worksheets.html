@@ -43,6 +43,15 @@
 .gr-nav a{padding:8px 14px;border-radius:12px;background:var(--card2);border:1px solid var(--line);font-weight:800;font-size:14px}
 .gr-nav a.on{background:var(--grad);color:#fff;border-color:transparent}
 .gr-sys{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.gr-pack{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center;background:linear-gradient(135deg,#FFF4E0,#EAF2FF);border:3px solid #EF9F27;border-radius:24px;padding:18px;margin:0 0 20px;box-shadow:0 6px 0 #BA7517}
+:root[data-theme="dark"] .gr-pack{background:linear-gradient(135deg,#2A2214,#14214A)}
+.gr-pack img{width:100%;height:auto;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.gr-pack h2{font-size:22px;margin-bottom:6px}
+.gr-pack p{color:var(--ink2);line-height:1.6}
+.gr-price{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:30px;color:#BA7517;margin:6px 0}
+.gr-buy{font-size:17px;padding:12px 22px}
+.gr-note{font-size:12.5px;color:var(--muted)!important;margin-top:8px}
+@media(max-width:600px){.gr-pack{grid-template-columns:1fr}.gr-pack img{max-width:180px;justify-self:center}}
 .gr-sys>div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 18px;box-shadow:var(--shadow)}
 .gr-sys h2{font-size:19px;margin-bottom:6px}
 .gr-sys p{color:var(--muted);font-size:13.5px;margin-bottom:8px}
@@ -77,6 +86,7 @@
     <h1>Free kindergarten math worksheets</h1>
     <p>Kindergarten math is about number sense: counting objects one by one, writing numbers to 20, comparing groups (“which has more?”), and first additions and subtractions within 10 using fingers and objects. Children also learn to name and describe flat and solid shapes. These printable sheets follow that path, from tracing digits to simple sums, and every click makes a brand-new A4 sheet so your child never runs out of practice.</p>
   </section>
+
 
   <h2 class="gr-sec">📝 Printable worksheets for Kindergarten</h2>
   <div class="gr-list">

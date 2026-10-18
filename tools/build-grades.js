@@ -49,6 +49,32 @@ const UI = {
   es: { home: 'Inicio', ws: 'Fichas', grades: 'Por curso', sheetsH: n => `Fichas para imprimir de ${n}`, gamesH: 'Juegos online', tipsH: 'Consejos para las familias', faqH: 'Preguntas frecuentes', other: 'Otros cursos', systems: 'Otros sistemas escolares', open: 'Abrir →', play: 'Jugar →', ages: 'Edades', ctaT: 'MathoKids — aventuras de matemáticas', ctaD: 'Todo el programa de matemáticas de primaria en un juego, sin conexión y gratis en Google Play.', ad: 'Publicidad' },
   ar: { home: 'الرئيسية', ws: 'أوراق العمل', grades: 'حسب الصف', sheetsH: n => `أوراق عمل للطباعة — ${n}`, gamesH: 'ألعاب على الإنترنت', tipsH: 'نصائح للآباء', faqH: 'أسئلة شائعة', other: 'صفوف أخرى', systems: 'أنظمة دراسية أخرى', open: 'افتح ←', play: 'العب ←', ages: 'الأعمار', ctaT: 'MathoKids — مغامرة الرياضيات', ctaD: 'برنامج رياضيات الابتدائي كاملًا في لعبة، دون إنترنت ومجانًا على Google Play.', ad: 'إعلان' },
 };
+const PACKS = require('./packs-config.js');
+const PACK_T = {
+  en: { h: 'Get the complete printable pack', d: n => `About 85 pages for ${n}: several different sheets for every skill on this page, each with its answer key, plus a times tables poster or game and a certificate. One PDF, ready to print — no ads, nothing to generate.`, buy: 'Buy with PayPal', note: 'Instant download after payment · cards accepted · 14-day refund guarantee', terms: 'Terms', refund: 'Refunds' },
+  fr: { h: 'Le cahier complet à imprimer', d: n => `Environ 85 pages pour le ${n} : plusieurs fiches différentes pour chaque compétence de cette page, chacune avec son corrigé, plus un poster ou un jeu et un diplôme. Un seul PDF prêt à imprimer, sans publicité.`, buy: 'Acheter avec PayPal', note: 'Téléchargement immédiat après paiement · cartes acceptées · remboursement sous 14 jours', terms: 'Conditions', refund: 'Remboursements' },
+  es: { h: 'El cuadernillo completo para imprimir', d: n => `Unas 85 páginas para ${n}: varias fichas distintas de cada contenido de esta página, cada una con sus soluciones, más un póster o un juego y un diploma. Un solo PDF listo para imprimir, sin anuncios.`, buy: 'Comprar con PayPal', note: 'Descarga inmediata tras el pago · se aceptan tarjetas · reembolso en 14 días', terms: 'Condiciones', refund: 'Reembolsos' },
+  ar: { h: 'الكرّاسة الكاملة للطباعة', d: n => `حوالي 85 صفحة لـ${n}: عدة أوراق مختلفة لكل مهارة في هذه الصفحة، مع حلولها، وملصق أو لعبة وشهادة. ملف PDF واحد جاهز للطباعة، دون إعلانات.`, buy: 'اشترِ عبر PayPal', note: 'تحميل فوري بعد الدفع · تُقبل البطاقات البنكية · استرجاع خلال 14 يومًا', terms: 'الشروط', refund: 'الاسترجاع' },
+};
+function packBox(sys, g) {
+  const id = PACKS.buttons[`${sys.sys}/${g.slug}`];
+  if (!id) return '';
+  const t = PACK_T[sys.lang];
+  return `
+  <section class="gr-pack">
+    <img src="/packs/previews/${sys.sys}-${g.slug}.webp" alt="" width="318" height="449" loading="lazy">
+    <div>
+      <h2>📦 ${t.h}</h2>
+      <p>${esc(t.d(g.label))}</p>
+      <div class="gr-price">${PACKS.price}</div>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="${esc(id)}"><input type="hidden" name="currency_code" value="USD">
+        <button class="btn primary gr-buy" type="submit">${t.buy}</button>
+      </form>
+      <p class="gr-note">${t.note} · <a href="/terms.html">${t.terms}</a> · <a href="/refund.html">${t.refund}</a></p>
+    </div>
+  </section>`;
+}
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const pageUrl = (sys, g) => `${BASE}/grades/${sys.sys}/${g.slug}.html`;
 const ageOf = (sys, i) => AGE0[sys.sys] + i;
@@ -79,6 +105,15 @@ const CSS = `
 .gr-nav a{padding:8px 14px;border-radius:12px;background:var(--card2);border:1px solid var(--line);font-weight:800;font-size:14px}
 .gr-nav a.on{background:var(--grad);color:#fff;border-color:transparent}
 .gr-sys{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.gr-pack{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center;background:linear-gradient(135deg,#FFF4E0,#EAF2FF);border:3px solid #EF9F27;border-radius:24px;padding:18px;margin:0 0 20px;box-shadow:0 6px 0 #BA7517}
+:root[data-theme="dark"] .gr-pack{background:linear-gradient(135deg,#2A2214,#14214A)}
+.gr-pack img{width:100%;height:auto;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.gr-pack h2{font-size:22px;margin-bottom:6px}
+.gr-pack p{color:var(--ink2);line-height:1.6}
+.gr-price{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:30px;color:#BA7517;margin:6px 0}
+.gr-buy{font-size:17px;padding:12px 22px}
+.gr-note{font-size:12.5px;color:var(--muted)!important;margin-top:8px}
+@media(max-width:600px){.gr-pack{grid-template-columns:1fr}.gr-pack img{max-width:180px;justify-self:center}}
 .gr-sys>div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 18px;box-shadow:var(--shadow)}
 .gr-sys h2{font-size:19px;margin-bottom:6px}
 .gr-sys p{color:var(--muted);font-size:13.5px;margin-bottom:8px}
@@ -189,6 +224,7 @@ for (const sys of SYSTEMS) {
     <p>${esc(g.lede)}</p>
   </section>
 
+${packBox(sys, g)}
   <h2 class="gr-sec">📝 ${esc(t.sheetsH(g.label))}</h2>
   <div class="gr-list">
 ${cards}
