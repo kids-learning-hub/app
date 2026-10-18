@@ -188,6 +188,7 @@ function renderLevels(){
   LEVELS.forEach(lv=>{ const b=document.createElement('button'); b.className='btn level'+(lv.id===LEVEL?' active':'');
     b.textContent=lv.label[LANG]||lv.label.en; b.onclick=()=>{ LEVEL=lv.id; DATA=make(); renderLevels(); render(); }; box.appendChild(b); });
 }
+{ const _lvq=new URLSearchParams(location.search).get("level"); const _h=_lvq!==null&&LEVELS.find(l=>String(l.id)===_lvq); if(_h) LEVEL=_h.id; }
 DATA=make();
 PLAY.init(l=>{ LANG=l; PLAY.applyStrings(T()); renderLevels(); render(); });
 document.getElementById('newSheet').onclick=()=>{ DATA=make(); render(); };

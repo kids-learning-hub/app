@@ -36,6 +36,10 @@
   WS.setup = function(cfg){
     WS.cfg = cfg;
     WS.level = cfg.defaultLevel;
+    /* ?level=20 opens the sheet at that level (used by the grade pages in /grades/) */
+    const want = new URLSearchParams(location.search).get('level');
+    const hit = want !== null && (cfg.levels || []).find(l => String(l.id) === want);
+    if (hit) WS.level = hit.id;
     const s = parseInt(new URLSearchParams(location.search).get('seed'), 10);
     seedWith(s >= 1000 && s <= 999999 ? s : newSeed());
     buildChrome();
