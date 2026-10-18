@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Robot Code — Free Online Coding Game for Kids | Kids Learning Hub</title>
-<meta name="description" content="Program the robot to reach the star! A free coding game for kids aged 6–12: plan a sequence of arrow commands, run it, debug it. 10 levels, no install, no sign-up." />
+<title>Robot Code — Free Online Coding Game for Kids (No Typing) | Kids Learning Hub</title>
+<meta name="description" content="Free coding game for kids: plan a sequence of arrow commands, press Run and guide the robot to the star. 10 levels of algorithms and debugging. Ages 6–12." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/robot-code.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/robot-code.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/robot-code.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/robot-code.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/robot-code.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/robot-code.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/robot-code.html" />
-<meta property="og:title" content="Robot Code — Free Coding Game for Kids" />
-<meta property="og:description" content="Plan the arrows, press Run, guide the robot to the star. Play free in your browser!" />
+<meta property="og:title" content="Robot Code — Free Online Coding Game for Kids (No Typing) | Kids Learning Hub" />
+<meta property="og:description" content="Free coding game for kids: plan a sequence of arrow commands, press Run and guide the robot to the star. 10 levels of algorithms and debugging. Ages 6–12." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
-<script src="../analytics.js" defer></script>
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<script src="/analytics.js" defer></script>
 <style>
 .howto{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px;margin-top:22px;text-align:start}
 .howto h2{font-size:19px;margin-bottom:6px}
@@ -43,12 +48,18 @@
 .tools .btn{padding:11px 18px}
 .btn:disabled{opacity:.5;cursor:default}
 </style>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Is this real coding?","acceptedAnswer":{"@type":"Answer","text":"Yes. Sequences of commands, algorithms and debugging are the core ideas of programming, used in every language from Scratch to Python."}},{"@type":"Question","name":"Does my child need to read?","acceptedAnswer":{"@type":"Answer","text":"No. The commands are arrows, so even pre-readers can play with a little help."}},{"@type":"Question","name":"What comes next after this game?","acceptedAnswer":{"@type":"Answer","text":"Our free CodoKids app continues with loops, conditions and 40 robot-maze levels, and our coding guide explains when and how to start."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Robot Code","item":"https://kids-learning-hub.cc/play/robot-code.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -61,7 +72,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Robot Code</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Robot Code</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -92,7 +103,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=code" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=code" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
       </div>
     </div>
@@ -103,8 +114,29 @@
     <p data-t="howP">This is how programmers think: plan all the steps first (an algorithm), run them, and if the robot crashes, find the wrong step and fix it (debugging). Encourage your child to point at the grid and count the squares before pressing Run.</p>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>🤖 About this game</h2>
+    <p class="ws-lede">Coding is not about typing strange words — it is about planning steps, testing them and fixing what goes wrong. Robot Code teaches exactly that with arrows. Children write a short program (up, right, right, down…), press Run and watch the robot follow it. If it hits a rock or stops too early, they find the wrong step and fix it: that is debugging. Ten levels lead from straight lines to real mazes.</p>
+    <p class="ws-ages"><span aria-hidden="true">🤖</span> Best for ages <strong>6–12</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Before pressing Run, ask your child to point along the path with a finger and count the squares.</li>
+      <li>Treat each crash as information, not failure: “Which step went wrong?”</li>
+      <li>Try “unplugged” coding at home: give each other arrow instructions to cross the room.</li>
+      <li>Ask older children to find a shorter program for a level they have already solved.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>Is this real coding?</summary><p>Yes. Sequences of commands, algorithms and debugging are the core ideas of programming, used in every language from Scratch to Python.</p></details>
+    <details class="faq"><summary>Does my child need to read?</summary><p>No. The commands are arrows, so even pre-readers can play with a little help.</p></details>
+    <details class="faq"><summary>What comes next after this game?</summary><p>Our free CodoKids app continues with loops, conditions and 40 robot-maze levels, and our coding guide explains when and how to start.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/codokids.png" alt="CodoKids">
+    <img src="/logos/codokids.png" alt="CodoKids">
     <div><b>CodoKids</b><p data-t="cta">CodeQuest robot mazes, loops, conditions and the pioneers of computing — coding for kids 4–13, offline and free on Google Play.</p></div>
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.vsmedia.codokids" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -114,12 +146,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Robot Code',sub:'Plan the arrows, press Run and guide the robot to the star!',undo:'Undo',clear:'Clear',run:'Run',hint:'Tap the arrows to write your program…',again:'Play again',good:'Brilliant coder! 🎉',ok:'Well done — great debugging!',try:'You finished every level — keep practising!',win:'Star reached! 🎉',crash:'Oops — the robot hit a rock! Find the wrong step.',out:'Oops — the robot left the grid!',short:'The robot stopped before the star. Add more steps!',q:'Level',bugs:'bugs fixed',cert:'Print your certificate!',ad:'Advertisement',howT:'Coding without a computer language',howP:'This is how programmers think: plan all the steps first (an algorithm), run them, and if the robot crashes, find the wrong step and fix it (debugging). Encourage your child to point at the grid and count the squares before pressing Run.',cta:'CodeQuest robot mazes, loops, conditions and the pioneers of computing — coding for kids 4–13, offline and free on Google Play.'},

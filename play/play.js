@@ -21,7 +21,7 @@
     const want = ['fr','es','ar'].includes(p) ? p : (p ? null : saved);
     if(['fr','es','ar'].includes(want) && !/^\/(fr|es|ar)\//.test(location.pathname) && !/\/(fr|es|ar)\/(index\.html)?$/.test(location.pathname)){
       const u = staticUrl(want);
-      if(u){ location.replace(u + location.hash); return; }
+      if(u && u !== location.pathname){ location.replace(u + location.hash); return; }
     }
     setLang(['en','fr','es','ar'].includes(p) ? p : (['en','fr','es','ar'].includes(saved) ? saved : 'en'));
 
@@ -50,6 +50,8 @@
     const p = location.pathname; let m;
     if((m = p.match(/^\/(?:(?:fr|es|ar)\/)?(about|contact|kids|privacy|terms|refund)\.html$/))) return (l==='en' ? '/' : '/'+l+'/') + m[1] + '.html';
     if((m = p.match(/^\/(play|worksheets)\/(?:(?:fr|es|ar)\/)?(?:index\.html)?$/))) return '/'+m[1]+'/' + (l==='en' ? '' : l+'/');
+    /* browser games: every game has /play/fr|es|ar/ copies (tools/build-games.js) */
+    if((m = p.match(/^\/play\/(?:(?:fr|es|ar)\/)?([a-z0-9-]+)\.html$/)) && m[1] !== 'index') return '/play/' + (l==='en' ? '' : l+'/') + m[1] + '.html';
     return null;
   }
 

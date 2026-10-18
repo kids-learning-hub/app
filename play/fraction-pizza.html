@@ -4,15 +4,20 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Fraction Pizza — Free Online Fractions Game for Kids | Kids Learning Hub</title>
-<meta name="description" content="What fraction of the pizza has toppings? A free fractions game for kids aged 7–11: read halves, thirds, quarters and eighths on a pizza, earn stars. No install." />
+<meta name="description" content="Free fractions game: count the pizza slices and find the fraction with pepperoni — halves, thirds, quarters, sixths and eighths. Ages 7–11." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/fraction-pizza.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/fraction-pizza.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/fraction-pizza.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/fraction-pizza.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/fraction-pizza.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/fraction-pizza.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/fraction-pizza.html" />
-<meta property="og:title" content="Fraction Pizza — Free Fractions Game for Kids" />
-<meta property="og:description" content="Count the slices, find the fraction, earn stars. Play free in your browser!" />
+<meta property="og:title" content="Fraction Pizza — Free Online Fractions Game for Kids | Kids Learning Hub" />
+<meta property="og:description" content="Free fractions game: count the pizza slices and find the fraction with pepperoni — halves, thirds, quarters, sixths and eighths. Ages 7–11." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
-<script src="../analytics.js" defer></script>
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<script src="/analytics.js" defer></script>
 <style>
 .howto{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px;margin-top:22px;text-align:start}
 .howto h2{font-size:19px;margin-bottom:6px}
@@ -33,12 +38,18 @@
 .frac i{font-style:normal;display:block;padding-top:2px}
 .pz .btn.answer{font-size:28px;padding:10px 6px}
 </style>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"At what age do children learn fractions?","acceptedAnswer":{"@type":"Answer","text":"Halves and quarters around 6–7, thirds and sixths around 8, and comparing or adding fractions from about 9–10."}},{"@type":"Question","name":"Why does the game avoid equivalent answers like 2/4 and 1/2?","acceptedAnswer":{"@type":"Answer","text":"So that every question has exactly one correct choice. Equivalent fractions are a later step, best explored with our printable fraction worksheets."}},{"@type":"Question","name":"Can I print fraction exercises?","acceptedAnswer":{"@type":"Answer","text":"Yes — our free fraction worksheets make a new A4 sheet with pies and bars at every click."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Fraction Pizza","item":"https://kids-learning-hub.cc/play/fraction-pizza.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -51,7 +62,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Fraction Pizza</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Fraction Pizza</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -71,7 +82,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
       </div>
     </div>
@@ -82,8 +93,29 @@
     <p data-t="howP">The bottom number (denominator) says how many equal slices the pizza is cut into. The top number (numerator) says how many of those slices we are talking about. 3 slices with pepperoni out of 8 slices = 3/8.</p>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>🍕 About this game</h2>
+    <p class="ws-lede">Fractions become easy when children can see them. In Fraction Pizza, every question is a real picture: a pizza cut into equal slices, some of them covered in pepperoni. The bottom number of the fraction is how many slices there are; the top number is how many have pepperoni. The game starts with halves and quarters, then moves to thirds, sixths and eighths, and finally scatters the toppings so children must count carefully instead of guessing from the shape.</p>
+    <p class="ws-ages"><span aria-hidden="true">🍕</span> Best for ages <strong>7–11</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Say each fraction in words: “three out of eight equal slices”.</li>
+      <li>Point out that the slices must be equal — that is what makes it a fraction.</li>
+      <li>Cut a real pizza, pancake or sandwich into equal parts at home.</li>
+      <li>Watch for the common mistake of counting the plain slices instead of the pepperoni ones.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>At what age do children learn fractions?</summary><p>Halves and quarters around 6–7, thirds and sixths around 8, and comparing or adding fractions from about 9–10.</p></details>
+    <details class="faq"><summary>Why does the game avoid equivalent answers like 2/4 and 1/2?</summary><p>So that every question has exactly one correct choice. Equivalent fractions are a later step, best explored with our printable fraction worksheets.</p></details>
+    <details class="faq"><summary>Can I print fraction exercises?</summary><p>Yes — our free fraction worksheets make a new A4 sheet with pies and bars at every click.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/mathokids.png" alt="MathoKids">
+    <img src="/logos/mathokids.png" alt="MathoKids">
     <div><b>MathoKids</b><p data-t="cta">Fractions, times tables, column maths and more — learn by playing, offline and free on Google Play.</p></div>
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -93,12 +125,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Fraction Pizza',sub:'What fraction of the pizza has pepperoni?',again:'Play again',good:'Fraction master! 🎉',ok:'Well done — tasty work!',try:'Good try — play once more!',correct:'Yes! 🎉',wrong:'Almost! The answer is',q:'Pizza',cert:'Print your certificate!',ad:'Advertisement',howT:'How to read a fraction',howP:'The bottom number (denominator) says how many equal slices the pizza is cut into. The top number (numerator) says how many of those slices we are talking about. 3 slices with pepperoni out of 8 slices = 3/8.',cta:'Fractions, times tables, column maths and more — learn by playing, offline and free on Google Play.'},

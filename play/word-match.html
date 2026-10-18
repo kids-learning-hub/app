@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Word Match — Free Online Vocabulary Game for Kids (EN·FR·ES·DE·AR) | Kids Learning Hub</title>
-<meta name="description" content="Match the picture to the right word in English, French, Spanish, German or Arabic! A free browser vocabulary game for kids aged 5–12 — no install, no sign-up." />
+<title>Word Match — Free Vocabulary Game in 5 Languages for Kids | Kids Learning Hub</title>
+<meta name="description" content="Free picture-word matching game: learn first words in English, French, Spanish, German or Arabic. Tap the right word, earn stars. Ages 5–12, no sign-up." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/word-match.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/word-match.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/word-match.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/word-match.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/word-match.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/word-match.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/word-match.html" />
-<meta property="og:title" content="Word Match — Free Online Vocabulary Game for Kids" />
-<meta property="og:description" content="Match the picture to the right word in 5 languages. Play free in your browser!" />
+<meta property="og:title" content="Word Match — Free Vocabulary Game in 5 Languages for Kids | Kids Learning Hub" />
+<meta property="og:description" content="Free picture-word matching game: learn first words in English, French, Spanish, German or Arabic. Tap the right word, earn stars. Ages 5–12, no sign-up." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,14 +26,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
-<script src="../analytics.js" defer></script>
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Which languages can my child learn?","acceptedAnswer":{"@type":"Answer","text":"English, French, Spanish, German and Arabic. Choose the language at the start of each game."}},{"@type":"Question","name":"Does my child need to read?","acceptedAnswer":{"@type":"Answer","text":"A little. Pre-readers can play with an adult who reads the choices aloud; early readers practise reading at the same time."}},{"@type":"Question","name":"Is there a full app for each language?","acceptedAnswer":{"@type":"Answer","text":"Yes — EngloKids, FrancoKids, SpanoKids, GermoKids and ArabiKids offer lessons, stories and dictation, free on Google Play."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Word Match","item":"https://kids-learning-hub.cc/play/word-match.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -41,7 +52,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Word Match</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Word Match</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -66,15 +77,36 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=words" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=words" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame(target)" data-t="again">Play again</button>
         <button class="btn ghost" onclick="showSetup()" data-t="other">Another language</button>
       </div>
     </div>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>🗣️ About this game</h2>
+    <p class="ws-lede">Linking a picture directly to a word is one of the fastest ways to build vocabulary in a new language — the brain stores “🍎 = apple” without passing through translation. Word Match lets children choose the language they are learning (English, French, Spanish, German or Arabic) and then match everyday pictures to the right word. It is perfect for a few minutes of practice before school or as a warm-up before a lesson.</p>
+    <p class="ws-ages"><span aria-hidden="true">🗣️</span> Best for ages <strong>5–12</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Say each word aloud after choosing it — hearing and saying fixes it in memory.</li>
+      <li>Play the same language several days in a row before switching.</li>
+      <li>Point to the real objects at home and say their names in the new language.</li>
+      <li>For bilingual families, let your child “teach” you the words in the game.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>Which languages can my child learn?</summary><p>English, French, Spanish, German and Arabic. Choose the language at the start of each game.</p></details>
+    <details class="faq"><summary>Does my child need to read?</summary><p>A little. Pre-readers can play with an adult who reads the choices aloud; early readers practise reading at the same time.</p></details>
+    <details class="faq"><summary>Is there a full app for each language?</summary><p>Yes — EngloKids, FrancoKids, SpanoKids, GermoKids and ArabiKids offer lessons, stories and dictation, free on Google Play.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta" id="appcta">
-    <img id="ctaimg" src="../logos/englokids.png" alt="">
+    <img id="ctaimg" src="/logos/englokids.png" alt="">
     <div><b id="ctaname">EngloKids</b><p data-t="cta">Vocabulary, stories, dictation and games — learn a language by playing, offline and free on Google Play.</p></div>
     <a class="btn primary" id="ctalink" href="https://play.google.com/store/apps/details?id=com.vsmedia.englokids" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -84,12 +116,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Word Match',sub:'Match the picture to the right word!',pick:'Which language do you want to learn?',again:'Play again',other:'Another language',good:'Word wizard! 🎉',ok:'Well done — keep going!',try:'Good try — play once more!',correct:'Correct! 🎉',wrong:'Almost! It was',q:'Word',cert:'Print your certificate!',ad:'Advertisement',cta:'Vocabulary, stories, dictation and games — learn a language by playing, offline and free on Google Play.'},
@@ -139,7 +171,7 @@ function renderTargets(){
   });
 }
 function setCta(t){
-  document.getElementById('ctaimg').src='../logos/'+t.logo;
+  document.getElementById('ctaimg').src='/logos/'+t.logo;
   document.getElementById('ctaimg').alt=t.app;
   document.getElementById('ctaname').textContent=t.app;
   document.getElementById('ctalink').href='https://play.google.com/store/apps/details?id='+t.pkg;

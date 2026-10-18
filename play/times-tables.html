@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Times Tables Race — Free Online Multiplication Game for Kids | Kids Learning Hub</title>
-<meta name="description" content="Practise the times tables free in your browser! Pick a table, answer 10 questions, earn stars. A fun multiplication game for kids aged 6–12." />
+<title>Times Tables Game — Free Online Multiplication Practice for Kids | Kids Learning Hub</title>
+<meta name="description" content="Free online times tables game: pick a table from 2 to 10 or mix them all, answer 10 questions and earn stars. No install, no sign-up. Ages 6–12." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/times-tables.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/times-tables.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/times-tables.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/times-tables.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/times-tables.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/times-tables.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/times-tables.html" />
-<meta property="og:title" content="Times Tables Race — Free Online Multiplication Game for Kids" />
-<meta property="og:description" content="Pick a table, answer 10 questions, earn stars. Play free in your browser!" />
+<meta property="og:title" content="Times Tables Game — Free Online Multiplication Practice for Kids | Kids Learning Hub" />
+<meta property="og:description" content="Free online times tables game: pick a table from 2 to 10 or mix them all, answer 10 questions and earn stars. No install, no sign-up. Ages 6–12." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,14 +26,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
-<script src="../analytics.js" defer></script>
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"At what age should children learn their times tables?","acceptedAnswer":{"@type":"Answer","text":"Most children start with the 2, 5 and 10 tables around age 7 and know all tables to 10 by 9 or 10. Understanding what multiplication means comes first; speed comes with practice."}},{"@type":"Question","name":"How long should my child play each day?","acceptedAnswer":{"@type":"Answer","text":"Five to ten minutes a day works better than one long session a week. Short, regular practice is what moves facts into long-term memory."}},{"@type":"Question","name":"Is the game free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It works in any browser on phone, tablet or computer, with no download and no account."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Times Tables Game","item":"https://kids-learning-hub.cc/play/times-tables.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -41,7 +52,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Times Tables Race</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Times Tables Race</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -69,15 +80,36 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=tables" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=tables" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame(currentTable)" data-t="again">Play again</button>
         <button class="btn ghost" onclick="showSetup()" data-t="other">Choose another table</button>
       </div>
     </div>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>✖️ About this game</h2>
+    <p class="ws-lede">Knowing the times tables by heart frees a child’s mind for everything that comes later: division, fractions, area and mental arithmetic. This game turns the practice into short, ten-question races. Children choose one table to learn or mix them all for review, see instantly whether each answer is right, and collect up to three stars — a few minutes a day is enough to make real progress.</p>
+    <p class="ws-ages"><span aria-hidden="true">✖️</span> Best for ages <strong>6–12</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Learn the tables in this order: 2, 5 and 10 first, then 3 and 4, and finally 6, 7, 8 and 9.</li>
+      <li>Play one table until your child gets three stars twice in a row, then add the next one.</li>
+      <li>Use “Mix” once a week to review everything learned so far.</li>
+      <li>Remind your child that 4 × 7 is the same as 7 × 4: every fact learned counts twice.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>At what age should children learn their times tables?</summary><p>Most children start with the 2, 5 and 10 tables around age 7 and know all tables to 10 by 9 or 10. Understanding what multiplication means comes first; speed comes with practice.</p></details>
+    <details class="faq"><summary>How long should my child play each day?</summary><p>Five to ten minutes a day works better than one long session a week. Short, regular practice is what moves facts into long-term memory.</p></details>
+    <details class="faq"><summary>Is the game free?</summary><p>Yes. It works in any browser on phone, tablet or computer, with no download and no account.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/mathokids.png" alt="MathoKids">
+    <img src="/logos/mathokids.png" alt="MathoKids">
     <div><b>MathoKids</b><p data-t="cta">Want more? Adaptive maths practice for kids — offline, safe and free on Google Play.</p></div>
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -87,12 +119,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Times Tables Race',sub:'Answer 10 questions and earn your stars!',pick:'Which table do you want to practise?',mix:'Mix!',again:'Play again',other:'Choose another table',good:['Great job! 🎉','Awesome! 🚀','You rock! ⭐'],ok:'Well done — keep practising!',try:'Good try — play once more!',correct:'Correct! 🎉',wrong:'Almost! It was',q:'Question',cert:'Print your certificate!',ad:'Advertisement',cta:'Want more? Adaptive maths practice for kids — offline, safe and free on Google Play.'},

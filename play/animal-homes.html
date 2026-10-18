@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Animal Homes — Free Online Habitat Game for Kids | Kids Learning Hub</title>
-<meta name="description" content="Where does each animal live? A free science game for kids aged 5–10: match animals to the ocean, forest, desert, polar ice, farm or savanna and learn a fun fact each time." />
+<title>Animal Habitats Game for Kids — Free Online Science Game | Kids Learning Hub</title>
+<meta name="description" content="Free animal habitats game: help each animal find its home — ocean, forest, desert, polar ice, farm or savanna — and learn a fun fact each time. Ages 5–10." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/animal-homes.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/animal-homes.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/animal-homes.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/animal-homes.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/animal-homes.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/animal-homes.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/animal-homes.html" />
-<meta property="og:title" content="Animal Homes — Free Science Game for Kids" />
-<meta property="og:description" content="Help each animal find its home and discover a fun fact. Play free in your browser!" />
+<meta property="og:title" content="Animal Habitats Game for Kids — Free Online Science Game | Kids Learning Hub" />
+<meta property="og:description" content="Free animal habitats game: help each animal find its home — ocean, forest, desert, polar ice, farm or savanna — and learn a fun fact each time. Ages 5–10." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
-<script src="../analytics.js" defer></script>
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<script src="/analytics.js" defer></script>
 <style>
 .howto{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px;margin-top:22px;text-align:start}
 .howto h2{font-size:19px;margin-bottom:6px}
@@ -34,12 +39,18 @@
 .fact{min-height:48px;color:var(--ink2);font-weight:700;font-size:15px;margin-top:6px;background:var(--card2);border-radius:14px;padding:10px 14px}
 .fact:empty{visibility:hidden}
 </style>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"What is a habitat?","acceptedAnswer":{"@type":"Answer","text":"The place where an animal finds food, water and shelter. Each animal has body features adapted to its habitat."}},{"@type":"Question","name":"Why can some animals have two homes?","acceptedAnswer":{"@type":"Answer","text":"Penguins, seals and polar bears live on the ice and also hunt in the ocean, so the game never offers the second home as a wrong answer."}},{"@type":"Question","name":"Where can my child learn more about animals?","acceptedAnswer":{"@type":"Answer","text":"Our free ScienKids app has full lessons on animals, plants and the human body."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Animal Habitats Game for Kids","item":"https://kids-learning-hub.cc/play/animal-homes.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -52,7 +63,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Animal Homes</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Animal Homes</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -75,7 +86,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=science" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=science" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
       </div>
     </div>
@@ -86,8 +97,29 @@
     <p data-t="howP">A habitat is the place where an animal finds food, water and shelter. Animals have special body features for their home: thick fur and fat for the cold, humps and wide feet for the desert, fins for the water. After each fact, ask your child: “How does this help the animal live there?”</p>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>🦁 About this game</h2>
+    <p class="ws-lede">Why does a camel have a hump and a polar bear thick fur? Animals are shaped by the places they live. In this game, children help 22 animals find their habitat among six homes — ocean, forest, desert, polar ice, farm and savanna — and after every answer they discover a short, true fact about the animal. It is a gentle introduction to adaptation, one of the big ideas of primary science.</p>
+    <p class="ws-ages"><span aria-hidden="true">🦁</span> Best for ages <strong>5–10</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>After each fact, ask: “How does this help the animal live there?”</li>
+      <li>Sort toy animals or pictures into habitats on the floor.</li>
+      <li>Visit a zoo, farm or aquarium and play “guess the habitat” together.</li>
+      <li>Talk about your own home: which animals live in your city or countryside?</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>What is a habitat?</summary><p>The place where an animal finds food, water and shelter. Each animal has body features adapted to its habitat.</p></details>
+    <details class="faq"><summary>Why can some animals have two homes?</summary><p>Penguins, seals and polar bears live on the ice and also hunt in the ocean, so the game never offers the second home as a wrong answer.</p></details>
+    <details class="faq"><summary>Where can my child learn more about animals?</summary><p>Our free ScienKids app has full lessons on animals, plants and the human body.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/scienkids.png" alt="ScienKids">
+    <img src="/logos/scienkids.png" alt="ScienKids">
     <div><b>ScienKids</b><p data-t="cta">Animals, plants, the human body, space and weather — learn science by playing, offline and free on Google Play.</p></div>
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.vsmedia.scienkids" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -97,12 +129,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Animal Homes',sub:'Where does this animal live? Help it find its home!',next:'Next →',again:'Play again',good:'Animal expert! 🎉',ok:'Well done — great explorer!',try:'Good try — play once more!',correct:'Yes! 🎉',wrong:'Not quite! Its home is the',q:'Animal',cert:'Print your certificate!',ad:'Advertisement',howT:'What is a habitat?',howP:'A habitat is the place where an animal finds food, water and shelter. Animals have special body features for their home: thick fur and fat for the cold, humps and wide feet for the desert, fins for the water. After each fact, ask your child: “How does this help the animal live there?”',cta:'Animals, plants, the human body, space and weather — learn science by playing, offline and free on Google Play.'},

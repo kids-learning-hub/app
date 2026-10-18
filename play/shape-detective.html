@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shape Detective — Free Online Shapes Game for Kids | Kids Learning Hub</title>
-<meta name="description" content="Circle, triangle, hexagon or rhombus? A free shapes game for kids aged 4–8: name 2D shapes, count their sides and corners, earn stars. No install, no sign-up." />
+<title>Shape Detective — Free 2D Shapes Game for Kids | Kids Learning Hub</title>
+<meta name="description" content="Free shapes game: name circles, triangles, squares, rectangles, rhombuses, pentagons, hexagons and more, and count their sides and corners. Ages 4–8." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/shape-detective.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/shape-detective.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/shape-detective.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/shape-detective.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/shape-detective.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/shape-detective.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/shape-detective.html" />
-<meta property="og:title" content="Shape Detective — Free Shapes Game for Kids" />
-<meta property="og:description" content="Name the shape, count its sides and corners. Play free in your browser!" />
+<meta property="og:title" content="Shape Detective — Free 2D Shapes Game for Kids | Kids Learning Hub" />
+<meta property="og:description" content="Free shapes game: name circles, triangles, squares, rectangles, rhombuses, pentagons, hexagons and more, and count their sides and corners. Ages 4–8." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
-<script src="../analytics.js" defer></script>
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<script src="/analytics.js" defer></script>
 <style>
 .howto{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px;margin-top:22px;text-align:start}
 .howto h2{font-size:19px;margin-bottom:6px}
@@ -31,12 +36,18 @@
 .sh .btn.answer{font-size:20px;padding:14px 6px}
 .sides{min-height:24px;color:var(--muted);font-weight:700;font-size:15px;margin-top:4px}
 </style>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Which shapes are in the game?","acceptedAnswer":{"@type":"Answer","text":"Circle, oval, triangle, square, rectangle, rhombus, pentagon, hexagon, octagon, star and heart."}},{"@type":"Question","name":"Why are some answers so similar?","acceptedAnswer":{"@type":"Answer","text":"Look-alike choices make children check properties such as the number of sides or square corners — real geometric thinking."}},{"@type":"Question","name":"Is there something to print?","acceptedAnswer":{"@type":"Answer","text":"Yes, our free 2D shapes worksheets let children trace and colour the basic shapes."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Shape Detective","item":"https://kids-learning-hub.cc/play/shape-detective.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -49,7 +60,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Shape Detective</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Shape Detective</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -70,7 +81,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
       </div>
     </div>
@@ -81,8 +92,29 @@
     <p data-t="howP">Shapes get their names from their sides: a triangle has 3, a pentagon 5, a hexagon 6. A square and a rectangle both have 4 sides and 4 square corners, but all the sides of a square are the same length. Point to each side with your child and count together.</p>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>🔷 About this game</h2>
+    <p class="ws-lede">Young children often recognise a shape only in its “usual” position: a triangle pointing up, a square sitting flat. Shape Detective shows eleven shapes in different colours and slight rotations, and offers look-alike answers — square or rhombus, circle or oval, pentagon or hexagon — so children must look at the properties, not just the overall picture. After each answer, a short line says how many sides and corners the shape has.</p>
+    <p class="ws-ages"><span aria-hidden="true">🔷</span> Best for ages <strong>4–8</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Ask your child to trace each side with a finger and count aloud.</li>
+      <li>Go on a shape hunt at home: clocks, windows, road signs, slices of fruit.</li>
+      <li>Explain the difference between a square and a rhombus: both have four equal sides, but only the square has square corners.</li>
+      <li>Name the shapes in the language your child learns at school and at home.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>Which shapes are in the game?</summary><p>Circle, oval, triangle, square, rectangle, rhombus, pentagon, hexagon, octagon, star and heart.</p></details>
+    <details class="faq"><summary>Why are some answers so similar?</summary><p>Look-alike choices make children check properties such as the number of sides or square corners — real geometric thinking.</p></details>
+    <details class="faq"><summary>Is there something to print?</summary><p>Yes, our free 2D shapes worksheets let children trace and colour the basic shapes.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/mathokids.png" alt="MathoKids">
+    <img src="/logos/mathokids.png" alt="MathoKids">
     <div><b>MathoKids</b><p data-t="cta">Shapes, numbers, measures and logic — learn by playing, offline and free on Google Play.</p></div>
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -92,12 +124,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Shape Detective',sub:'Look closely: what is the name of this shape?',again:'Play again',good:'Super shape detective! 🎉',ok:'Well done — sharp eyes!',try:'Good try — play once more!',correct:'Yes! 🎉',wrong:'Almost! It is a',q:'Shape',cert:'Print your certificate!',ad:'Advertisement',howT:'Count sides and corners',howP:'Shapes get their names from their sides: a triangle has 3, a pentagon 5, a hexagon 6. A square and a rectangle both have 4 sides and 4 square corners, but all the sides of a square are the same length. Point to each side with your child and count together.',cta:'Shapes, numbers, measures and logic — learn by playing, offline and free on Google Play.',

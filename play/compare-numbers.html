@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Hungry Crocodile — Free Online Comparing Numbers Game (<, >, =) | Kids Learning Hub</title>
-<meta name="description" content="The crocodile always eats the bigger number! A free game for kids aged 5–10 to compare numbers with <, > and =, from 1 to 1000. Earn stars, no install." />
+<title>Greater Than Less Than Game — Hungry Crocodile, Free Online | Kids Learning Hub</title>
+<meta name="description" content="Free comparing numbers game: choose &lt;, &gt; or = and feed the hungry crocodile the bigger number. Numbers to 20, 100 and 1000. Ages 5–10." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/compare-numbers.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/compare-numbers.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/compare-numbers.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/compare-numbers.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/compare-numbers.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/compare-numbers.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/compare-numbers.html" />
-<meta property="og:title" content="Hungry Crocodile — Compare Numbers Game for Kids" />
-<meta property="og:description" content="Pick <, > or = and feed the crocodile the bigger number. Play free in your browser!" />
+<meta property="og:title" content="Greater Than Less Than Game — Hungry Crocodile, Free Online | Kids Learning Hub" />
+<meta property="og:description" content="Free comparing numbers game: choose &lt;, &gt; or = and feed the hungry crocodile the bigger number. Numbers to 20, 100 and 1000. Ages 5–10." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
-<script src="../analytics.js" defer></script>
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<script src="/analytics.js" defer></script>
 <style>
 .howto{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px;margin-top:22px;text-align:start}
 .howto h2{font-size:19px;margin-bottom:6px}
@@ -33,12 +38,18 @@
 .cr .btn.answer{font-size:clamp(34px,8vw,44px);font-family:"Baloo 2",sans-serif;flex:1 1 28%;max-width:31%}
 .cr{direction:ltr}
 </style>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"How do I remember which sign is which?","acceptedAnswer":{"@type":"Answer","text":"The open side faces the bigger number, like a hungry crocodile’s mouth: 9 > 4 and 4 < 9."}},{"@type":"Question","name":"Why does the game use pairs like 47 and 74?","acceptedAnswer":{"@type":"Answer","text":"They show that the position of a digit changes its value — the heart of place value."}},{"@type":"Question","name":"Is there a printable version?","acceptedAnswer":{"@type":"Answer","text":"Yes, our free “Compare numbers” worksheets give new <, > and = exercises at every click."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Greater Than Less Than Game","item":"https://kids-learning-hub.cc/play/compare-numbers.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -51,7 +62,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Hungry Crocodile</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Hungry Crocodile</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -71,7 +82,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
       </div>
     </div>
@@ -82,8 +93,29 @@
     <p data-t="howP">The open side of the sign always faces the bigger number, like a hungry crocodile’s mouth: 7 > 3 and 3 < 7. To compare big numbers, look at the number of digits first, then compare the digits from left to right: hundreds, then tens, then units.</p>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>🐊 About this game</h2>
+    <p class="ws-lede">The signs &lt; and &gt; confuse many children because they look alike. The hungry crocodile solves this with a simple picture: its mouth always opens towards the bigger number. In this game, children compare pairs of numbers that grow from 20 to 100 and then to 1000, including tricky pairs such as 47 and 74, and the occasional equal pair. It quietly trains place value: to compare big numbers, look at the digits from left to right.</p>
+    <p class="ws-ages"><span aria-hidden="true">🐊</span> Best for ages <strong>5–10</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Draw the crocodile mouth with your hands: open towards the bigger number.</li>
+      <li>Read every answer aloud: “47 is less than 74”.</li>
+      <li>For big numbers, compare the number of digits first, then the hundreds, then the tens.</li>
+      <li>Ask your child to invent a pair that would be “equal”.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>How do I remember which sign is which?</summary><p>The open side faces the bigger number, like a hungry crocodile’s mouth: 9 &gt; 4 and 4 &lt; 9.</p></details>
+    <details class="faq"><summary>Why does the game use pairs like 47 and 74?</summary><p>They show that the position of a digit changes its value — the heart of place value.</p></details>
+    <details class="faq"><summary>Is there a printable version?</summary><p>Yes, our free “Compare numbers” worksheets give new &lt;, &gt; and = exercises at every click.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/mathokids.png" alt="MathoKids">
+    <img src="/logos/mathokids.png" alt="MathoKids">
     <div><b>MathoKids</b><p data-t="cta">Numbers, place value, comparing and calculating — learn by playing, offline and free on Google Play.</p></div>
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -93,12 +125,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Hungry Crocodile',sub:'The crocodile always opens its mouth to the bigger number. Pick <, > or =!',again:'Play again',good:'Number champion! 🎉',ok:'Well done — keep comparing!',try:'Good try — play once more!',correct:'Yes! 🎉',wrong:'Almost! It is',q:'Round',cert:'Print your certificate!',ad:'Advertisement',howT:'A trick to remember < and >',howP:'The open side of the sign always faces the bigger number, like a hungry crocodile’s mouth: 7 > 3 and 3 < 7. To compare big numbers, look at the number of digits first, then compare the digits from left to right: hundreds, then tens, then units.',cta:'Numbers, place value, comparing and calculating — learn by playing, offline and free on Google Play.'},

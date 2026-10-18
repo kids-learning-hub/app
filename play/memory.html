@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Memory Match — Free Online Memory Game for Kids | Kids Learning Hub</title>
-<meta name="description" content="Flip the cards and find the matching pairs! A free memory game for kids aged 4–10 that trains focus and short-term memory — no install, no sign-up." />
+<title>Memory Match — Free Online Memory Card Game for Kids | Kids Learning Hub</title>
+<meta name="description" content="Free memory game for kids: flip the cards, find the 6 pairs in as few moves as possible and earn stars. Trains visual memory and focus. Ages 4–10." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/memory.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/memory.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/memory.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/memory.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/memory.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/memory.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/memory.html" />
-<meta property="og:title" content="Memory Match — Free Online Memory Game for Kids" />
-<meta property="og:description" content="Flip the cards, find the pairs, earn stars. Play free in your browser!" />
+<meta property="og:title" content="Memory Match — Free Online Memory Card Game for Kids | Kids Learning Hub" />
+<meta property="og:description" content="Free memory game for kids: flip the cards, find the 6 pairs in as few moves as possible and earn stars. Trains visual memory and focus. Ages 4–10." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
+<link rel="stylesheet" href="/play/play.css?v=5" />
 <style>
 .memgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:440px;margin:10px auto}
 .mcard{aspect-ratio:1;border-radius:16px;cursor:pointer;perspective:600px;background:none;padding:0}
@@ -33,13 +38,19 @@
 .mcard.done .mfront{border-color:var(--green);background:color-mix(in srgb,var(--green) 14%,var(--card2))}
 .mcard.done{cursor:default}
 </style>
-<script src="../analytics.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"What does a memory game train?","acceptedAnswer":{"@type":"Answer","text":"Working memory, visual attention and concentration — skills linked to reading, maths and following instructions."}},{"@type":"Question","name":"How many moves is a good score?","acceptedAnswer":{"@type":"Answer","text":"With six pairs, finishing in about 12 moves is excellent; under 18 is very good for young children."}},{"@type":"Question","name":"From what age?","acceptedAnswer":{"@type":"Answer","text":"Children from about 4 can play, especially with an adult; older children can aim for fewer moves."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Memory Match","item":"https://kids-learning-hub.cc/play/memory.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -52,7 +63,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Memory Match</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Memory Match</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -70,14 +81,35 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=star" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=star" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
       </div>
     </div>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>🃏 About this game</h2>
+    <p class="ws-lede">The classic memory card game is one of the best training grounds for working memory — the mental notepad children use to follow instructions, do mental maths and read longer words. Here, twelve cards hide six pairs of pictures. Children flip two at a time and try to remember where each picture was. Fewer moves earn more stars, which encourages them to slow down, look carefully and use a strategy instead of clicking at random.</p>
+    <p class="ws-ages"><span aria-hidden="true">🃏</span> Best for ages <strong>4–10</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Name each picture aloud when it is turned over: naming helps remember.</li>
+      <li>Teach a strategy: flip new cards rather than ones you have already seen.</li>
+      <li>Play side by side and take turns — children love beating an adult.</li>
+      <li>Compare the number of moves from one game to the next, not with other children.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>What does a memory game train?</summary><p>Working memory, visual attention and concentration — skills linked to reading, maths and following instructions.</p></details>
+    <details class="faq"><summary>How many moves is a good score?</summary><p>With six pairs, finishing in about 12 moves is excellent; under 18 is very good for young children.</p></details>
+    <details class="faq"><summary>From what age?</summary><p>Children from about 4 can play, especially with an adult; older children can aim for fewer moves.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/hub-logo.png" alt="Kids Learning Hub">
+    <img src="/logos/hub-logo.png" alt="Kids Learning Hub">
     <div><b data-t="ctaT">Train more skills!</b><p data-t="cta">Memory, logic, numbers and languages — 10 free apps, offline and safe on Google Play.</p></div>
     <a class="btn primary" href="/#apps" data-t="ctaBtn">See the apps</a>
   </div>
@@ -87,12 +119,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Memory Match',sub:'Flip the cards and find all the pairs!',again:'Play again',moves:'Moves',found:'Pairs',good:'Amazing memory! 🧠🎉',ok:'Well done!',try:'Good job — try to use fewer moves!',cert:'Print your certificate!',ad:'Advertisement',ctaT:'Train more skills!',cta:'Memory, logic, numbers and languages — 10 free apps, offline and safe on Google Play.',ctaBtn:'See the apps'},

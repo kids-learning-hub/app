@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>What Time Is It? — Free Online Clock Reading Game for Kids | Kids Learning Hub</title>
-<meta name="description" content="Learn to tell time by playing! Read the analog clock and pick the right time — from whole hours to 5-minute steps. Free browser game for kids aged 6–10." />
+<title>Telling Time Game — Read the Clock, Free Online for Kids | Kids Learning Hub</title>
+<meta name="description" content="Free telling-time game: read an analogue clock and pick the right time. Four levels from o’clock to five-minute steps. Ages 6–10, no sign-up." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/clock-game.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/clock-game.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/clock-game.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/clock-game.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/clock-game.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/clock-game.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/clock-game.html" />
-<meta property="og:title" content="What Time Is It? — Free Online Clock Reading Game" />
-<meta property="og:description" content="Read the analog clock, pick the right time, earn stars. Play free!" />
+<meta property="og:title" content="Telling Time Game — Read the Clock, Free Online for Kids | Kids Learning Hub" />
+<meta property="og:description" content="Free telling-time game: read an analogue clock and pick the right time. Four levels from o’clock to five-minute steps. Ages 6–10, no sign-up." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,15 +26,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
+<link rel="stylesheet" href="/play/play.css?v=5" />
 <style>#clockBox svg{width:min(58vw,230px);height:auto;margin:6px auto}</style>
-<script src="../analytics.js" defer></script>
+<script src="/analytics.js" defer></script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"At what age do children learn to tell the time?","acceptedAnswer":{"@type":"Answer","text":"O’clock and half past around 6–7, quarters around 7, and five-minute steps around 8. Every child moves at their own pace."}},{"@type":"Question","name":"Why learn analogue clocks when phones are digital?","acceptedAnswer":{"@type":"Answer","text":"Analogue clocks are still in classrooms and public places, and they help children understand fractions of an hour and the passing of time."}},{"@type":"Question","name":"Are there printable clock worksheets too?","acceptedAnswer":{"@type":"Answer","text":"Yes — our free telling-time worksheets give a new sheet of nine clocks at every click."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Telling Time Game","item":"https://kids-learning-hub.cc/play/clock-game.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -42,7 +53,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">What time is it?</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">What time is it?</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -67,15 +78,36 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame(currentStep)" data-t="again">Play again</button>
         <button class="btn ghost" onclick="showSetup()" data-t="other">Another level</button>
       </div>
     </div>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>⏰ About this game</h2>
+    <p class="ws-lede">Reading an analogue clock is harder than it looks: two hands, two different scales, and numbers that mean hours for one hand and minutes for the other. This game builds the skill step by step, in four levels: o’clock, half past, quarter past and quarter to, then five-minute steps. Each question shows a real clock face, so children practise exactly what they will see on the classroom wall.</p>
+    <p class="ws-ages"><span aria-hidden="true">⏰</span> Best for ages <strong>6–10</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Start with the short hand only: “The short hand points to 3, so it is 3 o’clock.”</li>
+      <li>Teach the long hand as counting in fives around the clock: 5, 10, 15…</li>
+      <li>Only move to the next level after three stars at the current one.</li>
+      <li>Ask the time at real moments of the day: breakfast, leaving for school, bedtime.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>At what age do children learn to tell the time?</summary><p>O’clock and half past around 6–7, quarters around 7, and five-minute steps around 8. Every child moves at their own pace.</p></details>
+    <details class="faq"><summary>Why learn analogue clocks when phones are digital?</summary><p>Analogue clocks are still in classrooms and public places, and they help children understand fractions of an hour and the passing of time.</p></details>
+    <details class="faq"><summary>Are there printable clock worksheets too?</summary><p>Yes — our free telling-time worksheets give a new sheet of nine clocks at every click.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/mathokids.png" alt="MathoKids">
+    <img src="/logos/mathokids.png" alt="MathoKids">
     <div><b>MathoKids</b><p data-t="cta">More time, numbers and maths practice — offline, safe and free on Google Play.</p></div>
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -85,12 +117,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'What time is it?',sub:'Read the clock and pick the right time!',pick:'Choose your level:',again:'Play again',other:'Another level',good:'Time master! ⏰🎉',ok:'Well done — keep practising!',try:'Good try — play once more!',correct:'Correct! 🎉',wrong:'Almost! It was',q:'Clock',cert:'Print your certificate!',ad:'Advertisement',cta:'More time, numbers and maths practice — offline, safe and free on Google Play.'},

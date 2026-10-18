@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Copy the Lights — Free Online Memory Sequence Game for Kids | Kids Learning Hub</title>
-<meta name="description" content="Watch the animals light up, then tap them in the same order! A free memory and focus game for kids aged 4–12 — the sequence grows each round. No install." />
+<title>Copy the Lights — Free Memory Sequence Game for Kids | Kids Learning Hub</title>
+<meta name="description" content="Free memory and focus game: watch the animals light up, then tap them in the same order. The sequence grows each round. Ages 4–12, no install." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/copy-the-lights.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/copy-the-lights.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/copy-the-lights.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/copy-the-lights.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/copy-the-lights.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/copy-the-lights.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/copy-the-lights.html" />
-<meta property="og:title" content="Copy the Lights — Free Memory Game for Kids" />
-<meta property="og:description" content="Watch, remember, repeat — how long a sequence can you copy? Play free in your browser!" />
+<meta property="og:title" content="Copy the Lights — Free Memory Sequence Game for Kids | Kids Learning Hub" />
+<meta property="og:description" content="Free memory and focus game: watch the animals light up, then tap them in the same order. The sequence grows each round. Ages 4–12, no install." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
-<script src="../analytics.js" defer></script>
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<script src="/analytics.js" defer></script>
 <style>
 .howto{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px;margin-top:22px;text-align:start}
 .howto h2{font-size:19px;margin-bottom:6px}
@@ -35,12 +40,18 @@
 .status{font-weight:800;font-size:17px;min-height:28px}
 .lives{letter-spacing:4px}
 </style>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"What is working memory?","acceptedAnswer":{"@type":"Answer","text":"It is the ability to hold and use information for a short time — like remembering a phone number while dialling. It supports reading, maths and following instructions."}},{"@type":"Question","name":"What is a good result?","acceptedAnswer":{"@type":"Answer","text":"Remembering 5 to 6 steps is typical around age 7; adults usually manage about 7. Every child improves with practice."}},{"@type":"Question","name":"Is there more to read about memory and focus?","acceptedAnswer":{"@type":"Answer","text":"Yes — see our guide on boosting children’s focus and attention in the Parents section."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Copy the Lights","item":"https://kids-learning-hub.cc/play/copy-the-lights.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -53,7 +64,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Copy the Lights</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Copy the Lights</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -79,7 +90,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=star" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=star" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
       </div>
     </div>
@@ -90,8 +101,29 @@
     <p data-t="howP">Holding a sequence in your head and repeating it trains working memory and attention — the same skills children use to follow instructions, do mental maths and read longer words. Tip: say the animals out loud (“cat, frog, cat”) — naming things helps the brain remember them.</p>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>💡 About this game</h2>
+    <p class="ws-lede">Holding a sequence in mind and repeating it in order trains working memory and attention, the same abilities children use to follow multi-step instructions and to read and calculate. In Copy the Lights, four animal buttons light up with their own sound; children watch, then tap them back in the same order. Each round adds one more step, from two up to eleven, with three lives to keep the game encouraging.</p>
+    <p class="ws-ages"><span aria-hidden="true">💡</span> Best for ages <strong>4–12</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Say the animals out loud while they light up: “cat, frog, cat…” — naming helps memory.</li>
+      <li>Turn the sound on: each animal has its own note, which gives the brain a second clue.</li>
+      <li>Celebrate the longest sequence reached rather than the mistakes.</li>
+      <li>Older children can try to remember the sequence with eyes closed, by sound only.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>What is working memory?</summary><p>It is the ability to hold and use information for a short time — like remembering a phone number while dialling. It supports reading, maths and following instructions.</p></details>
+    <details class="faq"><summary>What is a good result?</summary><p>Remembering 5 to 6 steps is typical around age 7; adults usually manage about 7. Every child improves with practice.</p></details>
+    <details class="faq"><summary>Is there more to read about memory and focus?</summary><p>Yes — see our guide on boosting children’s focus and attention in the Parents section.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/codokids.png" alt="CodoKids">
+    <img src="/logos/codokids.png" alt="CodoKids">
     <div><b>CodoKids</b><p data-t="cta">Sequences, patterns and robot puzzles — coding that trains memory and logic, for kids 4–13, offline and free on Google Play.</p></div>
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.vsmedia.codokids" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -101,12 +133,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Copy the Lights',sub:'Watch the animals light up, then tap them in the same order!',start:'Start',watch:'👀 Watch…',your:'👆 Your turn!',again:'Play again',good:'Memory superstar! 🎉',ok:'Great memory — keep training!',try:'Good try — your memory grows every time you play!',correct:'Perfect! 🎉',wrong:'Oops! Watch again…',q:'Round',best:'Longest sequence:',cert:'Print your certificate!',ad:'Advertisement',howT:'Training working memory',howP:'Holding a sequence in your head and repeating it trains working memory and attention — the same skills children use to follow instructions, do mental maths and read longer words. Tip: say the animals out loud (“cat, frog, cat”) — naming things helps the brain remember them.',cta:'Sequences, patterns and robot puzzles — coding that trains memory and logic, for kids 4–13, offline and free on Google Play.'},

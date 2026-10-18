@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Balance the Scale — Free Online Missing Number Game for Kids | Kids Learning Hub</title>
-<meta name="description" content="Which weight makes the scale balance? A free maths game for kids aged 6–11: find the missing number so both sides are equal — a first step into algebra. No install." />
+<title>Balance the Scale — Free Missing Number Game for Kids | Kids Learning Hub</title>
+<meta name="description" content="Free missing number game: find the weight that balances the scale, like 5 + ? = 9. A friendly first step into algebra. Ages 6–11." />
+<link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/play/balance-scale.html" />
+<link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/play/fr/balance-scale.html" />
+<link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/play/es/balance-scale.html" />
+<link rel="alternate" hreflang="ar" href="https://kids-learning-hub.cc/play/ar/balance-scale.html" />
+<link rel="alternate" hreflang="x-default" href="https://kids-learning-hub.cc/play/balance-scale.html" />
 <link rel="canonical" href="https://kids-learning-hub.cc/play/balance-scale.html" />
 <meta name="theme-color" content="#1E5BFF" />
-<link rel="icon" href="../logos/hub-logo.png" />
+<link rel="icon" href="/logos/hub-logo.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Kids Learning Hub" />
 <meta property="og:url" content="https://kids-learning-hub.cc/play/balance-scale.html" />
-<meta property="og:title" content="Balance the Scale — Free Missing Number Game for Kids" />
-<meta property="og:description" content="Find the weight that balances the scale — algebra made playful. Play free in your browser!" />
+<meta property="og:title" content="Balance the Scale — Free Missing Number Game for Kids | Kids Learning Hub" />
+<meta property="og:description" content="Free missing number game: find the weight that balances the scale, like 5 + ? = 9. A friendly first step into algebra. Ages 6–11." />
 <meta property="og:image" content="https://kids-learning-hub.cc/logos/og-share.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -21,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="play.css?v=4" />
-<script src="../analytics.js" defer></script>
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<script src="/analytics.js" defer></script>
 <style>
 .howto{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px;margin-top:22px;text-align:start}
 .howto h2{font-size:19px;margin-bottom:6px}
@@ -41,12 +46,18 @@
 .bl .btn.answer{font-size:30px;font-family:"Baloo 2",sans-serif;flex:1 1 28%;max-width:31%}
 .eq{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:20px;color:var(--muted);direction:ltr;min-height:30px}
 </style>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Is this algebra?","acceptedAnswer":{"@type":"Answer","text":"It is the foundation of it. Finding the missing number in 5 + ? = 9 is the same reasoning as solving x + 5 = 9, without letters."}},{"@type":"Question","name":"How hard does it get?","acceptedAnswer":{"@type":"Answer","text":"It starts with two weights to 10, then three weights to 20, and up to 40 with two weights on each side."}},{"@type":"Question","name":"My child adds everything together. What should I do?","acceptedAnswer":{"@type":"Answer","text":"Point to the tilting scale: the goal is to make both sides equal, not to find a total. Ask what is missing on the lighter side."}}]}
+</script>
+<script type="application/ld+json" data-gen="games">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kids-learning-hub.cc/"},{"@type":"ListItem","position":2,"name":"Games","item":"https://kids-learning-hub.cc/play/"},{"@type":"ListItem","position":3,"name":"Balance the Scale","item":"https://kids-learning-hub.cc/play/balance-scale.html"}]}
+</script>
 </head>
 <body>
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="../"><img src="../logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
     <div class="top-actions">
       <div class="langsw" role="group" aria-label="Language">
         <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
@@ -59,7 +70,7 @@
 </header>
 
 <div class="wrap">
-  <p class="crumbs"><a href="../" data-t="home">Home</a> › <a href="./" data-t="games">Games</a> › <span data-t="title">Balance the Scale</span></p>
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/play/" data-t="games">Games</a> › <span data-t="title">Balance the Scale</span></p>
 
   <div class="gamecard">
     <div class="gamehead">
@@ -83,7 +94,7 @@
       <div class="endscore" id="endscore"></div>
       <p class="endmsg" id="endmsg"></p>
       <div class="endbtns">
-        <a class="btn primary" id="certLink" href="../worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
+        <a class="btn primary" id="certLink" href="/worksheets/certificates.html?type=math" hidden>🏆 <span data-t="cert">Print your certificate!</span></a>
         <button class="btn primary" onclick="startGame()" data-t="again">Play again</button>
       </div>
     </div>
@@ -94,8 +105,29 @@
     <p data-t="howP">Many children think “=” means “write the answer next”. The scale shows its real meaning: both sides have the same value. 5 + ? = 9 asks “what do I add to 5 to balance 9?” — a first, friendly step into algebra. Encourage your child to check by adding each side.</p>
   </div>
 
+  <!-- GAME_GUIDE auto-generated by tools/build-games.js — edit tools/games-data-*.js -->
+  <section class="ws-guide" dir="ltr">
+    <h2>⚖️ About this game</h2>
+    <p class="ws-lede">Many children think the equals sign means “write the answer next”. The balance scale shows what it really means: both sides have the same value. In this game, weights sit on each pan and one weight is missing; while it is empty the heavier side tips down, and when the right number is chosen the scale levels out. It is a very visual introduction to missing-number problems and to the idea behind equations.</p>
+    <p class="ws-ages"><span aria-hidden="true">⚖️</span> Best for ages <strong>6–11</strong></p>
+
+    <h2>Tips for parents and teachers</h2>
+    <ul class="ws-tips">
+      <li>Before answering, ask “Which side is heavier? By how much?”</li>
+      <li>Encourage checking by adding each side after the answer.</li>
+      <li>Use a real kitchen scale or a coat hanger with cups to show balance at home.</li>
+      <li>Read the equation in both directions: 9 = 5 + 4 is as true as 5 + 4 = 9.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>Is this algebra?</summary><p>It is the foundation of it. Finding the missing number in 5 + ? = 9 is the same reasoning as solving x + 5 = 9, without letters.</p></details>
+    <details class="faq"><summary>How hard does it get?</summary><p>It starts with two weights to 10, then three weights to 20, and up to 40 with two weights on each side.</p></details>
+    <details class="faq"><summary>My child adds everything together. What should I do?</summary><p>Point to the tilting scale: the goal is to make both sides equal, not to find a total. Ask what is missing on the lighter side.</p></details>
+  </section>
+<!-- /GAME_GUIDE -->
+
   <div class="appcta">
-    <img src="../logos/mathokids.png" alt="MathoKids">
+    <img src="/logos/mathokids.png" alt="MathoKids">
     <div><b>MathoKids</b><p data-t="cta">Addition, subtraction, missing numbers and mental maths — learn by playing, offline and free on Google Play.</p></div>
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.matho.primaire" target="_blank" rel="noopener">Google Play</a>
   </div>
@@ -105,12 +137,12 @@
 
 <footer class="foot">
   <div class="fb">Kids Learning Hub</div>
-  <div style="opacity:.8">by VS MEDIA · <a href="../" data-t="home">Home</a> · <a href="./" data-t="games">Games</a> · <a href="../privacy.html">Privacy</a></div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/play/" data-t="games">Games</a> · <a href="/privacy.html">Privacy</a></div>
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
 <script src="/stars.js?v=4"></script>
-<script src="play.js?v=4"></script>
+<script src="/play/play.js?v=6"></script>
 <script>
 const STR = {
   en:{home:'Home',games:'Games',title:'Balance the Scale',sub:'Which weight makes both sides equal?',again:'Play again',good:'Perfect balance! 🎉',ok:'Well done — nearly balanced!',try:'Good try — play once more!',correct:'Balanced! 🎉',wrong:'Not balanced — the missing weight is',q:'Scale',cert:'Print your certificate!',ad:'Advertisement',howT:'The equals sign means “balanced”',howP:'Many children think “=” means “write the answer next”. The scale shows its real meaning: both sides have the same value. 5 + ? = 9 asks “what do I add to 5 to balance 9?” — a first, friendly step into algebra. Encourage your child to check by adding each side.',cta:'Addition, subtraction, missing numbers and mental maths — learn by playing, offline and free on Google Play.'},
