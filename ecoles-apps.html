@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Schools version | Kids Learning Hub</title>
+<!-- Page réservée aux écoles clientes (lien sur la fiche de remise du code) :
+     pas d'indexation, pas dans le sitemap. -->
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#1E5BFF" />
+<link rel="icon" href="/logos/hub-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/play/play.css?v=5" />
+<style>
+h1,h2,h3{font-family:"Baloo 2",sans-serif}
+.hero{text-align:center;padding:10px 0 4px}
+.hero h1{font-size:clamp(28px,6vw,44px);margin:8px 0 4px}
+.hero p{color:var(--ink2);font-size:17px;max-width:640px;margin:0 auto}
+.codebox{margin:18px auto 6px;max-width:640px;background:var(--card);border:3px dashed #EF9F27;border-radius:20px;padding:14px 18px;text-align:center;font-weight:800}
+.codebox code{font-family:Consolas,monospace;background:#FFF6E6;color:#22203A;padding:2px 8px;border-radius:8px;white-space:nowrap}
+.apks{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;margin:18px 0}
+.apk{background:var(--card);border:3px solid var(--line);border-radius:22px;padding:14px 10px;text-align:center;box-shadow:0 5px 0 var(--line);display:flex;flex-direction:column;align-items:center;gap:4px}
+.apk img{width:92px;height:92px;border-radius:20px}
+.apk b{font-family:"Baloo 2",sans-serif;font-size:19px;line-height:1.1}
+.apk .sub{color:var(--muted);font-weight:700;font-size:14px}
+.apk a.dl{margin-top:8px;display:block;width:100%;background:#639922;color:#fff;font-weight:900;border-radius:14px;padding:10px 6px;text-decoration:none;box-shadow:0 4px 0 #3B6D11}
+.apk a.dl.off{background:#B4B2A9;box-shadow:0 4px 0 #888780;pointer-events:none}
+.apk .size{font-size:12px;color:var(--muted);font-weight:700;min-height:16px}
+.card3{background:var(--card);border:3px solid var(--line);border-radius:22px;padding:16px 20px;margin:14px 0}
+.card3 h2{margin:0 0 6px;font-size:22px}
+.card3 ol{margin:8px 0 8px 22px;color:var(--ink2);line-height:1.8;font-weight:600}
+[dir="rtl"] .card3 ol{margin:8px 22px 8px 0}
+.warn{background:#FFF6E6;border-color:#F3C67A}
+</style>
+<script src="/analytics.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/"><img src="/logos/hub-logo.png" alt="Kids Learning Hub"><span><i>Kids</i> Learning Hub</span></a>
+    <div class="top-actions">
+      <div class="langsw" role="group" aria-label="Language">
+        <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="es">ES</button><button data-l="ar">AR</button>
+      </div>
+      <button class="icon-btn" aria-label="Dark mode" onclick="PLAY.toggleTheme()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap" style="max-width:980px">
+  <p class="crumbs"><a href="/" data-t="home">Home</a> › <a href="/schools.html" data-t="schools">For schools</a> › <span data-t="crumb">Schools version</span></p>
+
+  <div class="hero">
+    <h1 data-t="title">📲 Schools version of the apps</h1>
+    <p data-t="sub">For pupils of a partner school: these apps accept your school code and open everything, without ads.</p>
+  </div>
+
+  <div class="codebox"><span data-t="codeHint">You need the school code given by your school, for example</span> <code>KLH-NOUR-2706-XXXXXXXXXX</code></div>
+
+  <div class="apks" id="apks"></div>
+
+  <div class="card3">
+    <h2 data-t="howT">How to install</h2>
+    <ol>
+      <li data-t="h1">Tap “Download” under the app (Android phone or tablet).</li>
+      <li data-t="h2">Open the downloaded file. If Android asks, allow your browser to “install unknown apps”.</li>
+      <li data-t="h3">Open the app → Settings → Premium code, then type the school code.</li>
+      <li data-t="h4">The same code works in all 10 apps.</li>
+    </ol>
+  </div>
+
+  <div class="card3 warn">
+    <h2 data-t="warnT">⚠️ Good to know</h2>
+    <ol>
+      <li data-t="w1">If the app is already installed from Google Play, uninstall it first (otherwise Android refuses to install this version).</li>
+      <li data-t="w2">This version does not update by itself: come back to this page at the start of each term.</li>
+      <li data-t="w3">Questions? Write to vs.media.ste@gmail.com</li>
+    </ol>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="fb">Kids Learning Hub</div>
+  <div style="opacity:.8">by VS MEDIA · <a href="/" data-t="home">Home</a> · <a href="/schools.html" data-t="schools">For schools</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></div>
+  <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
+</footer>
+
+<script src="/play/play.js?v=6"></script>
+<script>
+/* APK « version Écoles » : déposés dans /apk/<id>.apk par build_all_direct.bat,
+   publiés avec deploy-site.bat. Un APK absent → « Bientôt disponible ». */
+const APPS = [
+  ['mathokids', 'MathoKids', ['Maths', 'Mathématiques', 'Matemáticas', 'الرياضيات']],
+  ['arabikids', 'ArabiKids', ['Arabic', 'Arabe', 'Árabe', 'العربية']],
+  ['francokids', 'FrancoKids', ['French', 'Français', 'Francés', 'الفرنسية']],
+  ['englokids', 'EngloKids', ['English', 'Anglais', 'Inglés', 'الإنجليزية']],
+  ['spanokids', 'SpanoKids', ['Spanish', 'Espagnol', 'Español', 'الإسبانية']],
+  ['germokids', 'GermoKids', ['German', 'Allemand', 'Alemán', 'الألمانية']],
+  ['chinokids', 'ChinoKids', ['Chinese', 'Chinois', 'Chino', 'الصينية']],
+  ['scienkids', 'ScienKids', ['Science', 'Sciences', 'Ciencias', 'العلوم']],
+  ['codokids', 'CodoKids', ['Coding', 'Codage', 'Programación', 'البرمجة']],
+  ['geokids', 'GeoKids', ['Geography', 'Géographie', 'Geografía', 'الجغرافيا']],
+];
+const LI = { en: 0, fr: 1, es: 2, ar: 3 };
+
+const T = {
+  en: { home: 'Home', schools: 'For schools', crumb: 'Schools version', title: '📲 Schools version of the apps',
+    sub: 'For pupils of a partner school: these apps accept your school code and open everything, without ads.',
+    codeHint: 'You need the school code given by your school, for example', dl: '⬇️ Download', soon: 'Coming soon', mb: 'MB',
+    howT: 'How to install', h1: 'Tap “Download” under the app (Android phone or tablet).',
+    h2: 'Open the downloaded file. If Android asks, allow your browser to “install unknown apps”.',
+    h3: 'Open the app → Settings → Premium code, then type the school code.', h4: 'The same code works in all 10 apps.',
+    warnT: '⚠️ Good to know', w1: 'If the app is already installed from Google Play, uninstall it first (otherwise Android refuses to install this version).',
+    w2: 'This version does not update by itself: come back to this page at the start of each term.', w3: 'Questions? Write to vs.media.ste@gmail.com' },
+  fr: { home: 'Accueil', schools: 'Écoles', crumb: 'Version Écoles', title: '📲 Version Écoles des applis',
+    sub: 'Pour les élèves d’une école partenaire : ces applis acceptent votre code école et ouvrent tout, sans publicité.',
+    codeHint: 'Il vous faut le code école donné par votre école, par exemple', dl: '⬇️ Télécharger', soon: 'Bientôt disponible', mb: 'Mo',
+    howT: 'Comment installer', h1: 'Touchez « Télécharger » sous l’appli (téléphone ou tablette Android).',
+    h2: 'Ouvrez le fichier téléchargé. Si Android le demande, autorisez votre navigateur à « installer des applis inconnues ».',
+    h3: 'Ouvrez l’appli → Réglages → Code Premium, puis tapez le code école.', h4: 'Le même code marche dans les 10 applis.',
+    warnT: '⚠️ Bon à savoir', w1: 'Si l’appli est déjà installée depuis Google Play, désinstallez-la d’abord (sinon Android refuse d’installer cette version).',
+    w2: 'Cette version ne se met pas à jour toute seule : revenez sur cette page à chaque trimestre.', w3: 'Une question ? Écrivez à vs.media.ste@gmail.com' },
+  es: { home: 'Inicio', schools: 'Escuelas', crumb: 'Versión Escuelas', title: '📲 Versión Escuelas de las apps',
+    sub: 'Para alumnos de una escuela asociada: estas apps aceptan el código de tu escuela y lo abren todo, sin anuncios.',
+    codeHint: 'Necesitas el código que te dio tu escuela, por ejemplo', dl: '⬇️ Descargar', soon: 'Próximamente', mb: 'MB',
+    howT: 'Cómo instalar', h1: 'Toca «Descargar» bajo la app (teléfono o tableta Android).',
+    h2: 'Abre el archivo descargado. Si Android lo pide, permite a tu navegador «instalar apps desconocidas».',
+    h3: 'Abre la app → Ajustes → Código Premium y escribe el código de la escuela.', h4: 'El mismo código funciona en las 10 apps.',
+    warnT: '⚠️ Conviene saber', w1: 'Si la app ya está instalada desde Google Play, desinstálala primero (si no, Android no instala esta versión).',
+    w2: 'Esta versión no se actualiza sola: vuelve a esta página cada trimestre.', w3: '¿Preguntas? Escribe a vs.media.ste@gmail.com' },
+  ar: { home: 'الرئيسية', schools: 'المدارس', crumb: 'نسخة المدارس', title: '📲 نسخة المدارس من التطبيقات',
+    sub: 'لتلاميذ المدارس الشريكة: هذه التطبيقات تقبل رمز مدرستكم وتفتح كل شيء، بدون إشهار.',
+    codeHint: 'تحتاجون رمز المدرسة الذي سلّمته لكم مدرستكم، مثل', dl: '⬇️ تحميل', soon: 'قريبًا', mb: 'م.ب',
+    howT: 'طريقة التثبيت', h1: 'اضغطوا «تحميل» تحت التطبيق (هاتف أو لوحة بنظام أندرويد).',
+    h2: 'افتحوا الملف المحمَّل. إن طلب أندرويد ذلك، اسمحوا للمتصفح بـ«تثبيت التطبيقات غير المعروفة».',
+    h3: 'افتحوا التطبيق ← الإعدادات ← رمز Premium، ثم اكتبوا رمز المدرسة.', h4: 'الرمز نفسه يعمل في التطبيقات العشرة.',
+    warnT: '⚠️ معلومات مهمة', w1: 'إن كان التطبيق مثبّتًا من Google Play، احذفوه أولًا (وإلا يرفض أندرويد تثبيت هذه النسخة).',
+    w2: 'هذه النسخة لا تتحدّث وحدها: ارجعوا إلى هذه الصفحة في بداية كل فصل دراسي.', w3: 'سؤال؟ راسلونا على vs.media.ste@gmail.com' },
+};
+let lang = 'en';
+const S = () => T[lang] || T.en;
+
+/* Taille réelle de chaque APK (requête HEAD), ou « Bientôt » s'il manque. */
+const sizes = {};
+async function probe(id) {
+  try {
+    const r = await fetch(`/apk/${id}.apk`, { method: 'HEAD', cache: 'no-store' });
+    const n = +r.headers.get('content-length');
+    sizes[id] = r.ok ? (n || -1) : 0;
+  } catch { sizes[id] = 0; }
+  render();
+}
+
+function render() {
+  const s = S();
+  document.getElementById('apks').innerHTML = APPS.map(([id, name, sub]) => {
+    const z = sizes[id];
+    const ok = z === undefined || z !== 0; // en cours de vérification → bouton actif
+    const size = z > 0 ? `${(z / 1048576).toFixed(0)} ${s.mb}` : '';
+    return `<div class="apk"><img src="/logos/${id}.png" alt="${name}"><b>${name}</b>
+      <span class="sub">${sub[LI[lang] ?? 0]}</span>
+      <a class="dl${ok ? '' : ' off'}" href="/apk/${id}.apk" download="${name}-ecoles.apk">${ok ? s.dl : s.soon}</a>
+      <span class="size">${size}</span></div>`;
+  }).join('');
+}
+
+PLAY.init(l => {
+  lang = l;
+  PLAY.applyStrings(S());
+  render();
+});
+APPS.forEach(([id]) => probe(id));
+</script>
+</body>
+</html>

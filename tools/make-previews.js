@@ -8,6 +8,7 @@
    Usage (from apps-site/, with the site served locally):
      python -m http.server 5971          (in another terminal)
      node tools/make-previews.js          [baseUrl, default http://localhost:5971]
+     node tools/make-previews.js http://localhost:5971 winter-math   (just one sheet)
 
    Re-run whenever a worksheet's look changes. Needs Chrome or Edge.
    ═══════════════════════════════════════════════════════════════════════ */
@@ -33,7 +34,9 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function main() {
   const html = fs.readFileSync(path.join(ROOT, 'worksheets', 'index.html'), 'utf8');
-  const pages = [...new Set([...html.matchAll(/class="gcard" href="\/worksheets\/([a-z0-9-]+)\.html"/g)].map(m => m[1]))];
+  const only = process.argv.slice(3);      // optional: render just these sheets
+  const pages = [...new Set([...html.matchAll(/class="gcard" href="\/worksheets\/([a-z0-9-]+)\.html"/g)].map(m => m[1]))]
+    .filter(p => !only.length || only.includes(p));
   if (!pages.length) throw new Error('no worksheet cards found in worksheets/index.html');
   fs.mkdirSync(OUT, { recursive: true });
 
