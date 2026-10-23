@@ -106,3 +106,17 @@
 .promo-note{font-size:12.5px;color:var(--muted);margin-top:10px!important}
 .app-actions .prem-btn{margin-inline-start:4px}
 @media(max-width:760px){.promo{grid-template-columns:1fr;padding:16px}.promo-phone{max-width:240px}}
+
+/* ── QR codes: scan with a phone to open the app on Google Play (2026-10) ──
+   Only useful when the page is seen on a bigger screen, so hidden on phones. */
+.qr-box{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0;
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 10px 8px;box-shadow:var(--shadow-sm)}
+.qr-box img{width:132px;height:132px;display:block;image-rendering:pixelated}
+.qr-box figcaption{font-size:12.5px;font-weight:800;color:#16213E;text-align:center;max-width:140px}
+.qr-box.small{padding:6px 6px 4px;border-radius:14px}
+.qr-box.small img{width:88px;height:88px}
+.qr-box.small figcaption{font-size:11px}
+.pcard.appcard{position:relative}
+.pcard.appcard .qr-mini{position:absolute;top:10px;inset-inline-end:10px;width:84px;height:84px;background:#fff;
+  padding:4px;border-radius:12px;box-shadow:0 6px 16px rgba(20,45,110,.18)}
+@media(max-width:700px){.qr-box,.pcard.appcard .qr-mini{display:none}}

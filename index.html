@@ -36,6 +36,11 @@
 
 
 
+
+
+
+
+
 <link rel="alternate" hreflang="en" href="https://kids-learning-hub.cc/" />
 <link rel="alternate" hreflang="fr" href="https://kids-learning-hub.cc/fr/" />
 <link rel="alternate" hreflang="es" href="https://kids-learning-hub.cc/es/" />
@@ -384,6 +389,9 @@ body::before{
 .app-chip .rate{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:800;color:var(--orange)}
 .app-chip .play{margin-top:2px;display:inline-flex;align-items:center;gap:7px;background:#111827;color:#fff;padding:8px 12px;border-radius:12px;font-weight:800;font-size:12px}
 :root[data-theme="dark"] .app-chip .play{background:#000}
+/* QR code under each app (opens Google Play) — only on bigger screens, where a phone can scan it */
+.app-chip .qr{width:96px;height:96px;background:#fff;padding:5px;border-radius:12px;border:1px solid var(--line);margin-top:4px;display:none}
+@media(min-width:900px){.app-chip .qr{display:block}}
 .app-chip .play svg{width:16px;height:18px}
 .app-chip .play span span{display:block;line-height:1.05}
 .app-chip .play .g-sub{font-size:8.5px;font-weight:600;opacity:.85}
@@ -1881,6 +1889,7 @@ function render(){
       <small>${a.subject[lang]}</small>
       <span class="rate">${a.dl}</span>
       <span class="play">${playSvg}<span><span class="g-sub">${t.download}</span><span class="g-main">Google Play</span></span></span>
+      <img class="qr" src="/apps/qr/${a.name.toLowerCase()}.svg" width="96" height="96" alt="QR ${a.name}" loading="lazy" title="${({en:'Scan to install',fr:'Scannez pour installer',es:'Escanea para instalar',ar:'امسح الرمز للتثبيت'})[lang]}">
     </a>`).join('');
 
   // why grid (reuse trust + features)

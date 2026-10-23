@@ -155,7 +155,7 @@ ${hreflangBlock(o.slug, o.self)}<meta name="theme-color" content="#1E5BFF" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${root}blog/article.css" />
-<link rel="stylesheet" href="${appsRoot}apps.css?v=2" />
+<link rel="stylesheet" href="${appsRoot}apps.css?v=3" />
 <script src="${root}analytics.js" defer></script>
 <script>(function(){try{var t=localStorage.getItem('vsm_theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
 
@@ -163,6 +163,12 @@ ${o.jsonld.map(j => `<script type="application/ld+json">\n${JSON.stringify(j)}\n
 </head>
 <body>
 `;
+}
+
+/* ── QR code that opens the app on Google Play (files from tools/make-qr.py) ── */
+const QR_T = { en: 'Scan to install', fr: 'Scannez pour installer', es: 'Escanea para instalar', ar: 'امسح الرمز للتثبيت' };
+function qrBox(app, lang, cls) {
+  return `<figure class="${cls}"><img src="/apps/qr/${app.slug}.svg" width="132" height="132" alt="QR code: ${app.name} on Google Play" loading="lazy" /><figcaption>📱 ${QR_T[lang]}</figcaption></figure>`;
 }
 
 /* ── Google Play badge (inline SVG, no external asset) ─────────────────── */
@@ -340,6 +346,7 @@ for (const app of APPS) {
         <span class="free-note">${esc(S.free)}</span>
       </div>
     </div>
+    ${qrBox(app, lang, 'qr-box')}
   </section>
 ${promoSection(app, lang, root)}
   <div class="stats">
@@ -360,6 +367,7 @@ ${faqs}
     <img src="${logo}" alt="${app.name}">
     <div><b>${app.name}</b><p>${esc(app.tagline[lang])} · ${esc(S.free)}</p></div>
     ${playBadge(app.pkg, S.getOn)}
+    ${qrBox(app, lang, 'qr-box small')}
   </div>
 
   <h2 class="section-h">${esc(S.related)}</h2>
@@ -414,6 +422,7 @@ for (const lang of ORDER) {
           <p>${esc(a.tagline[lang])}</p>
           <span class="read">${esc(S.getOn)} →</span>
         </div>
+        <img class="qr-mini" src="/apps/qr/${a.slug}.svg" width="84" height="84" alt="QR code: ${a.name}" loading="lazy" title="${QR_T[lang]}" />
       </a>`).join('\n');
 
   const page = headCommon(lang, { slug: '', self, title: S.idxTitle, ogTitle: S.idxH1, desc: S.idxDesc, jsonld })
