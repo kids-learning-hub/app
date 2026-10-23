@@ -505,6 +505,8 @@ module.exports = [
 
 /* ── most-requested printables (word search, counting, multiplication chart, reward chart, handwriting paper, patterns) ── */
 ...require('./worksheets-data-printables.js'),
+/* ── second batch (ten frames, hundred chart, even/odd, number words, tally & graphs, symmetry) ── */
+...require('./worksheets-data-printables2.js'),
 
 /* ── seasonal sheets (winter / Christmas maths) ── */
 ...require('./worksheets-data-seasonal.js'),
