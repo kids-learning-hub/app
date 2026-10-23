@@ -511,6 +511,8 @@ module.exports = [
 ...require('./worksheets-data-languages.js'),
 /* ── third batch (measuring, area & perimeter, Roman numerals, maths minute, calendar, picture crossword) ── */
 ...require('./worksheets-data-batch3.js'),
+/* ── fourth batch (coordinates, number pyramids, column multiplication, fact families, odd one out, compare fractions) ── */
+...require('./worksheets-data-batch4.js'),
 
 /* ── seasonal sheets (winter / Christmas maths) ── */
 ...require('./worksheets-data-seasonal.js'),
