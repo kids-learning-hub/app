@@ -143,7 +143,7 @@ ${(alts || []).map(a => `<link rel="alternate" hreflang="${a.hl}" href="${a.href
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/play/play.css?v=5" />
-<link rel="stylesheet" href="/worksheets/ws.css?v=4" />
+<link rel="stylesheet" href="/worksheets/ws.css?v=5" />
 <style>${CSS}</style>
 <script>(function(){try{var t=localStorage.getItem('vsm_theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){}})();(window.adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=1;</script>
 <script src="/analytics.js" defer></script>

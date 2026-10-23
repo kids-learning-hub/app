@@ -171,3 +171,17 @@
   .instr{font-size:11pt}
   .selfcheck{font-size:11pt}
 }
+
+/* ── Watermark + site link on every printed / saved-as-PDF sheet (2026-10) ──
+   A faint diagonal "kids-learning-hub.cc" repeated across the page (survives
+   cropping) and a clearer site address in the sheet header. Print only, so the
+   on-screen preview stays clean. Certificates use their own layout (.cert) and
+   are deliberately left without a watermark. */
+@media print{
+  .sheet{position:relative}
+  .sheet::after{
+    content:"";position:absolute;inset:0;z-index:5;pointer-events:none;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='190'%3E%3Ctext x='150' y='100' text-anchor='middle' transform='rotate(-28 150 95)' font-family='Arial,Helvetica,sans-serif' font-size='22' font-weight='700' fill='%231E5BFF' fill-opacity='0.075'%3Ekids-learning-hub.cc%3C/text%3E%3C/svg%3E") 0 0/300px 190px repeat;
+  }
+  .sheet-head .st span{font-weight:800;color:#1E5BFF;font-size:11.5pt}
+}
