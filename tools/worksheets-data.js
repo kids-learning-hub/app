@@ -503,6 +503,9 @@ module.exports = [
 /* ── printable games (snakes & ladders, bingo, I have…who has?, sea battle) ── */
 ...require('./worksheets-data-games.js'),
 
+/* ── most-requested printables (word search, counting, multiplication chart, reward chart, handwriting paper, patterns) ── */
+...require('./worksheets-data-printables.js'),
+
 /* ── seasonal sheets (winter / Christmas maths) ── */
 ...require('./worksheets-data-seasonal.js'),
 
