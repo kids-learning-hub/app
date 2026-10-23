@@ -182,3 +182,9 @@ footer::before,.foot::before{content:"";position:absolute;left:0;right:0;top:-38
 
 @media print{ .ws-guide{display:none} }
 @media(max-width:640px){.ws-guide{padding:20px 18px;border-radius:16px}.ws-lede{font-size:15.5px}}
+
+/* print is always light: dark-theme text would be invisible when "background graphics" is off */
+@media print{
+  :root[data-theme="dark"]{--bg:#fff;--bg2:#fff;--card:#fff;--card2:#fff;--ink:#12224E;--ink2:#1B2E63;--muted:#66799F;--line:#E4ECFA;color-scheme:light}
+  html,body{background:#fff!important;color:#12224E!important}
+}
