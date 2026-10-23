@@ -20,7 +20,8 @@ const { execFileSync } = require('child_process');
 const path = require('path');
 
 const TOOLS = __dirname;
-const steps = ['build.js', 'build-apps.js', 'build-worksheets.js', 'build-langs.js', 'build-games.js', 'build-grades.js'];
+const steps = ['build.js', 'build-apps.js', 'build-worksheets.js', 'build-langs.js', 'build-games.js', 'build-grades.js',
+               'prerender-home.js', 'build-quality.js'];   // keep these two last
 
 for (const step of steps) {
   console.log(`\n── ${step} ${'─'.repeat(Math.max(0, 56 - step.length))}`);
