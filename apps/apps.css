@@ -105,6 +105,8 @@
 .promo-from{font-weight:800;color:#BA7517}
 .promo-note{font-size:12.5px;color:var(--muted);margin-top:10px!important}
 .app-actions .prem-btn{margin-inline-start:4px}
+.promo-list{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.promo-list li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-weight:700}
 @media(max-width:760px){.promo{grid-template-columns:1fr;padding:16px}.promo-phone{max-width:240px}}
 
 /* ── QR codes: scan with a phone to open the app on Google Play (2026-10) ──
