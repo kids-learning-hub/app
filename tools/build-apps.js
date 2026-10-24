@@ -213,18 +213,61 @@ const PROMO = {
         premFrom: 'ابتداءً من 1.99$ في الشهر · أو التطبيقات العشرة بالبطاقة الشاملة.',
         premNote: 'الشراء يقوم به شخص بالغ على هذا الموقع. تعمل الأكواد في نسختي الويب وأندرويد من kids-learning-hub.cc، أما نسخة Google Play فتبقى مجانية.' },
 };
+/* ── Language & world apps: promo video (2026-10) ────────────────────────
+   One English-voiced video per app (media/<slug>-promo.mp4 + .webp poster),
+   captions in 4 languages. Same player as MathoKids, with a feature list
+   instead of the Premium card. Only the 🎤 line and the buddy emoji change. */
+const LANG_PROMO_TEXT = {
+  en: { watchT: n => `See ${n} in action`, sound: '🔊 Sound on', mute: '🔇 Sound off',
+        watchP: 'A one-minute tour: the buddies, the adventure map, the speaking and tracing activities, the games and the stories.',
+        list: b => [`${b} Pick a buddy who learns with your child`, '🗺️ An adventure map with a quick level test', null, '📖 Stories, songs and a weekly report for parents'] },
+  fr: { watchT: n => `${n} en action`, sound: '🔊 Activer le son', mute: '🔇 Couper le son',
+        watchP: 'Une visite d’une minute : les compagnons, la carte d’aventure, la prononciation et le tracé, les jeux et les histoires.',
+        list: b => [`${b} Un compagnon qui apprend avec votre enfant`, '🗺️ Une carte d’aventure et un petit test de niveau', null, '📖 Histoires, chansons et bilan hebdomadaire pour les parents'] },
+  es: { watchT: n => `${n} en acción`, sound: '🔊 Activar sonido', mute: '🔇 Quitar sonido',
+        watchP: 'Un recorrido de un minuto: los compañeros, el mapa de aventuras, la pronunciación y el trazo, los juegos y los cuentos.',
+        list: b => [`${b} Un compañero que aprende con tu hijo`, '🗺️ Un mapa de aventuras y una prueba de nivel rápida', null, '📖 Cuentos, canciones e informe semanal para los padres'] },
+  ar: { watchT: n => `شاهد ${n}`, sound: '🔊 تشغيل الصوت', mute: '🔇 كتم الصوت',
+        watchP: 'جولة في دقيقة واحدة: الرفاق، خريطة المغامرة، النطق وتتبّع الحروف، الألعاب والقصص.',
+        list: b => [`${b} رفيق يتعلّم مع طفلك`, '🗺️ خريطة مغامرة واختبار مستوى قصير', null, '📖 قصص وأغانٍ وتقرير أسبوعي للآباء'] },
+};
+// buddy emoji shown in the video + the 🎤 line per page language
+const LANG_PROMO = {
+  englokids:  { buddy: '🦊', speak: { en: '🎤 Listen, speak, trace and spell in English', fr: '🎤 Écouter, parler, tracer et épeler en anglais',
+                es: '🎤 Escucha, habla, traza y deletrea en inglés', ar: '🎤 استمع وتكلّم وتتبّع الحروف واكتب بالإنجليزية' } },
+  francokids: { buddy: '🦊', speak: { en: '🎤 Listen, speak, trace and spell in French', fr: '🎤 Écouter, parler, tracer et épeler en français',
+                es: '🎤 Escucha, habla, traza y deletrea en francés', ar: '🎤 استمع وتكلّم وتتبّع الحروف واكتب بالفرنسية' } },
+  spanokids:  { buddy: '🦊', speak: { en: '🎤 Listen, speak, trace and spell in Spanish', fr: '🎤 Écouter, parler, tracer et épeler en espagnol',
+                es: '🎤 Escucha, habla, traza y deletrea en español', ar: '🎤 استمع وتكلّم وتتبّع الحروف واكتب بالإسبانية' } },
+  arabikids:  { buddy: '🐱', speak: { en: '🎤 Listen, speak, trace the Arabic letters and spell', fr: '🎤 Écouter, parler, tracer les lettres arabes et épeler',
+                es: '🎤 Escucha, habla, traza las letras árabes y deletrea', ar: '🎤 استمع وتكلّم وتتبّع الحروف العربية واكتب' } },
+  chinokids:  { buddy: '🐼', speak: { en: '🎤 Listen, speak, trace characters and spell the pinyin', fr: '🎤 Écouter, parler, tracer les caractères et écrire le pinyin',
+                es: '🎤 Escucha, habla, traza los caracteres y escribe el pinyin', ar: '🎤 استمع وتكلّم وتتبّع الرموز الصينية واكتب البينيين' } },
+};
+function langPromoBody(app, lang, root) {
+  const A = LANG_PROMO[app.slug], P = LANG_PROMO_TEXT[lang], t = P.watchT(app.name);
+  const items = P.list(A.buddy).map(x => x ?? A.speak[lang]);
+  return {
+    video: `<video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="${root}media/${app.slug}-promo.webp" aria-label="${esc(t)}"
+             style="background-image:url(/logos/${app.slug}.png)" data-src="${root}media/${app.slug}-promo.mp4"></video>`,
+    sound: P.sound, mute: P.mute,
+    text: `<h2>🎬 ${esc(t)}</h2>
+      <p>${esc(P.watchP)}</p>
+      <ul class="promo-list">
+${items.map(x => `        <li>${esc(x)}</li>`).join('\n')}
+      </ul>`,
+  };
+}
+
 function promoSection(app, lang, root) {
+  if (LANG_PROMO[app.slug]) return promoMarkup(langPromoBody(app, lang, root));
   if (app.slug !== 'mathokids') return '';
   const P = PROMO[lang];
-  return `
-  <section class="promo">
-    <div class="promo-phone">
-      <video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="${root}media/mathokids-promo.webp" aria-label="${esc(P.watchT)}"
-             data-src="${root}media/mathokids-promo.mp4"></video>
-      <button class="promo-sound" id="promoSound" type="button" data-on="${esc(P.sound)}" data-off="${esc(P.mute)}">${esc(P.sound)}</button>
-    </div>
-    <div class="promo-t">
-      <h2>🎬 ${esc(P.watchT)}</h2>
+  return promoMarkup({
+    video: `<video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="${root}media/mathokids-promo.webp" aria-label="${esc(P.watchT)}"
+             data-src="${root}media/mathokids-promo.mp4"></video>`,
+    sound: P.sound, mute: P.mute,
+    text: `<h2>🎬 ${esc(P.watchT)}</h2>
       <p>${esc(P.watchP)}</p>
       <div class="promo-prem">
         <h3>${esc(P.premT)}</h3>
@@ -232,7 +275,21 @@ function promoSection(app, lang, root) {
         <p class="promo-from">${esc(P.premFrom)}</p>
         <a class="prem-btn" href="${root}premium.html?app=mathokids">${esc(P.premBtn)}</a>
         <p class="promo-note">${esc(P.premNote)}</p>
-      </div>
+      </div>`,
+  });
+}
+
+/* Phone-frame player shared by every promo: loads when scrolled into view,
+   tries sound first, falls back to muted until the visitor's first tap. */
+function promoMarkup({ video, sound, mute, text }) {
+  return `
+  <section class="promo">
+    <div class="promo-phone">
+      ${video}
+      <button class="promo-sound" id="promoSound" type="button" data-on="${esc(sound)}" data-off="${esc(mute)}">${esc(sound)}</button>
+    </div>
+    <div class="promo-t">
+      ${text}
     </div>
   </section>
   <script>(function(){

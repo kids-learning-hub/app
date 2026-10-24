@@ -85,6 +85,51 @@
     <figure class="qr-box"><img src="/apps/qr/chinokids.svg" width="132" height="132" alt="QR code: ChinoKids on Google Play" loading="lazy" /><figcaption>📱 Escanea para instalar</figcaption></figure>
   </section>
 
+  <section class="promo">
+    <div class="promo-phone">
+      <video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="../../media/chinokids-promo.webp" aria-label="ChinoKids en acción"
+             style="background-image:url(/logos/chinokids.png)" data-src="../../media/chinokids-promo.mp4"></video>
+      <button class="promo-sound" id="promoSound" type="button" data-on="🔊 Activar sonido" data-off="🔇 Quitar sonido">🔊 Activar sonido</button>
+    </div>
+    <div class="promo-t">
+      <h2>🎬 ChinoKids en acción</h2>
+      <p>Un recorrido de un minuto: los compañeros, el mapa de aventuras, la pronunciación y el trazo, los juegos y los cuentos.</p>
+      <ul class="promo-list">
+        <li>🐼 Un compañero que aprende con tu hijo</li>
+        <li>🗺️ Un mapa de aventuras y una prueba de nivel rápida</li>
+        <li>🎤 Escucha, habla, traza los caracteres y escribe el pinyin</li>
+        <li>📖 Cuentos, canciones e informe semanal para los padres</li>
+      </ul>
+    </div>
+  </section>
+  <script>(function(){
+    var v=document.getElementById('promoV'),b=document.getElementById('promoSound');if(!v)return;
+    var saveData=navigator.connection&&navigator.connection.saveData;
+    var userMuted=false, began=false;
+    function label(){ b.textContent=v.muted?b.dataset.on:b.dataset.off; }
+    /* sound on by default: try with sound first; if the browser blocks it
+       (no interaction with the site yet), play muted and turn the sound on
+       at the visitor's first tap, click or key press anywhere on the page */
+    function unmuteOnGesture(){
+      var evs=['pointerdown','touchend','keydown'];
+      function go(e){ if(e&&e.target===b) return; evs.forEach(function(n){ document.removeEventListener(n,go,true); });
+        if(userMuted) return; v.muted=false; if(v.currentTime>3) v.currentTime=0; v.play(); label(); }
+      evs.forEach(function(n){ document.addEventListener(n,go,true); });
+    }
+    function start(){
+      if(!v.getAttribute('src')){ v.src=v.dataset.src; }
+      if(saveData){ v.controls=true; return; }
+      if(began){ v.play(); return; }
+      began=true; v.muted=false;
+      var p=v.play();
+      if(p&&p.then) p.then(label).catch(function(){ v.muted=true; label(); v.play().catch(function(){ v.controls=true; }); unmuteOnGesture(); });
+    }
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) start(); else if(v.getAttribute('src')&&!v.paused) v.pause(); }); },{threshold:.2}).observe(v);
+    } else start();
+    b.onclick=function(){ if(!v.getAttribute('src')) start(); v.muted=!v.muted; userMuted=v.muted; if(!v.muted){ v.currentTime=0; v.play(); } label(); };
+  })();</script>
+
   <div class="stats">
       <div class="stat"><b>100</b><span>Lecciones</span></div>
       <div class="stat"><b>4–12</b><span>Edades</span></div>
