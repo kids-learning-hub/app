@@ -85,6 +85,51 @@
     <figure class="qr-box"><img src="/apps/qr/englokids.svg" width="132" height="132" alt="QR code: EngloKids on Google Play" loading="lazy" /><figcaption>📱 امسح الرمز للتثبيت</figcaption></figure>
   </section>
 
+  <section class="promo">
+    <div class="promo-phone">
+      <video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="../../media/englokids-promo.webp" aria-label="شاهد EngloKids"
+             style="background-image:url(/logos/englokids.png)" data-src="../../media/englokids-promo.mp4"></video>
+      <button class="promo-sound" id="promoSound" type="button" data-on="🔊 تشغيل الصوت" data-off="🔇 كتم الصوت">🔊 تشغيل الصوت</button>
+    </div>
+    <div class="promo-t">
+      <h2>🎬 شاهد EngloKids</h2>
+      <p>جولة في دقيقة واحدة: الرفاق، خريطة المغامرة، النطق وتتبّع الحروف، الألعاب والقصص.</p>
+      <ul class="promo-list">
+        <li>🦊 رفيق يتعلّم مع طفلك</li>
+        <li>🗺️ خريطة مغامرة واختبار مستوى قصير</li>
+        <li>🎤 استمع وتكلّم وتتبّع الحروف واكتب بالإنجليزية</li>
+        <li>📖 قصص وأغانٍ وتقرير أسبوعي للآباء</li>
+      </ul>
+    </div>
+  </section>
+  <script>(function(){
+    var v=document.getElementById('promoV'),b=document.getElementById('promoSound');if(!v)return;
+    var saveData=navigator.connection&&navigator.connection.saveData;
+    var userMuted=false, began=false;
+    function label(){ b.textContent=v.muted?b.dataset.on:b.dataset.off; }
+    /* sound on by default: try with sound first; if the browser blocks it
+       (no interaction with the site yet), play muted and turn the sound on
+       at the visitor's first tap, click or key press anywhere on the page */
+    function unmuteOnGesture(){
+      var evs=['pointerdown','touchend','keydown'];
+      function go(e){ if(e&&e.target===b) return; evs.forEach(function(n){ document.removeEventListener(n,go,true); });
+        if(userMuted) return; v.muted=false; if(v.currentTime>3) v.currentTime=0; v.play(); label(); }
+      evs.forEach(function(n){ document.addEventListener(n,go,true); });
+    }
+    function start(){
+      if(!v.getAttribute('src')){ v.src=v.dataset.src; }
+      if(saveData){ v.controls=true; return; }
+      if(began){ v.play(); return; }
+      began=true; v.muted=false;
+      var p=v.play();
+      if(p&&p.then) p.then(label).catch(function(){ v.muted=true; label(); v.play().catch(function(){ v.controls=true; }); unmuteOnGesture(); });
+    }
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) start(); else if(v.getAttribute('src')&&!v.paused) v.pause(); }); },{threshold:.2}).observe(v);
+    } else start();
+    b.onclick=function(){ if(!v.getAttribute('src')) start(); v.muted=!v.muted; userMuted=v.muted; if(!v.muted){ v.currentTime=0; v.play(); } label(); };
+  })();</script>
+
   <div class="stats">
       <div class="stat"><b>101</b><span>درسًا</span></div>
       <div class="stat"><b>4–12</b><span>الأعمار</span></div>
