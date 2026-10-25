@@ -134,6 +134,6 @@
    from here. All the code lives in /kidbar.js.                          */
 (function () {
   var s = document.createElement('script');
-  s.src = '/kidbar.js?v=2'; s.defer = true;
+  s.src = '/kidbar.js?v=3'; s.defer = true;
   (document.head || document.documentElement).appendChild(s);
 })();

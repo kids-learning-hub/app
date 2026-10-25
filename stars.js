@@ -12,7 +12,8 @@
   var GAMES = ['times-tables', 'quick-count', 'word-match', 'clock-game', 'memory',
                'capitals', 'math-race', 'flags', 'patterns', 'science-quiz',
                'odd-one-out', 'fraction-pizza', 'robot-code', 'animal-homes',
-               'compare-numbers', 'shape-detective', 'copy-the-lights', 'balance-scale'];
+               'compare-numbers', 'shape-detective', 'copy-the-lights', 'balance-scale',
+               'typing-game', 'word-guess', 'tic-tac-toe', 'coloring-online', 'sliding-puzzle', 'maze-game'];
 
   var L = {
     en: { stars: 'stars', earned: 'You earned', total: 'Total', newBadge: 'New badge!', title: 'My stars & badges',
@@ -40,7 +41,7 @@
       h: ['Play 5 different games', 'Joue à 5 jeux différents', 'Juega a 5 juegos distintos', 'العب 5 ألعاب مختلفة'],
       t: function (s) { return Object.keys(s.best).filter(function (g) { return GAMES.indexOf(g) > -1; }).length >= 5; } },
     { id: 'adventurer', e: '🗺️', n: ['Adventurer', 'Aventurier', 'Aventurero', 'المغامر'],
-      h: ['Play all 18 games', 'Joue aux 18 jeux', 'Juega a los 18 juegos', 'العب الألعاب الثماني عشرة كلها'],
+      h: ['Play all 24 games', 'Joue aux 24 jeux', 'Juega a los 24 juegos', 'العب الألعاب الأربع والعشرين كلها'],
       t: function (s) { return GAMES.every(function (g) { return g in s.best; }); } },
     { id: 'tables', e: '✖️', n: ['Times-table hero', 'Héros des tables', 'Héroe de las tablas', 'بطل جدول الضرب'],
       h: ['3 stars in Times Tables Race', '3 étoiles à la Course aux tables', '3 estrellas en Carrera de tablas', '3 نجوم في سباق جداول الضرب'],
