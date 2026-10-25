@@ -243,16 +243,28 @@ const LANG_PROMO = {
                 es: '🎤 Escucha, habla, traza las letras árabes y deletrea', ar: '🎤 استمع وتكلّم وتتبّع الحروف العربية واكتب' } },
   chinokids:  { buddy: '🐼', speak: { en: '🎤 Listen, speak, trace characters and spell the pinyin', fr: '🎤 Écouter, parler, tracer les caractères et écrire le pinyin',
                 es: '🎤 Escucha, habla, traza los caracteres y escribe el pinyin', ar: '🎤 استمع وتكلّم وتتبّع الرموز الصينية واكتب البينيين' } },
+  // Science app: its own tour text and feature list (no speaking/tracing).
+  scienkids:  { buddy: '🤖',
+    watchP: { en: 'A one-minute tour: the buddies, the adventure map, the animated lessons, the science lab, the games and the scientists.',
+              fr: 'Une visite d’une minute : les compagnons, la carte d’aventure, les leçons animées, le labo, les jeux et les savants.',
+              es: 'Un recorrido de un minuto: los compañeros, el mapa de aventuras, las lecciones animadas, el laboratorio, los juegos y los científicos.',
+              ar: 'جولة في دقيقة واحدة: الرفاق، خريطة المغامرة، الدروس المتحرّكة، المختبر، الألعاب والعلماء.' },
+    list: {
+      en: ['🤖 Pick a buddy and explore 10 science topics', '🧪 A science lab to mix things and make discoveries', '🎯 Quizzes, sorting and true-or-false games', '🔬 Great scientists, badges and a weekly report for parents'],
+      fr: ['🤖 Un compagnon et 10 thèmes de sciences à explorer', '🧪 Un labo pour faire des mélanges et des découvertes', '🎯 Quiz, jeux de tri et vrai ou faux', '🔬 Grands savants, badges et bilan hebdomadaire pour les parents'],
+      es: ['🤖 Un compañero y 10 temas de ciencias para explorar', '🧪 Un laboratorio para hacer mezclas y descubrimientos', '🎯 Cuestionarios, juegos de clasificar y verdadero o falso', '🔬 Grandes científicos, insignias e informe semanal para los padres'],
+      ar: ['🤖 رفيق و10 مواضيع علمية للاستكشاف', '🧪 مختبر علمي للخلط والاكتشاف', '🎯 اختبارات وألعاب تصنيف وصح أم خطأ', '🔬 علماء عظماء وشارات وتقرير أسبوعي للآباء'],
+    } },
 };
 function langPromoBody(app, lang, root) {
   const A = LANG_PROMO[app.slug], P = LANG_PROMO_TEXT[lang], t = P.watchT(app.name);
-  const items = P.list(A.buddy).map(x => x ?? A.speak[lang]);
+  const items = A.list ? A.list[lang] : P.list(A.buddy).map(x => x ?? A.speak[lang]);
   return {
     video: `<video class="promo-v" id="promoV" muted loop playsinline preload="none" poster="${root}media/${app.slug}-promo.webp" aria-label="${esc(t)}"
              style="background-image:url(/logos/${app.slug}.png)" data-src="${root}media/${app.slug}-promo.mp4"></video>`,
     sound: P.sound, mute: P.mute,
     text: `<h2>🎬 ${esc(t)}</h2>
-      <p>${esc(P.watchP)}</p>
+      <p>${esc(A.watchP ? A.watchP[lang] : P.watchP)}</p>
       <ul class="promo-list">
 ${items.map(x => `        <li>${esc(x)}</li>`).join('\n')}
       </ul>`,
