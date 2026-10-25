@@ -269,6 +269,37 @@ module.exports = [
          'اجمع الحروف حسب الشكل — c وo وa وd وg تبدأ بالانحناءة نفسها — بدل الترتيب الأبجدي.',
          'قصير ومتكرّر: خمس دقائق يوميًا أفضل من جلسة طويلة في العطلة.'],
   },
+  // Plan de deux semaines par familles de lettres (rendu par build-worksheets.js si présent).
+  plan: {
+    en: { steps: [
+            'Days 1–3 — Straight-line letters: l, i, t, then the capitals L, T, E, F, H. Finger first, then pencil; three letters a day is plenty.',
+            'Days 4–6 — The “c” family: c, o, a, d, g, q. They all start at the top of the curve and go round to the left — say “round to the left” out loud together.',
+            'Days 7–9 — Hump letters: n, m, h, r, b, p. Line down first, then back up and over the hump without lifting the pencil.',
+            'Days 10–12 — Diagonal letters: v, w, x, y, z, k, plus s and e, which most children need to practise a little longer.',
+            'Days 13–14 — Your child’s name and three short words they love. Writing something that matters to them is the best reward.'],
+          progress: 'The sign of progress is not neat letters: it is your child starting each letter in the right place without being reminded, even if the result is still wobbly.' },
+    fr: { steps: [
+            'Jours 1 à 3 — Les lettres à traits droits : l, i, t, puis les majuscules L, T, E, F, H. D’abord au doigt, puis au crayon ; trois lettres par jour suffisent.',
+            'Jours 4 à 6 — La famille du « c » : c, o, a, d, g, q. Elles commencent toutes en haut de la courbe et tournent vers la gauche — dites ensemble « je tourne à gauche ».',
+            'Jours 7 à 9 — Les lettres à pont : n, m, h, r, b, p. D’abord le trait vers le bas, puis on remonte et on passe le pont sans lever le crayon.',
+            'Jours 10 à 12 — Les lettres en diagonale : v, w, x, y, z, k, plus le s et le e, qui demandent souvent un peu plus d’entraînement.',
+            'Jours 13 et 14 — Le prénom de l’enfant et trois petits mots qu’il aime. Écrire quelque chose qui compte pour lui est la meilleure récompense.'],
+          progress: 'Le signe de progrès, ce ne sont pas des lettres parfaites : c’est l’enfant qui commence chaque lettre au bon endroit sans qu’on le lui rappelle, même si le tracé tremble encore.' },
+    es: { steps: [
+            'Días 1 a 3 — Letras de trazos rectos: l, i, t, y luego las mayúsculas L, T, E, F, H. Primero con el dedo y después con el lápiz; tres letras al día bastan.',
+            'Días 4 a 6 — La familia de la «c»: c, o, a, d, g, q. Todas empiezan arriba de la curva y giran hacia la izquierda; digan juntos en voz alta «giro a la izquierda».',
+            'Días 7 a 9 — Letras con puente: n, m, h, r, b, p. Primero la línea hacia abajo y luego se sube y se pasa el puente sin levantar el lápiz.',
+            'Días 10 a 12 — Letras en diagonal: v, w, x, y, z, k, además de la s y la e, que suelen necesitar un poco más de práctica.',
+            'Días 13 y 14 — El nombre del niño y tres palabras cortas que le gusten. Escribir algo que le importa es la mejor recompensa.'],
+          progress: 'La señal de progreso no son letras perfectas: es que el niño empiece cada letra en el lugar correcto sin que se lo recuerdes, aunque el trazo todavía tiemble.' },
+    ar: { steps: [
+            'الأيام 1 إلى 3 — الحروف ذات الخطوط المستقيمة: l وi وt، ثم الحروف الكبيرة L وT وE وF وH. بالإصبع أولًا ثم بالقلم، وثلاثة حروف في اليوم تكفي.',
+            'الأيام 4 إلى 6 — عائلة الحرف c: c وo وa وd وg وq. كلها تبدأ من أعلى الانحناءة وتدور نحو اليسار، فقولا معًا بصوت مسموع: «أدور نحو اليسار».',
+            'الأيام 7 إلى 9 — الحروف ذات القنطرة: n وm وh وr وb وp. الخط إلى الأسفل أولًا، ثم الصعود وعبور القنطرة دون رفع القلم.',
+            'الأيام 10 إلى 12 — الحروف المائلة: v وw وx وy وz وk، ومعها s وe اللذان يحتاجان غالبًا إلى تمرين أطول قليلًا.',
+            'اليومان 13 و14 — اسم الطفل وثلاث كلمات قصيرة يحبّها. فكتابة شيء يهمّه هي أجمل مكافأة.'],
+          progress: 'علامة التقدّم ليست حروفًا مرتّبة، بل أن يبدأ الطفل كل حرف من المكان الصحيح دون تذكير، حتى لو بقي الخط مرتجفًا.' },
+  },
   faq: {
     en: [['What age should a child start tracing letters?', 'Around 3 or 4 for finger tracing and large shapes, and 5 to 6 for pencil work. Before that, drawing, cutting and threading build the hand strength that writing needs.'],
          ['Capitals or lower case first?', 'Capitals are easier — straight lines and simple curves — so most children start there. But lower case is what reading and writing actually use, so do not stay on capitals long.'],

@@ -36,13 +36,13 @@ const END = '<!-- /WS_CONTENT -->';
 
 const UI = {
   en: { how: 'How to get the most from these sheets', faq: 'Frequently asked questions',
-        ages: 'Best for ages', home: 'Home', ws: 'Worksheets', more: 'More worksheets' },
+        plan: 'A simple two-week plan', ages: 'Best for ages', home: 'Home', ws: 'Worksheets', more: 'More worksheets' },
   fr: { how: 'Comment tirer le meilleur de ces fiches', faq: 'Questions fréquentes',
-        ages: 'Conseillé de', home: 'Accueil', ws: 'Fiches', more: "Plus de fiches" },
+        plan: 'Un plan simple sur deux semaines', ages: 'Conseillé de', home: 'Accueil', ws: 'Fiches', more: "Plus de fiches" },
   es: { how: 'Cómo aprovechar mejor estas fichas', faq: 'Preguntas frecuentes',
-        ages: 'Recomendado de', home: 'Inicio', ws: 'Fichas', more: 'Más fichas' },
+        plan: 'Un plan sencillo de dos semanas', ages: 'Recomendado de', home: 'Inicio', ws: 'Fichas', more: 'Más fichas' },
   ar: { how: 'كيف تستفيد أكثر من هذه الأوراق', faq: 'أسئلة شائعة',
-        ages: 'الأنسب لأعمار', home: 'الرئيسية', ws: 'أوراق العمل', more: 'أوراق عمل أخرى' },
+        plan: 'خطة بسيطة لأسبوعين', ages: 'الأنسب لأعمار', home: 'الرئيسية', ws: 'أوراق العمل', more: 'أوراق عمل أخرى' },
 };
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -55,6 +55,15 @@ function contentBlock(topic, lang) {
   const how = topic.how[lang].map(li => `      <li>${esc(li)}</li>`).join('\n');
   const faq = topic.faq[lang].map(([q, a]) =>
     `    <details class="faq"><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('\n');
+  // Optional step-by-step plan (only some topics have one).
+  const P = topic.plan && topic.plan[lang];
+  const plan = P ? `
+    <h2>${t.plan}</h2>
+    <ol class="ws-tips">
+${P.steps.map(s => `      <li>${esc(s)}</li>`).join('\n')}
+    </ol>
+    <p>${esc(P.progress)}</p>
+` : '';
   return `${BEGIN}
   <section class="ws-guide">
     <p class="ws-lede">${esc(topic.lede[lang])}</p>
@@ -64,7 +73,7 @@ function contentBlock(topic, lang) {
     <ul class="ws-tips">
 ${how}
     </ul>
-
+${plan}
     <h2>${t.faq}</h2>
 ${faq}
   </section>
