@@ -513,6 +513,8 @@ module.exports = [
 ...require('./worksheets-data-batch3.js'),
 /* ── fourth batch (coordinates, number pyramids, column multiplication, fact families, odd one out, compare fractions) ── */
 ...require('./worksheets-data-batch4.js'),
+/* ── fifth batch (Halloween maths, name tracing, cursive, flashcards, mandalas, dots and boxes) ── */
+...require('./worksheets-data-batch5.js'),
 
 /* ── seasonal sheets (winter / Christmas maths) ── */
 ...require('./worksheets-data-seasonal.js'),
