@@ -515,6 +515,8 @@ module.exports = [
 ...require('./worksheets-data-batch4.js'),
 /* ── fifth batch (Halloween maths, name tracing, cursive, flashcards, mandalas, dots and boxes) ── */
 ...require('./worksheets-data-batch5.js'),
+/* ── sixth batch (Thanksgiving maths, sight words, spot the difference, mystery picture, expanded form, shadow matching) ── */
+...require('./worksheets-data-batch6.js'),
 
 /* ── seasonal sheets (winter / Christmas maths) ── */
 ...require('./worksheets-data-seasonal.js'),
