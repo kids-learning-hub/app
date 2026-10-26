@@ -192,7 +192,15 @@ const STR = {
       tClass:'قسم',tSmall:'مدرسة صغيرة',tMedium:'مدرسة متوسطة',tLarge:'مدرسة كبيرة',upTo:'حتى {n} تلميذ',perPupil:'≈ {p} للتلميذ / سنة',perYear:'/ سنة',buy:'اشترِ عبر الإنترنت',quote:'اطلب عرض سعر',best:'الأكثر طلبًا',recommend:'المناسب لـ {n} تلميذ: {t} — {price} في السنة.',over:'أكثر من 1000 تلميذ: اطلب عرض سعر أدناه.',errReq:'المرجو ملء كل الخانات الإلزامية.',errMail:'المرجو إدخال بريد إلكتروني صحيح.',mailSubj:'طلب ترخيص مدرسي',madNote:'الأسعار بالدرهم: الدفع بفاتورة / تحويل بنكي.'}
 };
 
-let lang = 'en', cur = 'usd';
+/* Devise par défaut : MAD si l'appareil est à l'heure du Maroc, sinon USD
+   (aucune requête réseau). Le choix manuel est mémorisé (klh_cur). */
+function defaultCur() {
+  try { const c = localStorage.getItem('klh_cur'); if (c === 'usd' || c === 'mad') return c; } catch (e) {}
+  const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
+  return /^Africa\/(Casablanca|El_Aaiun)$/.test(tz) ? 'mad' : 'usd';
+}
+
+let lang = 'en', cur = defaultCur();
 const S = () => STR[lang] || STR.en;
 const fmt = (n) => cur === 'usd' ? '$' + n : String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' MAD';
 const tierName = (t) => S()['t' + t.id[0].toUpperCase() + t.id.slice(1)];
@@ -228,10 +236,14 @@ function calc() {
 }
 
 document.getElementById('pupils').addEventListener('input', calc);
-document.querySelectorAll('[data-cur]').forEach(b => b.onclick = () => {
-  cur = b.dataset.cur;
-  document.querySelectorAll('[data-cur]').forEach(x => x.setAttribute('aria-pressed', x === b));
-  renderTiers();
+document.querySelectorAll('[data-cur]').forEach(b => {
+  b.setAttribute('aria-pressed', b.dataset.cur === cur);
+  b.onclick = () => {
+    cur = b.dataset.cur;
+    try { localStorage.setItem('klh_cur', cur); } catch (e) {}
+    document.querySelectorAll('[data-cur]').forEach(x => x.setAttribute('aria-pressed', x === b));
+    renderTiers();
+  };
 });
 
 /* Formulaire → e-mail prêt à envoyer (site statique, pas de serveur). */
