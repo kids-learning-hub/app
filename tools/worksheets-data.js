@@ -548,6 +548,8 @@ module.exports = [
 ...require('./worksheets-data-batch5.js'),
 /* ── sixth batch (Thanksgiving maths, sight words, spot the difference, mystery picture, expanded form, shadow matching) ── */
 ...require('./worksheets-data-batch6.js'),
+/* ── ABC colouring book (letter + word + picture + sentence, 4 alphabets) ── */
+...require('./worksheets-data-abc.js'),
 
 /* ── seasonal sheets (winter / Christmas maths) ── */
 ...require('./worksheets-data-seasonal.js'),
