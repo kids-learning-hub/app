@@ -29,14 +29,15 @@
 <link rel="stylesheet" href="/play/play.css?v=6" />
 <link rel="stylesheet" href="/worksheets/ws.css?v=6" />
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@400&family=Andika:wght@400;700&family=Noto+Naskh+Arabic:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Noto+Naskh+Arabic:wght@700&display=swap');
 .prob.ab{white-space:normal;grid-column:1/-1}
 .prob.ab .pn{display:none}
 .probs:has(.ab){grid-template-columns:1fr}
 .abp{display:flex;flex-direction:column;align-items:center;gap:10px}
 .abtop{display:flex;align-items:center;justify-content:center;gap:30px;width:100%}
 .abl{font-family:"Baloo 2",Arial,sans-serif;font-weight:800;font-size:170px;line-height:1;color:transparent;-webkit-text-stroke:3px #16213E;paint-order:stroke}
-.abe{font-family:"Noto Emoji",sans-serif;font-size:170px;line-height:1.05;color:#16213E}
+.abe img{width:230px;height:230px;display:block}
+.abcr{font-size:10px;color:#8796bd;margin:4px 0 0;text-align:center}
 .abw{font-family:"Baloo 2",Arial,sans-serif;font-weight:800;font-size:76px;line-height:1.1;color:transparent;-webkit-text-stroke:2px #16213E}
 .abw b{font-weight:800;color:transparent;-webkit-text-stroke:2.6px #1E5BFF}
 .abs{font-family:"Andika",Arial,sans-serif;font-weight:700;font-size:26px;text-align:center}
@@ -46,12 +47,12 @@
 .abm{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .abc{border:2px dashed #b9c4de;border-radius:18px;padding:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
 .abc .abl{font-size:86px;-webkit-text-stroke:2.2px #16213E}
-.abc .abe{font-size:86px}
+.abc .abe img{width:120px;height:120px}
 .abc .abw{font-size:38px;-webkit-text-stroke:1.5px #16213E}
 .abnav{display:inline-flex;align-items:center;gap:6px;font-weight:800}
 .abnav select{font:inherit;font-weight:800;font-size:16px;padding:8px 10px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--ink)}
-@media print{.abl{font-size:150pt}.abe{font-size:150pt}.abw{font-size:66pt}.abs{font-size:20pt}.abline{height:15mm}
-  .abc .abl{font-size:72pt}.abc .abe{font-size:72pt}.abc .abw{font-size:30pt}.abc{padding:4mm;height:95mm}.abp{gap:5mm}}
+@media print{.abl{font-size:150pt}.abe img{width:62mm;height:62mm}.abw{font-size:66pt}.abs{font-size:20pt}.abline{height:15mm}
+  .abc .abl{font-size:72pt}.abc .abe img{width:32mm;height:32mm}.abc .abw{font-size:30pt}.abc{padding:4mm;height:95mm}.abp{gap:5mm}}
 .prob.wsr .pn,.prob.mc .pn,.prob.rc .pn,.prob.hw .pn{display:none}
 .sheet:has(.prob.rc) .selfcheck,.sheet:has(.prob.hw) .selfcheck,.sheet:has(.prob.rc) .sheetno,.sheet:has(.prob.hw) .sheetno{display:none}
 </style>
@@ -135,14 +136,14 @@
 <script src="/play/play.js?v=6"></script>
 <script src="/worksheets/ws.js?v=3"></script>
 <script>
-/* [letter, word, picture, sentence] — pictures are drawn in the black-and-white
-   Noto Emoji font, so they print as outlines ready to colour. */
+/* [letter, word, picture, sentence] — pictures are the black line-art OpenMoji
+   drawings (CC BY-SA 4.0): outlines only, large areas, ready to colour. */
 const ABC = {
   en: [['A','apple','🍏','An apple is crunchy and sweet.'],['B','balloon','🎈','The balloon flies up high.'],['C','cat','🐱','The cat says meow.'],['D','dog','🐶','The dog runs fast.'],
        ['E','elephant','🐘','The elephant is very big.'],['F','fish','🐟','The fish swims in the sea.'],['G','grapes','🍇','I eat green grapes.'],['H','house','🏠','I live in a house.'],
        ['I','ice cream','🍦','Ice cream is cold.'],['J','juice','🧃','I drink orange juice.'],['K','kite','🪁','The kite flies in the wind.'],['L','lion','🦁','The lion is the king.'],
        ['M','moon','🌙','The moon shines at night.'],['N','nose','👃','I smell with my nose.'],['O','owl','🦉','The owl wakes up at night.'],['P','pig','🐷','The pig likes mud.'],
-       ['Q','queen','👸','The queen wears a crown.'],['R','rabbit','🐰','The rabbit hops.'],['S','sun','☀','The sun is hot.'],['T','tree','🌳','The tree is tall.'],
+       ['Q','queen','👸','The queen wears a crown.'],['R','rabbit','🐰','The rabbit hops.'],['S','sun','☀','The sun is hot.'],['T','turtle','🐢','The turtle is slow.'],
        ['U','umbrella','☂','I open my umbrella in the rain.'],['V','violin','🎻','She plays the violin.'],['W','whale','🐳','The whale lives in the ocean.'],['X','fox','🦊','The word fox ends with x.'],
        ['Y','yo-yo','🪀','I play with my yo-yo.'],['Z','zebra','🦓','The zebra has stripes.']],
   fr: [['A','ananas','🍍','L’ananas est sucré.'],['B','bateau','⛵','Le bateau flotte sur l’eau.'],['C','chat','🐱','Le chat dort au soleil.'],['D','dauphin','🐬','Le dauphin saute dans la mer.'],
@@ -161,7 +162,7 @@ const ABC = {
        ['X','taxi','🚕','El taxi es amarillo.'],['Y','yoyó','🪀','Juego con el yoyó.'],['Z','zanahoria','🥕','La zanahoria es naranja.']],
   ar: [['ا','أرنب','🐰','الأرنب يحبّ الجزر.'],['ب','بطّة','🦆','البطّة تسبح في الماء.'],['ت','تفّاحة','🍏','التفّاحة لذيذة.'],['ث','ثعلب','🦊','الثعلب ذكيّ.'],
        ['ج','جمل','🐪','الجمل يعيش في الصحراء.'],['ح','حصان','🐴','الحصان يجري بسرعة.'],['خ','خروف','🐑','الخروف صوفه أبيض.'],['د','درّاجة','🚲','أركب الدرّاجة.'],
-       ['ذ','ذرة','🌽','الذرة صفراء.'],['ر','ريشة','🪶','الريشة خفيفة.'],['ز','زرافة','🦒','الزرافة طويلة.'],['س','سمكة','🐟','السمكة تعيش في البحر.'],
+       ['ذ','ذئب','🐺','الذئب يعيش في الغابة.'],['ر','ريشة','🪶','الريشة خفيفة.'],['ز','زرافة','🦒','الزرافة طويلة.'],['س','سمكة','🐟','السمكة تعيش في البحر.'],
        ['ش','شمس','☀','الشمس مشرقة.'],['ص','صاروخ','🚀','الصاروخ يطير إلى الفضاء.'],['ض','ضفدع','🐸','الضفدع يقفز.'],['ط','طائرة','✈','الطائرة في السماء.'],
        ['ظ','ظرف','✉','وضعت الرسالة في الظرف.'],['ع','عصفور','🐦','العصفور يغرّد.'],['غ','غيمة','☁','الغيمة في السماء.'],['ف','فيل','🐘','الفيل حيوان كبير.'],
        ['ق','قطّ','🐱','القطّ يشرب الحليب.'],['ك','كتاب','📖','أقرأ الكتاب.'],['ل','ليمون','🍋','الليمون حامض.'],['م','موز','🍌','الموز أصفر.'],
@@ -169,7 +170,9 @@ const ABC = {
 };
 let abI = 0;
 const abList = () => ABC[WS.lang] || ABC.en;
-const abPic = e => e.replace(/️/g, '') + '︎';           /* text style = outline drawing */
+const abPic = e => '<img src="https://cdn.jsdelivr.net/npm/openmoji@15.0.0/black/svg/' +
+  [...e.replace(/️/g, '')].map(c => c.codePointAt(0).toString(16).toUpperCase()).join('-') + '.svg" alt="">';
+const AB_CREDIT = '<p class="abcr">Drawings: OpenMoji — openmoji.org — CC BY-SA 4.0</p>';
 const abBase = c => c.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 function abWord(w, L){
   if (WS.lang === 'ar') return w;
@@ -201,11 +204,11 @@ WS.setup({
       const el = document.getElementById('sheetInstr'); if (el) el.textContent = kind === 'mini' ? S.instrMini : S.instr; });
     if (kind === 'mini') {
       return [{ q: '<div class="abm'+(ar?' ar':'')+'" dir="'+d+'">'+items.map(([L, w, e]) =>
-        '<div class="abc"><div class="abtop"><span class="abl">'+abLetter(L)+'</span><span class="abe">'+abPic(e)+'</span></div><span class="abw">'+abWord(w, L)+'</span></div>').join('')+'</div>' }];
+        '<div class="abc"><div class="abtop"><span class="abl">'+abLetter(L)+'</span><span class="abe">'+abPic(e)+'</span></div><span class="abw">'+abWord(w, L)+'</span></div>').join('')+'</div>' + AB_CREDIT }];
     }
     const [L, w, e, s] = items[0];
     return [{ q: '<div class="abp'+(ar?' ar':'')+'" dir="'+d+'"><div class="abtop"><span class="abl">'+abLetter(L)+'</span><span class="abe">'+abPic(e)+'</span></div>'+
-      '<span class="abw">'+abWord(w, L)+'</span><p class="abs">'+s+'</p><div class="abline"></div><div class="abline"></div><div class="abline"></div></div>' }];
+      '<span class="abw">'+abWord(w, L)+'</span><p class="abs">'+s+'</p><div class="abline"></div><div class="abline"></div><div class="abline"></div></div>' + AB_CREDIT }];
   }
 });
 </script>
