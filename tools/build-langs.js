@@ -107,11 +107,11 @@ const PAGES = [
     urlEn: `${BASE}/terms.html`,
     meta: {
       fr: { title: 'Conditions générales de vente et d’abonnement | Kids Learning Hub',
-            desc: 'Conditions de vente des codes Premium, abonnements et licences écoles Kids Learning Hub (VS MEDIA, Larache, Maroc) : prix, paiement, livraison, résiliation et remboursements.' },
+            desc: 'Conditions de vente des codes Premium, abonnements et licences écoles Kids Learning Hub (VS MEDIA, Maroc) : prix, paiement, livraison, résiliation et remboursements.' },
       es: { title: 'Condiciones de venta y suscripción | Kids Learning Hub',
-            desc: 'Condiciones de venta de los códigos Premium, suscripciones y licencias escolares de Kids Learning Hub (VS MEDIA, Larache, Marruecos): precios, pago, entrega, cancelación y reembolsos.' },
+            desc: 'Condiciones de venta de los códigos Premium, suscripciones y licencias escolares de Kids Learning Hub (VS MEDIA, Marruecos): precios, pago, entrega, cancelación y reembolsos.' },
       ar: { title: 'شروط البيع والاشتراك | Kids Learning Hub',
-            desc: 'شروط بيع أكواد Premium والاشتراكات وتراخيص المدارس في Kids Learning Hub (VS MEDIA، العرائش، المغرب): الأسعار والدفع والتسليم والإلغاء والاسترجاع.' },
+            desc: 'شروط بيع أكواد Premium والاشتراكات وتراخيص المدارس في Kids Learning Hub (VS MEDIA، المغرب): الأسعار والدفع والتسليم والإلغاء والاسترجاع.' },
     },
   },
   {
