@@ -38,10 +38,18 @@
 .stat-chip{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:12px 18px;text-align:center;flex:1;min-width:120px}
 .stat-chip b{display:block;font-family:"Baloo 2",sans-serif;font-size:24px;color:var(--blue)}
 .stat-chip span{font-size:13px;color:var(--muted);font-weight:700}
+.founder{display:flex;gap:22px;align-items:center}
+.founder img{width:140px;height:140px;border-radius:50%;object-fit:cover;flex:none;border:4px solid var(--card2);box-shadow:var(--shadow)}
+.founder h2{margin:0 0 2px!important}
+.founder .role{margin:0 0 8px;font-weight:800;color:var(--ink)}
+.founder ul{margin:6px 0 6px 20px}
+[dir="rtl"] .founder ul{margin:6px 20px 6px 0}
+@media (max-width:560px){.founder{flex-direction:column;text-align:center}.founder ul{text-align:start}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AboutPage","url":"https://kids-learning-hub.cc/about.html","name":"About Kids Learning Hub",
  "mainEntity":{"@type":"Organization","name":"Kids Learning Hub","alternateName":"VS MEDIA","url":"https://kids-learning-hub.cc/",
+  "founder":{"@type":"Person","name":"Ayyoub EL HAJJI","jobTitle":"Mathematics teacher","image":"https://kids-learning-hub.cc/media/founder.jpg","alumniOf":"Abdelmalek Essaâdi University","knowsAbout":["Mathematics education","Applied mathematics","Educational software"]},
   "logo":"https://kids-learning-hub.cc/logos/hub-logo.png","email":"vs.media.ste@gmail.com",
   "sameAs":["https://www.youtube.com/@Kids-Learn-ing","https://www.facebook.com/Kids.Learning.hub.00","https://www.instagram.com/kids.learning.hub/","https://www.tiktok.com/@kids.learning.hub.1"]}}
 </script>
@@ -70,6 +78,19 @@
   <!-- EN -->
   <div data-lang="en">
     <h1 style="font-size:clamp(26px,5vw,40px)">A teacher's project, built for real classrooms and real homes</h1>
+    <div class="about-card founder">
+      <img src="/media/founder.jpg" alt="Ayyoub EL HAJJI" width="140" height="140" loading="lazy">
+      <div>
+        <h2>Meet the founder</h2>
+        <p class="role"><strong>Ayyoub EL HAJJI</strong><br>Mathematics teacher since 2016 · Researcher in applied mathematics</p>
+        <ul>
+          <li>PhD candidate and Master’s degree in applied mathematics — Abdelmalek Essaâdi University</li>
+          <li>Certified secondary-school mathematics teacher (CRMEF)</li>
+          <li>Professional bachelor’s degree in teaching computer science</li>
+        </ul>
+        <p>For ten years I have taught mathematics and watched, every day, where children get stuck and what makes an idea finally click. My computer-science training lets me turn those lessons into the apps, games and worksheets on this site — designed, written and programmed by me, and tested with real learners.</p>
+      </div>
+    </div>
     <div class="about-card">
       <h2>Who we are</h2>
       <p><strong>Kids Learning Hub</strong> (VS MEDIA) is created by a mathematics teacher from Morocco. Everything on this site — the apps, the games, the worksheets, the articles — grows out of one simple daily experience: watching what actually helps children learn, and what just wastes their time.</p>
@@ -89,6 +110,19 @@
   <!-- FR -->
   <div data-lang="fr" hidden>
     <h1 style="font-size:clamp(26px,5vw,40px)">Le projet d'un enseignant, pensé pour de vraies classes et de vraies familles</h1>
+    <div class="about-card founder">
+      <img src="/media/founder.jpg" alt="Ayyoub EL HAJJI" width="140" height="140" loading="lazy">
+      <div>
+        <h2>Le fondateur</h2>
+        <p class="role"><strong>Ayyoub EL HAJJI</strong><br>Professeur de mathématiques depuis 2016 · Chercheur en mathématiques appliquées</p>
+        <ul>
+          <li>Doctorant et titulaire d’un master en mathématiques appliquées — Université Abdelmalek Essaâdi</li>
+          <li>Professeur de mathématiques certifié du secondaire (CRMEF)</li>
+          <li>Licence professionnelle en enseignement de l’informatique</li>
+        </ul>
+        <p>Depuis dix ans, j’enseigne les mathématiques et j’observe chaque jour où les enfants bloquent et ce qui leur fait enfin comprendre une idée. Ma formation en informatique me permet de transformer ces leçons en applis, jeux et fiches : je les conçois, je les écris et je les programme moi-même, puis je les teste avec de vrais élèves.</p>
+      </div>
+    </div>
     <div class="about-card">
       <h2>Qui sommes-nous</h2>
       <p><strong>Kids Learning Hub</strong> (VS MEDIA) est créé par un professeur de mathématiques au Maroc. Tout ce que vous trouvez ici — applis, jeux, fiches, articles — naît d'une expérience quotidienne simple : observer ce qui aide vraiment les enfants à apprendre, et ce qui leur fait perdre leur temps.</p>
@@ -108,6 +142,19 @@
   <!-- ES -->
   <div data-lang="es" hidden>
     <h1 style="font-size:clamp(26px,5vw,40px)">El proyecto de un profesor, pensado para aulas y hogares reales</h1>
+    <div class="about-card founder">
+      <img src="/media/founder.jpg" alt="Ayyoub EL HAJJI" width="140" height="140" loading="lazy">
+      <div>
+        <h2>El fundador</h2>
+        <p class="role"><strong>Ayyoub EL HAJJI</strong><br>Profesor de matemáticas desde 2016 · Investigador en matemáticas aplicadas</p>
+        <ul>
+          <li>Doctorando y máster en matemáticas aplicadas — Universidad Abdelmalek Essaâdi</li>
+          <li>Profesor de matemáticas de secundaria titulado (CRMEF)</li>
+          <li>Licenciatura profesional en enseñanza de la informática</li>
+        </ul>
+        <p>Desde hace diez años enseño matemáticas y veo cada día dónde se atascan los niños y qué hace que por fin entiendan una idea. Mi formación en informática me permite convertir esas lecciones en las apps, juegos y fichas de este sitio: los diseño, escribo y programo yo mismo, y los pruebo con alumnos reales.</p>
+      </div>
+    </div>
     <div class="about-card">
       <h2>Quiénes somos</h2>
       <p><strong>Kids Learning Hub</strong> (VS MEDIA) es obra de un profesor de matemáticas de Marruecos. Todo lo que hay aquí — apps, juegos, fichas, artículos — nace de una experiencia diaria muy simple: observar qué ayuda de verdad a los niños a aprender y qué solo les hace perder el tiempo.</p>
@@ -127,6 +174,19 @@
   <!-- AR -->
   <div data-lang="ar" hidden>
     <h1 style="font-size:clamp(26px,5vw,40px)">مشروع معلّم، صُنع لفصول حقيقية وبيوت حقيقية</h1>
+    <div class="about-card founder">
+      <img src="/media/founder.jpg" alt="Ayyoub EL HAJJI" width="140" height="140" loading="lazy">
+      <div>
+        <h2>المؤسِّس</h2>
+        <p class="role"><strong>أيوب الحجّي — Ayyoub EL HAJJI</strong><br>أستاذ رياضيات منذ 2016 · باحث في الرياضيات التطبيقية</p>
+        <ul>
+          <li>طالب دكتوراه وحاصل على الماستر في الرياضيات التطبيقية — جامعة عبد المالك السعدي</li>
+          <li>أستاذ رياضيات للتعليم الثانوي، خرّيج المركز الجهوي لمهن التربية والتكوين (CRMEF)</li>
+          <li>إجازة مهنية في تدريس المعلوميات</li>
+        </ul>
+        <p>منذ عشر سنوات وأنا أدرّس الرياضيات، وألاحظ كل يوم أين يتعثّر الأطفال وما الذي يجعل الفكرة تتّضح لهم أخيرًا. وتكويني في المعلوميات يسمح لي بتحويل هذه الدروس إلى التطبيقات والألعاب وأوراق العمل التي تجدها هنا: أصمّمها وأكتبها وأبرمجها بنفسي، وأجرّبها مع متعلّمين حقيقيين.</p>
+      </div>
+    </div>
     <div class="about-card">
       <h2>من نحن</h2>
       <p><strong>Kids Learning Hub</strong> (VS MEDIA) من إنشاء أستاذ رياضيات من المغرب. كل ما تجده هنا — التطبيقات والألعاب وأوراق العمل والمقالات — وُلد من تجربة يومية بسيطة: مراقبة ما يساعد الأطفال فعلًا على التعلّم، وما يضيّع وقتهم فحسب.</p>
