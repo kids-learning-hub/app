@@ -17,13 +17,13 @@
 
   var L = {
     en: { stars: 'stars', earned: 'You earned', total: 'Total', newBadge: 'New badge!', title: 'My stars & badges',
-          sub: 'Play any game to earn up to 3 stars. Your stars are saved on this device only.', locked: 'Locked', played: 'games played' },
+          sub: 'Play any game to earn up to 3 stars. Your stars are saved on this device.', locked: 'Locked', played: 'games played' },
     fr: { stars: 'étoiles', earned: 'Tu as gagné', total: 'Total', newBadge: 'Nouveau badge !', title: 'Mes étoiles et badges',
-          sub: 'Joue à n’importe quel jeu pour gagner jusqu’à 3 étoiles. Tes étoiles sont gardées sur cet appareil uniquement.', locked: 'À débloquer', played: 'jeux joués' },
+          sub: 'Joue à n’importe quel jeu pour gagner jusqu’à 3 étoiles. Tes étoiles sont gardées sur cet appareil.', locked: 'À débloquer', played: 'jeux joués' },
     es: { stars: 'estrellas', earned: 'Has ganado', total: 'Total', newBadge: '¡Nueva insignia!', title: 'Mis estrellas e insignias',
-          sub: 'Juega a cualquier juego para ganar hasta 3 estrellas. Tus estrellas se guardan solo en este dispositivo.', locked: 'Bloqueada', played: 'juegos jugados' },
+          sub: 'Juega a cualquier juego para ganar hasta 3 estrellas. Tus estrellas se guardan en este dispositivo.', locked: 'Bloqueada', played: 'juegos jugados' },
     ar: { stars: 'نجوم', earned: 'ربحت', total: 'المجموع', newBadge: 'شارة جديدة!', title: 'نجومي وشاراتي',
-          sub: 'العب أي لعبة لتربح حتى 3 نجوم. تُحفظ نجومك على هذا الجهاز فقط.', locked: 'مغلقة', played: 'ألعاب لُعبت' },
+          sub: 'العب أي لعبة لتربح حتى 3 نجوم. تُحفظ نجومك على هذا الجهاز.', locked: 'مغلقة', played: 'ألعاب لُعبت' },
   };
 
   /* badge: id, emoji, names (en/fr/es/ar), hint (en/fr/es/ar), test(state) */

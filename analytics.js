@@ -142,6 +142,6 @@
    Header button, ♡ save buttons and account sync all live in /account.js. */
 (function () {
   var s = document.createElement('script');
-  s.src = '/account.js?v=1'; s.defer = true;
+  s.src = '/account.js?v=2'; s.defer = true;
   (document.head || document.documentElement).appendChild(s);
 })();

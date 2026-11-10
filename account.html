@@ -149,9 +149,9 @@
   <div style="opacity:.6;margin-top:6px">© 2026 Kids Learning Hub · VS MEDIA</div>
 </footer>
 
-<script src="/stars.js?v=6"></script>
+<script src="/stars.js?v=7"></script>
 <script src="/play/play.js?v=6"></script>
-<script src="/account.js?v=1"></script>
+<script src="/account.js?v=2"></script>
 <script>
 const STR = {
   en: { home: 'Home', title: 'My space', sub: 'Your favourites and your child’s stars, in one place.',
@@ -211,7 +211,7 @@ const STR = {
     e_popup: 'نافذة Google حُجبت أو أُغلقت. حاول من جديد.', e_net: 'لا يوجد اتصال. تحقّق من الإنترنت وحاول من جديد.', e_many: 'محاولات كثيرة. انتظر بضع دقائق.',
     e_recent: 'لأمانك، سجّل الخروج ثم الدخول من جديد، وبعدها احذف الحساب.', e_any: 'حدث خطأ. حاول من جديد.' },
 };
-let T = STR.en, L = 'en', mode = 'in';
+let T = STR.en, L = 'en', mode = new URLSearchParams(location.search).get('signup') ? 'up' : 'in';
 const $ = id => document.getElementById(id), ACC = window.KLH_ACCOUNT;
 const ICON = { worksheets: '🖨️', play: '🎮', stories: '📖' };
 

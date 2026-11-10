@@ -177,11 +177,11 @@ const PAGES = [
     urlEn: `${BASE}/privacy.html`,
     meta: {
       fr: { title: 'Confidentialité — Kids Learning Hub',
-            desc: 'Comment Kids Learning Hub traite les données : pas de compte, pas de chat, pas de publicité personnalisée pour les enfants.' },
+            desc: 'Comment Kids Learning Hub traite les données : compte facultatif pour adultes, pas de chat, pas de publicité personnalisée pour les enfants.' },
       es: { title: 'Privacidad — Kids Learning Hub',
-            desc: 'Cómo trata los datos Kids Learning Hub: sin cuentas, sin chat y sin publicidad personalizada para niños.' },
+            desc: 'Cómo trata los datos Kids Learning Hub: cuenta opcional para adultos, sin chat y sin publicidad personalizada para niños.' },
       ar: { title: 'الخصوصية — Kids Learning Hub',
-            desc: 'كيف يتعامل Kids Learning Hub مع البيانات: بلا حسابات ولا دردشة ولا إعلانات مخصّصة للأطفال.' },
+            desc: 'كيف يتعامل Kids Learning Hub مع البيانات: حساب اختياري للبالغين، ولا دردشة ولا إعلانات مخصّصة للأطفال.' },
     },
   },
 ];
