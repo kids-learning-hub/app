@@ -43,6 +43,12 @@
 .ac-me b{font-size:17px;word-break:break-all}
 .ac-me small{display:block;color:#15A34A;font-weight:800}
 .ac-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.ac-prof{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.ac-prof h3{font-size:19px;margin:0 0 2px}
+.ac-prof input[type=text],.ac-prof input[type=tel],.ac-prof select{width:100%;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:var(--card2);color:var(--ink);font:700 16px Nunito,system-ui,sans-serif}
+.ac-prof input:focus,.ac-prof select:focus{outline:none;border-color:var(--blue)}
+.ac-prof input[type=tel]{direction:ltr;text-align:start}
+.ac-prof .tip{color:var(--muted);font-size:12.5px;margin:4px 0 0}
 .ac-danger{background:transparent;border:2px solid #E5484D;color:#E5484D}
 .ac-favs{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .ac-favs li{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:14px;padding:8px 10px;background:var(--card2)}
@@ -121,6 +127,27 @@
         <button class="btn ac-danger" id="acDel" type="button" data-t="del">Delete my account</button>
       </div>
       <div class="ac-msg" id="acMsg2" role="status"></div>
+
+      <form class="ac-f ac-prof" id="pfForm" novalidate>
+        <h3 data-t="pfT">My information</h3>
+        <p class="hint" data-t="pfH">About you, the adult — never about your child. Everything here is optional.</p>
+        <label for="pfName" data-t="pfName">Your full name</label>
+        <input type="text" id="pfName" maxlength="80" autocomplete="name">
+        <label for="pfPhone" data-t="pfPhone">Phone or WhatsApp number</label>
+        <input type="tel" id="pfPhone" maxlength="24" autocomplete="tel" placeholder="+212 6 12 34 56 78">
+        <p class="tip" data-t="pfTip">With the country code, for example +212 for Morocco.</p>
+        <label for="pfCountry" data-t="pfCountry">Country</label>
+        <input type="text" id="pfCountry" maxlength="60" autocomplete="country-name">
+        <label for="pfRole" data-t="pfRole">You are</label>
+        <select id="pfRole">
+          <option value="parent" data-t="pfParent">A parent</option>
+          <option value="teacher" data-t="pfTeacher">A teacher</option>
+          <option value="other" data-t="pfOther">Other</option>
+        </select>
+        <label class="ac-ck"><input type="checkbox" id="pfOk"><span data-t="pfOk">I agree that Kids Learning Hub may contact me by phone or WhatsApp about my account, the apps and offers.</span></label>
+        <button class="btn primary ac-btn" type="submit" id="pfSave" data-t="pfSave">Save my information</button>
+        <div class="ac-msg" id="pfMsg" role="status"></div>
+      </form>
     </div>
   </section>
 
@@ -151,10 +178,10 @@
 
 <script src="/stars.js?v=7"></script>
 <script src="/play/play.js?v=6"></script>
-<script src="/account.js?v=2"></script>
+<script src="/account.js?v=3"></script>
 <script>
 const STR = {
-  en: { home: 'Home', title: 'My space', sub: 'Your favourites and your child’s stars, in one place.',
+  en: { pfT: "My information", pfH: "About you, the adult — never about your child. Everything here is optional.", pfName: "Your full name", pfPhone: "Phone or WhatsApp number", pfTip: "With the country code, for example +212 for Morocco.", pfCountry: "Country", pfRole: "You are", pfParent: "A parent", pfTeacher: "A teacher", pfOther: "Other", pfOk: "I agree that Kids Learning Hub may contact me by phone or WhatsApp about my account, the apps and offers.", pfSave: "Save my information", pfDone: "✔ Your information has been saved.", pfBad: "This phone number is not valid. Include the country code, for example +212 6 12 34 56 78.", pfNeedOk: "To give your number, please tick the box agreeing to be contacted.", home: 'Home', title: 'My space', sub: 'Your favourites and your child’s stars, in one place.',
     accT: 'Parent account (optional)', accH: 'For parents and teachers. Free. Everything on the site works without it.',
     why1: 'Stars and badges follow your child from the phone to the computer.', why2: 'Your favourite worksheets and games are kept on every device.',
     tabIn: 'Sign in', tabUp: 'Create an account', google: 'Continue with Google', or: 'or with your email', email: 'Email address', pw: 'Password',
@@ -168,7 +195,7 @@ const STR = {
     e_used: 'This email already has an account. Sign in instead.', e_cred: 'Wrong email or password.', e_email: 'This email address is not valid.', e_weak: 'This password is too weak. Use at least 8 characters.',
     e_popup: 'The Google window was blocked or closed. Please try again.', e_net: 'No connection. Check the internet and try again.', e_many: 'Too many tries. Please wait a few minutes.',
     e_recent: 'For your security, sign out, sign in again, then delete the account.', e_any: 'Something went wrong. Please try again.' },
-  fr: { home: 'Accueil', title: 'Mon espace', sub: 'Vos favoris et les étoiles de votre enfant, au même endroit.',
+  fr: { pfT: "Mes informations", pfH: "Sur vous, l’adulte — jamais sur votre enfant. Tout est facultatif.", pfName: "Votre nom complet", pfPhone: "Numéro de téléphone ou WhatsApp", pfTip: "Avec l’indicatif du pays, par exemple +212 pour le Maroc.", pfCountry: "Pays", pfRole: "Vous êtes", pfParent: "Parent", pfTeacher: "Enseignant(e)", pfOther: "Autre", pfOk: "J’accepte que Kids Learning Hub me contacte par téléphone ou WhatsApp au sujet de mon compte, des applis et des offres.", pfSave: "Enregistrer mes informations", pfDone: "✔ Vos informations sont enregistrées.", pfBad: "Ce numéro n’est pas valide. Ajoutez l’indicatif du pays, par exemple +212 6 12 34 56 78.", pfNeedOk: "Pour indiquer votre numéro, cochez la case autorisant le contact.", home: 'Accueil', title: 'Mon espace', sub: 'Vos favoris et les étoiles de votre enfant, au même endroit.',
     accT: 'Compte parent (facultatif)', accH: 'Pour les parents et les enseignants. Gratuit. Tout le site fonctionne sans compte.',
     why1: 'Les étoiles et les badges suivent votre enfant du téléphone à l’ordinateur.', why2: 'Vos fiches et jeux favoris sont gardés sur tous vos appareils.',
     tabIn: 'Se connecter', tabUp: 'Créer un compte', google: 'Continuer avec Google', or: 'ou avec votre e-mail', email: 'Adresse e-mail', pw: 'Mot de passe',
@@ -182,7 +209,7 @@ const STR = {
     e_used: 'Cette adresse a déjà un compte. Connectez-vous.', e_cred: 'E-mail ou mot de passe incorrect.', e_email: 'Cette adresse e-mail n’est pas valide.', e_weak: 'Mot de passe trop faible. Utilisez au moins 8 caractères.',
     e_popup: 'La fenêtre Google a été bloquée ou fermée. Réessayez.', e_net: 'Pas de connexion. Vérifiez Internet et réessayez.', e_many: 'Trop d’essais. Patientez quelques minutes.',
     e_recent: 'Par sécurité, déconnectez-vous, reconnectez-vous, puis supprimez le compte.', e_any: 'Une erreur est survenue. Réessayez.' },
-  es: { home: 'Inicio', title: 'Mi espacio', sub: 'Tus favoritos y las estrellas de tu hijo, en un solo lugar.',
+  es: { pfT: "Mis datos", pfH: "Sobre ti, la persona adulta; nunca sobre tu hijo. Todo es opcional.", pfName: "Tu nombre completo", pfPhone: "Número de teléfono o WhatsApp", pfTip: "Con el prefijo del país, por ejemplo +212 para Marruecos.", pfCountry: "País", pfRole: "Eres", pfParent: "Madre o padre", pfTeacher: "Docente", pfOther: "Otro", pfOk: "Acepto que Kids Learning Hub me contacte por teléfono o WhatsApp sobre mi cuenta, las apps y las ofertas.", pfSave: "Guardar mis datos", pfDone: "✔ Tus datos se han guardado.", pfBad: "Este número no es válido. Incluye el prefijo del país, por ejemplo +212 6 12 34 56 78.", pfNeedOk: "Para dar tu número, marca la casilla que autoriza el contacto.", home: 'Inicio', title: 'Mi espacio', sub: 'Tus favoritos y las estrellas de tu hijo, en un solo lugar.',
     accT: 'Cuenta de padres (opcional)', accH: 'Para familias y docentes. Gratis. Todo el sitio funciona sin cuenta.',
     why1: 'Las estrellas e insignias siguen a tu hijo del móvil al ordenador.', why2: 'Tus fichas y juegos favoritos se guardan en todos tus dispositivos.',
     tabIn: 'Iniciar sesión', tabUp: 'Crear una cuenta', google: 'Continuar con Google', or: 'o con tu correo', email: 'Correo electrónico', pw: 'Contraseña',
@@ -196,7 +223,7 @@ const STR = {
     e_used: 'Este correo ya tiene una cuenta. Inicia sesión.', e_cred: 'Correo o contraseña incorrectos.', e_email: 'Este correo no es válido.', e_weak: 'Contraseña demasiado débil. Usa al menos 8 caracteres.',
     e_popup: 'La ventana de Google se bloqueó o se cerró. Inténtalo de nuevo.', e_net: 'Sin conexión. Revisa internet e inténtalo de nuevo.', e_many: 'Demasiados intentos. Espera unos minutos.',
     e_recent: 'Por seguridad, cierra sesión, vuelve a entrar y luego elimina la cuenta.', e_any: 'Algo ha fallado. Inténtalo de nuevo.' },
-  ar: { home: 'الرئيسية', title: 'فضائي', sub: 'مفضّلتك ونجوم طفلك في مكان واحد.',
+  ar: { pfT: "معلوماتي", pfH: "معلومات عنك أنت، الشخص البالغ، وليس عن طفلك أبدًا. كل الخانات اختيارية.", pfName: "اسمك الكامل", pfPhone: "رقم الهاتف أو واتساب", pfTip: "مع رمز البلد، مثلًا 212+ للمغرب.", pfCountry: "البلد", pfRole: "أنت", pfParent: "وليّ أمر", pfTeacher: "معلّم(ة)", pfOther: "غير ذلك", pfOk: "أوافق على أن يتواصل معي Kids Learning Hub عبر الهاتف أو واتساب بخصوص حسابي والتطبيقات والعروض.", pfSave: "احفظ معلوماتي", pfDone: "✔ تم حفظ معلوماتك.", pfBad: "هذا الرقم غير صالح. أضف رمز البلد، مثلًا ‎+212 6 12 34 56 78.", pfNeedOk: "لتسجيل رقمك، ضع علامة في مربّع الموافقة على التواصل.", home: 'الرئيسية', title: 'فضائي', sub: 'مفضّلتك ونجوم طفلك في مكان واحد.',
     accT: 'حساب الوالدين (اختياري)', accH: 'للآباء والمعلّمين. مجاني. كل ما في الموقع يعمل دون حساب.',
     why1: 'النجوم والشارات ترافق طفلك من الهاتف إلى الحاسوب.', why2: 'أوراقك وألعابك المفضّلة محفوظة على كل أجهزتك.',
     tabIn: 'تسجيل الدخول', tabUp: 'إنشاء حساب', google: 'المتابعة بحساب Google', or: 'أو ببريدك الإلكتروني', email: 'البريد الإلكتروني', pw: 'كلمة المرور',
@@ -246,10 +273,37 @@ function drawFavs(){
   });
   $('favEmpty').hidden = list.length > 0;
 }
+let pfUid = null;
+function fillProfile(u){
+  if (u && u.uid === pfUid) return;
+  pfUid = u ? u.uid : null;
+  $('pfForm').reset(); msg('', '', 'pfMsg');           /* a shared computer never shows the last person's details */
+  if (!u) return;
+  $('pfName').value = u.displayName || '';
+  ACC.profile().then(p => {
+    if (!p || pfUid !== u.uid) return;
+    $('pfName').value = p.name || ''; $('pfPhone').value = p.phone || ''; $('pfCountry').value = p.country || '';
+    $('pfRole').value = ['parent', 'teacher', 'other'].includes(p.role) ? p.role : 'parent'; $('pfOk').checked = p.contactOk === true;
+  }).catch(() => {});
+}
 function drawUser(u){
   $('acOut').hidden = !!u; $('acIn').hidden = !u; $('localNote').hidden = !!u;
   if (u) { $('acWho').textContent = u.email || u.displayName || ''; $('acVerify').hidden = u.emailVerified !== false; }
+  fillProfile(u);
 }
+$('pfForm').onsubmit = ev => {
+  ev.preventDefault();
+  const raw = $('pfPhone').value.replace(/[\s().\-\u200e\u200f]/g, ''), phone = raw.replace(/^00/, '+');
+  if (phone && !/^\+[1-9]\d{7,14}$/.test(phone)) return msg(T.pfBad, 'err', 'pfMsg');
+  if (phone && !$('pfOk').checked) return msg(T.pfNeedOk, 'err', 'pfMsg');
+  const u = ACC.user(); if (!u) return;
+  msg('…', '', 'pfMsg'); $('pfSave').disabled = true;
+  ACC.saveProfile({ name: $('pfName').value.trim().slice(0, 80), phone, country: $('pfCountry').value.trim().slice(0, 60),
+    role: $('pfRole').value, contactOk: !!phone && $('pfOk').checked, email: (u.email || '').slice(0, 254) })
+    .then(() => { $('pfPhone').value = phone; msg(T.pfDone, 'ok', 'pfMsg'); })
+    .catch(e => msg(errText(e), 'err', 'pfMsg'))
+    .finally(() => { $('pfSave').disabled = false; });
+};
 
 $('tabIn').onclick = () => setMode('in');
 $('tabUp').onclick = () => setMode('up');

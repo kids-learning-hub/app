@@ -16,7 +16,8 @@
    The account belongs to an ADULT (parent or teacher). Children never sign
    in and nothing is asked about them. Nothing on the site needs an account.
    Stored per account (Firestore users/<uid>): stars, badges, favourites,
-   interface language. The Firebase SDK is only downloaded for signed-in
+   interface language and, if the adult fills it in, their own contact
+   details ("profile": name, phone, country, role, consent to be contacted). The Firebase SDK is only downloaded for signed-in
    visitors and on /account.html — everyone else never loads it.          */
 (function () {
   'use strict';
@@ -26,16 +27,16 @@
   var FAVS = 'klh_favs', STARS = 'klh_stars', FLAG = 'klh_acct', PROMO = 'klh_acct_promo';
   var PROMO_PAUSE = 30 * 864e5;     /* after ×, the banner stays away for 30 days */
   var L = {
-    en: { space: 'My space', save: 'Save', saved: 'Saved', saveT: 'Add to my favourites', join: 'Sign up',
+    en: { space: 'My space', save: 'Save', saved: 'Saved', saveT: 'Add to my favourites', join: 'Sign up', out: 'Sign out',
           pT: 'Parents: a free account', pS: 'Keep your child’s stars and your favourite worksheets on all your devices.', pGo: 'Create my free account', close: 'Close',
           nudge: 'Saved on this device only.', nudgeGo: 'Keep it on all your devices: free parent account' },
-    fr: { space: 'Mon espace', save: 'Garder', saved: 'Gardé', saveT: 'Ajouter à mes favoris', join: 'S’inscrire',
+    fr: { space: 'Mon espace', save: 'Garder', saved: 'Gardé', saveT: 'Ajouter à mes favoris', join: 'S’inscrire', out: 'Déconnexion',
           pT: 'Parents : un compte gratuit', pS: 'Gardez les étoiles de votre enfant et vos fiches favorites sur tous vos appareils.', pGo: 'Créer mon compte gratuit', close: 'Fermer',
           nudge: 'Gardé sur cet appareil seulement.', nudgeGo: 'Retrouvez-le partout : compte parent gratuit' },
-    es: { space: 'Mi espacio', save: 'Guardar', saved: 'Guardado', saveT: 'Añadir a mis favoritos', join: 'Registrarse',
+    es: { space: 'Mi espacio', save: 'Guardar', saved: 'Guardado', saveT: 'Añadir a mis favoritos', join: 'Registrarse', out: 'Cerrar sesión',
           pT: 'Familias: una cuenta gratis', pS: 'Conserva las estrellas de tu hijo y tus fichas favoritas en todos tus dispositivos.', pGo: 'Crear mi cuenta gratis', close: 'Cerrar',
           nudge: 'Guardado solo en este dispositivo.', nudgeGo: 'Tenlo en todos tus dispositivos: cuenta gratis para familias' },
-    ar: { space: 'فضائي', save: 'احفظ', saved: 'محفوظ', saveT: 'أضِف إلى مفضّلتي', join: 'التسجيل',
+    ar: { space: 'فضائي', save: 'احفظ', saved: 'محفوظ', saveT: 'أضِف إلى مفضّلتي', join: 'التسجيل', out: 'خروج',
           pT: 'للآباء: حساب مجاني', pS: 'احتفظ بنجوم طفلك وأوراقك المفضّلة على كل أجهزتك.', pGo: 'أنشئ حسابي المجاني', close: 'إغلاق',
           nudge: 'حُفظت على هذا الجهاز فقط.', nudgeGo: 'لتجدها على كل أجهزتك: حساب مجاني للآباء' },
   };
@@ -70,6 +71,8 @@
       '.klh-me:hover{border-color:#1E5BFF}.klh-me.in{box-shadow:inset 0 0 0 2px #42C85A}' +
       '.klh-fav{display:inline-flex;align-items:center;gap:6px;margin:8px 0 2px;padding:7px 14px;border-radius:999px;border:2px solid #FF4FA3;background:transparent;color:#FF4FA3;font:800 14px Nunito,system-ui,sans-serif;cursor:pointer}' +
       '.klh-fav.on{background:#FF4FA3;color:#fff}' +
+      '.klh-out{cursor:pointer;width:auto;padding:0 12px;gap:6px;display:inline-flex;align-items:center;font:800 14px Nunito,system-ui,sans-serif;color:var(--ink,#12224E);white-space:nowrap}' +
+      '@media(max-width:900px){.klh-out{width:40px;padding:0;justify-content:center}.klh-out span{display:none}}' +
       '.klh-me.lbl{width:auto;padding:0 12px;gap:6px;display:inline-flex;align-items:center;font:800 14px Nunito,system-ui,sans-serif;color:var(--ink,#12224E);white-space:nowrap}' +
       '@media(max-width:900px){.klh-me.lbl{width:40px;padding:0;justify-content:center}.klh-me.lbl span{display:none}}' +
       '.klh-nudge{display:block;font:700 13.5px/1.5 Nunito,system-ui,sans-serif;color:var(--muted,#66799F);margin:4px 0 8px}' +
@@ -80,7 +83,7 @@
       '.klh-join .b{flex:1 1 240px;min-width:0}.klh-join b{display:block;font-size:16.5px}.klh-join small{display:block;font-size:14px;font-weight:700;color:var(--muted,#66799F);line-height:1.4}' +
       '.klh-join .go{flex:none;background:#15A34A;color:#fff!important;text-decoration:none;font-weight:900;font-size:15px;padding:10px 16px;border-radius:12px}' +
       '.klh-join .x{position:absolute;top:4px;inset-inline-end:4px;width:40px;height:40px;border:0;background:none;color:var(--muted,#66799F);font-size:20px;cursor:pointer;border-radius:50%}' +
-      '@media print{.klh-fav,.klh-me,.klh-nudge,.klh-join{display:none!important}}';
+      '@media print{.klh-out,.klh-fav,.klh-me,.klh-nudge,.klh-join{display:none!important}}';
     document.head.appendChild(st);
   }
 
@@ -97,6 +100,15 @@
     a.classList.toggle('lbl', !signedIn);
     a.innerHTML = '👤' + (signedIn ? '' : '<span></span>');
     if (!signedIn) a.querySelector('span').textContent = label;
+    /* signed in: a sign-out button sits beside 👤 on every page */
+    var out = document.getElementById('klhOut');
+    if (!signedIn) { if (out) out.remove(); return; }
+    if (!out) {
+      out = document.createElement('button'); out.id = 'klhOut'; out.type = 'button'; out.className = 'klh-me klh-out';
+      out.innerHTML = '🚪<span></span>'; a.insertAdjacentElement('afterend', out);
+      out.addEventListener('click', function () { out.disabled = true; window.KLH_ACCOUNT.signOut().catch(function () { out.disabled = false; }); });
+    }
+    out.querySelector('span').textContent = L[l].out; out.title = L[l].out; out.setAttribute('aria-label', L[l].out);
   }
 
   function signupUrl() { var l = lang(); return '/account.html?signup=1' + (l === 'en' ? '' : '&lang=' + l); }
@@ -253,6 +265,9 @@
     signIn: function (email, pw) { return need().then(function (api) { return api.A.signInWithEmailAndPassword(api.auth, email, pw); }); },
     reset: function (email) { return need().then(function (api) { return api.A.sendPasswordResetEmail(api.auth, email); }); },
     signOut: function () { return need().then(function (api) { return push(api, true).then(function () { return api.A.signOut(api.auth); }); }); },
+    /* the adult's own contact details (see account.html) */
+    profile: function () { return need().then(function (api) { return api.F.getDoc(ref(api)).then(function (d) { return (d.exists() && d.data().profile) || null; }); }); },
+    saveProfile: function (p) { return need().then(function (api) { return api.F.setDoc(ref(api), { profile: p, updated: api.F.serverTimestamp() }, { merge: true }); }); },
     /* erases the account and everything stored with it (this device keeps its own copy) */
     remove: function () { return need().then(function (api) {
       var u = api.auth.currentUser; if (!u) throw new Error('signed-out');
