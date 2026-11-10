@@ -1,0 +1,117 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   Kids Learning Hub — site-wide look: background and buttons (2026-11)
+   ═══════════════════════════════════════════════════════════════════════
+   Loaded last on every page by analytics.js, so it refines play.css,
+   article.css, apps.css, ws.css and the homepage styles without editing
+   them. Screen only: printed worksheets are not affected.
+
+   Background = three still layers: a sky gradient with soft colour pools,
+   clouds and hills (body::before), and a light confetti pattern (body::after).
+   No blur or animation, so it stays cheap on old phones.
+   Buttons = two families sharing one press effect: "solid" (main actions)
+   and "outline" (choices such as levels and answers).                    */
+@media screen {
+
+  /* ── background ─────────────────────────────────────────────────────── */
+  body::before {
+    content: "" !important; display: block !important; position: fixed !important; inset: 0 !important; z-index: -2 !important; pointer-events: none;
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200' preserveAspectRatio='none'%3E%3Cpath fill='%23D8F3DF' d='M0 112C220 40 430 44 720 104s500 72 720-4v100H0Z'/%3E%3Cpath fill='%23C4ECD0' d='M0 164c300-62 540-54 790-16s420 34 650-14v66H0Z'/%3E%3C/svg%3E") left bottom / 100% 170px no-repeat,
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Cpath fill='%23fff' d='M46 88a26 26 0 0 1-3-52 36 36 0 0 1 68-12 30 30 0 0 1 46 22 22 22 0 0 1 3 42Z'/%3E%3C/svg%3E") 3% 140px / 190px auto no-repeat,
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Cpath fill='%23fff' d='M46 88a26 26 0 0 1-3-52 36 36 0 0 1 68-12 30 30 0 0 1 46 22 22 22 0 0 1 3 42Z'/%3E%3C/svg%3E") 97% 240px / 150px auto no-repeat,
+      radial-gradient(46% 40% at 8% 6%, rgba(73,182,255,.26), transparent 70%),
+      radial-gradient(42% 38% at 94% 10%, rgba(255,79,163,.14), transparent 70%),
+      radial-gradient(40% 36% at 90% 72%, rgba(255,199,44,.18), transparent 70%),
+      linear-gradient(180deg, #DDF0FF 0%, #EFF8FF 42%, #FFFAF0 100%) !important;
+  }
+  body::after {
+    content: "" !important; display: block !important; position: fixed !important; inset: 0 !important; z-index: -1 !important; pointer-events: none; opacity: .55 !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='340' fill='none'%3E%3Cpath fill='%23FFE9A8' d='m48 30 6 13 14 2-10 10 2 14-12-7-12 7 2-14-10-10 14-2Z'/%3E%3Ccircle cx='190' cy='56' r='7' fill='%23FFD3E8'/%3E%3Cpath stroke='%23BFE3FF' stroke-width='5' stroke-linecap='round' d='M286 46v24M274 58h24'/%3E%3Cpath stroke='%23DCCFFF' stroke-width='4' stroke-linejoin='round' d='m104 150 16 28H88Z'/%3E%3Ccircle cx='262' cy='176' r='11' stroke='%23C9F2D4' stroke-width='4'/%3E%3Cpath fill='%23FFD3E8' d='m196 250 5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2Z'/%3E%3Cpath stroke='%23FFE9A8' stroke-width='5' stroke-linecap='round' d='M44 256v22M33 267h22'/%3E%3Ccircle cx='312' cy='292' r='6' fill='%23BFE3FF'/%3E%3Ccircle cx='128' cy='312' r='5' fill='%23C9F2D4'/%3E%3C/svg%3E") 0 0 / 340px 340px repeat !important;
+  }
+  :root[data-theme="dark"] body::before {
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200' preserveAspectRatio='none'%3E%3Cpath fill='%23182350' d='M0 112C220 40 430 44 720 104s500 72 720-4v100H0Z'/%3E%3Cpath fill='%231E2B5E' d='M0 164c300-62 540-54 790-16s420 34 650-14v66H0Z'/%3E%3C/svg%3E") left bottom / 100% 170px no-repeat,
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23FFE9A8' d='M62 6a46 46 0 1 0 32 74A40 40 0 0 1 62 6Z'/%3E%3C/svg%3E") 96% 130px / 84px auto no-repeat,
+      radial-gradient(46% 40% at 8% 6%, rgba(73,120,255,.26), transparent 70%),
+      radial-gradient(42% 38% at 92% 14%, rgba(122,77,255,.24), transparent 70%),
+      radial-gradient(40% 36% at 14% 80%, rgba(255,79,163,.10), transparent 70%),
+      linear-gradient(180deg, #0B1230 0%, #101A40 55%, #141F4B 100%) !important;
+  }
+  :root[data-theme="dark"] body::after {
+    opacity: 1 !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cg fill='%23FFE9A8'%3E%3Cpath opacity='.55' d='m46 30 4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1Z'/%3E%3Cpath opacity='.4' d='m226 196 3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1Z'/%3E%3C/g%3E%3Cg fill='%23BFD2FF'%3E%3Ccircle opacity='.6' cx='150' cy='60' r='2'/%3E%3Ccircle opacity='.45' cx='262' cy='92' r='1.6'/%3E%3Ccircle opacity='.6' cx='84' cy='142' r='1.8'/%3E%3Ccircle opacity='.45' cx='180' cy='150' r='1.4'/%3E%3Ccircle opacity='.6' cx='32' cy='240' r='2'/%3E%3Ccircle opacity='.5' cx='130' cy='270' r='1.6'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 300px 300px repeat !important;
+  }
+
+  /* ── buttons: shared press effect ───────────────────────────────────── */
+  .btn.primary, .controls .btn.action, .controls .btn.print, .btn.table.mix, .opts .btn.on,
+  .btn-primary, .btn-sm, .btn-login, .prem-btn, .play-btn:not(.ghost), .btn.ghost, .btn.table:not(.mix),
+  .btn.answer, .btn.target, .controls .btn.level, .picker .btn.glyph, .btn-ghost, .play-btn.ghost,
+  .btn.keytoggle, .opts .btn:not(.on), .cobtns .btn, .abnav .btn, .ac-row .btn, .ac-go .btn, .klh-fav {
+    transition: transform .12s ease, box-shadow .12s ease, background-color .15s, border-color .15s, color .15s, filter .15s;
+  }
+
+  /* solid: the main action on the page */
+  .btn.primary, .controls .btn.action, .controls .btn.print, .btn.table.mix, .opts .btn.on,
+  .btn-primary, .btn-sm, .btn-login, .prem-btn, .play-btn:not(.ghost) {
+    border-radius: 16px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.28), 0 5px 0 rgba(10,20,70,.34), 0 10px 18px rgba(20,45,110,.20);
+  }
+  .controls .btn.print { background: linear-gradient(180deg, #22A94B, #15803D); }
+  .opts .btn.on { padding: 9px 16px; background: linear-gradient(135deg, var(--blue), var(--purple)); border: 0; }
+  .play-btn:not(.ghost) { background: linear-gradient(180deg, #1D3575, #12224E); }
+
+  .btn.primary:hover, .controls .btn.action:hover, .controls .btn.print:hover, .btn.table.mix:hover, .opts .btn.on:hover,
+  .btn-primary:hover, .btn-sm:hover, .btn-login:hover, .prem-btn:hover, .play-btn:not(.ghost):hover {
+    transform: translateY(-2px); filter: brightness(1.07);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.28), 0 7px 0 rgba(10,20,70,.34), 0 14px 22px rgba(20,45,110,.24);
+  }
+  .btn.primary:active, .controls .btn.action:active, .controls .btn.print:active, .btn.table.mix:active, .opts .btn.on:active,
+  .btn-primary:active, .btn-sm:active, .btn-login:active, .prem-btn:active, .play-btn:not(.ghost):active {
+    transform: translateY(4px);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.2), 0 1px 0 rgba(10,20,70,.34);
+  }
+
+  /* outline: choices (levels, answers, secondary actions) */
+  .btn.ghost, .btn.table:not(.mix), .btn.answer:not(.right):not(.bad), .btn.target, .controls .btn.level, .picker .btn.glyph,
+  .btn-ghost, .play-btn.ghost, .btn.keytoggle, .opts .btn:not(.on), .cobtns .btn:not(.primary), .abnav .btn, .ac-row .btn:not(.ac-danger), .ac-go .btn:not(.primary) {
+    background: var(--card); border: 2px solid var(--line); border-radius: 14px; color: var(--ink);
+    box-shadow: 0 4px 0 var(--line);
+  }
+  .opts .btn:not(.on), .cobtns .btn:not(.primary), .abnav .btn, .ac-row .btn, .ac-go .btn:not(.primary), .btn.keytoggle { padding: 9px 16px; }
+  .ac-row .btn.ac-danger { border-radius: 14px; box-shadow: 0 4px 0 rgba(229,72,77,.35); }
+
+  .btn.ghost:hover, .btn.table:not(.mix):hover, .btn.answer:not(.right):not(.bad):not(:disabled):hover, .btn.target:hover, .controls .btn.level:hover, .picker .btn.glyph:hover,
+  .btn-ghost:hover, .play-btn.ghost:hover, .btn.keytoggle:hover, .opts .btn:not(.on):hover, .cobtns .btn:not(.primary):hover, .abnav .btn:hover, .ac-row .btn:not(.ac-danger):hover, .ac-go .btn:not(.primary):hover {
+    transform: translateY(-2px); border-color: var(--blue); color: var(--blue);
+    box-shadow: 0 6px 0 color-mix(in srgb, var(--blue) 40%, var(--line));
+  }
+  .btn.ghost:active, .btn.table:not(.mix):active, .btn.answer:not(.right):not(.bad):not(:disabled):active, .btn.target:active, .controls .btn.level:active, .picker .btn.glyph:active,
+  .btn-ghost:active, .play-btn.ghost:active, .btn.keytoggle:active, .opts .btn:not(.on):active, .cobtns .btn:not(.primary):active, .abnav .btn:active, .ac-row .btn:not(.ac-danger):active, .ac-go .btn:not(.primary):active {
+    transform: translateY(3px); box-shadow: 0 1px 0 var(--line);
+  }
+
+  /* the selected choice */
+  .controls .btn.level.active, .btn.target.active, .picker .btn.glyph.active {
+    background: color-mix(in srgb, var(--blue) 12%, var(--card)); border-color: var(--blue); color: var(--blue);
+    box-shadow: 0 4px 0 color-mix(in srgb, var(--blue) 55%, var(--line));
+  }
+  .btn.answer.right, .btn.answer.bad { box-shadow: 0 4px 0 rgba(10,20,70,.25); }
+  .btn.answer:disabled { transform: none; }
+
+  /* keyboard users can always see where they are */
+  a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible {
+    outline: 3px solid #FFC72C; outline-offset: 2px;
+  }
+}
+
+/* phones: no clouds behind the titles, smaller hills and moon (one size per background layer) */
+@media screen and (max-width: 760px) {
+  body::before { background-size: 100% 96px, 0 0, 0 0, auto, auto, auto, auto !important; }
+  :root[data-theme="dark"] body::before { background-size: 100% 96px, 0 0, auto, auto, auto, auto !important; }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .btn, .btn-primary, .btn-ghost, .btn-sm, .btn-login, .prem-btn, .play-btn, .klh-fav { transition: none !important; }
+  .btn:hover, .btn:active, .btn-primary:hover, .btn-primary:active, .btn-ghost:hover, .btn-ghost:active,
+  .btn-sm:hover, .btn-sm:active, .btn-login:hover, .btn-login:active, .prem-btn:hover, .prem-btn:active, .play-btn:hover, .play-btn:active { transform: none !important; }
+}

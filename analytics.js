@@ -129,6 +129,14 @@
   });
 })();
 
+/* ── Site-wide background and buttons (2026-11): loaded here so that every
+   page gets it, after each page's own stylesheets.                       */
+(function () {
+  var l = document.createElement('link');
+  l.rel = 'stylesheet'; l.href = '/ui.css?v=1';
+  document.head.appendChild(l);
+})();
+
 /* ── Kids' menu bar + first-visit welcome tour (2026-10) ────────────────
    Every page loads this file, so it also loads the site-wide kids' menu
    from here. All the code lives in /kidbar.js.                          */
