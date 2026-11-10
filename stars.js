@@ -72,7 +72,11 @@
     try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.best) return s; } catch (e) {}
     return { total: 0, plays: 0, best: {}, badges: [] };
   }
-  function save(s) { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} }
+  function save(s) {
+    try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {}
+    /* account.js listens: a signed-in parent's account is kept in step */
+    try { document.dispatchEvent(new CustomEvent('klh:stars')); } catch (e) {}
+  }
 
   /* ── toast ── */
   function css() {

@@ -137,3 +137,11 @@
   s.src = '/kidbar.js?v=3'; s.defer = true;
   (document.head || document.documentElement).appendChild(s);
 })();
+
+/* ── "My space": favourites + optional parent account (2026-11) ─────────
+   Header button, ♡ save buttons and account sync all live in /account.js. */
+(function () {
+  var s = document.createElement('script');
+  s.src = '/account.js?v=1'; s.defer = true;
+  (document.head || document.documentElement).appendChild(s);
+})();
