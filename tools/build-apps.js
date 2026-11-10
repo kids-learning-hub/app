@@ -411,7 +411,7 @@ for (const app of APPS) {
       <p class="lede">${esc(app.lede[lang])}</p>
       <div class="app-actions">
         ${playBadge(app.pkg, S.getOn)}
-        ${app.slug === 'mathokids' ? `<a class="prem-btn" href="${root}premium.html?app=mathokids">${esc(PROMO[lang].premBtn)}</a>` : ''}
+        <a class="prem-btn" href="${root}premium.html?app=${app.slug}">${esc(PROMO[lang].premBtn)}</a>
         <span class="free-note">${esc(S.free)}</span>
       </div>
     </div>
