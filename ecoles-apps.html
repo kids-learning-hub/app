@@ -92,8 +92,8 @@ h1,h2,h3{font-family:"Baloo 2",sans-serif}
 
 <script src="/play/play.js?v=6"></script>
 <script>
-/* APK « version Écoles » : déposés dans /apk/<id>.apk par build_all_direct.bat,
-   publiés avec deploy-site.bat. Un APK absent → « Bientôt disponible ». */
+/* APK « version Écoles » : hébergés sur GitHub Releases (tag apk-latest),
+   publiés avec publish-apks.bat. Un APK absent → « Bientôt disponible ». */
 const APPS = [
   ['mathokids', 'MathoKids', ['Maths', 'Mathématiques', 'Matemáticas', 'الرياضيات']],
   ['arabikids', 'ArabiKids', ['Arabic', 'Arabe', 'Árabe', 'العربية']],
@@ -145,15 +145,21 @@ const T = {
 let lang = 'en';
 const S = () => T[lang] || T.en;
 
-/* Taille réelle de chaque APK (requête HEAD), ou « Bientôt » s'il manque. */
+/* Taille réelle de chaque APK d'après GitHub, ou « Bientôt » s'il manque.
+   Si GitHub ne répond pas, les boutons restent actifs, sans la taille. */
+const APK_BASE = 'https://github.com/kids-learning-hub/app/releases/download/apk-latest/';
 const sizes = {};
-async function probe(id) {
+async function probe() {
   try {
-    const r = await fetch(`/apk/${id}.apk`, { method: 'HEAD', cache: 'no-store' });
-    const n = +r.headers.get('content-length');
-    sizes[id] = r.ok ? (n || -1) : 0;
-  } catch { sizes[id] = 0; }
-  render();
+    const r = await fetch('https://api.github.com/repos/kids-learning-hub/app/releases/tags/apk-latest');
+    if (!r.ok) return;
+    const assets = (await r.json()).assets || [];
+    APPS.forEach(([id]) => {
+      const a = assets.find(x => x.name === `${id}.apk`);
+      sizes[id] = a ? a.size : 0;
+    });
+    render();
+  } catch {}
 }
 
 function render() {
@@ -164,7 +170,7 @@ function render() {
     const size = z > 0 ? `${(z / 1048576).toFixed(0)} ${s.mb}` : '';
     return `<div class="apk"><img src="/logos/${id}.png" alt="${name}"><b>${name}</b>
       <span class="sub">${sub[LI[lang] ?? 0]}</span>
-      <a class="dl${ok ? '' : ' off'}" href="/apk/${id}.apk" download="${name}-ecoles.apk">${ok ? s.dl : s.soon}</a>
+      <a class="dl${ok ? '' : ' off'}" href="${APK_BASE}${id}.apk" download="${name}-ecoles.apk">${ok ? s.dl : s.soon}</a>
       <span class="size">${size}</span></div>`;
   }).join('');
 }
@@ -174,7 +180,7 @@ PLAY.init(l => {
   PLAY.applyStrings(S());
   render();
 });
-APPS.forEach(([id]) => probe(id));
+probe();
 </script>
 </body>
 </html>
